@@ -134,6 +134,26 @@ def _(mo):
 @app.cell
 def _(mo):
     mo.md(r"""
+    ## Textbook
+
+    Our primary textbook for this course is:
+
+    **Transport Processes and Separation Process Principles (Includes Unit Operations), 4th Edition** by Christie J. Geankoplis.
+
+    <div style="width: 50%; text-align: center;">
+      <img
+        src="public/L01/300w.jpeg"
+        alt="Geankoplis 4th Edition Textbook Cover"
+        style="width: 300px; height: auto; display: block; margin: 0 auto;"
+      />
+    </div>
+    """)
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
     ## What do Mass Transfer Study (1)?
     Scent diffuser:
     \(
@@ -230,7 +250,9 @@ def _(mo):
 
 @app.cell
 def _(mo):
-    mo.md(r"""
+    _pdf = mo.pdf(src="public/L01/l01-wooclap-results.pdf",width="80%")
+
+    _md = mo.md(f"""
     ## Let’s Get to Know You!
 
     We will use Wooclap in this course!
@@ -239,6 +261,8 @@ def _(mo):
 
     *Results to be published after the class*
     """)
+
+    mo.vstack([_md, _pdf])
     return
 
 
@@ -306,7 +330,6 @@ def _(mo):
                        r"$\text{m}^{2}\cdot{s^{-1}}$",
                        r"Why is there a negative sign?": "To ensure flux is positive."})
     mo.vstack([_m1, _acc])
-
     return
 
 
@@ -334,7 +357,6 @@ def _(mo):
         _md1,
         mo.hstack([_md2, _md3], widths=[1, 3])
     ])
-
     return
 
 
@@ -357,13 +379,8 @@ def _(mo):
     return
 
 
-@app.cell
-def _():
-    return
-
-
 @app.cell(hide_code=True)
-def _(current_temp, mo):
+def _():
     import numpy as np
     import plotly.graph_objects as go
 
@@ -403,20 +420,20 @@ def _(current_temp, mo):
         )
 
     # Calculate diffusivities at the current slider temperature
-    _D_gas_current: float = calculate_diffusivity_gas(current_temp.value)
-    _D_liquid_current: float = calculate_diffusivity_liquid(current_temp.value)
-    _D_solid_current: float = calculate_diffusivity_solid(current_temp.value)
+    # _D_gas_current: float = calculate_diffusivity_gas(current_temp.value)
+    # _D_liquid_current: float = calculate_diffusivity_liquid(current_temp.value)
+    # _D_solid_current: float = calculate_diffusivity_solid(current_temp.value)
 
     # Display current values
-    _display_values = mo.md(
-        f"""
-        ### Diffusivity at {current_temp.value:.2f} K
-        ({current_temp.value - 273.15:.2f} °C)
-        - **Gas:** `{_D_gas_current:.2e}` m²/s
-        - **Liquid:** `{_D_liquid_current:.2e}` m²/s
-        - **Solid:** `{_D_solid_current:.2e}` m²/s
-        """
-    )
+    # _display_values = mo.md(
+    #     f"""
+    #     ### Diffusivity at {current_temp.value:.2f} K
+    #     ({current_temp.value - 273.15:.2f} °C)
+    #     - **Gas:** `{_D_gas_current:.2e}` m²/s
+    #     - **Liquid:** `{_D_liquid_current:.2e}` m²/s
+    #     - **Solid:** `{_D_solid_current:.2e}` m²/s
+    #     """
+    # )
 
     # Generate data for plotting over the temperature range
     _temps_for_plot: np.ndarray = np.linspace(273.15, 373.15, 100)
