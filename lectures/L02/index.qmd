@@ -9,6 +9,14 @@ format:
     output-file: slides.html
 ---
 
+::: {.content-visible when-format="html"}
+
+::: {.callout-note}
+Slides 👉  [Open presentation🗒️](./slides.html)
+:::
+
+:::
+
 ## Recap
 
 - Fick's 1st law of diffusion
@@ -26,7 +34,7 @@ $$
 N_{A} = -c_T D_{AB} \dfrac{d x_A}{dz} + x_A(N_A + N_B)
 $$
 
-- We will learn to solve this equation in this lecture!
+- We will learn how to solve this equation in this lecture!
 
 ---
 

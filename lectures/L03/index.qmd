@@ -9,6 +9,14 @@ format:
     output-file: slides.html
 ---
 
+::: {.content-visible when-format="html"}
+
+::: {.callout-note}
+Slides 👉  [Open presentation🗒️](./slides.html)
+:::
+
+:::
+
 ## Recap
 
 - **Governing equation** for diffusion binary mixture gas systems

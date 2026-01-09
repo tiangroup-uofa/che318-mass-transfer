@@ -9,6 +9,14 @@ format:
     output-file: slides.html
 ---
 
+::: {.content-visible when-format="html"}
+
+::: {.callout-note}
+Slides 👉  [Open presentation🗒️](./slides.html)
+:::
+
+:::
+
 ## Land Acknowledgement {.center}
 
 #### The University of Alberta acknowledges that we are located on Treaty 6 territory, and respects the histories, languages, and cultures of the First Nations, Métis, Inuit, and all First Peoples of Canada, whose presence continues to enrich our vibrant community.
