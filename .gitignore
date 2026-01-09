@@ -245,3 +245,8 @@ flycheck_*.el
 /manifest.json
 /mate374-guest-lec.html
 /site.webmanifest
+
+/.quarto/
+**/*.quarto_ipynb
+/old/
+/_extensions/

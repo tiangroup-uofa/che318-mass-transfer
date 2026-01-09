@@ -1,0 +1,45 @@
+---
+title: CHE 318 Mass Transfer
+format: html
+toc: false
+---
+
+## Course Information
+
+- **Course Number**: CHE 318
+- **Instructor**: Dr. Tian Tian
+- **Semester**: Winter 2026
+- **Office**: DICE 12-245
+- **Office Hour**: Wednesday 11:15 - 12: 15
+
+## Course Description
+
+Mass transfer fundamentals with emphasis on diffusion, convection, theories of molecular diffusion coefficients, phase equilibria,
+and applications to separations and
+reactor/transport problems. 
+
+Topics include:
+
+1) molecular diffusion and convection
+2) theoretical background of mass transfer coefficients
+3) interphase mass transfer, boundary layers
+4) analogies with
+heat/momentum transfer
+5) introductory design calculations for
+separation processes.
+
+## Textbook
+
+The concepts, symbols and examples in this course are adapted from:
+
+- **C. J. Geankoplis** _Transport Processes and Separation Process Principles_
+4th Ed, Prentice Hall PTR
+
+<img src="https://learning.oreilly.com/covers/urn:orm:book:013101367X/400w/"
+     alt="Geankoplis textbook cover"
+     width="240">
+
+- 📘 Free online access: [link (requires UofA login)](https://search.library.ualberta.ca/view/action/uresolver.do?operation=resolveService&package_service_id=12962289870009116&institutionId=9116&customerId=9115&VE=true)
+- All chapter, figure and table numbers in lecture notes refer to the **4th ed** of the Geankoplis book.
+
+

@@ -1,0 +1,673 @@
+---
+title: "CHE 318 Lecture 02"
+subtitle: "Molecular Diffusion in Gases: Diffusive + Convective Mass Transport"
+author: "Dr. Tian Tian"
+date: "2026-01-07"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+---
+
+## Recap
+
+- Fick's 1st law of diffusion
+$$
+J_{Az}^{*} = -D_{AB}\dfrac{d c_A}{dz}
+$$
+
+- Diffusion and convection
+$$
+N_{A} = J_{Az}^{*} + c_A v_m
+$$
+
+- **Governing equation** for binary mixture system
+$$
+N_{A} = -c_T D_{AB} \dfrac{d x_A}{dz} + x_A(N_A + N_B)
+$$
+
+- We will learn to solve this equation in this lecture!
+
+---
+
+## Learning Outcomes
+
+After today's lecture, you will be able to:
+
+- Distinguish diffusion vs convection mechanisms
+- Recall common cases in defining the $N_A$ and $N_B$ relation
+- Apply constraints to select the right case
+- Solve:
+  - Equimolar counter diffusion (EMCD)
+  - Diffusion through stagnant B
+- Analyze different solutions for EMCD and stagnant B
+
+
+--- 
+
+## Recap: Fick's 1st Law of Diffusion
+
+Diffusion flux of A in B, z-direction follows:
+
+$$
+J^*_{Az} = - D_{AB}\,\frac{d c_A}{d z}
+$$
+
+::: {.columns}
+::: {.column width="20%"}
+![*Adolf Fick (1829 - 1901), German physiologist*](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Adolf_Fick_8bit_korr_klein1.jpg/500px-Adolf_Fick_8bit_korr_klein1.jpg){fig-alt="Adolf Fick"}
+
+:::
+
+::: {.column width="80%"}
+- Fick was the first to propose the relation between diffusion and concentration gradient driving force
+- Analog:
+  - Heat transfer (**Fourier's law**)
+  - Momentum transfer in fluid (**Newton equation**)
+- Diffusivity $D_{AB}$ was later linked to molecular Brownian motion by Albert Einstein
+- $D_{AB}$ has unit of $\mathrm{m^2\,s^{-1}}$
+:::
+:::
+
+---
+
+## Behaviour of Molecular Diffusion
+
+:::: {.columns}
+
+::: {.column width="40%"}
+![*Diffusion and Brownian motion of molecules, adapted from Wikipedia*](https://upload.wikimedia.org/wikipedia/commons/4/4d/DiffusionMicroMacro.gif){width="95%"}
+
+
+:::
+
+::: {.column width="60%"}
+- Brownian motion (Bm) is the inherent motion of molecules
+- Bm leads to redistribution of molecules until $\dfrac{d c_A}{d z} = 0$
+- Non-zero flux only when $\dfrac{d c_A}{d z} \neq 0$
+- Is diffusivity temperature dependent? pressure dependent?
+- How fast is molecular diffusion?
+:::
+
+:::: 
+
+---
+
+## Typical $D_{AB}$ Range
+
+```python {.marimo}
+D_AB_plot
+```
+
+```python {.marimo hide_code="true"}
+import marimo as mo
+```
+
+```python {.marimo hide_code="true"}
+import numpy as np
+import plotly.graph_objects as go
+
+# Constants
+_R_gas_constant: float = 8.314  # J/(mol·K)
+_ref_temp: float = 298.15  # K (25 °C)
+
+# Reference diffusivities at _ref_temp (m^2/s)
+_D_gas_ref: float = 1e-5
+_D_liquid_ref: float = 5e-10
+_D_solid_ref: float = 1e-14
+
+# Temperature dependency parameters
+# For gases: D ~ T^exponent
+_gas_exponent: float = 1.75
+# For liquids/solids: Arrhenius-like D ~ exp(-Ea/RT)
+_Ea_liquid: float = 15_000  # J/mol (typical for diffusion in water)
+_Ea_solid: float = 50_000  # J/mol (typical for diffusion in solids)
+
+# Temperature slider
+
+
+def calculate_diffusivity_gas(temp: float) -> float:
+    """Calculate gas diffusivity based on temperature."""
+    return _D_gas_ref * (temp / _ref_temp)**_gas_exponent
+
+def calculate_diffusivity_liquid(temp: float) -> float:
+    """Calculate liquid diffusivity based on temperature."""
+    return _D_liquid_ref * np.exp(
+        (_Ea_liquid / _R_gas_constant) * (1 / _ref_temp - 1 / temp)
+    )
+
+def calculate_diffusivity_solid(temp: float) -> float:
+    """Calculate solid diffusivity based on temperature."""
+    return _D_solid_ref * np.exp(
+        (_Ea_solid / _R_gas_constant) * (1 / _ref_temp - 1 / temp)
+    )
+
+# Calculate diffusivities at the current slider temperature
+# _D_gas_current: float = calculate_diffusivity_gas(current_temp.value)
+# _D_liquid_current: float = calculate_diffusivity_liquid(current_temp.value)
+# _D_solid_current: float = calculate_diffusivity_solid(current_temp.value)
+
+# Display current values
+# _display_values = mo.md(
+#     f"""
+#     ### Diffusivity at {current_temp.value:.2f} K
+#     ({current_temp.value - 273.15:.2f} °C)
+#     - **Gas:** `{_D_gas_current:.2e}` m²/s
+#     - **Liquid:** `{_D_liquid_current:.2e}` m²/s
+#     - **Solid:** `{_D_solid_current:.2e}` m²/s
+#     """
+# )
+
+# Generate data for plotting over the temperature range
+_temps_for_plot: np.ndarray = np.linspace(273.15, 373.15, 100)
+_D_gas_plot: np.ndarray = np.array(
+    [calculate_diffusivity_gas(t) for t in _temps_for_plot]
+)
+_D_liquid_plot: np.ndarray = np.array(
+    [calculate_diffusivity_liquid(t) for t in _temps_for_plot]
+)
+_D_solid_plot: np.ndarray = np.array(
+    [calculate_diffusivity_solid(t) for t in _temps_for_plot]
+)
+
+# Create Plotly figure
+_fig = go.Figure()
+
+_fig.add_trace(go.Scatter(
+    x=_temps_for_plot,
+    y=_D_gas_plot,
+    mode='lines',
+    name='Gas',
+    line=dict(color='blue'),
+    hovertemplate=(
+        'Temperature: %{x:.2f} K<br>'
+        'Diffusivity: %{y:.2e} m²/s<extra>Gas</extra>'
+    )
+))
+_fig.add_trace(go.Scatter(
+    x=_temps_for_plot,
+    y=_D_liquid_plot,
+    mode='lines',
+    name='Liquid',
+    line=dict(color='red'),
+    hovertemplate=(
+        'Temperature: %{x:.2f} K<br>'
+        'Diffusivity: %{y:.2e} m²/s<extra>Liquid</extra>'
+    )
+))
+_fig.add_trace(go.Scatter(
+    x=_temps_for_plot,
+    y=_D_solid_plot,
+    mode='lines',
+    name='Solid',
+    line=dict(color='green'),
+    hovertemplate=(
+        'Temperature: %{x:.2f} K<br>'
+        'Diffusivity: %{y:.2e} m²/s<extra>Solid</extra>'
+    )
+))
+
+_fig.update_layout(
+    title="Diffusivity vs. Temperature for Different Phases",
+    xaxis_title="Temperature (K)",
+    yaxis_title="Diffusivity (m²/s)",
+    yaxis_type="log",  # Use log scale for y-axis due to large range
+    hovermode="x unified",
+    legend_title="Phase",
+    width=1200,
+    template="plotly_white",
+    font=dict(
+        size=26  
+    ),
+)
+D_AB_plot = _fig
+```
+
+
+
+## A Common Misconception
+
+Search for any youtube video with *"diffusion experiment dye"*
+
+<iframe
+  width="1280"
+  height="600"
+  src="https://www.youtube.com/embed/STLAJH7_zkY"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+Can we **verify** whether the scenario seen is Ficknian diffusion?
+
+---
+
+## Diffusion vs Convection Length Scale
+
+:::: {.columns}
+
+::: {.column width="45%"}
+Length $L$ traveled in time $t$:
+
+- **Diffusion:** $L = 6\sqrt{D_{AB}\,t}$ *(Einstein, ~1905)*
+- **Convection:** $L = v_m\,t$
+
+**What is typical $D_{AB}$ in a liquid?**  
+- Often $D_{AB}\sim 10^{-9}$ to $10^{-10}\,\mathrm{m^2/s}$
+:::
+
+::: {.column width="55%"}
+Assuming $D_{AB} = 10^{-10} \mathrm{m^2/s}$
+$v_{m} = 10^{-3} \mathrm{m/s}$
+```python {.marimo}
+# Convert slider exponents to physical values
+def plot(log10_D, log10_vm):
+    D_AB = 10 ** (log10_D)     # m^2/s
+    v_m  = 10 ** (log10_vm)    # m/s
+
+    # Time horizon (seconds)
+    t_end = 120.0
+    t = np.linspace(0, t_end, 200)
+
+    # Length scales
+    L_diff = 6.0 * np.sqrt(D_AB * t)   # m
+    L_conv = v_m * t                   # m
+
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(x=t, y=L_diff, mode="lines", name="Diffusion: $6\\sqrt{D_{AB}t}$"))
+    fig.add_trace(go.Scatter(x=t, y=L_conv, mode="lines", name="Convection: $v_m t$"))
+
+    fig.update_layout(
+        title=f"Length Scale vs Time (0–{t_end:.0f} s)",
+        xaxis_title="Time, t (s)",
+        yaxis_title="Length, L (m)",
+        yaxis_type="log",
+        hovermode="x unified",
+        height=680,
+        template="plotly_white",
+        font=dict(size=26),
+        legend=dict(font=dict(size=22)),
+    )
+    return fig
+
+plot(log10_D=-10, log10_vm=-3)
+```
+
+:::
+
+::::
+
+---
+
+
+## Diffusion vs Convection Summary
+
+::: columns
+::: column
+**Diffusion**
+
+- Driven by concentration gradient
+- Associated with Diffusivity $D_{AB}$
+- Diffusive velocity $v_{Ad}$
+- **Slow** at large (industry) length scale
+
+:::
+::: column
+**Convection**
+
+- Driven by bulk motion 
+- Can reinforce or oppose diffusion
+- Bulk fluid motion $v_m$
+- **Fast** at large (industry) length scale
+:::
+:::
+
+
+---
+
+## A Note on Setups
+
+##### Reference frame
+- $J_{Az}^{*}$ refers to the fluid plane frame (hence the $*$)
+- $N_{A}$ refers to the stationary frame (lab frame)
+- We will be dealing with $N_A$ in this course!
+
+##### Mass balance in stationary frame
+$$
+[\mathrm{In}] - [\mathrm{Out}] + [\mathrm{Generate}] = [\mathrm{Accumulation}]
+$$
+
+##### Steady state (S.S)
+- $[\mathrm{Generate}] = [\mathrm{Accumulation}] = 0$
+- $[\mathrm{In}] = [\mathrm{Out}]$
+- $\dfrac{d N_A}{dz} = 0$ (**S.S**)
+
+---
+
+## Governing Equation for $N_A$ and $N_B$
+
+The common way of expressing the governing equation is
+
+```{=tex}
+\begin{align}
+  N_{A} &= -c_T D_{AB} \dfrac{d x_A}{dz} + x_A(N_A + N_B) \\
+  N_{B} &= -c_T D_{BA} \dfrac{d x_B}{dz} + x_B(N_A + N_B) 
+\end{align}
+```
+
+How can we solve these?
+
+- For this course we assume $D_{AB}$ and $D_{BA}$ are constants
+- For industrial purposes we want to know values of $N_A$ and $N_B$
+- We need relation between $N_A$ and $N_B$ to solve them!
+- $x_A(z)$ can be solved as a by-product
+
+
+---
+
+## Three Limiting Cases
+
+:::: {.columns}
+
+::: {.column width="40%"}
+Equimolar Counter Diffusion (EMCD)
+
+**Assumption**
+
+- $N_A + N_B = 0$
+- $v_m = 0$
+
+<!-- **Implication** -->
+
+<!-- - Transport is purely diffusive -->
+<!-- - Fluxes are equal and opposite -->
+
+**Example**
+
+- Two gases exchanging through a thin tube
+- Idealized membrane diffusion
+:::
+
+::: {.column width="30%"}
+Diffusion with Stagnant B
+
+**Assumption**
+
+- $N_B = 0$
+- $N_A \neq 0$
+
+<!-- **Implication** -->
+
+<!-- - Bulk motion exists -->
+<!-- - Convection cancels diffusion of B -->
+
+**Example**
+
+- Evaporation of A through non-diffusing air
+- Gas absorption into a liquid film
+:::
+
+::: {.column width="30%"}
+General Case
+
+**Assumption**
+
+- $N_A \neq 0$
+- $N_A = x N_B$ & $x \neq -1$
+
+<!-- **Implication** -->
+
+<!-- - Both diffusion and convection contribute -->
+<!-- - Requires coupled flux relations -->
+
+**Example**
+
+- Catalyst reaction
+:::
+
+:::: 
+
+--- 
+
+## Case 1: Equimolar Counter Diffusion (EMCD)
+
+- Condition: $N_A + N_B = 0$
+- No bulk fluid motion
+
+```{=tex}
+\begin{align}
+  N_A &= -N_B \\
+      &= J_{Az}^{*} \\
+      &= -c_T D_{AB} \dfrac{d x_A}{d z}
+\end{align}
+```
+
+Relation in EMCD gives:
+```{=tex}
+\begin{align}
+  -c_T D_{BA} \dfrac{d x_B}{d z}    &= -c_T D_{AB} \dfrac{d x_A}{d z}
+\end{align}
+```
+
+Since $x_A + x_B = 1$, we have $D_{AB} = D_{BA}$
+
+---
+
+## Solving EMCD: Flux $N_A$
+
+Assume S.S., constant $D_{AB}$ and integrate from $z_1$ to $z_2$
+
+```{=tex}
+\begin{align*}
+\int_{c_{A1}}^{c_{A2}} d c_A
+&= -\frac{N_A}{D_{AB}} \int_{z_1}^{z_2} d z \\
+c_{A2} - c_{A1} &= -\frac{N_A}{D_{AB}}(z_2 - z_1) \\
+\end{align*}
+```
+
+```{=tex}
+\begin{align}
+\boxed{
+N_A = \frac{D_{AB}}{(z_2 - z_1)}(c_{A1} - c_{A2})
+  }
+\end{align}
+```
+
+For ideal gas:
+
+```{=tex}
+\begin{align}
+\boxed{
+N_A = \frac{D_{AB}}{RT(z_2 - z_1)}(p_{A1} - p_{A2})
+  }
+\end{align}
+```
+
+---
+
+## EMCD: Linear Concentration Profile $c_A(z)$
+
+From EMCD, $N_A$ is constant and $c_A(z)$ is linear!
+
+<!-- ```{=tex} -->
+<!-- \begin{align*} -->
+<!-- \frac{d c_A}{d z} &= -\frac{N_A}{D_{AB}} = \text{constant} -->
+<!-- \end{align*} -->
+<!-- ``` -->
+
+```python {.marimo}
+import matplotlib.pyplot as plt
+
+def plot_ca():
+    # Abstract coordinate (we'll label endpoints as z1 and z2)
+    z = np.linspace(0, 1, 200)
+
+    # Total concentration (constant)
+    cT = 1.0  # arbitrary units
+
+    # EMCD-style linear profiles
+    cA_z1 = 0.80 * cT
+    cA_z2 = 0.10 * cT
+    cA = cA_z1 + (cA_z2 - cA_z1) * z
+    cB = cT - cA
+    cT_profile = cT * np.ones_like(z)
+
+    fig, ax = plt.subplots(figsize=(7.5, 4.5), dpi=150)
+
+    ax.plot(z, cA, label=r"$c_A(z)$")   # default color cycle
+    ax.plot(z, cB, label=r"$c_B(z)$")
+    ax.plot(z, cT_profile, label=r"$c_T$")
+
+    ax.set_xlabel(r"Position, $z$")
+    ax.set_ylabel(r"$c / c_{T}$")
+
+    ax.set_xlim(0, 1)
+    ax.set_xticks([0, 1])
+    ax.set_xticklabels([r"$z_1$", r"$z_2$"])
+
+    ax.set_ylim(0, 1.05 * cT)
+
+    ax.grid(True, alpha=0.3)
+    ax.legend(loc="best", frameon=False)
+
+    return ax
+
+plot_ca()
+```
+
+
+
+
+## Case 2: Diffusion Through Stagnant B
+
+Definition: **stagnant** species B means zero molar flux in the lab frame:
+$$
+N_B = 0
+$$
+
+But diffusion in B phase **still occurs**!
+
+The governing equation becomes:
+
+```{=tex}
+\begin{align}
+  N_A &= -cD_{AB}\dfrac{d x_A}{dz} + x_A N_A \\
+  N_A(1 - x_A) &= -cD_{AB}\dfrac{d x_A}{dz}
+\end{align}
+```
+
+## Solving Stagnant B Case
+
+We again do an integration by separating variables:
+
+```{=tex}
+\begin{align}
+\frac{d x_A}{1-x_A} &= -\frac{N_A}{c_TD_{AB}}\,dz \\
+\int_{x_{A1}}^{x_{A2}} \frac{d x_A}{1-x_A}
+&= -\frac{N_A}{c_TD_{AB}}\int_{z_1}^{z_2} dz \\
+\left[-\ln(1-x_A)\right]_{x_{A1}}^{x_{A2}}
+&= -\frac{N_A}{c_TD_{AB}}(z_2-z_1) \\
+\ln\!\left(\frac{1-x_{A1}}{1-x_{A2}}\right)
+&= -\frac{N_A}{c_TD_{AB}}(z_2-z_1)
+\end{align}
+```
+
+```{=tex}
+\begin{align}
+\boxed{
+N_A = \frac{c_TD_{AB}}{(z_2-z_1)}
+\ln\!\left(\frac{1-x_{A2}}{1-x_{A1}}\right)
+  }
+\end{align}
+```
+
+---
+
+## Various Forms of Stagnant B Solution
+
+- In concentration and molar fraction
+
+```{=tex}
+\begin{align}
+
+N_A = \frac{c_TD_{AB}}{(z_2-z_1)}
+\ln\!\left(\frac{1-x_{A2}}{1-x_{A1}}\right)
+
+\end{align}
+```
+
+- Ideal gas with partial pressure
+
+```{=tex}
+\begin{align}
+
+N_A = \frac{p_TD_{AB}}{RT(z_2-z_1)}
+\ln\!\left(\frac{p_T-p_{A2}}{p_T-p_{A1}}\right)
+
+\end{align}
+```
+
+--- 
+
+## Log-mean Form
+
+Historically, engineers liked to write the stagnant B equation using linear terms.
+
+```{=tex}
+\begin{align}
+  \ln\!\left(\frac{p_T-p_{A2}}{p_T-p_{A1}}\right) &= \ln\!\left(\frac{p_{B2}}{p_{B1}}\right) \\
+  (p_{B2} - p_{B1})\ln\!\left(\frac{p_T-p_{A2}}{p_T-p_{A1}}\right) &= \ln\!\left(\frac{p_{B2}}{p_{B1}}\right) (p_{A1} - p_{A2}) \\
+  \ln\!\left(\frac{p_T-p_{A2}}{p_T-p_{A1}}\right)
+                                                  &= \ln\!\left(\frac{p_{B2}}{p_{B1}}\right)
+                                                    \left(
+                                                    \frac{p_{A1} - p_{A2}}{p_{B2} - p_{B1}}
+                                                    \right)
+\end{align}
+```
+
+Define $p_{Bm} = \dfrac{p_{B2} - p_{B1}}{\ln\!(p_{B2}/p_{B1})}$
+
+We get
+
+```{=tex}
+\begin{align}
+
+N_A = \frac{p_TD_{AB}}{RT(z_2-z_1)}
+  \frac{1}{p_{Bm}}(p_{A1}-p_{A2})
+
+\end{align}
+```
+
+---
+
+## Solving Concentration Profiles in Stagnant B
+
+- We will utilize the fact $d N_A / dz = 0$ (S.S). 
+- Do we have $d c_A / dz = 0$ like in EMCD?
+
+```{=tex}
+\begin{align}
+d N_A / dz &= -cD_{AB} \frac{d}{dx}
+             \left[\frac{1}{1 - x_A}\frac{d x_A}{dz}\right]  \\
+           &= 0 \\
+\frac{1}{1 - x_A}\frac{d x_A}{dz} &= \mathrm{Const}  \\
+  \int_{x_{A1}}^{x} \frac{1}{1 - x_A^{'}}d x_A^{'}
+  &= \int_{z_1}^{z} \mathrm{Const}\, dz^{'}
+\end{align}
+```
+
+*Can you solve the profile for $x_A(z)$*?
+
+
+---
+
+## Wrap-up
+
+- “Case selection”: choosing the right constraint
+- Different **constraints** lead to different solvable cases
+- **Equimolar counter diffusion (EMCD):** linear concentration profiles
+- **Stagnant B:** non-linear profiles and logarithmic driving force
+- **Stagnant ≠ no diffusion:** 👉 $N_B = 0$
+
+**Next lecture:** we remove simplifying constraints and discuss the **general case**
