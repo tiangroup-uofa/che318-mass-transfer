@@ -1,5 +1,19 @@
 /__marimo__/
 /mossball/
+
+scripts/.nojekyll
+scripts/*.html
+scripts/android-chrome-192x192.png
+scripts/android-chrome-512x512.png
+scripts/apple-touch-icon.png
+scripts/assets/
+scripts/favicon-16x16.png
+scripts/favicon-32x32.png
+scripts/favicon.ico
+scripts/logo.png
+scripts/manifest.json
+scripts/site.webmanifest
+
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
@@ -252,3 +266,4 @@ flycheck_*.el
 /_extensions/
 __marimo__/
 /_old/
+CLAUDE.md
