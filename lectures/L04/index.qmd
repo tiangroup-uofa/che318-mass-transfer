@@ -1,0 +1,181 @@
+---
+title: "CHE 318 Lecture 04"
+subtitle: "Molecular Diffusivity: Theories and Measurement"
+author: "Dr. Tian Tian"
+date: "2026-01-12"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+Slides 👉  [Open presentation🗒️](./slides.html)
+:::
+
+:::
+
+## Recap
+
+- **General solution** for diffusion binary mixture gas systems ($N_B = k N_A$)
+  - $k = -1$ reduces to EMCD solution
+  - Total flux $N_A$ is EMCD flux times a coefficient
+  
+```{=tex}
+\begin{align}
+N_A = \frac{ c_T D_{AB}}{(z_2 - z_1)}
+\left(\frac{N_A}{N_A + N_B}\right)
+\ln\!\left[\dfrac{
+\frac{N_A}{N_A + N_B} - x_{A2}}
+{\frac{N_A}{N_A + N_B} - x_{A1}}
+\right]
+\end{align}
+```
+  
+- Brief discussion about diffusivity measurement: two-bulb setup
+
+## Demonstration of General Solution
+
+```{=html}
+<iframe width="100%" height="800"
+		src="../../scripts/L03_xa_profile.html" title="Webpage example"></iframe>
+```
+
+## Interaction Time!
+
+[participation link](https://app.wooclap.com/318L03?from=instruction-slide)
+
+*Results and comments to be published after the class*
+
+---
+
+## Learning Outcomes {.center}
+
+After today's lecture, you will be able to:
+
+- **Recall** multiple theories of molecular diffusivity 
+- **Analyze** the diffusivity $D_{AB}$ as function of $(T, P)$
+- **Derive** new diffusivity values from standard table
+- **Formulate** governing equations for different scenarios measuring the diffusivity
+
+---
+
+## Motivation to Have Theory About Diffusivity {.center}
+
+- Solving the general solution for gas mass transfer requires parameter $D_{AB}$ (and $D_{BA}$)!
+- Measuring every $D_{AB}$ pair for gases is tedious
+- $D_{AB}$ is dependent on conditions $T, P$
+- We need to have theories that can **predict** diffusivity $D_{AB}$ **without** doing all pair experiments and all $(T, P)$ conditions!
+- In the lease case, the theory should allow extrapolating a measured $D_{AB}(T_1, P_1)$ to $D_{AB}(T_2, P_2)$
+
+---
+
+## Molecular Diffusivity Theory -- Kinetic Theory
+
+::: {.columns}
+::: {.column width="50%"}
+
+$$
+D_{AB} = \frac{1}{3} \overline{u} \lambda
+$$
+
+- $\overline{u}$: average molecular velocitt
+- $\lambda$: mean free path between collisions
+
+:::
+
+:::{.column width="50%"}
+Assumptions:
+
+- Rigid sphere type molecules (what are they?)
+- No interaction upon collisions
+- Collisions are elastic 
+- Good for dilute gases (low $P$)
+- Not accurate otherwise
+:::
+:::
+
+--- 
+
+## Molecular Diffusivity Theory -- Chapman-Enskog Theory
+
+```{=tex}
+\begin{align}
+  D_{AB} &= \frac{1.8583\times{}10^{-7} T^{3/2}}
+           {P \sigma_{AB}^2 \Omega_{D, AB}} \left(\frac{1}{m_A} + \frac{1}{m_B} \right)^{\frac{1}{2}} \\
+ &\propto \frac{T^{\frac{3}{2}}}{P} \left(\frac{1}{m_A} + \frac{1}{m_B} \right)^{\frac{1}{2}}
+\end{align}
+```
+- $m_A$, $m_B$, molecular weight
+- $\sigma_{AB}$: average collision radius between A and B
+- $\Omega_{D, AB}$: Lennard-Jones collision integral 
+  - $\Omega_{D, AB}=1$ for elastic collision
+  - Chapman-Enskog theory accounts for non-elastic collision using $\Omega_{D, AB}\neq1$
+
+---
+
+## Molecular Diffusivity Theory -- Fuller Method
+
+```{=tex}
+\begin{align}
+D_{AB} &= \frac{10^{-7} T^{1.75} }{P \left[ (\sum \nu_A)^{1/3} + (\sum \nu_B)^{1/3}\right]^2}
+         \left(\frac{1}{m_A} + \frac{1}{m_B} \right)^{\frac{1}{2}} \\
+  &\propto \frac{T^{1.75}}{P}
+\end{align}
+```
+
+- Mainly to overcome the complicated estimation of $\Sigma_{D, AB}$ in Chapman-Enskog Theory
+- $\sum \nu_i$ sum of structural volume increments
+- $\sum \nu_i$ can be estimated from individual atoms
+- Easier to use than the Chapman-Enskog Theory, but less accurate
+
+## How to Use the Fuller Method From a Table
+
+We need to determine $\sum \nu_A$ and $\sum \nu_B$,
+*Check Table 6.2-2 of Geankoplis 4th ed*.
+
+- $\sum \nu_i$ are **dimensionless** numbers
+- For known gases in the table, use its value in the table
+  - Air: $\nu = 20.1$
+  - O$_2$:  $\nu = 16.6$
+  
+- For an unknown gas, use its chemical composition
+  - For chemical formula $\text{C}_x \text{H}_y \text{O}_z$,
+    $$
+	\sum \nu(\text{C}_x \text{H}_y \text{O}_z)
+	= \nu(\text{C}) \cdot x + \nu(\text{H}) \cdot y + \nu(\text{O}) \cdot z
+	$$
+
+## Estimating $D_{AB}$ At Different $(T, P)$
+
+For the same pair of (A, B), both the Chapman-Enskog and Fuller methods have the same form
+$$
+D_{AB} \propto \frac{T^n}{P}
+$$
+
+This means we can find one existing $D_{AB}$ value from table and extrapolate:
+$$
+\frac{D_{AB}\vert_1}{D_{AB}\vert_2}
+= \left(\frac{T_1}{T_2}\right)^{n}
+\left(
+\frac{P_2}{P_1}
+\right)
+$$
+
+Fuller method is often used in chemical engineering, where $n=1.75$.
+
+---
+
+# Examples To Solve
+
+
+## Summary
+
+- Diffusivity $D_{AB}$ value is the key to solve the transport problem in gases
+- $D_{AB}$ can be measured from experiments, but not exhaustively
+- Several theories predict the value for $D_{AB}$ with certain accuracy
+- Chapman-Enkog theory and Fuller method both have $D_{AB}\propto T^n/P$ form
+- Fuller method more often used as it can approximate $D_{AB}$ solely by taking values from table
+
