@@ -278,7 +278,7 @@ General Case
 Relation in EMCD gives:
 ```{=tex}
 \begin{align}
-  -c_T D_{BA} \dfrac{d x_B}{d z}    &= -c_T D_{AB} \dfrac{d x_A}{d z}
+  c_T D_{BA} \dfrac{d x_B}{d z}    &= -c_T D_{AB} \dfrac{d x_A}{d z}
 \end{align}
 ```
 
