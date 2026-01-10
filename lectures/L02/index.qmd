@@ -317,11 +317,11 @@ N_A = \frac{D_{AB}}{RT(z_2 - z_1)}(p_{A1} - p_{A2})
 \end{align}
 ```
 
----
+<!-- --- -->
 
-## EMCD: Linear Concentration Profile $c_A(z)$
+<!-- ## EMCD: Linear Concentration Profile $c_A(z)$ -->
 
-From EMCD, $N_A$ is constant and $c_A(z)$ is linear!
+<!-- From EMCD, $N_A$ is constant and $c_A(z)$ is linear! -->
 
 <!-- ```{=tex} -->
 <!-- \begin{align*} -->

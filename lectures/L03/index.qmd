@@ -318,10 +318,14 @@ x_{A} = s - K_1 e^{K_2 z}
   }
 \end{align}
 ```
-<!-- --- -->
+---
 
-<!-- ## $x_A(z)$ Profile -->
+## $x_A(z)$ Profile
 
+```{=html}
+<iframe width="100%" height="800"
+		src="./xa_profile.html" title="Webpage example"></iframe>
+```
 
 --- 
 
