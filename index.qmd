@@ -43,3 +43,22 @@ The concepts, symbols and examples in this course are adapted from:
 - All chapter, figure and table numbers in lecture notes refer to the **4th ed** of the Geankoplis book.
 
 
+## Lecture Notes
+
+Thanks to recent developments in scientific typesetting and
+interactive computing enabled by tools such as
+[**Quarto**](https://quarto.org) and
+[**Marimo**](https://docs.marimo.io), the course materials are
+presented in different ways. You can view the course notes in the following ways:
+
+- Directly browsing the webpage of individual lectures
+- Open the slide presentations for lectures (powered by `reveal.js`)
+
+In either way we have included interactive demonstrations of some
+numerical solution to a few key problems, and we hope you enjoy
+reading and interacting with the course materials!
+
+📙**Access all lectures here:**  
+[Lecture notes and slides](lectures/)
+
+

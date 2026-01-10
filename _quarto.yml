@@ -12,7 +12,7 @@ website:
     left:
       - href: index.qmd
         text: About Course
-      - href: syllabus.qmd
+      - href: syllabus/
         text: Syllabus
       - href: lectures/
         text: Lectures
@@ -27,7 +27,8 @@ website:
       - href: index.qmd
         id: guide
       - section: "Syllabus"
-        href: syllabus.qmd
+        contents:
+          - syllabus/index.qmd
       - section: "Lectures"
         contents:
           - lectures/L01/index.qmd
