@@ -3,6 +3,8 @@ project:
   output-dir: _site
   preview:
     port: 7777
+  post-render: 
+    - _marimo_export.py
 
 website:
   title: "CHE 318 Mass Transfer (UofA)"
