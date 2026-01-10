@@ -324,7 +324,7 @@ x_{A} = s - K_1 e^{K_2 z}
 
 ```{=html}
 <iframe width="100%" height="800"
-		src="../../../scripts/L03_xa_profile.html" title="Webpage example"></iframe>
+		src="../../scripts/L03_xa_profile.html" title="Webpage example"></iframe>
 ```
 
 --- 
