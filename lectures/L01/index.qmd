@@ -9,7 +9,7 @@ format:
     output-file: slides.html
 ---
 
-::: {.content-visible when-format="html"}
+::: {.content-visible when-format="html" unless-format="revealjs"}
 
 ::: {.callout-note}
 Slides 👉  [Open presentation🗒️](./slides.html)

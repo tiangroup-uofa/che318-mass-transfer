@@ -9,7 +9,7 @@ format:
     output-file: slides.html
 ---
 
-::: {.content-visible when-format="html"}
+::: {.content-visible when-format="html" unless-format="revealjs"}
 
 ::: {.callout-note}
 Slides 👉  [Open presentation🗒️](./slides.html)
@@ -28,14 +28,14 @@ $$
 ::: {.column width="50%"}
 - Case 1: equimolar counter diffusion (EMCD)
   - $N_A + N_B = 0$
-  - $N_A = -c_T D_{AB} \frac{d x_A}{d z}$
+  - $N_A = -c_T D_{AB} \dfrac{d x_A}{d z}$
   - Linear $x_A$, $c_A$ and $p_A$ profiles
   - $N_A = \dfrac{D_{AB}}{RT(z_2 - z_1)}(p_{A1} - p_{A2})$
 :::
 ::: {.column width="50%"}
 - Case 2: diffusion through stagnant B
   - $N_B = 0$
-  - $N_A(1 - x_A) = -cD_{AB}\frac{d x_A}{dz}$
+  - $N_A(1 - x_A) = -c_T D_{AB}\dfrac{d x_A}{dz}$
   - Usually in log-mean pressure form
   - $N_A = \dfrac{D_{AB}}{RT(z_2-z_1)}
   \dfrac{p_T}{p_{Bm}} \left(p_{A1} - p_{A2}\right)
@@ -56,17 +56,17 @@ $
 
 After today's lecture, you will be able to:
 
-- Derive general solution for mass transport in binary gas mixture
-- Define the conditions for each cases we have studied so far
-- Formulate governing equations for various case systems
-- Apply general solution to defined problem
-- Analyze pressure / concentration profile
+- **Derive** general solution for mass transport in binary gas mixture
+- **Define** the conditions for each cases we have studied so far
+- **Formulate** governing equations for various case systems
+- **Apply** general solution to defined problem
+- **Analyze** pressure / concentration profile
 
 ## Deriving the General Solution (I)
 
 General case for steady state (S.S) transport
 
-- $N_B = \lambda N_A$ ($\lambda$ is a constant. *why?*)
+- $N_B = k N_A$ ($k$ is a constant. *why?*)
 - Only $x_A$ (or $c_A$, $p_A$) dependent on $z$, not $N_A$ or $N_B$ 👉 separation of variables!
 
 ```{=tex}
@@ -123,7 +123,7 @@ We can gather all $N_A / (N_A + N_B)$ in the R.H.S since it's a constant
 ```{=tex}
 \begin{align}
 \boxed{
-N_A = \frac{D_{AB} c_T}{(z_2 - z_1)}
+N_A = \frac{ c_T D_{AB}}{(z_2 - z_1)}
 \left(\frac{N_A}{N_A + N_B}\right)
 
 \ln\!\left[\dfrac{
@@ -217,7 +217,7 @@ In $x_A$ form
 - Case 1: EMCD
   - $N_A + N_B = 0$
   $$
-  N_A = \dfrac{D_{AB} c_T}{RT(z_2 - z_1)}(x_{A1} - x_{A2})
+  N_A = \dfrac{D_{AB} c_T}{(z_2 - z_1)}(x_{A1} - x_{A2})
   $$
   
 - Case 2: stagnant B
@@ -283,7 +283,7 @@ In $p_A$ form (ideal gas)
   - $N_B = \lambda N_A$
   
 $$
-N_A = \frac{D_{AB} c_T}{(z_2 - z_1)} 
+N_A = \frac{D_{AB} p_T}{RT(z_2 - z_1)} 
 \frac{N_A}{N_A + N_B}
 \ln\!\left[\dfrac{
 \frac{N_A}{N_A + N_B} - x_{A2}}
@@ -439,7 +439,8 @@ We can extract $D_{AB}$ usingt the slope of the plot!
 
 ## Some Typical Diffusivity Measurements
 
-![](./images/geankoplis-gas-diff){width=700}
+![](public/geankoplis-gas-diff){width=700}
+^[Geankoplis Table 6.2-1]
 
 
 ---

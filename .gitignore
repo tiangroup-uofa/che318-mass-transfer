@@ -250,3 +250,5 @@ flycheck_*.el
 **/*.quarto_ipynb
 /old/
 /_extensions/
+__marimo__/
+/_old/
