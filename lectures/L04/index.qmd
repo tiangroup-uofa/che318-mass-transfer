@@ -45,9 +45,79 @@ N_A = \frac{ c_T D_{AB}}{(z_2 - z_1)}
 
 ## Interaction Time!
 
-[participation link](https://app.wooclap.com/318L03?from=instruction-slide)
+[participation link](https://app.wooclap.com/318L04?from=instruction-slide)
 
 *Results and comments to be published after the class*
+
+
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+---
+
+## Detailed Explanation for Convection-Driven Flux Change
+
+::: {.callout-note}
+Advanced topic, not shown in presentation
+:::
+
+The ratio between total flux in general solution $N_A(\text{gen})$ and $N_A(\text{EMCD})$ can be written as:
+
+```{=tex}
+\begin{align}
+  \frac{N_A(\text{gen})}{N_A(\text{EMCD})}
+  &= \frac{s \ln\! \left[
+    \frac{s - x_{A2}}{s - x_{A1}}
+    \right]}{x_{A1} - x_{A2}} \\
+  &= \frac{s \ln\! \left[
+    \frac{s - x_{A2}}{s - x_{A1}}
+    \right]}{(s - x_{A2}) - (s - x_{A1})} \\
+  &= \frac{s}{\text{LM}(s-x_A)}
+\end{align}
+```
+where $\text{LM}(u)$ is the log-mean function (similar treatment in [Lecture 2](../L02)), and $s = N_A / (N_A + N_B)$.
+
+There are several limiting cases. Let's assume $x_{A1} > x_{A2}$ for simplicity, and there is a real solution to the $N_A(\text{gen})$
+
+1. $s > x_{A1}$:
+
+   $s - x_{A1}$ and $s - x_{A2}$ must be both positive to ensure a
+   solution. Therefore $\text{LM}(s-x_A) < s$. We know that
+   $N_A(\text{gen})>N_A(\text{EMCD})$.
+   
+   - Example: diffusion through stagnant B ($s = 1$)
+     
+	 In this case $\text{LM}(s-x_A) = \text{LM}(x_B)$, we can conclude that the diffusion through stagnant B case **always enhances** total flux compared with EMCD.
+	 
+	 A signature of such transport is the $x_A(z)$ profile is **concave**, as shown in @fig-na-comp (a).
+	 
+2. $s < 0$:
+
+   $s - x_{A2}$ and $s - x_{A1}$ are be both negative. Therefore $|\text{LM}(s-x_A)| > s$. We know that
+   $N_A(\text{gen})<N_A(\text{EMCD})$, but $N_A$ is still positive.
+   
+   - Example: counter $N_B$ flux ($N_B/N_A < -1$)
+     
+	 The opposite direction of $N_B$ **attenuates** the molar flux of A. A signature of such transport is the $x_A(z)$ profile is **convex**, as shown in @fig-na-comp (b).
+	 
+3. $0 < s < x_2$:
+
+	$s - x_{A2}$ and $s - x_{A1}$ are be both negative. Since $s >0$, we actually can have $N_A < 0$!
+	
+	Such situation may be counter-intuitive but the solution is physically valid, as the only solution to satisfy such criteria is $N_B < 0$ and $N_A < 0$ at the same time.
+	As we cannot directly compare $s$ and $\text{LM}(s-x_A)$ in this case, $|N_A(\text{gen})|$ can be either smaller or larger than $N_A(\text{EMCD})$, as shown in @fig-na-comp (c) and (d).
+	
+4. $x_2 < s < x_1$:
+   
+   The expression inside the logarithm is negative and we do not have a real solution to the general equation for $N_A$.
+	
+![Comparison between general solution and EMCD flux. **a**. Enhance flux via diffusion through stagnant B. **b** Reduced flux when $s=-1$. **c**. Enhanced counter flux case **d** Reduced counter flux case](./public/NA_comparison_plots.svg){#fig-na-comp width="100%"}
+	
+	
+   
+   
+
+:::
 
 ---
 
