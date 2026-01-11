@@ -49,7 +49,16 @@ N_A = \frac{ c_T D_{AB}}{(z_2 - z_1)}
 
 *Results and comments to be published after the class*
 
+::: {.content-visible when-format="revealjs"}
 
+---
+
+## Convection-Driven Flux Change
+
+![](./public/NA_comparison_plots.svg){#fig-na-comp width="100%"}
+	
+
+:::
 
 ::: {.content-visible when-format="html" unless-format="revealjs"}
 
@@ -113,9 +122,6 @@ There are several limiting cases. Let's assume $x_{A1} > x_{A2}$ for simplicity,
 	
 ![Comparison between general solution and EMCD flux. **a**. Enhance flux via diffusion through stagnant B. **b** Reduced flux when $s=-1$. **c**. Enhanced counter flux case **d** Reduced counter flux case](./public/NA_comparison_plots.svg){#fig-na-comp width="100%"}
 	
-	
-   
-   
 
 :::
 
@@ -184,6 +190,10 @@ assumptions are made:
 There are some results from the kinetic theory:
 ^[adapted from *BSL Transport Phenomena ch 17.3*]
 
+::: {.columns}
+
+::: {.column width="50%"}
+
 1. Mean molecular speed $\overline{u}$
 $$
 \overline{u} = \sqrt{\frac{8 k_B T}{\pi \overline{m_{AB}}}}
@@ -194,6 +204,9 @@ $$
 \lambda_{AB}=\frac{1}{\sqrt{2} \pi d_{AB}^2 c_T}
 $$
 
+:::
+
+::: {.column width="50%"}
 3. Frequency of molecule A colliding with wall ($Z$, unit $\text{m}^{-2}\cdot \text{s}^{-1}$):
 $$
 Z_A = \frac{1}{4} c_A \overline{u}
@@ -205,6 +218,13 @@ where $d_{AB} = \frac{d_A + d_B}{2}$, $m_{AB}^{-1} = m_{A}^{-1} + m_B^{-1}$, $k_
 $$
 a = \frac{2}{3}\lambda_{AB}
 $$
+:::
+
+:::
+
+
+
+
 
 ---
 
@@ -264,7 +284,7 @@ Assumptions:
 
 --- 
 
-## Molecular Diffusivity Theory -- Chapman-Enskog Theory
+## Molecular Diffusivity -- Chapman-Enskog Theory
 
 We can take real interaction between molecules into the kinetic theory!
 
@@ -306,19 +326,39 @@ Resulting $D_{AB}$ is in $\text{m}^2 \cdot \text{s}^{-1}$
 
 ## Chapman-Enskog Theory & Lennard Jones Potential
 
-In many cases the parameters $\sigma_{AB}$ and $\Omega_{D, AB}$ can be derived using Lennard-Jones potential.
+- Parameters $\sigma_{AB}$ and $\Omega_{D, AB}$ can be derived using Lennard-Jones (LJ) potential
+- LJ potential described the interaction energy $U_{AB}$ between 2 molecules at distance $r$ follows:
 
+```{=tex}
+\begin{align}
+  U_{AB}(r) = 4\epsilon_{AB}\left[
+  (\frac{\sigma_{AB}}{r})^{12} - (\frac{\sigma_{AB}}{r})^{6}
+  \right]
+\end{align}
+```
+
+How to get the parameters from table:
+
+- $\sigma_{AB} = (\sigma_{A} + \sigma_{B})/2$
+- $\epsilon_{AB} = \sqrt{\epsilon_A \epsilon_B}$
+- $\Omega_{D, AB}$: get interpolated table values as function of $T^*=k_B T / \epsilon_{AB}$
+
+::: {.callout-note}
+Check online [course materials]() for the $\Omega_{D, AB}$ table!
+:::
 
 
 ---
 
 ## Molecular Diffusivity Theory -- Fuller Method
 
+The Chapman Enskog theory can be difficult to use, engineers need some simplied empirical rules.
+
 ```{=tex}
 \begin{align}
-D_{AB} &= \frac{10^{-7} T^{1.75} }{P \left[ (\sum \nu_A)^{1/3} + (\sum \nu_B)^{1/3}\right]^2}
+D_{AB} &= \frac{1.0\times{}10^{-7} T^{1.75} }{p_T \left[ (\sum \nu_A)^{1/3} + (\sum \nu_B)^{1/3}\right]^2}
          \left(\frac{1}{m_A} + \frac{1}{m_B} \right)^{\frac{1}{2}} \\
-  &\propto \frac{T^{1.75}}{P}
+  &\propto \frac{T^{1.75}}{p_T}
 \end{align}
 ```
 
@@ -326,6 +366,26 @@ D_{AB} &= \frac{10^{-7} T^{1.75} }{P \left[ (\sum \nu_A)^{1/3} + (\sum \nu_B)^{1
 - $\sum \nu_i$ sum of structural volume increments
 - $\sum \nu_i$ can be estimated from individual atoms
 - Easier to use than the Chapman-Enskog Theory, but less accurate
+
+---
+
+## Fuller Method: How to Use
+
+```{=tex}
+\begin{align}
+D_{AB} = \frac{1.0\times{}10^{-7} T^{1.75} }{p_T \left[ (\sum \nu_A)^{1/3} + (\sum \nu_B)^{1/3}\right]^2}
+         \left(\frac{1}{m_A} + \frac{1}{m_B} \right)^{\frac{1}{2}}
+\end{align}
+```
+
+The Fuller method formula in *Geankoplis book* need to use the following units:
+
+- $T$: absolute temperature in $\text{K}$
+- $m_A$, $m_B$: molecular weight in $\text{kg} \cdot (\text{kg mol})^{-1}$ or $\text{g} \cdot (\text{g mol})^{-1}$
+- $p_T$: absolute pressure in $\text{atm}$
+- $\nu_{A}$, $\nu_{B}$: structural volume increments (dimensionless)
+
+Resulting $D_{AB}$ is in $\text{m}^2 \cdot \text{s}^{-1}$
 
 ## How to Use the Fuller Method From a Table
 
@@ -364,7 +424,100 @@ Fuller method is often used in chemical engineering, where $n=1.75$.
 
 ---
 
-# Examples To Solve
+## Example 1: Chapman-Enskog Theory vs Fuller Method
+
+Question: calculate the diffusivity $D_{AB}$ for methan--ethan system at 313 K and 1 atm.
+
+::: {.columns}
+::: {.column width="50%"}
+#### Chapman-Enskog Theory
+
+- $m_A=16.04$, $m_B=30.07$
+- $\rho_A (Å)=3.822$, $\rho_B (Å)=4.418$
+- $\epsilon_A = k_B * (137\ \text{K})$, $\epsilon_B = k_B * (230\ \text{K})$
+- $\Omega_{D, AB} = 1.125$ in this case
+:::
+
+::: {.column width="50%"}
+
+#### Fuller Method
+
+- $m_A=16.04$, $m_B=30.07$
+- $\nu(\text{C})=16.5$, $\nu(\text{H})=1.98$
+
+:::
+:::
+
+The experimental value at this condition is $D_{AB}=1.84\times 10^{-5}\ \text{m}^2\cdot s^{-1}$. Compare the percent errors in both methods.
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+---
+
+## Solution to Example 1:
+
+```{python}
+#| echo: false
+import marimo as mo
+
+def chapman(ma, mb, T, p, sig_a, sig_b, Omega):
+    coeff = 1.8583e-7
+    numerator = coeff * T ** 1.5
+    denominator = p * ((sig_a + sig_b) / 2) ** 2 * Omega
+    mass_inv = (1/ma + 1/mb) ** 0.5
+    return numerator / denominator * mass_inv
+
+def fuller(ma, mb, T, p, nu_a, nu_b):
+    coeff = 1.0e-7
+    numerator = coeff * T ** 1.75
+    denominator = p * (nu_a ** (1/3) + nu_b ** (1/3)) ** 2
+    mass_inv = (1/ma + 1/mb) ** 0.5
+    return numerator / denominator * mass_inv
+
+def nu_ch(x_c, x_h):
+    nu_c = 16.5
+    nu_h = 1.98
+    return nu_c * x_c + nu_h * x_h
+
+def calculate():
+    ma = 16.04
+    mb = 30.07
+    symb_a = (1, 4)
+    symb_b = (2, 6)
+    _T = 313
+    _p = 1.0
+    sig_a = 3.822
+    sig_b = 4.418
+    Omega = 1.125
+
+    v_chap = chapman(ma, mb, _T, _p, sig_a, sig_b, Omega)
+    v_fuller = fuller(ma, mb, _T, _p, nu_ch(*symb_a), nu_ch(*symb_b))
+
+    v_real = 1.84e-5
+
+    output = mo.vstack([
+    mo.md(f"""**Chapman-Enskog Theory**:
+    
+    - Diffusivity (m^2/s) = {v_chap:.3e}
+    - Percentage error: {abs((v_chap - v_real) / v_real) * 100:.2f}%
+    """),
+    mo.md(f"""
+    **Fuller Method**:
+    
+    - Diffusivity (m^2/s) = {v_fuller:.3e}
+    - Percentage error: {abs((v_fuller - v_real) / v_real) * 100:.2f}%
+    """
+    )])
+    return output
+calculate()
+```
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+## Example 2: Chapman-Enskog Theory vs Fuller Method
+
+Question: calculate the diffusivity $D_{AB}$ for methan--ethan system at 313 K and 1 atm.
+
+
 
 
 ## Summary
