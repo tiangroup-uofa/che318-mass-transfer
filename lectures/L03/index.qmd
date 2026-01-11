@@ -194,7 +194,7 @@ In $c_A$ form
 
 - General solution
 
-  - $N_B = \lambda N_A$
+  - $N_B = k N_A$
   
 $$
 N_A = \frac{D_{AB} c_T}{(z_2 - z_1)} 

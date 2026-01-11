@@ -132,6 +132,31 @@ After today's lecture, you will be able to:
 
 ---
 
+## Let's Look At The General Mass Transfer Equation (Again)
+
+$$
+N_A = \frac{D_{AB} c_T}{(z_2 - z_1)} 
+s
+\ln\!\left[\dfrac{
+s - \frac{c_{A2}}{c_T}}
+{s - \frac{c_{A1}}{c_T}}
+\right]
+\quad
+s = \frac{N_A}{N_A + N_B}
+$$
+
+What values do we know from the system setup?
+
+- Geometry: $z_1$, $z_2$, $c_{A1}$, $c_{A2}$, $c_T$
+- Chemical reaction stoichiometry: $k$
+
+What else value(s) do we need to solve $N_A$?
+
+- $D_{AB}$: generally $D_{AB}(z) = \text{Const}$
+- But $D_{AB}=f(T, P, \cdots)$
+
+---
+
 ## Motivation to Have Theory About Diffusivity {.center}
 
 - Solving the general solution for gas mass transfer requires parameter $D_{AB}$ (and $D_{BA}$)!
@@ -144,14 +169,84 @@ After today's lecture, you will be able to:
 
 ## Molecular Diffusivity Theory -- Kinetic Theory
 
+In dilute gas regime ($p_T \approx \text{atm}$), the kinetic behaviour
+of gas molecules can be described using kinetic theory. A few
+assumptions are made:
+
+1. Interdiffusion between A and B are dominated by **collision** between molecules (low $p_T$ 👉 **only 2** molecules can collide at the same time)
+2. The molecules are rigid spheres having particle masses $m_A$, $m_B$ and diameters $d_A$ and $d_B$
+
+![Scheme of gas kinetic theory]()
+
+
+## Kinetic Theory -- Key Results
+
+There are some results from the kinetic theory:
+^[adapted from *BSL Transport Phenomena ch 17.3*]
+
+1. Mean molecular speed $\overline{u}$
+$$
+\overline{u} = \sqrt{\frac{8 k_B T}{\pi \overline{m_{AB}}}}
+$$
+
+2. Mean free path (between collisions): $\lambda_{A,B}$
+$$
+\lambda_{AB}=\frac{1}{\sqrt{2} \pi d_{AB}^2 c_T}
+$$
+
+3. Frequency of molecule A colliding with wall ($Z$, unit $\text{m}^{-2}\cdot \text{s}^{-1}$):
+$$
+Z_A = \frac{1}{4} c_A \overline{u}
+$$
+
+where $d_{AB} = \frac{d_A + d_B}{2}$, $m_{AB}^{-1} = m_{A}^{-1} + m_B^{-1}$, $k_B$ is the Boltzmann constant
+
+4. We also have the average distance $a$ to one plane from last collision:
+$$
+a = \frac{2}{3}\lambda_{AB}
+$$
+
+---
+
+## Kinetic Theory -- Mass Transfer
+
+When there is only molecular diffusion (no convection), at plane $z=0$, the flux can be described by:
+
+::: {.columns}
+::: {.column width="60&"}
+```{=tex}
+\begin{align}
+J_{Az}^*\vert_{z=0} &= \text{[In]}\vert_{z=-a} - \text{[Out]}\vert_{z=+a} \\
+                    &= \frac{1}{4} c_T [x_A \overline{u}]\vert_{z=-a} \\
+                   &- \frac{1}{4} [c_T x_A \overline{u}]\vert_{z=+a}\\
+&= -\frac{1}{4} c_T \cdot 2a \cdot \overline{u} \frac{d x_A}{dz} \\
+&= -D_{AB} \frac{dx_A}{dz}
+\end{align}
+```
+
+We can now link $D_{AB}$ to microscopic properties!
+:::
+
+::: {.column width="40%"}
+
+![Mass balance in gas kinetic theory]()
+:::
+
+:::
+
+---
+
+## Kinetic Theory of Diffusivity -- Conclusion
+
 ::: {.columns}
 ::: {.column width="50%"}
+Results:
 
 $$
-D_{AB} = \frac{1}{3} \overline{u} \lambda
+D_{AB} = \frac{1}{3} \overline{u} \lambda_{A,B}
 $$
 
-- $\overline{u}$: average molecular velocitt
+- $\overline{u}$: average molecular velocity
 - $\lambda$: mean free path between collisions
 
 :::
@@ -161,7 +256,7 @@ Assumptions:
 
 - Rigid sphere type molecules (what are they?)
 - No interaction upon collisions
-- Collisions are elastic 
+- Collisions are elastic (momentum conserved)
 - Good for dilute gases (low $P$)
 - Not accurate otherwise
 :::
@@ -171,18 +266,49 @@ Assumptions:
 
 ## Molecular Diffusivity Theory -- Chapman-Enskog Theory
 
+We can take real interaction between molecules into the kinetic theory!
+
 ```{=tex}
 \begin{align}
   D_{AB} &= \frac{1.8583\times{}10^{-7} T^{3/2}}
-           {P \sigma_{AB}^2 \Omega_{D, AB}} \left(\frac{1}{m_A} + \frac{1}{m_B} \right)^{\frac{1}{2}} \\
- &\propto \frac{T^{\frac{3}{2}}}{P} \left(\frac{1}{m_A} + \frac{1}{m_B} \right)^{\frac{1}{2}}
+           {p_T \sigma_{AB}^2 \Omega_{D, AB}} \left(\frac{1}{m_A} + \frac{1}{m_B} \right)^{\frac{1}{2}} \\
+ &\propto \frac{T^{\frac{3}{2}}}{p_T} \left(\frac{1}{m_A} + \frac{1}{m_B} \right)^{\frac{1}{2}}
 \end{align}
 ```
+
 - $m_A$, $m_B$, molecular weight
 - $\sigma_{AB}$: average collision radius between A and B
 - $\Omega_{D, AB}$: Lennard-Jones collision integral 
   - $\Omega_{D, AB}=1$ for elastic collision
   - Chapman-Enskog theory accounts for non-elastic collision using $\Omega_{D, AB}\neq1$
+  
+---
+
+## Chapman-Enskog Theory: How to Use
+```{=tex}
+\begin{align}
+  D_{AB} = \frac{1.8583\times{}10^{-7} T^{3/2}}
+           {p_T \sigma_{AB}^2 \Omega_{D, AB}} \left(\frac{1}{m_A} + \frac{1}{m_B} \right)^{\frac{1}{2}}
+\end{align}
+```
+
+The Chapman-Enskog theory formula in *Geankoplis book* need to use the following units:
+
+- $T$: absolute temperature in $\text{K}$
+- $m_A$, $m_B$: molecular weight in $\text{kg} \cdot (\text{kg mol})^{-1}$ or $\text{g} \cdot (\text{g mol})^{-1}$
+- $p_T$: absolute pressure in $\text{atm}$
+- $\sigma_{AB}$: average collision diameter in Å
+- $\Omega_{D, AB}$: collision integral (dimensionless)
+
+Resulting $D_{AB}$ is in $\text{m}^2 \cdot \text{s}^{-1}$
+
+---
+
+## Chapman-Enskog Theory & Lennard Jones Potential
+
+In many cases the parameters $\sigma_{AB}$ and $\Omega_{D, AB}$ can be derived using Lennard-Jones potential.
+
+
 
 ---
 
