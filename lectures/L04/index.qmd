@@ -17,6 +17,24 @@ Slides 👉  [Open presentation🗒️](./slides.html)
 
 :::
 
+::: {.content-visible when-format="revealjs"}
+
+::: {.callout-note}
+- **Course Website Updated!**
+
+[https://tiangroup-uofa.github.io/che318-mass-transfer/](https://tiangroup-uofa.github.io/che318-mass-transfer/)
+
+<div style="width: 100%; text-align: center;">
+  <img
+    src="https://quickchart.io/qr?text=https://tiangroup-uofa.github.io/che318-mass-transfer/&size=250"
+    alt="QR Code"
+    style="width: 150px; height: 150px; display: block; margin: 0 auto;"
+  />
+</div>
+:::
+
+:::
+
 ## Recap
 
 - **General solution** for diffusion binary mixture gas systems ($N_B = k N_A$)
@@ -182,7 +200,7 @@ assumptions are made:
 1. Interdiffusion between A and B are dominated by **collision** between molecules (low $p_T$ 👉 **only 2** molecules can collide at the same time)
 2. The molecules are rigid spheres having particle masses $m_A$, $m_B$ and diameters $d_A$ and $d_B$
 
-![Scheme of gas kinetic theory]()
+![Scheme of gas kinetic theory](./public/kinetic-theory-gas.png){width="80%"}
 
 
 ## Kinetic Theory -- Key Results
@@ -240,7 +258,7 @@ J_{Az}^*\vert_{z=0} &= \text{[In]}\vert_{z=-a} - \text{[Out]}\vert_{z=+a} \\
                     &= \frac{1}{4} c_T [x_A \overline{u}]\vert_{z=-a} \\
                    &- \frac{1}{4} [c_T x_A \overline{u}]\vert_{z=+a}\\
 &= -\frac{1}{4} c_T \cdot 2a \cdot \overline{u} \frac{d x_A}{dz} \\
-&= -D_{AB} \frac{dx_A}{dz}
+&= -D_{AB} c_T \frac{dx_A}{dz}
 \end{align}
 ```
 
@@ -249,7 +267,7 @@ We can now link $D_{AB}$ to microscopic properties!
 
 ::: {.column width="40%"}
 
-![Mass balance in gas kinetic theory]()
+![Mass balance in gas kinetic theory](./public/kt-mass-balance.png){width="80%"}
 :::
 
 :::
@@ -513,11 +531,7 @@ calculate()
 ```
 ::: {.content-visible when-format="html" unless-format="revealjs"}
 
-## Example 2: Chapman-Enskog Theory vs Fuller Method
-
-Question: calculate the diffusivity $D_{AB}$ for methan--ethan system at 313 K and 1 atm.
-
-
+---
 
 
 ## Summary
