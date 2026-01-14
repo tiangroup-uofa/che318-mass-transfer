@@ -12,7 +12,8 @@ format:
 ::: {.content-visible when-format="html" unless-format="revealjs"}
 
 ::: {.callout-note}
-Slides 👉  [Open presentation🗒️](./slides.html)
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- Handwritten notes 👉 [Open in pdf](./public/L01_annotated.pdf)
 :::
 
 :::
@@ -282,7 +283,7 @@ The flux can also be written using velocity terms:
   J^*_{Az} = v_{Ad}\overline{c}_{A}
   $$
   - $v_{Ad}$: diffusive velocity of A ($\text{m}\cdot\text{s}^{-1}$)
-  - $\overline{c}_{A}$: average concentration of A ($\text{mol}\cdot\text{m}^{-3}\cdot\text{s}^{-1}$)
+  - $\overline{c}_{A}$: average concentration of A ($\text{mol}\cdot\text{m}^{-3}$)
   - Which reference frame is used?
   
 ## Combining Diffusion and Convection
@@ -340,6 +341,7 @@ This is the **governing equation** for all steady-state mass transfer in the fol
 ## Summary
 
 What we learned today:
+
 - Syllabus / course contents of CHE 318
 - Basic concepts in mass transfer
 - Fick's 1st law of diffusion
