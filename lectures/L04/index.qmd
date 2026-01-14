@@ -530,7 +530,7 @@ def calculate():
     return output
 calculate()
 ```
-::: {.content-visible when-format="html" unless-format="revealjs"}
+:::
 
 ---
 
