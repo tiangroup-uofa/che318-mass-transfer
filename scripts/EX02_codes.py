@@ -77,7 +77,7 @@ def _(LJ_chapman_array, T_chap_slider, chapman_enskog_method, mo, np):
 
     The calculated $D_{{AB}}$ at {T_chap_slider.value} ℃ is {_dab / 1e-5:.2f}⨉10$^{{-5}}$ m$^2$/s.
 
-    You should get $D_{{AB}} = 0.63\\times 10^{{-5}}$ m$^2$/s at $T=-40$ ℃.
+    You should get $D_{{AB}} \\approx 0.64\\times 10^{{-5}}$ m$^2$/s at $T=-40$ ℃.
     """)
     return
 
