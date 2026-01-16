@@ -268,3 +268,7 @@ __marimo__/
 /_old/
 CLAUDE.md
 /handwritten-notes/
+slides.html
+*.aux
+index.tex
+index.html
