@@ -43,7 +43,7 @@ website:
           - lectures/L06/index.qmd
       - section: "Interactive Demos"
         contents:
-          - scripts/index.qmd
+          - scripts.qmd
 
 
 format:

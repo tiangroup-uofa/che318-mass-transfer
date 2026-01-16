@@ -13,11 +13,11 @@ These examples are designed to complement analytical derivations in mass transfe
 
 ### Examples in lecture notes
 
-- [(L02) Comparison of diffusion / convection length scales](./L02_diffusion_length.html)
-- [(L02) Comparison of diffusivity in gas / solid / liquid](./L02_diffusion_length.html)
-- [(L03) Concentration profile in general solution of flux equation](./L03_xa_profile.html)
+- [(L02) Comparison of diffusion / convection length scales](./scripts/L02_diffusion_length.html)
+- [(L02) Comparison of diffusivity in gas / solid / liquid](./scripts/L02_diffusion_length.html)
+- [(L03) Concentration profile in general solution of flux equation](./scripts/L03_xa_profile.html)
 
 
 ### Examples in assignments
 
-- [(EX02) Plots for Q3 (choice of diffusivity model)](./EX02_codes.html)
+- [(EX02) Plots for Q3 (choice of diffusivity model)](./scripts/EX02_codes.html)
