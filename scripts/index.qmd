@@ -1,0 +1,23 @@
+---
+title: "Interactive Demos"
+toc: false
+format:
+  html
+---
+
+### Why this?
+
+This page contains a collection of the interactive demonstrations written as playable [Marimo notebooks](https://docs.marimo.io). 
+
+These examples are designed to complement analytical derivations in mass transfer, by turning mathematical models into interactive components.
+
+### Examples in lecture notes
+
+- [(L02) Comparison of diffusion / convection length scales](./L02_diffusion_length.html)
+- [(L02) Comparison of diffusivity in gas / solid / liquid](./L02_diffusion_length.html)
+- [(L03) Concentration profile in general solution of flux equation](./L03_xa_profile.html)
+
+
+### Examples in assignments
+
+- [(EX02) Plots for Q3 (choice of diffusivity model)](./EX02_codes.html)
