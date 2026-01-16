@@ -65,7 +65,7 @@ $$
 
 ::: {.columns}
 ::: {.column width="20%"}
-![*Adolf Fick (1829 - 1901), German physiologist*](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Adolf_Fick_8bit_korr_klein1.jpg/500px-Adolf_Fick_8bit_korr_klein1.jpg){fig-alt="Adolf Fick"}
+![*Adolf Fick (1829 - 1901), German physiologist*](./public/500px-Adolf_Fick_8bit_korr_klein1.jpg){fig-alt="Adolf Fick"}
 
 :::
 
@@ -86,8 +86,10 @@ $$
 :::: {.columns}
 
 ::: {.column width="40%"}
-![*Diffusion and Brownian motion of molecules, adapted from Wikipedia*](https://upload.wikimedia.org/wikipedia/commons/4/4d/DiffusionMicroMacro.gif){width="95%"}
 
+::: {.content-visible when-format="html"}
+![*Diffusion and Brownian motion of molecules, adapted from Wikipedia*](./public/DiffusionMicroMacro.gif){width="95%"}
+:::
 
 :::
 
@@ -293,11 +295,11 @@ Since $x_A + x_B = 1$, we have $D_{AB} = D_{BA}$
 Assume S.S., constant $D_{AB}$ and integrate from $z_1$ to $z_2$
 
 ```{=tex}
-\begin{align*}
+\begin{align}
 \int_{c_{A1}}^{c_{A2}} d c_A
 &= -\frac{N_A}{D_{AB}} \int_{z_1}^{z_2} d z \\
 c_{A2} - c_{A1} &= -\frac{N_A}{D_{AB}}(z_2 - z_1) \\
-\end{align*}
+\end{align}
 ```
 
 ```{=tex}
@@ -317,59 +319,6 @@ N_A = \frac{D_{AB}}{RT(z_2 - z_1)}(p_{A1} - p_{A2})
   }
 \end{align}
 ```
-
-<!-- --- -->
-
-<!-- ## EMCD: Linear Concentration Profile $c_A(z)$ -->
-
-<!-- From EMCD, $N_A$ is constant and $c_A(z)$ is linear! -->
-
-<!-- ```{=tex} -->
-<!-- \begin{align*} -->
-<!-- \frac{d c_A}{d z} &= -\frac{N_A}{D_{AB}} = \text{constant} -->
-<!-- \end{align*} -->
-<!-- ``` -->
-
-<!-- ```python {.marimo} -->
-<!-- import matplotlib.pyplot as plt -->
-
-<!-- def plot_ca(): -->
-<!--     # Abstract coordinate (we'll label endpoints as z1 and z2) -->
-<!--     z = np.linspace(0, 1, 200) -->
-
-<!--     # Total concentration (constant) -->
-<!--     cT = 1.0  # arbitrary units -->
-
-<!--     # EMCD-style linear profiles -->
-<!--     cA_z1 = 0.80 * cT -->
-<!--     cA_z2 = 0.10 * cT -->
-<!--     cA = cA_z1 + (cA_z2 - cA_z1) * z -->
-<!--     cB = cT - cA -->
-<!--     cT_profile = cT * np.ones_like(z) -->
-
-<!--     fig, ax = plt.subplots(figsize=(7.5, 4.5), dpi=150) -->
-
-<!--     ax.plot(z, cA, label=r"$c_A(z)$")   # default color cycle -->
-<!--     ax.plot(z, cB, label=r"$c_B(z)$") -->
-<!--     ax.plot(z, cT_profile, label=r"$c_T$") -->
-
-<!--     ax.set_xlabel(r"Position, $z$") -->
-<!--     ax.set_ylabel(r"$c / c_{T}$") -->
-
-<!--     ax.set_xlim(0, 1) -->
-<!--     ax.set_xticks([0, 1]) -->
-<!--     ax.set_xticklabels([r"$z_1$", r"$z_2$"]) -->
-
-<!--     ax.set_ylim(0, 1.05 * cT) -->
-
-<!--     ax.grid(True, alpha=0.3) -->
-<!--     ax.legend(loc="best", frameon=False) -->
-
-<!--     return ax -->
-
-<!-- plot_ca() -->
-<!-- ``` -->
-
 
 
 
@@ -424,10 +373,8 @@ N_A = \frac{c_TD_{AB}}{(z_2-z_1)}
 
 ```{=tex}
 \begin{align}
-
 N_A = \frac{c_TD_{AB}}{(z_2-z_1)}
 \ln\!\left(\frac{1-x_{A2}}{1-x_{A1}}\right)
-
 \end{align}
 ```
 
@@ -435,10 +382,8 @@ N_A = \frac{c_TD_{AB}}{(z_2-z_1)}
 
 ```{=tex}
 \begin{align}
-
 N_A = \frac{p_TD_{AB}}{RT(z_2-z_1)}
 \ln\!\left(\frac{p_T-p_{A2}}{p_T-p_{A1}}\right)
-
 \end{align}
 ```
 
@@ -466,10 +411,8 @@ We get
 
 ```{=tex}
 \begin{align}
-
 N_A = \frac{D_{AB}}{RT(z_2-z_1)}
   \frac{p_T}{p_{Bm}}(p_{A1}-p_{A2})
-
 \end{align}
 ```
 
