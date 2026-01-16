@@ -89,7 +89,7 @@ N_A = \frac{D_{AB} c_{A, v}}{z_2 - z_1} (x_{A1} - x_{A2})
 }
 \end{align}
 ```
-We define $c_{av}$ as the average total concentration in A+B:
+We define $c_{av}$ as the average total concentration in A+B (_not A alone!_):
 
 $$
 c_{av} = \left(\frac{\rho}{M}\right) = \frac{1}{2} \left(\frac{\rho_1}{M_1} + \frac{\rho_2}{M_2}\right) 
@@ -340,6 +340,8 @@ Unit:
 - $c_A$: $\text{kg mol}\cdot\text{m}^{-3}$
 - $S$: $\text{m}^3$ (STP at 0 ℃ and 1 atm)
 - $p_A$: atm
+
+Often we also express the **permeability** of a gas ($P_{M}$) in solid using $P_M = S D_{AB}$
 
 ---
 

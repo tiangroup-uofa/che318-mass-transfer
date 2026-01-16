@@ -1,6 +1,6 @@
 ---
 title: "CHE 318 Lecture 06"
-subtitle: "Molecular Diffusivity: Theories and Measurement"
+subtitle: "Steady State Mass Transfer -- Other Geometries"
 author: "Dr. Tian Tian"
 date: "2026-01-16"
 format:
@@ -12,472 +12,408 @@ format:
 ::: {.content-visible when-format="html" unless-format="revealjs"}
 
 ::: {.callout-note}
-Slides 👉  [Open presentation🗒️](./slides.html)
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- Handwritten notes 👉 [Open in pdf](./public/L06_annotated.pdf)
 :::
 
 :::
 
 ## Recap
 
-- **Governing equation** for diffusion binary mixture gas systems
-$$
-N_{A} = -c_T D_{AB} \dfrac{d x_A}{dz} + x_A(N_A + N_B)
-$$
+- Diffusion in liquid and solid
+  - Much slower than gas ($D_{AB}$ orders of magnitudes smaller)
+  - Theories to predict $D_{AB}$ in liquid (Stokes-Einstein, Wilke-Chang)
+  - Effective diffusivity in solid (void fraction ε; tortuosity τ)
 
-::: {.columns}
-::: {.column width="50%"}
-- Case 1: equimolar counter diffusion (EMCD)
-  - $N_A + N_B = 0$
-  - $N_A = -c_T D_{AB} \dfrac{d x_A}{d z}$
-  - Linear $x_A$, $c_A$ and $p_A$ profiles
-  - $N_A = \dfrac{D_{AB}}{RT(z_2 - z_1)}(p_{A1} - p_{A2})$
-:::
-::: {.column width="50%"}
-- Case 2: diffusion through stagnant B
-  - $N_B = 0$
-  - $N_A(1 - x_A) = -c_T D_{AB}\dfrac{d x_A}{dz}$
-  - Usually in log-mean pressure form
-  - $N_A = \dfrac{D_{AB}}{RT(z_2-z_1)}
-  \dfrac{p_T}{p_{Bm}} \left(p_{A1} - p_{A2}\right)
-$
-:::
-:::
+- Solving $N_A$ in liquid
+  - EMCD: rare case
+  - Stgnant B: approximating $x_{Bm}$
+  - Calculating $c_{av}$ concentration
 
----
-
-## Office Hour
-
-- Wednesday 11:15 - 12:15
-- DICE 12-245
-- Can take place in other meeting rooms if many people are attending
-- Please use seminar time wisely for assignment questions!
+- Solving $N_A$ in solid (thin membrane permeability)
+  - Use of solubility $S$
+  - Permeability $P_{M} = S D_{AB}$
 
 ## Learning Outcomes {.center}
 
 After today's lecture, you will be able to:
 
-- **Derive** general solution for mass transport in binary gas mixture
-- **Define** the conditions for each cases we have studied so far
-- **Formulate** governing equations for various case systems
-- **Apply** general solution to defined problem
-- **Analyze** pressure / concentration profile
+- **Identify** the difference between diffusion in various geometries
+- **Describe** the approximations used for simplifying the soluton for $N_A$
+- **Recall** the reason to choose stagnant B solution for spherical diffusion
+- **Solve** pseudo-steady state diffusion problem
+- **Analyze** solutions of P.S.S solution and calculate diffusivity through experiment
 
-## Deriving the General Solution (I)
+# Examples for Diffusion in Liquid and Solid
 
-General case for steady state (S.S) transport
+## Example 1: gas diffusion through liquid film
 
-- $N_B = k N_A$ ($k$ is a constant. *why?*)
-- Only $x_A$ (or $c_A$, $p_A$) dependent on $z$, not $N_A$ or $N_B$ 👉 separation of variables!
+_Adapted from Geankoplis Problem 6.3-2_
+
+Diffusion of Ammonia in an Aqueous Solution. An ammonia (A)–water (B)
+solution at 278 K and 4.0 mm thick is in contact at one surface with
+an organic liquid at this interface. The concentration of ammonia in
+the organic phase is held constant and is such that the equilibrium
+concentration of ammonia in the water at this surface is 2.0 wt % ammonia (density of aqueous solution 991.7 kg/m3) and the
+concentration of ammonia in water at the other end of the film 4.0 mm
+away is 10 wt % (density 961.7 kg/m3). Water and the organic are
+insoluble in each other. The diffusion coefficient of NH3 in water is
+$1.24\times{}10^{−9}$ m$^2$/s.
+
+a. At steady state, calculate the flux $N_A$ in kg mol/s·m$^2$
+b. Calculate the flux $N_B$. Explain.
+
+## Example 1: solutions
+
+See [handwritten notes](./public/L06_annotated.pdf) for step-by-step solutions.
+
+:::{.callout-tip}
+1. Determine the type of system if water-organic layer is inpenetratable (answer question b first)
+2. Refere to [Lecture 1](../L01) for conversion between wt%, molar fraction and concentration.
+:::
+
+Answer:
+
+a. $N_A = 1.52\times{}10^{6}\ \text{kg mol}\cdot\text{m}^{-2}\cdot\text{s}^{-1}$
+b. $N_B=0$ (diffusion through stagnant film)
+
+## Example 2: diffusion through solid film (solubility)
+
+_Adapted from Geankoplis Problem 6.5-1_
+
+A flat plug 30 mm thick having an area of $4.0\times10^{−4}\
+\text{m}^2$ and made of vulcanized rubber is used for closing an
+opening in a container. The gas CO2 at 25 °C and 2.0 atm pressure is
+inside the container. Calculate the total leakage or diffusion of
+CO2 through the plug to the outside in kg mol CO2/s at steady
+state. Assume that the partial pressure of CO2 outside is zero. From
+Barrer (B5) the solubility of the CO2 gas is 0.90 $m^3$ gas (at STP of
+0°C and 1 atm) per m3 rubber per atm pressure of CO2. The diffusivity
+is $0.11\times{}10^{−9}$ m$^22$/s.
+
+## Example 2: solution
+
+:::{.callout-tip}
+1. Notice the unit for symbols when applying $c_A = S P_A / (22.414)$
+2. What unit should **total leakage** have?
+:::
+
+Answer:
+
+a. Total leakage rate $1.178\times{}10^{-13}\ \text{kg mol}\cdot\text{s}^{-1}$
+
+
+## Example 3: use of permeability
+
+_Adapted from Geankoplis Problem 6.5-3_
+
+The gas hydrogen
+is diffusing through a sheet of vulcanized rubber 20 mm thick at
+25 °C. The partial pressure of H2 is 1.5 atm inside and 0 outside.
+Using the data from Table 6.5-1 (see below), calculate the following:
+
+a. The diffusivity $D_AB$ from the permeability $P_M$ and solubility $S$ ,
+and compare with the value in the table.
+b. The flux $N_A$ of H2 at steady state.
+
+![](./public/perm-table.png){width="60%"}
+
+## Example 3: solution
+
+Answer:
+
+a. Use $D_{AB} = P_M / S$ (note the unit)
+b. $N_A = 1.144\times{}10^{-10}\ \text{kg mol}\cdot\text{m}^{-2}\cdot\text{s}^{-1}$
+
+# Solving Diffusion Through Varying Area
+
+## Diffusion Through Varying Cross-Sectional Area
+
+**Steady state mass balance**
+
+Many industrial applications involde 1D transport with variable area $A(z)$, with mass balance:
 
 ```{=tex}
 \begin{align}
-N_A - x_A(N_A + N_B) &= -D_{AB}c_T \dfrac{d x_A}{dz}\\
-\frac{dz}{D_{AB} c_T} &= -\dfrac{dx_A}{N_A - x_A (N_A + N_B)} \\
-\int_{z_1}^{z_2} \frac{dz}{D_{AB} c_T} &= \int_{x_{A1}}^{x_{A2}} -\dfrac{dx_A}{N_A - x_A (N_A + N_B)}
+[\mathrm{In}] - [\mathrm{Out}] &= 0 \\
+N_{A1} A_1 - N_{A2} A_2 &= 0
 \end{align}
 ```
 
-## Deriving the General Solution (II)
-- L.H.S.
+Define the **total molar flow rate** of A:
 
 $$
-\int_{z_1}^{z_2} \frac{dz}{D_{AB} c_T} = \frac{(z_2 - z_1)}{D_{AB} c_T}
+\overline{N}_A = N_A \, A(z)
 $$
 
-- R.H.S.
+At steady state:
+- $\overline{N}_A$ is constant
+- $N_A$ varies with position if $A(z)$ (or $A(r)$) varies
 
-Using substitution $u = N_A - x_A (N_A + N_B)$, $d u = -(N_A + N_B)\,dx_A$
+## Applications of Variable-Area Diffusion
+
+![](./public/vary-area.png){width="75%"}
+
+:::{.columns}
+:::{.column width="50%"}
+This framework can be used to solve diffusion through:
+
+- Sphere
+- Cylinder
+- Tube with varying diameter
+- Any system with a known area function $A = A(z)$ or $A=A(r)$
+:::
+
+
+:::{.column width="50%"}
+**Key ideas**
+
+- Do **not** solve as simple 1D Cartesian diffusion
+- Geometry enters through $A(z)$
+- Flux adjusts to maintain constant $\overline{N}_A$
+:::
+:::
+
+## Case Study 1: Diffusion Through a Sphere
+
+:::{.columns}
+:::{.column width="50%"}
+**Typical physical situations**
+
+- Evaporation of a liquid droplet
+- Sublimation of a solid organic sphere
+:::
+
+:::{.column width="50%"}
+**Conditions**
+
+- Steady state
+- Stagnant B ($N_B = 0$)
+- Radial symmetry
+:::
+:::
+
+**Governing equation (stagnant B)**: use the **ODE form**, not the full 1D Cartesian solution:
 
 ```{=tex}
 \begin{align}
-\int_{x_{A1}}^{x_{A2}} -\dfrac{dx_A}{N_A - x_A (N_A + N_B)}
-&= - \cdot - \frac{1}{N_A + N_B} \ln\!\left[N_A - x_A (N_A + N_B)\right] \bigg\vert_{x_{A1}}^{x_{A2}} \\
-&= \frac{1}{N_A + N_B} \ln\!\left[\dfrac{
-N_A - x_{A2} (N_A + N_B)}
-{N_A - x_{A1} (N_A + N_B)}
-\right]
+N_A &= -\frac{D_{AB}}{RT}\frac{d p_A}{dr}
+      + \frac{p_A}{p_T} N_A \\
+N_A\!\left(1 - \frac{p_A}{p_T}\right)
+    &= -\frac{D_{AB}}{RT}\frac{d p_A}{dr}
 \end{align}
 ```
 
-## Deriving the General Solution (III)
+## Stagnant B in a Sphere: Reformulation
 
-We want to solve for $N_A$
+For spherical symmetry, $N_A(r)$ varies with $r$ and **cannot** appear alone in the balance equation L.H.S
+
+Use the **constant molar flow rate**:
+$$
+\overline{N}_A = N_A(r)\,4\pi r^2 = \text{constant}
+$$
 
 ```{=tex}
 \begin{align}
-\frac{(z_2 - z_1)}{c_T D_{AB}}
-&= \frac{1}{N_A + N_B} \ln\!\left[\dfrac{
-N_A - x_{A2} (N_A + N_B)}
-{N_A - x_{A1} (N_A + N_B)}
-\right] \\
-N_A &= \frac{c_T D_{AB}}{(z_2 - z_1)}
-\frac{N_A}{N_A + N_B} \ln\!\left[\dfrac{
-N_A - x_{A2} (N_A + N_B)}
-{N_A - x_{A1} (N_A + N_B)}
-\right]
+\frac{\overline{N}_A}{4\pi r^2}\,dr
+&= -\frac{D_{AB}}{RT}\frac{1}{1-p_A/p_T}\,dp_A
 \end{align}
 ```
 
-We can gather all $N_A / (N_A + N_B)$ in the R.H.S since it's a constant
+## Stagnant B in a Sphere: Final Results
 
 ```{=tex}
 \begin{align}
 \boxed{
-N_A = \frac{ c_T D_{AB}}{(z_2 - z_1)}
-\left(\frac{N_A}{N_A + N_B}\right)
-
-\ln\!\left[\dfrac{
-\frac{N_A}{N_A + N_B} - x_{A2}}
-{\frac{N_A}{N_A + N_B} - x_{A1}}
-\right]
+\frac{\overline{N}_A}{4\pi} \left(\frac{1}{r_1}-\frac{1}{r_2}\right)
+= \frac{D_{AB}p_T}{RT}
+\ln\!\left(\frac{p_T-p_{A2}}{p_T-p_{A1}}\right)
 }
 \end{align}
 ```
 
-- This is the general solution for binary gas transport.
-- Also works for $N_A = -N_B$ (EMCD), with a little bit trick
+This looks very similar to the 1D stagnant B solution in cartesian
+coordinates. We can simplify it in several occations.
 
-## Relation Between Gen. Sol. and EMCD
+## Stagnant B in a Sphere: Far-Field Limit ($r_2 \gg r_1$)
 
-The general solution is not applicable $N_B = -N_A$, but we can prove $N_B / N_A \to -1$ reduces to the EMCD equation.
+**Special case:** $r_2 \gg r_1$ (often $r_2 \to \infty$)
 
-- Let $s = N_A / (N_A + N_B)$, so $s \to \infty$ when $N_B/N_A \to -1$
-- Use the Taylor expansion that $\lim_{u \to 0} \ln(1-u) = -u$
+Typical examples:
+- Evaporating liquid droplet
+- Sublimation of a naphthalene (solid) sphere
 
-```{=tex}
-\begin{align}
-\lim_{s \to \infty} \left(\frac{N_A}{N_A + N_B}\right)
-
-\ln\!\left[\dfrac{
-\frac{N_A}{N_A + N_B} - x_{A2}}
-{\frac{N_A}{N_A + N_B} - x_{A1}}
-\right]
-
-&=
-
-s \ln\!\left(\frac{s - x_2}{s - x_1}\right) \\
-
-&= s \ln\!\left(\frac{1 - x_2/s}{1 - x_1/s}\right) \\
-&= s [(-\frac{x_2}{s}) - (-\frac{x_1}{s})] \\
-&= x_1 - x_2
-\end{align}
-```
-
-This **is** the EMCD result!
-
-## Three Forms of Gass Mass Transport Equations (I)
-
-In $c_A$ form
-
-::: {.columns}
-::: {.column width="40%"}
-- Case 1: EMCD
-  - $N_A + N_B = 0$
-  $$
-  N_A = \dfrac{D_{AB}}{(z_2 - z_1)}(c_{A1} - c_{A2})
-  $$
-  
-- Case 2: stagnant B
-  - $N_B = 0$
-  
-  $$
-  N_A = \frac{D_{AB} c_T }{(z_2 - z_1)}
-  \ln\! \left(
-  \frac{1 - \frac{c_{A2}}{c_T} }
-       {1-\frac{c_{A1}}{c_T}}
-  \right)
-  $$
-  
-:::
-
-::: {.column width="60%"}
-
-- General solution
-
-  - $N_B = \lambda N_A$
-  
-$$
-N_A = \frac{D_{AB} c_T}{(z_2 - z_1)} 
-\frac{N_A}{N_A + N_B}
-\ln\!\left[\dfrac{
-\frac{N_A}{N_A + N_B} - \frac{c_{A2}}{c_T}}
-{\frac{N_A}{N_A + N_B} - \frac{c_{A1}}{c_T}}
-\right]
-$$
-
-:::
-:::
-
-## Three Forms of Gass Mass Transport Equations (II)
-
-In $x_A$ form
-
-::: {.columns}
-::: {.column width="40%"}
-- Case 1: EMCD
-  - $N_A + N_B = 0$
-  $$
-  N_A = \dfrac{D_{AB} c_T}{(z_2 - z_1)}(x_{A1} - x_{A2})
-  $$
-  
-- Case 2: stagnant B
-  - $N_B = 0$
-  
-  $$
-  N_A = \frac{D_{AB} c_T }{(z_2 - z_1)}
-  \ln\! \left(
-  \frac{1 - x_{A2} }
-       {1- x_{A1}}
-  \right)
-  $$
-  
-:::
-
-::: {.column width="60%"}
-
-- General solution
-
-  - $N_B = \lambda N_A$
-  
-$$
-N_A = \frac{D_{AB} c_T}{(z_2 - z_1)} 
-\frac{N_A}{N_A + N_B}
-\ln\!\left[\dfrac{
-\frac{N_A}{N_A + N_B} - x_{A2}}
-{\frac{N_A}{N_A + N_B} - x_{A1}}
-\right]
-$$
-
-:::
-:::
-
-## Three Forms of Gass Mass Transport Equations (III)
-
-In $p_A$ form (ideal gas)
-
-::: {.columns}
-::: {.column width="40%"}
-- Case 1: EMCD
-  - $N_A + N_B = 0$
-  $$
-  N_A = \dfrac{D_{AB}}{RT(z_2 - z_1)}(p_{A1} - p_{A2})
-  $$
-  
-- Case 2: stagnant B
-  - $N_B = 0$
-  
-  $$
-  N_A = \frac{D_{AB} p_T}{RT(z_2 - z_1)}
-  \ln\! \left(
-  \frac{p_T - p_{A2}}
-       {p_T - p_{A1}}
-  \right)
-  $$
-  
-:::
-
-::: {.column width="60%"}
-
-- General solution
-
-  - $N_B = \lambda N_A$
-  
-$$
-N_A = \frac{D_{AB} p_T}{RT(z_2 - z_1)} 
-\frac{N_A}{N_A + N_B}
-\ln\!\left[\dfrac{
-\frac{N_A}{N_A + N_B} - x_{A2}}
-{\frac{N_A}{N_A + N_B} - x_{A1}}
-\right]
-$$
-
-:::
-:::
-
-## General Solution -- $x_A(z)$ Profile
-
-In all the cases we study the S.S. condition:
-
-$$\frac{d N_A}{d z} = 0$$
-
-For the general case $s = N_A / (N_A + N_B)$, we have 
-
-```{=tex}
-\begin{align}
-\frac{dN_A}{dz} &= \frac{d}{dz} \left[ \frac{D_{AB} c_T}{s - x_A} \frac{d x_A}{d z}\right] = 0\\
-\frac{D_{AB} c_T}{s - x_A} \frac{d x_A}{d z} &= \mathrm{Const}
-\end{align}
-```
-
-$x_A(z)$ has a general solution with exponential form (with $K_1$ and $K_2$ being constants)
+From the general spherical stagnant-B result, use the **log-mean pressure** form:
 
 ```{=tex}
 \begin{align}
 \boxed{
-x_{A} = s - K_1 e^{K_2 z}
-  }
+N_{A1}
+= \frac{D_{AB} p_T}{RT\,p_{Bm}}
+\left(p_{A1} - p_{A2}\right)
+}
 \end{align}
 ```
----
 
-## $x_A(z)$ Profile
-
-```{=html}
-<iframe width="100%" height="800"
-		src="../../scripts/L03_xa_profile.html" title="Webpage example"></iframe>
-```
-
---- 
-
-## Notes on the Relation Between $N_A$ and $N_B$ (1)
-
-Using steady state condition, we need to know relation between $N_A$ and $N_B$ *before* solving the general EQ.
-
-It depends on the system setup and mass balance. 
-
-Let's consider the same chemical reaction of hydrogen dissociation by a solid catalst
+Where $N_{A1} = N_A(r=r_1)$. For liquid, another form is often used (considering $p_{Bm}/p_T \approx 1$ and use $p = cRT$)
 
 ```{=tex}
 \begin{align}
-\text{H}_2\ (A, \text{gas}) \rightarrow 2\text{H}^*\ (B, \text{gas})
+\boxed{
+N_{A1} = \frac{D_{AB}}{r_1}\left(c_{A1} - c_{A2}\right)
+}
 \end{align}
 ```
 
-- Case 1: reaction through a solid catalyst at bottom of a tube
+## Spherical Diffusion: Thin Shell Limit $r_1 \approx r_2$
 
-  - The flux of A and B have **opposite** signs
-  - $N_B = -2 N_A$
-  
-## Notes on the Relation Between $N_A$ and $N_B$ (2)
+**Special case:** thin membrane / shell  
+$\Delta r = r_2 - r_1 \ll r_1$
 
-- Case 2: gas flow through a solid catalyst inside a tube
-
-  - The flux of A and B have the **same** sign
-  - $N_B = 2 N_A$
-  
-Take home question: 
-- How do the flux directions affect the general solution?
-
----
-
-## Measuring Diffusivity $D_{AB}$ In Gases
-
-- Several experimental methods exist for gases, evaporated liquid and sublimated solids (see *Geankoplis* Ch 6.2E)
-- We will introduce the two-bulb method for gases
-- Typical setup see Duncan & Toor *AIChE J.* 1962, 8, 38-41
-- Which case should we apply?
-
----
-
-## Two-Bulb Experiment: Conditions
-
-Conditions for the two-bulb experiment
-
-- Initially, pure A in bulb 1 and pure B and bulb 2
-- $t=0$, the valve is opened slowly to minimize convection
-- $t=t_e$, the valve is closed and the composition in 1 and 2 are analyzed
-- The valve open time is much shorter than $t_2 - t_1$
-- The tube is a very thin capillary 👉 no convection
-- Constant $p_T$ and $T$ throughout experiment
-
----
-
-## Two-Bulb Experiment: Pseudo Steady State
-
-We can apply:
-
-- EMCD condition (no convection)
-- *Pseudo*-steady state (P.S.S) assumption
-  - At each time step, we assume $N_A$ or $J_{Az}^*$ is constant (linear $c_A$ profile)
-  - But net $N_A$ flux accumulates A molecules in bulb 2
-  - $c_A$ in bulb 2 **changes** over time
-  
---- 
-
-## Two-Bulb Experiment: Governing Equations
-
-We use the mass balance of the system
-
-```{=tex}
-\begin{align*}
-\text{[Mass In]} &= \text{[Accumulation]} \\
-S \cdot J_{Az}^* &= V_2 \frac{d c_{A2}}{dt} \\
-D_{AB} \frac{c_{A1} - c_{A2}}{L} \cdot S &= V_2 \frac{d c_{A2}}{dt}
-\end{align*}
-```
-
-Since the total pressure $p_T$ is constant, the average concentration of $c_A$ in the system, $c_{A, av}$ is also constant
-
-```{=tex}
-\begin{align*}
-V_T c_{A, av} &= (V_1 + V_2)c_{A, av} \\
-&= V_1c_{A1}(t=0) + V_2c_{A2}(t=0) \\
-&= V_1c_{A1}(t\neq0) + V_2c_{A2}(t\neq0)
-\end{align*}
-```
-
----
-
-## Two-Bulb Experiment: Solutions
-
-We are interested in $c_{A2}$, so substitute $c_{A1}$ with relation to $c_{A, av}$:
-
+Approximation:
 $$
-c_{A1} = \frac{V_T c_{A, av} - V_2 c_{A2}}{V_1}
+\frac{1}{r_1} - \frac{1}{r_2}
+\;\approx\;
+\frac{r_2 - r_1}{r_1^2}
+\;=\;
+\frac{\Delta r}{r_1^2}
 $$
 
-After the substitution, rearrangement and integration we get:
+Final result:
 
 ```{=tex}
-\begin{align*}
-\ln\!\left[
-\frac{c_{A, av} - c_{A2}(t=t_e)}{c_{A, av} - c_{A2}(t=0)}
-\right]
-&= -\frac{D_{AB} V_T S}{V_1 V_2 L} \cdot t \\
-\end{align*}
+\begin{align}
+\boxed{
+N_{A1} = \frac{D_{AB}}{RT}\frac{p_T}{p_{Bm}}
+\frac{(p_{A1}-p_{A2})}{\Delta r}
+}
+\end{align}
 ```
 
-We can extract $D_{AB}$ usingt the slope of the plot!
+This acts like a 1D stagnant-B film with thickness $\Delta r$! (See lecture 3 wooclap question.)
 
----
+## Case 2: Diffusion Through a Non-uniform Area Conduit
 
-## Some Typical Diffusivity Measurements
+Conditions:
 
-![](public/geankoplis-gas-diff){width=700}
-^[Geankoplis Table 6.2-1]
+- Stagnant B
+- Steady state
+- Variable radius $r(z)$
+
+Assume **linear radius profile**:
+$$
+r(z) = r_1 + \frac{(r_2-r_1)}{(z_2-z_1)}(z-z_1)
+$$
+
+Use the **ODE form** with $\dot N_A = N_A(z)\,A(z)$ and $A(z)=\pi r(z)^2$:
+
+```{=tex}
+\begin{align}
+\frac{\dot N_A}{\pi}\int_{z_1}^{z_2}\frac{dz}{\left[r(z)\right]^2}
+&= -\frac{D_{AB}}{RT}\int_{p_{A1}}^{p_{A2}}
+\frac{dp_A}{1-p_A/p_T}
+\end{align}
+```
+
+_Can you solve for $N_{A1}$_?
+
+# Examples for Pseudo Steady State (P.S.S)
+
+## Example 4: Diffusion Through Stagnant B with Changing Path Length
+
+_Adapted from Geankoplis 6.2-3_
+
+Water vapor diffuses through a stagnant gas in a narrow vertical tube, dry air is constantly blown at the top of tube.  
+At time $t$, the liquid level is a distance $z$ from the tube top (i.e., the diffusion path length is $z$).  
+As diffusion proceeds, the liquid level drops slowly, so $z$ increases with time. The liquid has density $\rho_A$, and molecular weight $M_A$
+
+1) Derive an expression for the time $t_F$ required for the level to drop such that the diffusion path length changes from $z=z_0$ at $t=0$ to $z=z_F$ at $t=t_F$.
 
 
----
+
+## Example 4: solutions
+
+:::{.callout-tip}
+1. Use pseudo steady-state assumption
+2. $N_A$ change over time!
+:::
+
+Answer
+$$
+t_F = \frac{\rho_A (z_F^2 - z_0^2) RT p_{Bm}}{2 D_{AB} M_A p_{T}} \frac{1}{(p_{A1} - p_{A2})}
+$$
+
+## Example 5: Determine $D_{AB}$ Through Evaporation
+
+_Adapted from Griskey 10-2_
+
+Sample setup as example 4, a vertical tube of diameter $D=0.01128$ m
+contains a liquid volatile species $A$ (chloropicrin, $CCl_3NO_2$)
+evaporating into stagnant air ($B$) at 1 atm. The gas-phase
+diffusion of $A$ occurs through the air column above the liquid
+surface.
+
+At $t=0$, the distance from the tube top to the liquid surface is $z_0 = 0.0388$ m, after $t=1$ day, the distance is $z_1 = 0.0412$ m.
+
+- Vapor pressure at the interface: $p_{A1} = 3178.3$ Pa
+- Liquid density: $\rho_A = 1650$ kg/m$^3$
+- Molecular weight: $M_A = 164.39$ kg/kmol
+
+1) Use your expression from example 4, determine the binary diffusivity $D_{AB}$ of $A$ in air.
+
+## Example 5: solutions
+
+:::{.callout-tip}
+Pseudo steady state solution and assuming $N_A=\text{const}$ solution differ very little. Why?
+:::
+
+Answer:
+
+1. Pseudo-steady state: $D_{AB} = 8.56\times{}10^{-6}\ \text{m}^2/\text{s}$
+1. $N_A$ constant: $D_{AB} = 8.75\times{}10^{-6}\ \text{m}^2/\text{s}$ ($+2.2\%$ error)
+
+## Example 6: P.S.S For Diffusion Through Sphere
+
+_Adapted from Geankoplis Ex 6.2-4_
+
+A sphere of naphthalene having a radius of 2.0 mm is suspended in a large volume of still air at 318 K and
+$1.01325 \times{}10^5$ Pa (1 atm). The surface temperature of the naphthalene can be assumed to be at 318 K and
+its vapor pressure at 318 K is 0.555 mm Hg. The $D_AB$ of naphthalene in air at 318 K is $6.92\times{}10^{−6}\ \text{m}^2/\text{s}$.
+
+1. Calculate the rate of evaporation of naphthalene from the surface.
+2. Write the expression for the time $t_F$ to evaporate a sphere from radius $r_0$ to $r_F$. The solid density for naphthalene is $\rho$ and molecular weight is $M_A$.
+3. What is the $t_F$ value when the sphere is completely evaporated?
+
+
+## Example 6: solutions
+
+:::{.callout-tip}
+Similar setup as example 5. $N_A$ is time-dependent
+:::
+
+Answer:
+
+1) $N_A = 9.68\times{}10^{-8}\ \text{kg mol}/\text{m}^2/\text{s}$
+2) Expression for $t_F{r=r_F}$:
+$$
+t_F(r=r_F) = \frac{\rho RT p_{Bm}}{2 M_A D_{AB} p_T} \frac{1}{(p_{A1} - p_{A2})} (r_0^2 - r_F^2)
+$$
+3) Expression for $t_F{r=0}$:
+$$
+t_F(r=0) = \frac{\rho RT p_{Bm} r_0^2}{2 M_A D_{AB} p_T} \frac{1}{(p_{A1} - p_{A2})}
+$$
+
+Compare the solutions with Example 4. We can also measure the
+diffusivity of volatile organic molecules using the sphere evaporation
+methos!
 
 ## Summary
 
-- General solution for $N_B = k N_A$
-- Like stagnant B case, general solution take a **logarithm** form for $N_A$
-- When $x_{A1}$ and $x_{A_2}$ are determined, the flux $N_A$ is controlled by the relation between $N_B$ and $N_A$
-- The ratio between $N_B$ and $N_A$ depends on the system and setup
-- Diffusivity $D_{AB}$ can be determined by EMCD through two-bulb setup
+- Solving diffusion through varying cross-section
+- Pseudo-steady state solutions to diffusion-evaporation problems
 
----
 
-## Preview of Next Class: Theories for predicting $D_{AB}$
 
-- Kinetic theory
-
-$$
-D_{AB} = \frac{1}{3} \overline{u} \lambda
-$$
-
-- Chapman-Enskog theory
-
-$$
-D_{AB} \propto \frac{T^{\frac{3}{2}}}{P} \left(\frac{1}{m_A} + \frac{1}{m_B} \right)^{\frac{1}{2}}
-$$
-
-- Fuller method
-
-$$
-D_{AB} \propto  \frac{T^{1.75}}{P} \left(\frac{1}{m_A} + \frac{1}{m_B} \right)^{\frac{1}{2}}
-$$
 
 
 

@@ -267,3 +267,4 @@ flycheck_*.el
 __marimo__/
 /_old/
 CLAUDE.md
+/handwritten-notes/
