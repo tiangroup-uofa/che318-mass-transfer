@@ -1,7 +1,7 @@
 import marimo
 
 __generated_with = "0.19.0"
-app = marimo.App(width="full", app_title="CHE 318 Exercise 1 Playground (Q3)")
+app = marimo.App(width="full", app_title="CHE 318 Exercise 02 Playground (Q3)")
 
 
 @app.cell
