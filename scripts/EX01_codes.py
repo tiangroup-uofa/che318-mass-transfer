@@ -1,13 +1,31 @@
 import marimo
 
 __generated_with = "0.19.0"
-app = marimo.App(width="full")
+app = marimo.App(width="full", app_title="CHE 318 Exercise 1 Playground (Q3)")
 
 
 @app.cell
 def _():
     import marimo as mo
     return (mo,)
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
+    ## A Playground for Q3
+
+    This is an interactive playground for Q3 of Exercise 1 of CHE 318.
+
+    We have compiled some python codes to calculate the $D_{AB}$  and flow rate
+    in different assumptions. You can make use of the tool to help check your answers
+    and make the plots.
+
+    Please follow the instructions below. Have fun 😃!
+
+    _Privacy Disclosure: Everything will run inside your browser and **no data** is being shared with external server._
+    """)
+    return
 
 
 @app.cell
