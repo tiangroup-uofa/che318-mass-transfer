@@ -15,7 +15,7 @@ def _(mo):
     mo.md(r"""
     ## A Playground for Q3
 
-    This is an interactive playground for Q3 of Exercise 1 of CHE 318.
+    This is an interactive playground for Q3 of Exercise 02 of CHE 318.
 
     We have compiled some python codes to calculate the $D_{AB}$  and flow rate
     in different assumptions. You can make use of the tool to help check your answers
