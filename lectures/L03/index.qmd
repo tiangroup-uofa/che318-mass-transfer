@@ -127,9 +127,9 @@ We can gather all $N_A / (N_A + N_B)$ in the R.H.S since it's a constant
 \boxed{
 N_A = \frac{ c_T D_{AB}}{(z_2 - z_1)}
 \left(\frac{N_A}{N_A + N_B}\right)
-
-\ln\!\left[\dfrac{
-\frac{N_A}{N_A + N_B} - x_{A2}}
+\%
+\ln\!\left[
+\dfrac{\frac{N_A}{N_A + N_B} - x_{A2}}
 {\frac{N_A}{N_A + N_B} - x_{A1}}
 \right]
 }
@@ -149,16 +149,14 @@ The general solution is not applicable $N_B = -N_A$, but we can prove $N_B / N_A
 ```{=tex}
 \begin{align}
 \lim_{s \to \infty} \left(\frac{N_A}{N_A + N_B}\right)
-
-\ln\!\left[\dfrac{
+\ln\!\left[
+\dfrac{
 \frac{N_A}{N_A + N_B} - x_{A2}}
-{\frac{N_A}{N_A + N_B} - x_{A1}}
+{\frac{N_A}{N_A + N_B} - x_{A1}
+}
 \right]
-
 &=
-
 s \ln\!\left(\frac{s - x_2}{s - x_1}\right) \\
-
 &= s \ln\!\left(\frac{1 - x_2/s}{1 - x_1/s}\right) \\
 &= s [(-\frac{x_2}{s}) - (-\frac{x_1}{s})] \\
 &= x_1 - x_2
@@ -445,7 +443,7 @@ We can extract $D_{AB}$ usingt the slope of the plot!
 
 ## Some Typical Diffusivity Measurements
 
-![](public/geankoplis-gas-diff){width=700}
+![](public/geankoplis-gas-diff.png){width=700}
 ^[Geankoplis Table 6.2-1]
 
 
