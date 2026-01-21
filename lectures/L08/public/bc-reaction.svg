@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="44.123058mm"
+   height="26.426165mm"
+   viewBox="0 0 166.76432 99.878419"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
+   sodipodi:docname="bc-reaction.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="4.5399736"
+     inkscape:cx="80.61721"
+     inkscape:cy="69.60393"
+     inkscape:window-width="1600"
+     inkscape:window-height="972"
+     inkscape:window-x="1436"
+     inkscape:window-y="143"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2668">
+      <stop
+         style="stop-color:#34b5ac;stop-opacity:1;"
+         offset="0"
+         id="stop2664" />
+      <stop
+         style="stop-color:#fffefe;stop-opacity:0;"
+         offset="1"
+         id="stop2666" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2668"
+       id="linearGradient2670"
+       x1="142.13"
+       y1="98.221191"
+       x2="288.0174"
+       y2="98.221191"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-121.25306,-49.314995)">
+    <rect
+       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect1827"
+       width="21.672419"
+       height="68.443726"
+       x="121.75306"
+       y="63.999332" />
+    <rect
+       style="fill:url(#linearGradient2670);fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect1937"
+       width="144.88737"
+       height="68.443726"
+       x="142.63"
+       y="63.999332" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;fill:none;fill-opacity:1;stroke:none;stroke-opacity:1"
+       x="137.80969"
+       y="145.84615"
+       id="text5242"><tspan
+         sodipodi:role="line"
+         id="tspan5240"
+         x="137.80969"
+         y="145.84615"
+         style="font-style:italic;fill:#000000;fill-opacity:1;stroke:none">z<tspan
+   style="font-style:normal;font-size:65%;baseline-shift:sub"
+   id="tspan5244">0</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
+       x="144.21419"
+       y="117.8176"
+       id="text6721"><tspan
+         sodipodi:role="line"
+         id="tspan6719"
+         x="144.21419"
+         y="117.8176"><tspan
+           style="font-style:italic"
+           id="tspan6723">c</tspan><tspan
+           style="font-size:65%;baseline-shift:sub"
+           id="tspan6725">As</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.6667px;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
+       x="-120.25252"
+       y="135.53198"
+       id="text6737"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan6735"
+         x="-120.25252"
+         y="135.53198"
+         style="font-size:10.6667px">Catalyst</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
+       x="144.21419"
+       y="105.50939"
+       id="text6811"><tspan
+         sodipodi:role="line"
+         id="tspan6809"
+         x="144.21419"
+         y="105.50939"><tspan
+           style="font-style:italic"
+           id="tspan6805">c</tspan><tspan
+           style="font-size:65%;baseline-shift:sub"
+           id="tspan6819">BS</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.6667px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       x="144.80331"
+       y="77.669907"
+       id="text6823"><tspan
+         sodipodi:role="line"
+         id="tspan6821"
+         x="144.80331"
+         y="77.669907"
+         style="fill:#000000;fill-opacity:1;stroke:none"><tspan
+           style="font-style:italic"
+           id="tspan6825">→N</tspan><tspan
+           style="font-size:65%;baseline-shift:sub"
+           id="tspan6827">B</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.6667px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       x="145.41269"
+       y="88.242653"
+       id="text6835"><tspan
+         sodipodi:role="line"
+         id="tspan6833"
+         x="145.41269"
+         y="88.242653"
+         style="fill:#000000;fill-opacity:1;stroke:none"> ←<tspan
+   style="font-style:italic"
+   id="tspan6829">N</tspan><tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan6839">A</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.6667px;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
+       x="173.38017"
+       y="100.32146"
+       id="text6843"><tspan
+         sodipodi:role="line"
+         id="tspan6841"
+         x="173.38017"
+         y="100.32146"><tspan
+   style="font-style:italic"
+   id="tspan6845">x</tspan>A<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan6849">(g)</tspan> ➝ <tspan
+   style="font-style:italic"
+   id="tspan6847">y</tspan>B<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan6851">(g)</tspan> + <tspan
+   style="font-style:italic"
+   id="tspan6853">w</tspan>D<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan6855">(s)</tspan></tspan></text>
+  </g>
+</svg>
