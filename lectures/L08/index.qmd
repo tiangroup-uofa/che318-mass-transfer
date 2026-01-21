@@ -380,8 +380,6 @@ N_A(0, t) = -\frac{c_T D_{AB}}{1 - x_{A0}}\frac{\partial x_A(0, t)}{\partial z}
 \end{align}
 ```
 
-## Step 5: 
-
 
 
 
