@@ -338,16 +338,111 @@ N_A = -c_T D_{AB} \frac{\partial x_A}{\partial z}
 
 ## U.S.S Example 2: Transport Through A Catalyst Wall
 
-**Question**: A gas mixture containing species A flows through a cylindrical conduit of diameter $D$ with a constant mean velocity $v_m$. A porous catalytic wall of thickness $\Delta z$ is located at a fixed axial position inside the conduit. Inside the catalyst region, species A is consumed by a first-order surface reaction:
-$$
-r = k'(c_{A,s} - c_A)
+**Question**: A gas mixture containing species A flows through a
+cylindrical conduit of diameter $D$ with a constant mean velocity
+$v_m$. A porous catalytic wall of thickness $\Delta z$ is located at a
+fixed axial position inside the conduit. Inside the catalyst region,
+species A is consumed by a first-order surface reaction: 
+
+$$ 
+r =
+k'(c_{A,s} - c_A) 
 $$
 
 Assume:
-- one-dimensional transport in the axial ($z$) direction
+
+- surface concentration on catalyst, $c_{A,s}$ is constant
 - uniform properties in the radial direction
 - constant $T$, $P$, and physical properties
 - no reaction outside the catalyst region
+
+## Step 1: Mass Balance
+
+Consider a differential gas-phase control volume of thickness $\Delta z$ that intersects the catalytic wall.
+
+```{=tex}
+\begin{align}
+\text{In} - \text{Out} + \text{Generation} &= \text{Accumulation} \\
+\\
+\frac{\pi D^2}{4}
+\left(
+N_A\big|_{z}
+-
+N_A\big|_{z+\Delta z}
+\right)
++
+\pi D\,\Delta z\,k\,(c_{A,s}-c_A)
+&=
+\frac{\pi D^2}{4}\,
+\frac{\partial C_A}{\partial t} \\
+-\frac{\partial N_A}{\partial z}
++
+\frac{4k}{D}\,(c_{A,s}-c_A)
+=
+\frac{\partial c_A}{\partial t}
+\end{align}
+```
+
+## Step 2: Coupling With Flux Equation
+
+
+Use the convection–diffusion flux (constant $v_m$):
+
+```{=tex}
+\begin{align}
+N_A
+=
+-\,D_{AB}\,\frac{\partial c_A}{\partial z}
++
+c_A\,v_m
+\end{align}
+```
+
+When $v_m$ is constant, differentiate over $N_A$ becomes:
+
+```{=tex}
+\begin{align}
+\frac{\partial N_A}{\partial z}
+=
+-\,D_{AB}\,\frac{\partial^2 c_A}{\partial z^2}
++
+v_m\,\frac{\partial c_A}{\partial z}
+\qquad (v_m=\text{const})
+\end{align}
+```
+
+## Step 3: General Equation for M.T + Surface Reaction
+
+```{=tex}
+\begin{align}
+\frac{\partial c_A}{\partial t}
+&=
+-\left(
+-\,D_{AB}\,\frac{\partial^2 c_A}{\partial z^2}
++
+v_m\,\frac{\partial c_A}{\partial z}
+\right)
++
+\frac{4k}{D}\,(c_{A,s}-c_A) \\
+&=
+D_{AB}\,\frac{\partial^2 c_A}{\partial z^2}
+-
+v_m\,\frac{\partial c_A}{\partial z}
++
+\frac{4k}{D}\,(c_{A,s}-c_A)
+\end{align}
+```
+
+Need:
+
+- initial condition $c_A(z,0)$
+- boundary conditions at $z=0$ and $z=L$
+
+Solve:
+
+- analytical (special cases)
+- numerical integration (finite difference)
+
 
 
 
@@ -358,8 +453,9 @@ Assume:
 
 ## Summary
 
-- Solving diffusion through varying cross-section
-- Pseudo-steady state solutions to diffusion-evaporation problems
+- Unsteady state mass transfer governing equation
+- Step-by-step solution to diffusion through stagnant B
+- Diffusion and reaction system setup
 
 
 
