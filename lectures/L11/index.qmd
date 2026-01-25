@@ -1,0 +1,313 @@
+---
+title: "CHE 318 Lecture 11"
+subtitle: "Unsteady State Mass Transfer"
+author: "Dr. Tian Tian"
+date: "2026-01-28"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+  pdf:
+    output-file: L11.pdf
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L11.pdf)
+- Handwritten notes 👉 [Open in pdf](./public/L11_annotated.pdf)
+:::
+
+:::
+
+## Recap {.center}
+
+- Step-by-step solution to U.S.S. evaporation through stagnant air
+- Mass balance & flux analysis for catalyst on wall system
+
+
+## Learning Outcomes {.center}
+
+After today's lecture, you will be able to:
+
+- **Derive** mass balance and flux with reaction terms
+- **Identify** B.C. and I.C. for reaction-related problems
+- **Apply** simplifications for U.S.S. problems with generation terms
+
+
+## U.S.S Example 2: Transport Through A Catalyst Wall
+
+**Question**: A gas mixture containing species A flows through a
+cylindrical conduit of diameter $D$ with a constant mean velocity
+$v_m$. A porous catalytic wall of thickness $\Delta z$ is located at a
+fixed axial position inside the conduit. Inside the catalyst region,
+species A is consumed by a first-order surface reaction: 
+
+$$ 
+r =
+k'(c_{A,s} - c_A) 
+$$
+
+Assume:
+
+- surface concentration on catalyst, $c_{A,s}$ is constant
+- uniform properties in the radial direction
+- constant $T$, $P$, and physical properties
+- no reaction outside the catalyst region
+
+## Step 1: Mass Balance
+
+Consider a differential gas-phase control volume of thickness $\Delta z$ that intersects the catalytic wall.
+
+```{=tex}
+\begin{align}
+\text{In} - \text{Out} + \text{Generation} &= \text{Accumulation} \\
+\\
+\frac{\pi D^2}{4}
+\left(
+N_A\big|_{z}
+-
+N_A\big|_{z+\Delta z}
+\right)
++
+\pi D\,\Delta z\,k'\,(c_{A,s}-c_A)
+&=
+\frac{\pi D^2}{4}\,
+\frac{\partial C_A}{\partial t} \\
+-\frac{\partial N_A}{\partial z}
++
+\frac{4k'}{D}\,(c_{A,s}-c_A)
+=
+\frac{\partial c_A}{\partial t}
+\end{align}
+```
+
+## Step 2: Coupling With Flux Equation
+
+
+Use the convection–diffusion flux (constant $v_m$):
+
+```{=tex}
+\begin{align}
+N_A
+=
+-\,D_{AB}\,\frac{\partial c_A}{\partial z}
++
+c_A\,v_m
+\end{align}
+```
+
+When $v_m$ is constant, differentiate over $N_A$ becomes:
+
+```{=tex}
+\begin{align}
+\frac{\partial N_A}{\partial z}
+=
+-\,D_{AB}\,\frac{\partial^2 c_A}{\partial z^2}
++
+v_m\,\frac{\partial c_A}{\partial z}
+\qquad (v_m=\text{const})
+\end{align}
+```
+
+## Step 3: General Equation for M.T + Surface Reaction
+
+```{=tex}
+\begin{align}
+\frac{\partial c_A}{\partial t}
+&=
+-\left(
+-\,D_{AB}\,\frac{\partial^2 c_A}{\partial z^2}
++
+v_m\,\frac{\partial c_A}{\partial z}
+\right)
++
+\frac{4k'}{D}\,(c_{A,s}-c_A) \\
+&=
+D_{AB}\,\frac{\partial^2 c_A}{\partial z^2}
+-
+v_m\,\frac{\partial c_A}{\partial z}
++
+\frac{4k}{D}\,(c_{A,s}-c_A)
+\end{align}
+```
+
+Need:
+
+- initial condition $c_A(z,0)$
+- boundary conditions at $z=0$ and $z=L$
+
+Solve:
+
+- analytical (special cases)
+- numerical integration (finite difference)
+
+## Simplifications for Solving U.S.S. Problems
+
+We can make some assumptions that do not have significant impact on the results:
+
+- **Assumption 1**: convection $\gg$ diffusion
+  - We can write $D_{AB} \frac{\partial^2 c_A}{\partial z^2} \approx 0$
+  - Only need $v_m$ to solve the U.S.S. problem
+  - Typically tolerable error in industrial pipes
+
+- **Asumption 2**: system close to steady state
+  - U.S.S --> S.S.? Just let $\partial c_A/\partial t = 0$
+  - Can compare with other S.S. solutions!
+
+
+## Solutions to Simplified U.S.S. Governing Equations
+
+After removing the $\partial c_A/\partial t$ and  $D_{AB} \frac{\partial^2 c_A}{\partial z^2}$ terms, we have
+
+```{=tex}
+\begin{align}
+\frac{4k'}{D}\left(c_{AS}-c_A\right)
+&= v_m \frac{dc_A}{dz} \\
+\int_0^z \frac{4k'}{D v_m} dz
+&= \int_{c_{Ai}}^{c_A} \frac{dc_A}{c_{AS}-c_A} \\
+\frac{4k'}{D v_m} z &= -\ln\!\left(\frac{c_{AS}-c_A(z)}{c_{AS}-c_{Ai}}\right)
+\end{align}
+```
+
+We get $c_A(z)$ profile:
+
+```{=tex}
+\begin{align}
+c_A(z)
+= c_{AS}
+-\left(c_{AS} - c_{Ai}\right)
+\exp\!\left(-\frac{4k'}{D_{AB} v_m} z\right)
+\end{align}
+```
+
+## What Happens To The Solution?
+
+We show previously that steady state solution without generation
+**does not** depend on the $D_{AB}$, why do we see the expression
+$c_A(z)$ with $D_{AB}$ inside?
+
+- This is the effect of generation term!
+- Qualitatively, a generation "source" of A must be exhausted 
+  by the molar  flux in the system!
+- The concentration after the reaction region decays exponentially
+- Length scale $D_{AB} v_m / 4 k'$
+- Relation to Damköhler number of reaction-transport system
+
+## Dimensionless Analysis
+
+Reaction-transport Damköhler number:
+
+```{=tex}
+\begin{align}
+Da &= \frac{\text{[reaction rate]}}{\text{[transport rate]}} \\
+&= \frac{k' L}{D_{AB} v_m}
+\end{align}
+```
+
+## Case 3: Catalytic Conversion of D → E (1D, Steady State)
+
+**Question**: A binary gas mixture containing species D and E occupies
+a stagnant gas film of thickness $L$ in the $z$-direction.  At $z=0$,
+the gas is in contact with a solid catalyst surface that
+instantaneously and completely converts D to E.  At $z=L$, the gas
+composition is maintained at known values. Assumpt constant $T$ and
+total pressure $p_T$ and 100% conversion rate. The reaction between D and E follows:
+$$
+m \text{D} \rightarrow n \text{E}
+$$
+
+Develop the governing differential equation for $N_D$ and $c_D$ the
+molar flux of species D in the gas phase.
+
+## Step 1: Mass Balance
+
+At anywhere outside the boundary, we have:
+
+```{=tex}
+\begin{align}
+\text{[In]} - \text{[Out]} + \text{[Gen]} &= \text{[Acc]} \\
+-\frac{\partial N_D}{\partial z} + 0 &= \frac{\partial c_D}{\partial t}
+\end{align}
+```
+
+- Catalyst at the bottom of the reactor 👉 [Gen] = 0
+- How do we get the boundary condition?
+
+## Step 2: Flux Equation
+
+The reaction at the bottom catalyst is very fast, we can use the
+"general case" flux equation
+
+```{=tex}
+\begin{align}
+N_D = -D_{DE} \frac{\partial c_A}{\partial z} + \frac{c_D}{c_T} (N_D + NE)
+\end{align}
+```
+
+- How do we get relation between $N_D$ and $N_E$?
+- What are the boundary conditions?
+
+## Step 3: Conditions And Solutions
+
+We have in general $N_E / m = - N_D / n$
+
+```{=tex}
+\begin{align}
+-\frac{\partial }{\partial z}
+\left[
+-D_{DE} \frac{\partial c_D}{\partial z}
++ \frac{c_D}{c_T} (N_D + N_E)
+\right] &= \frac{\partial c_D}{\partial t} \\
+-\frac{\partial }{\partial z}
+\left[
+-D_{DE} \frac{\partial c_D}{\partial z}
++ \frac{c_D}{c_T} N_D (1 - \frac{n}{m})
+\right] &= \frac{\partial c_D}{\partial t}
+\end{align}
+```
+
+The steady state solution can be easily integrated
+
+## Reaction-Transport System: Solution Demo
+
+## Conclusion of Unsteady State Mass Transport
+
+We will cover until **this point** in the mid-term exam!
+
+To solve unsteady and steady state problem, use the following steps:
+
+1. Draw scheme and list physical quantities / conditions
+2. Write mass balance equation
+3. Is it steady-state or unsteady-state?
+4. If unsteady state, write flux equation in differential form
+5. If steady state, use one of the solution examples 
+6. Do integration / calculation
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Summary
+
+- Unsteady state mass transfer governing equation
+- Step-by-step solution to diffusion through stagnant B
+- Diffusion and reaction system setup
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+---
+title: "CHE 318 Lecture 12"
+subtitle: "Preparation Before Midterm / Convective Mass Transfer"
+author: "Dr. Tian Tian"
+date: "2026-01-30"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+  pdf:
+    output-file: L12.pdf
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L12.pdf)
+- Handwritten notes 👉 [Open in pdf](./public/L12_annotated.pdf)
+:::
+
+:::
+
+## Recap {.center}
+
+- Several example systems in unsteady state mass transfer regime
+- General procedures to identify generation / accumulation terms
+- Steady state solution from mass balance equations
+
+
+## Learning Outcomes {.center}
+
+After today's lecture, you will be able to:
+
+- **Recall** concepts in steady state and unsteady state mass transfer
+- **Practice** step-by-step solution to sample problems
+- **Analyze** typical pitfalls in concepts of mass transfer
+- **Familiarize** with convective mass transfer concepts
+
+## 
+
+
+
+
+## Summary
+
+- Good luck with the midterm exam!
+
+
+
+
+
+
+
+
