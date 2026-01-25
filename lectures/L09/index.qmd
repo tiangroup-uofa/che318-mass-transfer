@@ -208,242 +208,240 @@ For U.S.S M.T, we typically need
 
 ![A "solver engine" for unsteady state mass transfer](./public/uss-engine.png){width="85%"}
 
-## B.C. Case 1. Concentration at surfaces
+<!-- ## B.C. Case 1. Concentration at surfaces -->
 
-![Concentration at phase interfaces](./public/bc-conc.svg){width="55%"}
+<!-- ![Concentration at phase interfaces](./public/bc-conc.svg){width="55%"} -->
 
-- Interface can be gas|liquid, liquid|solid, gas|solid
-- Often assuming equilibrium
+<!-- - Interface can be gas|liquid, liquid|solid, gas|solid -->
+<!-- - Often assuming equilibrium -->
 
-$$
-c_{A}\vert_{\text{surf}} = c_{As}\qquad\text{eq. solubility}
-$$
+<!-- $$ -->
+<!-- c_{A}\vert_{\text{surf}} = c_{As}\qquad\text{eq. solubility} -->
+<!-- $$ -->
 
-## B.C. Case 2: Chemical Reactions
+<!-- ## B.C. Case 2: Chemical Reactions -->
 
-![Boundary condition for reaction](./public/bc-reaction.svg){width="55%"}
-
-
-```{=tex}
-\begin{align}
-N_A\big|_{\text{surf}} = \nu_A\, r_A
-\end{align}
-```
-
-- Surface reaction couples mass transfer and kinetics
-- Molar flux at surface determined by reaction rate
-- Generally Neumann boundary
-- $\nu_A$: stoichiometric ratio
-
-## B.C. Case 3: Constant Flux
-
-![Constant flux B.C.](./public/const-flux-bc.svg){width="55%"}
-
-- In many cases the flux $N_{A, \text{surf}}$ or $N_{B, \text{surf}}$ can be constant.
-- E.g. inpenetratable surface to stagnant gas $N_{B, \text{surf}} = 0$
-- **Does not** mean $N_{A}(z)$ or $N_B(z)$ elsewhere is constant!
-
-## U.S.S Example 1: Diffusion Through Stagnant B
-
-We have seen in previous examples how to solve the molar flux of
-liquid evaporating into stagnant air. Let's see the same system but in unsteady state.
-
-**Question**: liquid methanol (A) evaporates inside stagnant air (B)
-inside a vertical tube at constant temperature $T$ and pressure
-$p_T$. At the vent of the system dry air is continuous blown. Plot the
-molar fraction $x_A$ as a function of $z$ and time $t$. Assume the liquid level is $z_0$ away from the vent and does not change during the evaporation process.
-
-## Step 1: Species Mass Balance (Unsteady, 1D)
-
-For a differential slice $A\,dz$, write the mass balance
-
-```{=tex}
-\begin{align}
-\text{[IN]} - \text{[OUT]} &= \text{[ACC]} \\
-A N_A \vert_{z=z} - A N_A \vert_{z=z+\Delta z}
-&= \frac{\partial}{\partial t}\left(A\,dz\,c_A\right) \\
--\frac{\partial N_A}{\partial z} = \frac{\partial c_A}{\partial t}
-\end{align}
-```
-
-We would have $\frac{\partial c_B}{\partial t} = -\frac{\partial N_B}{\partial z}$
-
-## Step 2: Couple With Flux Equation
-
-This is a diffusion through stagnant B case, we can directly write
-
-```{=tex}
-\begin{align}
-N_A(z, t) = -c_T D_{AB}\frac{\partial x_A(z, t)}{\partial z} + x_A \left[N_A(z, t) + N_B(z, t)\right]
-\end{align}
-```
-
-- Can we use $N_B=0$ in this case?
-- **No**, $N_B$ changes by $z, t$!
-- $N_B=0$ only at $z=0$ (liquid interface)
-- **Do not** write the steady state $N_A$ solution!
-
-## Step 3: Conservation Equations
-
-Generally, we still need to know the relation between $N_A$ and $N_B$
-to solve the mass-balance-flux equations.
-
-The total concentration $c_T=c_A + c_B$ is conserved, therefore we have constrains
-
-```{=tex}
-\begin{align}
-\text{[In]}_{T} - \text{[Out]}_{T} &= 0 \\
-\text{[In]}_A - \text{[Out]}_A &= -\text{[In]}_B + \text{[Out]}_B \\
-\frac{\partial N_A(z, t)}{\partial z} &= -\frac{\partial N_B(z, t)}{\partial z}
-\end{align}
-```
-
-## Step 4: Boundary Conditions
-
-Boundary conditions (Left, Right, any time)
-
-- $x_A(0, t) = x_{A0}$ (equilibrium vapor fraction)
-- $x_A(L, t) = 0$      (dry air)
-- $N_B(0, t) = 0$  (No-flux boundary for B)
-
-The last B.C for $N_B(0, t)$ gives:
-```{=tex}
-\begin{align}
-N_A(0, t) = -\frac{c_T D_{AB}}{1 - x_{A0}}\frac{\partial x_A(0, t)}{\partial z}
-\end{align}
-```
-
-## Step 5: Final solution
-
-- Unsteady state flux equation (stagnant B)
-
-```{=tex}
-\begin{align}
-N_A = -c_T D_{AB} \frac{\partial x_A}{\partial z}
-+ x_A \left[ \frac{-c_T D_{AB}}{1 - x_{A0}} \frac{\partial x_{A}}{\partial z}\big\vert_{z=0} \right]
-\end{align}
-```
-
-- Governing equation for diffusion through stagnant B, unsteady state:
-
-```{=tex}
-\begin{align}
-\frac{\partial x_A}{\partial t}
-= c_T D_{AB} \frac{\partial^2 x_A}{\partial z^2}
-+ \left[ \frac{-c_T D_{AB}}{1 - x_{A0}} \frac{\partial x_{A}}{\partial z}\big\vert_{z=0} \right] \frac{\partial x_A}{\partial z} 
-\end{align}
-```
-
-- Analytical solution exists, but numerical solution is more convenient
-
-## U.S.S Example 2: Transport Through A Catalyst Wall
-
-**Question**: A gas mixture containing species A flows through a
-cylindrical conduit of diameter $D$ with a constant mean velocity
-$v_m$. A porous catalytic wall of thickness $\Delta z$ is located at a
-fixed axial position inside the conduit. Inside the catalyst region,
-species A is consumed by a first-order surface reaction: 
-
-$$ 
-r =
-k'(c_{A,s} - c_A) 
-$$
-
-Assume:
-
-- surface concentration on catalyst, $c_{A,s}$ is constant
-- uniform properties in the radial direction
-- constant $T$, $P$, and physical properties
-- no reaction outside the catalyst region
-
-## Step 1: Mass Balance
-
-Consider a differential gas-phase control volume of thickness $\Delta z$ that intersects the catalytic wall.
-
-```{=tex}
-\begin{align}
-\text{In} - \text{Out} + \text{Generation} &= \text{Accumulation} \\
-\\
-\frac{\pi D^2}{4}
-\left(
-N_A\big|_{z}
--
-N_A\big|_{z+\Delta z}
-\right)
-+
-\pi D\,\Delta z\,k\,(c_{A,s}-c_A)
-&=
-\frac{\pi D^2}{4}\,
-\frac{\partial C_A}{\partial t} \\
--\frac{\partial N_A}{\partial z}
-+
-\frac{4k}{D}\,(c_{A,s}-c_A)
-=
-\frac{\partial c_A}{\partial t}
-\end{align}
-```
-
-## Step 2: Coupling With Flux Equation
+<!-- ![Boundary condition for reaction](./public/bc-reaction.svg){width="55%"} -->
 
 
-Use the convection–diffusion flux (constant $v_m$):
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- N_A\big|_{\text{surf}} = \nu_A\, r_A -->
+<!-- \end{align} -->
+<!-- ``` -->
 
-```{=tex}
-\begin{align}
-N_A
-=
--\,D_{AB}\,\frac{\partial c_A}{\partial z}
-+
-c_A\,v_m
-\end{align}
-```
+<!-- - Surface reaction couples mass transfer and kinetics -->
+<!-- - Molar flux at surface determined by reaction rate -->
+<!-- - Generally Neumann boundary -->
+<!-- - $\nu_A$: stoichiometric ratio -->
 
-When $v_m$ is constant, differentiate over $N_A$ becomes:
+<!-- ## B.C. Case 3: Constant Flux -->
 
-```{=tex}
-\begin{align}
-\frac{\partial N_A}{\partial z}
-=
--\,D_{AB}\,\frac{\partial^2 c_A}{\partial z^2}
-+
-v_m\,\frac{\partial c_A}{\partial z}
-\qquad (v_m=\text{const})
-\end{align}
-```
+<!-- ![Constant flux B.C.](./public/const-flux-bc.svg){width="55%"} -->
 
-## Step 3: General Equation for M.T + Surface Reaction
+<!-- - In many cases the flux $N_{A, \text{surf}}$ or $N_{B, \text{surf}}$ can be constant. -->
+<!-- - E.g. inpenetratable surface to stagnant gas $N_{B, \text{surf}} = 0$ -->
+<!-- - **Does not** mean $N_{A}(z)$ or $N_B(z)$ elsewhere is constant! -->
 
-```{=tex}
-\begin{align}
-\frac{\partial c_A}{\partial t}
-&=
--\left(
--\,D_{AB}\,\frac{\partial^2 c_A}{\partial z^2}
-+
-v_m\,\frac{\partial c_A}{\partial z}
-\right)
-+
-\frac{4k}{D}\,(c_{A,s}-c_A) \\
-&=
-D_{AB}\,\frac{\partial^2 c_A}{\partial z^2}
--
-v_m\,\frac{\partial c_A}{\partial z}
-+
-\frac{4k}{D}\,(c_{A,s}-c_A)
-\end{align}
-```
+<!-- ## U.S.S Example 1: Diffusion Through Stagnant B -->
 
-Need:
+<!-- We have seen in previous examples how to solve the molar flux of -->
+<!-- liquid evaporating into stagnant air. Let's see the same system but in unsteady state. -->
 
-- initial condition $c_A(z,0)$
-- boundary conditions at $z=0$ and $z=L$
+<!-- **Question**: liquid methanol (A) evaporates inside stagnant air (B) -->
+<!-- inside a vertical tube at constant temperature $T$ and pressure -->
+<!-- $p_T$. At the vent of the system dry air is continuous blown. Plot the -->
+<!-- molar fraction $x_A$ as a function of $z$ and time $t$. Assume the liquid level is $z_0$ away from the vent and does not change during the evaporation process. -->
 
-Solve:
+<!-- ## Step 1: Species Mass Balance (Unsteady, 1D) -->
 
-- analytical (special cases)
-- numerical integration (finite difference)
+<!-- For a differential slice $A\,dz$, write the mass balance -->
+
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- \text{[IN]} - \text{[OUT]} &= \text{[ACC]} \\ -->
+<!-- A N_A \vert_{z=z} - A N_A \vert_{z=z+\Delta z} -->
+<!-- &= \frac{\partial}{\partial t}\left(A\,dz\,c_A\right) \\ -->
+<!-- -\frac{\partial N_A}{\partial z} = \frac{\partial c_A}{\partial t} -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- We would have $\frac{\partial c_B}{\partial t} = -\frac{\partial N_B}{\partial z}$ -->
+
+<!-- ## Step 2: Couple With Flux Equation -->
+
+<!-- This is a diffusion through stagnant B case, we can directly write -->
+
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- N_A(z, t) = -c_T D_{AB}\frac{\partial x_A(z, t)}{\partial z} + x_A \left[N_A(z, t) + N_B(z, t)\right] -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- - Can we use $N_B=0$ in this case? -->
+<!-- - **No**, $N_B$ changes by $z, t$! -->
+<!-- - $N_B=0$ only at $z=0$ (liquid interface) -->
+<!-- - **Do not** write the steady state $N_A$ solution! -->
+
+<!-- ## Step 3: Conservation Equations -->
+
+<!-- Generally, we still need to know the relation between $N_A$ and $N_B$ -->
+<!-- to solve the mass-balance-flux equations. -->
+
+<!-- The total concentration $c_T=c_A + c_B$ is conserved, therefore we have constrains -->
+
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- \text{[In]}_{T} - \text{[Out]}_{T} &= 0 \\ -->
+<!-- \text{[In]}_A - \text{[Out]}_A &= -\text{[In]}_B + \text{[Out]}_B \\ -->
+<!-- \frac{\partial N_A(z, t)}{\partial z} &= -\frac{\partial N_B(z, t)}{\partial z} -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- ## Step 4: Boundary Conditions -->
+
+<!-- Boundary conditions (Left, Right, any time) -->
+
+<!-- - $x_A(0, t) = x_{A0}$ (equilibrium vapor fraction) -->
+<!-- - $x_A(L, t) = 0$      (dry air) -->
+<!-- - $N_B(0, t) = 0$  (No-flux boundary for B) -->
+
+<!-- The last B.C for $N_B(0, t)$ gives: -->
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- N_A(0, t) = -\frac{c_T D_{AB}}{1 - x_{A0}}\frac{\partial x_A(0, t)}{\partial z} -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- ## Step 5: Final solution -->
+
+<!-- - Unsteady state flux equation (stagnant B) -->
+
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- N_A = -c_T D_{AB} \frac{\partial x_A}{\partial z} -->
+<!-- + x_A \left[ \frac{-c_T D_{AB}}{1 - x_{A0}} \frac{\partial x_{A}}{\partial z}\big\vert_{z=0} \right] -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- - Governing equation for diffusion through stagnant B, unsteady state: -->
+
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- \frac{\partial x_A}{\partial t} -->
+<!-- = c_T D_{AB} \frac{\partial^2 x_A}{\partial z^2} -->
+<!-- + \left[ \frac{-c_T D_{AB}}{1 - x_{A0}} \frac{\partial x_{A}}{\partial z}\big\vert_{z=0} \right] \frac{\partial x_A}{\partial z}  -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- - Analytical solution exists, but numerical solution is more convenient -->
+
+<!-- ## U.S.S Example 2: Transport Through A Catalyst Wall -->
+
+<!-- **Question**: A gas mixture containing species A flows through a -->
+<!-- cylindrical conduit of diameter $D$ with a constant mean velocity -->
+<!-- $v_m$. A porous catalytic wall of thickness $\Delta z$ is located at a -->
+<!-- fixed axial position inside the conduit. Inside the catalyst region, -->
+<!-- species A is consumed by a first-order surface reaction:  -->
+
+<!-- $$  -->
+<!-- r = -->
+<!-- k'(c_{A,s} - c_A)  -->
+<!-- $$ -->
+
+<!-- Assume: -->
+
+<!-- - surface concentration on catalyst, $c_{A,s}$ is constant -->
+<!-- - uniform properties in the radial direction -->
+<!-- - constant $T$, $P$, and physical properties -->
+<!-- - no reaction outside the catalyst region -->
+
+<!-- ## Step 1: Mass Balance -->
+
+<!-- Consider a differential gas-phase control volume of thickness $\Delta z$ that intersects the catalytic wall. -->
+
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- \text{In} - \text{Out} + \text{Generation} &= \text{Accumulation} \\ -->
+<!-- \\ -->
+<!-- \frac{\pi D^2}{4} -->
+<!-- \left( -->
+<!-- N_A\big|_{z} -->
+<!-- - -->
+<!-- N_A\big|_{z+\Delta z} -->
+<!-- \right) -->
+<!-- + -->
+<!-- \pi D\,\Delta z\,k\,(c_{A,s}-c_A) -->
+<!-- &= -->
+<!-- \frac{\pi D^2}{4}\, -->
+<!-- \frac{\partial C_A}{\partial t} \\ -->
+<!-- -\frac{\partial N_A}{\partial z} -->
+<!-- + -->
+<!-- \frac{4k}{D}\,(c_{A,s}-c_A) -->
+<!-- = -->
+<!-- \frac{\partial c_A}{\partial t} -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- ## Step 2: Coupling With Flux Equation -->
 
 
+<!-- Use the convection–diffusion flux (constant $v_m$): -->
+
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- N_A -->
+<!-- = -->
+<!-- -\,D_{AB}\,\frac{\partial c_A}{\partial z} -->
+<!-- + -->
+<!-- c_A\,v_m -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- When $v_m$ is constant, differentiate over $N_A$ becomes: -->
+
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- \frac{\partial N_A}{\partial z} -->
+<!-- = -->
+<!-- -\,D_{AB}\,\frac{\partial^2 c_A}{\partial z^2} -->
+<!-- + -->
+<!-- v_m\,\frac{\partial c_A}{\partial z} -->
+<!-- \qquad (v_m=\text{const}) -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- ## Step 3: General Equation for M.T + Surface Reaction -->
+
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- \frac{\partial c_A}{\partial t} -->
+<!-- &= -->
+<!-- -\left( -->
+<!-- -\,D_{AB}\,\frac{\partial^2 c_A}{\partial z^2} -->
+<!-- + -->
+<!-- v_m\,\frac{\partial c_A}{\partial z} -->
+<!-- \right) -->
+<!-- + -->
+<!-- \frac{4k}{D}\,(c_{A,s}-c_A) \\ -->
+<!-- &= -->
+<!-- D_{AB}\,\frac{\partial^2 c_A}{\partial z^2} -->
+<!-- - -->
+<!-- v_m\,\frac{\partial c_A}{\partial z} -->
+<!-- + -->
+<!-- \frac{4k}{D}\,(c_{A,s}-c_A) -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- Need: -->
+
+<!-- - initial condition $c_A(z,0)$ -->
+<!-- - boundary conditions at $z=0$ and $z=L$ -->
+
+<!-- Solve: -->
+
+<!-- - analytical (special cases) -->
+<!-- - numerical integration (finite difference) -->
 
 
 
