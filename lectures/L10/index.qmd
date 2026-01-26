@@ -95,10 +95,10 @@ N_A\big|_{\text{surf}} = \nu_A\, r_A
 We have seen in previous examples how to solve the molar flux of
 liquid evaporating into stagnant air. Let's see the same system but in unsteady state.
 
-**Question**: liquid methanol (A) evaporates inside stagnant air (B)
+**Question**: liquid (A) evaporates inside stagnant air (B)
 inside a vertical tube at constant temperature $T$ and pressure
 $p_T$. At the vent of the system dry air is continuous blown. Plot the
-molar fraction $x_A$ as a function of $z$ and time $t$. Assume the liquid level is $z_0$ away from the vent and does not change during the evaporation process.
+molar fraction $x_A$ as a function of $z$ and time $t$. Assume the liquid level is $L$ away from the vent and does not change during the evaporation process.
 
 ## Step 1: Species Mass Balance (Unsteady, 1D)
 
@@ -176,8 +176,8 @@ N_A = -c_T D_{AB} \frac{\partial x_A}{\partial z}
 ```{=tex}
 \begin{align}
 \frac{\partial x_A}{\partial t}
-= c_T D_{AB} \frac{\partial^2 x_A}{\partial z^2}
-+ \left[ \frac{-c_T D_{AB}}{1 - x_{A0}} \frac{\partial x_{A}}{\partial z}\big\vert_{z=0} \right] \frac{\partial x_A}{\partial z} 
+= D_{AB} \frac{\partial^2 x_A}{\partial z^2}
++ \left[ \frac{D_{AB}}{1 - x_{A0}} \frac{\partial x_{A}}{\partial z}\big\vert_{z=0} \right] \frac{\partial x_A}{\partial z} 
 \end{align}
 ```
 
@@ -185,40 +185,45 @@ N_A = -c_T D_{AB} \frac{\partial x_A}{\partial z}
 
 ## U.S.S Diffusion Through Stagnant B: Analytical Solution
 
-$x_A{z, t}$ has an analytical solution with the given B.C.:
-
+$x_A{z, t}$ has an analytical solution if $L \rightarrow \infty$ (See Bird. _Transport Phenomena_ Ch 20.1):
 ```{=tex}
 \begin{align}
-x_A(z,t)
-=1-(1-x_{A0})
-\exp\!\left[
-\ln\!\left(\frac{1-x_{A1}}{1-x_{A0}}\right)
-\operatorname{erfc}\!\left(\frac{z}{\sqrt{4D_{AB}t}}\right)
-\right]
+x_A(z, t)
+= x_{A0}
+\frac{1 - \operatorname{erf}\!(\frac{z}{\sqrt{4 D_{AB} t}} - \phi)}{1 + \operatorname{erf}\!\phi}
 \end{align}
 ```
 
-$\operatorname{efrc}$ is the **complementary error function**:
+$\operatorname{erf}$ is the **error function**:
 
 ```{=tex}
 \begin{align}
-\operatorname{erfc}(\eta)
-&= 1 - \operatorname{erf}(\eta) \\
-&= 
+\operatorname{erf}(\eta)
+=
 \frac{2}{\sqrt{\pi}}
 \int_{0}^{\eta} e^{-s^2}\,ds
 \end{align}
 ```
-
-- Scaling: $\frac{z}{\sqrt{4D_{AB}t}$
+- $\phi$: a dimensionless constant depending on $x_{A0}$, $t$ and $D_{AB}$
+- Scaling combining length and time: $\frac{z}{\sqrt{4D_{AB}t}}$
 - Higher $D_{AB}$ 👉 faster towards steady state! (Wooclap question 3, L09)
 - Penetration depth: $L_p \approx \sqrt{4D_{AB} t}$
+
+## Numerical Solutions To Evaporation Problem
+
+The numerical solution using finite difference (FD) methods is beyond
+CHE 318, but we can briefly breakdown the process into:
+
+- Discretize space: $z \rightarrow z_i$
+- Approximate spatial derivatives with finite differences
+- Convert PDE into a system of ODEs in time
+- Integrate in time using standard ODE solvers
 
 ## U.S.S Diffusion Through Stagnant B: Demo
 
 ```{=html}
-<iframe width="100%" height="800"
-		src="../../scripts/L10_uss_evap.html" title="Webpage example"></iframe>
+<iframe width="100%" height="900"
+		src="../../scripts/L10_uss_profile.html" title="Webpage example"></iframe>
 ```
 
 
