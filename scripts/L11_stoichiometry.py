@@ -90,7 +90,7 @@ def _(
         [
             mo.md("Reaction: $m D \\rightarrow n E$"),
             mo.hstack(
-                [xa1_slider, xa2_slider, m_slider, n_slider], justify="start"
+                [xa1_slider, xa2_slider, m_slider, n_slider], justify="start", wrap=True,
             ),
             #mo.md("EMCD: $x_A{z}$ linear; $N_A \\propto x_{A2} - x_{A1}$"),
             #mo.md(f"$s$={_s:.3f}, $N_A$ (general) / $N_A$ (EMCD) = {_ratio:.3f}"),
@@ -104,6 +104,7 @@ def _(
             ),
         ],
         justify="start",
+        wrap=True
     )
     return
 
