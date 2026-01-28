@@ -36,25 +36,26 @@ After today's lecture, you will be able to:
 - **Apply** simplifications for U.S.S. problems with generation terms
 
 
-## U.S.S Example 2: Transport Through A Catalyst Wall
+## U.S.S Example 2: Transport Through A Reactive Wall
 
-**Question**: A gas mixture containing species A flows through a
-cylindrical conduit of diameter $D$ with a constant mean velocity
-$v_m$. A porous catalytic wall of thickness $\Delta z$ is located at a
-fixed axial position inside the conduit. Inside the catalyst region,
-species A is consumed by a first-order surface reaction: 
+**Question**: A gas mixture of CO$_2$ (A) in argon (B) is flown
+through a cylindrical pipe of diameter $D$ and length $L$ with
+constant velocity $v_m$. The pipe is covered with a porous material to
+absorb CO$_2$. The porous material is coated uniformed on the inner
+wall of the pipe. While A is flowing through the pipe, it is being absorbed by a first-order reaction
 
 $$ 
-r =
-k'(c_{A,s} - c_A) 
+r_A =
+k(c_{A,s} - c_A) 
 $$
 
-Assume:
+Where $c_{A, s}$ is the surface concentration on the absorbing
+material and $c_A$ is the conentration of A in the gas mixture. We
+assume the concentration $c_A(z)$ in the gas phase is uniform in the
+radial direction. The total pressure $p_T$ and temperature $T$ are both kept constant.
 
-- surface concentration on catalyst, $c_{A,s}$ is constant
-- uniform properties in the radial direction
-- constant $T$, $P$, and physical properties
-- no reaction outside the catalyst region
+Can you estimate the concentration of CO$_2$ at the end of the pipe?
+
 
 ## Step 1: Mass Balance
 
@@ -71,13 +72,13 @@ N_A\big|_{z}
 N_A\big|_{z+\Delta z}
 \right)
 +
-\pi D\,\Delta z\,k'\,(c_{A,s}-c_A)
+\pi D\,\Delta z\,k\,(c_{A,s}-c_A)
 &=
 \frac{\pi D^2}{4}\,
 \frac{\partial C_A}{\partial t} \\
 -\frac{\partial N_A}{\partial z}
 +
-\frac{4k'}{D}\,(c_{A,s}-c_A)
+\frac{4k}{D}\,(c_{A,s}-c_A)
 =
 \frac{\partial c_A}{\partial t}
 \end{align}
@@ -163,55 +164,44 @@ After removing the $\partial c_A/\partial t$ and  $D_{AB} \frac{\partial^2 c_A}{
 
 ```{=tex}
 \begin{align}
-\frac{4k'}{D}\left(c_{AS}-c_A\right)
+\frac{4k}{D}\left(c_{A,s}-c_A\right)
 &= v_m \frac{dc_A}{dz} \\
-\int_0^z \frac{4k'}{D v_m} dz
-&= \int_{c_{Ai}}^{c_A} \frac{dc_A}{c_{AS}-c_A} \\
-\frac{4k'}{D v_m} z &= -\ln\!\left(\frac{c_{AS}-c_A(z)}{c_{AS}-c_{Ai}}\right)
+\int_0^z \frac{4k}{D v_m} dz
+&= \int_{c_{Ai}}^{c_A} \frac{dc_A}{c_{A,s}-c_A} \\
+\frac{4k}{D v_m} z &= -\ln\!\left(\frac{c_{A,s}-c_A(z)}{c_{A,s}-c_{A0}}\right)
 \end{align}
 ```
 
-We get $c_A(z)$ profile:
+We get $c_A(z)$ profile, where $c_{A0}=c_{A}(z=0)$
 
 ```{=tex}
 \begin{align}
 c_A(z)
-= c_{AS}
--\left(c_{AS} - c_{Ai}\right)
-\exp\!\left(-\frac{4k'}{D_{AB} v_m} z\right)
+= c_{A,s}
+-\left(c_{A,s} - c_{A0}\right)
+\exp\!\left(-\frac{4k}{D v_m} z\right)
 \end{align}
 ```
 
-## What Happens To The Solution?
+## Interpretation  of $c_A(z)$ Profile
 
-We show previously that steady state solution without generation
-**does not** depend on the $D_{AB}$, why do we see the expression
-$c_A(z)$ with $D_{AB}$ inside?
+For this problem, because the surface reaction occurs, we no longer have a linear $c_A$ profile. It decays with
+a length scale of $D v_m / 4k$.
 
-- This is the effect of generation term!
-- Qualitatively, a generation "source" of A must be exhausted 
-  by the molar  flux in the system!
-- The concentration after the reaction region decays exponentially
-- Length scale $D_{AB} v_m / 4 k'$
-- Relation to Damköhler number of reaction-transport system
+- At the exit of the pipe, concentration of $c_A(L)$ is no less than $c_{A, s}$!
+- Decay length $L_{d} \approx \frac{D v_m}{4k}$
+- Faster flushing 👉 incomplete absorption
+- Is $N_A$ constant inside the tube?
+- What is the unit of $k$ in this case?
 
-## Dimensionless Analysis
-
-Reaction-transport Damköhler number:
-
-```{=tex}
-\begin{align}
-Da &= \frac{\text{[reaction rate]}}{\text{[transport rate]}} \\
-&= \frac{k' L}{D_{AB} v_m}
-\end{align}
-```
+We will investigate these questions in the second half of the course!
 
 ## Case 3: Catalytic Conversion of D → E (1D, Steady State)
 
 **Question**: A binary gas mixture containing species D and E occupies
 a stagnant gas film of thickness $L$ in the $z$-direction.  At $z=0$,
 the gas is in contact with a solid catalyst surface that
-instantaneously and completely converts D to E.  At $z=L$, the gas
+**instantaneously** and **completely** converts D to E.  At $z=L$, the gas
 composition is maintained at known values. Assumpt constant $T$ and
 total pressure $p_T$ and 100% conversion rate. The reaction between D and E follows:
 $$
@@ -219,7 +209,7 @@ m \text{D} \rightarrow n \text{E}
 $$
 
 Develop the governing differential equation for $N_D$ and $c_D$ the
-molar flux of species D in the gas phase.
+molar flux of species D in the gas phase at steady state.
 
 ## Step 1: Mass Balance
 
@@ -242,16 +232,28 @@ The reaction at the bottom catalyst is very fast, we can use the
 
 ```{=tex}
 \begin{align}
-N_D = -D_{DE} \frac{\partial c_A}{\partial z} + \frac{c_D}{c_T} (N_D + NE)
+N_D = -D_{DE} \frac{\partial c_D}{\partial z} + \frac{c_D}{c_T} (N_D + N_E)
 \end{align}
 ```
 
 - How do we get relation between $N_D$ and $N_E$?
 - What are the boundary conditions?
 
+## Diffusion-Controlled Reaction: Explanations
+
+In this system we have two conditions **instantaneous** and
+**complete** reaction. They have distinct meanings
+
+- **Instantaneous**: the reaction rate at the boundary does not depend
+  on the actual concentration, but rather what ever molar flux is at that interface (**diffusion-controlled**)
+  - Often we will have $c_{D, z=0} = 0$ (all D at interface consumed instantly)
+- **Complete**: the conversion between D and E occur 100%, meaning the fluxes of D and E follow **stoichiometry**
+  - Stoichiometry: $m D \rightarrow n E$
+  - Flux continuity $N_D / m + N_E / n = 0$
+
 ## Step 3: Conditions And Solutions
 
-We have in general $N_E / m = - N_D / n$
+We have in general $N_D / m = - N_E / n$ 
 
 ```{=tex}
 \begin{align}
@@ -268,9 +270,24 @@ We have in general $N_E / m = - N_D / n$
 \end{align}
 ```
 
+At steady state, we have
+```
+N_D = \left[-\frac{D_{DE}}{1 - \frac{c_D}{c_T} (1 - \frac{n}{m})}\right]{d c_D}{dz}
+```
+
 The steady state solution can be easily integrated
 
-## Reaction-Transport System: Solution Demo
+## Catalyst In Wall: Simulation Demo
+
+A slighted adapted demo from lecture 3 ($x_A$ profile). 
+Can we modify the molar flux by interface reaction stoichiometry?
+
+```{=html}
+<iframe width="100%" height="900"
+		src="../../scripts/L11_stoichiometry.html" title="Webpage example"></iframe>
+```
+ 
+
 
 ## Conclusion of Unsteady State Mass Transport
 
@@ -285,7 +302,11 @@ To solve unsteady and steady state problem, use the following steps:
 5. If steady state, use one of the solution examples 
 6. Do integration / calculation
 
+## Summary
 
+- Writing mass balance equation for unsteady state problems 
+- Apply conditions for reaction
+- Apply conditions for fluxes
 
 
 
