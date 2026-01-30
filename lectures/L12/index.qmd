@@ -37,6 +37,22 @@ After today's lecture, you will be able to:
 - **Analyze** typical pitfalls in concepts of mass transfer
 - **Familiarize** with convective mass transfer concepts
 
+## Midterm Exam Announcement {.center}
+
+- Date: Feb 09, 2026 (Monday)
+- Time: 50 min during class
+- Question types:
+  - Multichoice questions (conceptual, no derivation)
+  - Short-answer questions (conceptual, no derivation)
+  - Long-answer questions (derivation and / or calculation)
+- Formula sheet / calculator policy: refer to course syllabus
+
+## Midterm Exam Questions {.center}
+
+- Covers up to unsteady state mass transport
+- Sample questions to be released this week on Canvas
+- Use our [AI helper](https://gemini.google.com/gem/f2d47200f0bf) wisely!
+
 ## Key Concepts of Mass Transfer
 
 - **Q: What is mass transfer about**?
@@ -52,9 +68,9 @@ After today's lecture, you will be able to:
   - Steady state: concentration of species **do not change** over time
   - Unsteady state: concentration of species **change** over time
 
-## A Mindmap For Mass Transfer Part I
+::: {.content-visible when-format="html"}
 
-## Mass Transfer Mind Map
+## A Mindmap For Mass Transfer Part I
 
 ```{mermaid}
 mindmap
@@ -95,6 +111,9 @@ mindmap
         Permeability
         Effective diffusivity
 ```
+
+:::
+
 
 # Sample Questions (2019)
 
