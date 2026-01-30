@@ -117,22 +117,61 @@ mindmap
 
 # Sample Questions (2019)
 
+- Please check our Canvas examples for solutions. 
+- We will give a few "what do we look for" and "potential pitfalls"
+- Always remember to draw the diagram and list conditions!
+
 ## Short Answer Question
 
 ![](./public/sa-1.png){width="100%"}
+
+## Short Answer Question 1 -- Key Points
+
+- Surface area of droplet -- sphere -- $4 \pi r_0^2$
+- Total flux per droplet -- $\overline{N}_A = 4 \pi r_0^2 N_A$ (bonus: the flux is described by stagnant B solution)
+- Relation between surface flux $N_A \propto r_0^{-1}$ 
+- Number of droplets $n \propto r_0^{-3}$
+- Total mass transfer for same weight: $\propto r_0^{-2}$
+
+Conclusion: 
+- smaller particle $r_0$  👉 larger combined area 👉 larger total flux / amount of absorption
+- (bonus) in practice you want to balance between making smaller droplets, and energy cost for producing the droplets
 
 ## Long Answer Question 1
 
 ![](./public/la-1.png){width="100%"}
 
+## Long Answer Question 1 -- Key Points
+
+- Sign in $N_A$ or $J_{Az}^*$
+- EMCD situation
+- Use Fuller method to calibrate $D_{AB}$ ($\propto T^{1.5}/P$)
+
 ## Long Answer Question 2
 
 ![](./public/la-2.png){width="100%"}
+
+## Long Answer Question 2 -- Key Points
+
+- Diagram (a cylinder with in/out diameter & length)
+- Solid diffusion 👉 EMCD-like equation (diffusion only)
+- **DO NOT** write $N_A \propto 1/(d_2 - d_1)$!
+- Steady state flux eq. in cylindrical coordinate
+- Governing eq for cylindrical coordinate
+- Use of $\overline{N}_A$ for steady state
+- $c_A$ from solubility
+
 
 ## Long Answer Question 3
 
 ![](./public/la-3.png){width="100%"}
 
+## Long Answer Question 3 -- Key Points
+
+- Diagram (convection in axial / z-axis; diffusion in radial / r-axis)
+- Mass balance in control volume
+- Generation term link to flux-controlled consumption
+- Flux boundary conditions in r-axis
 
 ## Summary
 
