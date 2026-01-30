@@ -37,9 +37,82 @@ After today's lecture, you will be able to:
 - **Analyze** typical pitfalls in concepts of mass transfer
 - **Familiarize** with convective mass transfer concepts
 
-## 
+## Key Concepts of Mass Transfer
 
+- **Q: What is mass transfer about**?
+  - Moving of chemical species through space
 
+- **Q: What does mass transfer study**?
+  - How fast can we move chemicals / materials through space --> Concept of flux
+  - What drives species to move? --> Concept of driving force / concentration gradient
+  - Resistance of species moving during transport --> Concept of Diffusivity
+  - Slow vs fast ways to move species --> diffusion vs convection
+  
+- **Q: What systems do we study?**
+  - Steady state: concentration of species **do not change** over time
+  - Unsteady state: concentration of species **change** over time
+
+## A Mindmap For Mass Transfer Part I
+
+## Mass Transfer Mind Map
+
+```{mermaid}
+mindmap
+  root((Mass Transfer))
+    Mass Balance
+      Steady State
+      Unsteady State
+        Boundary conditions
+        Reaction rate coupling
+      Pseudo-steady State
+
+    Flux Equation
+      Diffusion
+        Fick 1st law
+        Diffusive velocity
+      Convection
+        Convective velocity
+
+    General Systems
+      EMCD
+      Stagnant B
+      General and reaction
+
+    Geometry
+      1D slab
+      Cylinder
+      Sphere
+      Varying cross section
+
+    State of Material and Diffusivity
+      Gas
+        Chapman–Enskog
+        Fuller
+      Liquid
+        Stokes–Einstein
+      Solid
+        Solubility
+        Permeability
+        Effective diffusivity
+```
+
+# Sample Questions (2019)
+
+## Short Answer Question
+
+![](./public/sa-1.png){width="100%"}
+
+## Long Answer Question 1
+
+![](./public/la-1.png){width="100%"}
+
+## Long Answer Question 2
+
+![](./public/la-2.png){width="100%"}
+
+## Long Answer Question 3
+
+![](./public/la-3.png){width="100%"}
 
 
 ## Summary
