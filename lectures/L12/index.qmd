@@ -68,7 +68,7 @@ After today's lecture, you will be able to:
   - Steady state: concentration of species **do not change** over time
   - Unsteady state: concentration of species **change** over time
 
-<!-- ::: {.content-visible when-format="html"} -->
+::: {.content-visible when-format="html"}
 
 ## A Mindmap For Mass Transfer Part I
 
@@ -112,7 +112,7 @@ mindmap
         Effective diffusivity
 ```
 
-<!-- ::: -->
+:::
 
 
 # Sample Questions (2019)
