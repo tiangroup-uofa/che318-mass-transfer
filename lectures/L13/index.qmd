@@ -121,165 +121,26 @@ Boundary conditions?
 - How do we know $c_A(z)$ at the interface?
 - They can actually take any value!
 
-## Realistic Interfacial Concentration Profiles
-
-At the boundary, it is often convenient to use the equilibrium
-concentration ratio between gas ($c_i$) and liquid ($c_{Li}$). This constant, often called the **equilibrium distribution coefficient**, is defined as:
-
-```{=tex}
-\begin{align}
-K &= \frac{\text{[Conc. at gas side]}}{\text{[Conc. at liquid side]}} \\
-&= \frac{c_{i}}{c_{Li}}
-\end{align}
-```
-
-- Similarity: Henry's law ($H = \dfrac{p_{\text{gas}}}{c_{\text{aq}}}$), remember in gas $p_{\text{gas}} = c_{\text{gas}} RT$
-- We have already seen similar concepts in solubility in liquid / solid diffusion equations!
-- $K$ can be a value range from $0$ to $\infty$ 👉 what does that mean?
-
-## Interfacial Concentration Profile For Different $K$
-
-- The interfacial concentration values depend on the value of $K$!
-- What else determines the interfacial balance? 👉 matching of interfacial fluxes $N_A$ at both sides!
-
-![_Geankoplis Figure 7.1.3_](./public/distribution-coeff-profile.png){width="95%"}
-
-
-## Match of Interfacial Fluxes
-
-**At equilibrium**, if there is no resistance when transferring A between the interface, what is the mass balance equation?
-
-```{=tex}
-\begin{align}
-\text{[In]}\vert_{\text{left}} - \text{[Out]}\vert_{\text{right}} + \text{[Gen]}\vert_{\text{interface}}
-&= \text{[Acc]}\vert_{\text{interface}} \\
-N_A\vert_{\text{left}} = N_A\vert_{\text{right}}
-\end{align}
-```
-
-How do we model $N_A$ in each phase?
-
-- May be a combination of diffusion and convection
-- Fluid velocity at interface may be turbulent (hard to model)
-- In general we use the phenomenal relation $\text{[Flux]} = \text{[Driving Force]} / \text{[Resistance]}$
-
-
-## General Flux Equation For Convective Transport Regime
-
-- The driving force is the concentration difference "bulk concentration" and "interfacial concentration"
-- The resistance is lumped into one coefficient $k_c$, **mass transfer coefficient**.
-
-```{=tex}
-\begin{align}
-N_A = k_c (c_{L, b} - c_{Li})
-\end{align}
-```
-- $k_c$ is inversely related to the resistance.
-- The unit of $k_c$?  👉  $\text{m}\cdot\text{s}^{-1}$
-- $k_c$ can be $\infty$! 👉 No transfer resistance inside the bulk phase
-
-## Where Does $k_c$ Come From?
-
-Simplified view: transport resistance of A from bulk to the interface occurs inside an interfacial film with thickness
-$\delta$. We can write $N_A$ at steady state using already known results
-
-- Case 1: EMCD / diffusion-controlled / dilute transport in liquid
-
-```{=tex}
-\begin{align}
-N_A &= \boxed{\frac{D_{AB}}{\delta}} (c_{L, b} - c_{L, i}) \\
-    &= k_c (c_{L, b} - c_{L, i})
-\end{align}
-```
-
-- Case 2: transport in stagnant film with non-negligible convection
-
-```{=tex}
-\begin{align}
-N_A &= \boxed{\frac{D_{AB}}{\delta (1 - \frac{c}{c_T} )}} (c_{L, b} - c_{L, i}) \\
-    &= k_c (c_{L, b} - c_{L, i})
-\end{align}
-```
-
-One can expect $k_c$ may contain the $1/x_{Bm}$ term in Case 2!
-
-## Where Does $k_c$ Come From?
-
-The mass transfer coefficient $k_c$ is even valid for systems with effective $D_{AB}$!
-
-- Case 3: mass transfer in porous solid materials
-
-```{=tex}
-\begin{align}
-N_A &= \boxed{\frac{\epsilon}{\tau}\frac{D_{AB}}{\delta}} (c_{L, b} - c_{L, i}) \\
-    &= k_c (c_{L, b} - c_{L, i})
-\end{align}
-```
-
-- Case 4: turbulent mass transfer (to be discussed later)
-
-The turbulence in the fluid contributes to an additional term $\epsilon_m$ in diffusion terms
-
-```{=tex}
-\begin{align}
-N_A &= \boxed{\frac{D_{AB} + \epsilon_m}{\delta}} (c_{L, b} - c_{L, i}) \\
-    &= k_c (c_{L, b} - c_{L, i})
-\end{align}
-```
-
-## Implications of Mass Transfer Coefficient $k_c$
-
-- Really convenient to use! 
-- In reality, $k_c$ is not a physics-based quantity, it depends on system / condition
-- $k_c \propto D_{AB}^n$ in realistic systems
-- We will discuss about different theories that explains the relation between $k_c$ and $D_{AB}$ (penetration theory, film theory, boundary theory) in coming weeks
-
-## Balance Equations At Interfaces
-
-We now have 2 equations to determine the interfacial concentrations!
-
-1. Equilibrium concentration distribution
-
-```{=tex}
-\begin{align}
-K = \frac{c_{Li}}{c_i}
-\end{align}
-```
-
-2. Flux matching
-
-```{=tex}
-\begin{align}
-N_{A}\vert_{\text{liq}} &= N_{A}\vert_{\text{gas}} \\
-k_{c, \text{liq}} (c_{L, b} - c_{L, i}) &= k_{c, \text{gas}} (c_{g, i} - c_{g, b})
-\end{align}
-```
-
-We can solve $c_{L, i}$ and $c_{g, i}$ given information about:
-
-- Bulk concentrations $c_{L, b}$, $c_{g, b}$
-- Equilibrium distribution coefficient $K$
-- Mass transfer coefficients $k_c$ in each phase
-
-## Demonstration of Mixed Boundary Conditions
 
 ## Summary
 In this lecture, we talked about
 
+- Solving long-answer questions in midterm
 - The difficulty of studying boundary problems in mass transfer
 - The rise of equilibrium distribution coefficient $K$ and mass transfer coefficient $k$
-- Link between mass transfer coefficient $k$ and transfer layer
 
 ## What To Learn Next
 
-The concept of mass transfer coefficient $k$ is both beautiful and
-ugly.
+- We will introduce the **mass transfer coefficient** $k$ as a general parameter for convective mass transfer
 
-- We **gain** the simplicity of expressing flux equations using simple
-formula,
-- We **lose** physical understanding about its origin in many systems
+<!-- - The concept of mass transfer coefficient $k$ is both beautiful and -->
+<!-- ugly. -->
 
-In next lectures, we will see:
+<!-- - We **gain** the simplicity of expressing flux equations using simple -->
+<!-- formula, -->
+<!-- - We **lose** physical understanding about its origin in many systems -->
+
+<!-- In next lectures, we will see: -->
 
 - How to use mass transfer coefficients for different phases (gas, liquid, solid)
 - How convective fluid transport is expressed using coefficients

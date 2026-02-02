@@ -183,7 +183,8 @@ into the gas stream. The liquid $A$ completely wets the surface of a
 blotting paper, so that the interface is always covered with liquid
 $A$. The partial pressure of species $A$ at $298\;\text{K}$ is
 $0.20\;\text{atm}$. 
-From textbook table, $ k_y' = 6.78 \times 10^{-5} \;\frac{\text{kg mol}}{\text{m}^2 \cdot \text{s}}$.
+From textbook table, 
+$$ k_y' = 6.78 \times 10^{-5} \;\frac{\text{kg mol}}{\text{m}^2 \cdot \text{s}}$$.
 
 Calculate the evaporation rate $N_A$ and determine the values of the gas-phase mass transfer coefficients $k_y$ and $k_G$ for this system.
 
