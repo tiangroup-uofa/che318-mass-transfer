@@ -7,8 +7,6 @@ format:
   html: {}
   revealjs:
     output-file: slides.html
-  <!-- pdf: -->
-    <!-- output-file: L12.pdf -->
 ---
 
 ::: {.content-visible when-format="html" unless-format="revealjs"}
