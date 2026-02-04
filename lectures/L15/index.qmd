@@ -512,9 +512,8 @@ Correlation 1, applicable to:
 
 ```{=tex}
 \begin{align}
-j_D &= j_H = \frac{0.4548}{\varepsilon}
-N_{Re}^(-0.4069) \\
-N_{Re} &= \frac{D_p v^' \rho}{\mu}
+j_D &= j_H = \frac{0.4548}{\varepsilon} N_{Re}^(-0.4069) \\
+N_{Re} &= \frac{D_p v' \rho}{\mu}
 \end{align}
 ```
 
@@ -529,8 +528,8 @@ Correlation 2, applicable to:
 
 ```{=tex}
 \begin{align}
-j_D &= \frac{1.09}{\varepsilon}
-N_{Re}^(-2/3) \\
+j_D = \frac{1.09}{\varepsilon}
+N_{Re}^(-2/3)
 \end{align}
 ```
 
@@ -539,8 +538,8 @@ N_{Re}^(-2/3) \\
 
 ```{=tex}
 \begin{align}
-j_D &= \frac{0.250}{\varepsilon}
-N_{Re}^(-0.31) \\
+j_D = \frac{0.250}{\varepsilon}
+N_{Re}^(-0.31)
 \end{align}
 ```
 
@@ -552,8 +551,8 @@ Correlation 3, applicable to fluidized beds
 
 ```{=tex}
 \begin{align}
-j_D &= \frac{0.4548}{\varepsilon}
-N_{Re}^(-0.4069) \\
+j_D = \frac{0.4548}{\varepsilon}
+N_{Re}^(-0.4069)
 \end{align}
 ```
 
@@ -561,8 +560,8 @@ N_{Re}^(-0.4069) \\
 
 ```{=tex}
 \begin{align}
-j_D &= \frac{1.1068}{\varepsilon}
-N_{Re}^(-0.72) \\
+j_D = \frac{1.1068}{\varepsilon}
+N_{Re}^(-0.72)
 \end{align}
 ```
 
