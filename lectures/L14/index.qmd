@@ -83,18 +83,19 @@ How do we model $N_A$ in each phase?
 ## General Flux Equation For Convective Transport Regime
 
 - The driving force is the concentration difference "bulk concentration" and "interfacial concentration"
-- The resistance is lumped into one coefficient $k_c$, **mass transfer coefficient**.
+- The resistance is lumped into one coefficient $k_c'$, **mass transfer coefficient**.
 
 ```{=tex}
 \begin{align}
-N_A = k_c (c_{L, b} - c_{Li})
+N_A = k_c' (c_{L, b} - c_{Li})
 \end{align}
 ```
-- $k_c$ is inversely related to the resistance.
-- The unit of $k_c$?  👉  $\text{m}\cdot\text{s}^{-1}$
-- $k_c$ can be $\infty$! 👉 No transfer resistance inside the bulk phase
+- $k_c'$ is inversely related to the resistance.
+- $k_c'$ means driving force is concentration & convection term is EMCD-like
+- The unit of $k_c'$?  👉  $\text{m}\cdot\text{s}^{-1}$
+- $k_c'$ can be $\infty$! 👉 No transfer resistance inside the bulk phase
 
-## Where Does $k_c$ Come From?
+## Where Does $k_c'$ Come From (I)?
 
 Simplified view: transport resistance of A from bulk to the interface occurs inside an interfacial film with thickness
 $\delta$. We can write $N_A$ at steady state using already known results
@@ -104,7 +105,7 @@ $\delta$. We can write $N_A$ at steady state using already known results
 ```{=tex}
 \begin{align}
 N_A &= \boxed{\frac{D_{AB}}{\delta}} (c_{L, b} - c_{L, i}) \\
-    &= k_c (c_{L, b} - c_{L, i})
+    &= k_c' (c_{L, b} - c_{L, i})
 \end{align}
 ```
 
@@ -113,13 +114,15 @@ N_A &= \boxed{\frac{D_{AB}}{\delta}} (c_{L, b} - c_{L, i}) \\
 ```{=tex}
 \begin{align}
 N_A &= \boxed{\frac{D_{AB}}{\delta (1 - \frac{c}{c_T} )}} (c_{L, b} - c_{L, i}) \\
-    &= k_c (c_{L, b} - c_{L, i})
+    &= k_c' \frac{1}{x_{Bm}} (c_{L, b} - c_{L, i}) \\
+	&= k_c (c_{L, b} - c_{L, i})
 \end{align}
 ```
 
-One can expect $k_c$ may contain the $1/x_{Bm}$ term in Case 2!
+- Can be written both by $k_c'$ or $k_c$ terms
+- One can expect $k_c$ contain the $1/x_{Bm}$ term!
 
-## Where Does $k_c$ Come From?
+## Where Does $k_c$ Come From (II)?
 
 The mass transfer coefficient $k_c$ is even valid for systems with effective $D_{AB}$!
 
@@ -128,27 +131,30 @@ The mass transfer coefficient $k_c$ is even valid for systems with effective $D_
 ```{=tex}
 \begin{align}
 N_A &= \boxed{\frac{\epsilon}{\tau}\frac{D_{AB}}{\delta}} (c_{L, b} - c_{L, i}) \\
-    &= k_c (c_{L, b} - c_{L, i})
+    &= k_c' (c_{L, b} - c_{L, i})
 \end{align}
 ```
 
-- Case 4: turbulent mass transfer (to be discussed later)
+- Case 4: turbulent mass transfer
 
 The turbulence in the fluid contributes to an additional term $\epsilon_m$ in diffusion terms
 
 ```{=tex}
 \begin{align}
 N_A &= \boxed{\frac{D_{AB} + \epsilon_m}{\delta}} (c_{L, b} - c_{L, i}) \\
-    &= k_c (c_{L, b} - c_{L, i})
+    &= k_c' (c_{L, b} - c_{L, i})
 \end{align}
 ```
 
-## Implications of Mass Transfer Coefficient $k_c$
+- $\epsilon_m$ is the "Eddie diffusivity" (correction to $D_{AB}$ due to turbulence)
+- General case for $\epsilon_m$ is non-trivial to solve!
+
+## Implications of Mass Transfer Coefficient $k_c'$
 
 - Really convenient to use! 
-- In reality, $k_c$ is not a physics-based quantity, it depends on system / condition
-- $k_c \propto D_{AB}^n$ in realistic systems
-- We will discuss about different theories that explains the relation between $k_c$ and $D_{AB}$ (penetration theory, film theory, boundary theory) in coming weeks
+- In reality, $k_c'$ is not a physics-based quantity, it depends on system / condition
+- $k_c' \propto D_{AB}^n$ in realistic systems
+- We will discuss about different theories that explains the relation between $k_c'$ and $D_{AB}$ (penetration theory, film theory, boundary theory) in coming weeks
 
 ## Balance Equations At Interfaces
 
@@ -158,7 +164,7 @@ We now have 2 equations to determine the interfacial concentrations!
 
 ```{=tex}
 \begin{align}
-K = \frac{c_{Li}}{c_i}
+K = \frac{c_{g,i}}{c_{L,i}}
 \end{align}
 ```
 
@@ -167,7 +173,7 @@ K = \frac{c_{Li}}{c_i}
 ```{=tex}
 \begin{align}
 N_{A}\vert_{\text{liq}} &= N_{A}\vert_{\text{gas}} \\
-k_{c, \text{liq}} (c_{L, b} - c_{L, i}) &= k_{c, \text{gas}} (c_{g, i} - c_{g, b})
+k_{c, \text{liq}}' (c_{L, b} - c_{L, i}) &= k_{c, \text{gas}}' (c_{g, i} - c_{g, b})
 \end{align}
 ```
 
@@ -179,27 +185,6 @@ We can solve $c_{L, i}$ and $c_{g, i}$ given information about:
 
 ## Demonstration of Mixed Boundary Conditions
 
-## Summary
-In this lecture, we talked about
-
-- The difficulty of studying boundary problems in mass transfer
-- The rise of equilibrium distribution coefficient $K$ and mass transfer coefficient $k$
-- Link between mass transfer coefficient $k$ and transfer layer
-
-## What To Learn Next
-
-The concept of mass transfer coefficient $k$ is both beautiful and
-ugly.
-
-- We **gain** the simplicity of expressing flux equations using simple
-formula,
-- We **lose** physical understanding about its origin in many systems
-
-In next lectures, we will see:
-
-- How to use mass transfer coefficients for different phases (gas, liquid, solid)
-- How convective fluid transport is expressed using coefficients
-- How to perform mass transfer analysis based on transfer coefficients
 
 ## Mass Transfer Coefficient In Different Forms
 
@@ -265,25 +250,25 @@ But:
 
 ```{=tex}
 \begin{align}
-k_c' \, c
-&= k_c' \frac{p}{RT}
+k_c' \, c_T
+&= k_c' \frac{p_T}{RT}
 = k_c \frac{p_{Bm}}{RT}
 \\
-&= k_G' \, p
-= k_G \, p_{BM}
+&= k_G' \, p_T
+= k_G \, p_{Bm}
 \\
 &= k_y' 
-= k_y \, y_{BM}
+= k_y \, y_{Bm}
 \\
-&= k_c \, y_{BM} \, c
-= k_G \, y_{BM} \, p
+&= k_c \, y_{Bm} \, c_T
+= k_G \, y_{Bm} \, p_T
 \end{align}
 ```
 
 - $p$ : total pressure
-- $p_{BM}$ : log-mean partial pressure of inert $B$
-- $y_{BM}$ : log-mean mole fraction of $B$
-- $c = p/(RT)$
+- $p_{Bm}$ : log-mean partial pressure of inert $B$
+- $y_{Bm}$ : log-mean mole fraction of $B$
+- $c_T = p_T/(RT)$
 
 
 :::
@@ -318,9 +303,9 @@ k_c' \, c
 Question: Consider steady-state, one-dimensional mass transfer of a
 binary gas mixture consisting of species $A$ and $B$ between two
 parallel planes, labeled (1) and (2). The total pressure of the system
-is $p_T = 700 \text{kPa}$ and the temperature is maintained at $T =
-100 ^\circ\text{C}$. The gas-phase mass transfer coefficient from molar fraction is
-$ k_y’ = 1.5 \times 10^{-4} \text{kg mol}\cdot \text{m}^{-2} \cdot \text{s}^{-1}$.
+is $p_T = 700\ \text{kPa}$ and the temperature is maintained at $T =
+100 ^\circ\text{C}$. The gas-phase mass transfer coefficient from molar fraction is 
+$k_y’ = 1.5 \times 10^{-4}\ \text{kg mol}\cdot \text{m}^{-2} \cdot \text{s}^{-1}$. Flow in pipe 1 contains 65 mol% A, while flow in pipe 2 contains 45 mol% B.
 
 1. Find the values for fluxes $N_A$ and $N_B$
 2. Find the values (and units) for other coefficients $k_G'$ and $k_c'$
@@ -341,7 +326,7 @@ Answer
 
 ## Example 2: Using $k$ For Diffusion Through Stagnant Film
 
-_Geankoplis Ex 7.2-1_ Alarge volume of pure gas $B$ at 2 atm pressure
+_Geankoplis Ex 7.2-1_ A large volume of pure gas $B$ at 2 atm pressure
 flows over a flat surface. Species $A$ is vaporizing from the surface
 into the gas stream. The liquid $A$ completely wets the surface of a
 blotting paper, so that the interface is always covered with liquid
@@ -404,73 +389,28 @@ k_L = \frac{1}{4 \pi r_0^2} \frac{m_1 - m_2}{c_{As} M_A \Delta t}
 \end{align}
 ```
 
-## Mass Transfer Coefficients For Various Geometries
-
-- Expressing fluxes using $k$ coefficients are easy
-- But do we need to measure $k$ for each system specifically?
-- Of course **NO**!
-- We can correlate the values of $k$ measured in different geometries, velocities using **dimensionless numbers**
-- Similar treatment exists in heat and momentum (fluid) transfer
-
-## Dimensionless Numbers In Mass Transfer
-
-- **Schmidt number** (ratio between momentum diffusivity and molecular diffusivity)
-
-```{=tex}
-\begin{align}
-N_{\text{Sc}} = \frac{\mu}{\rho D_{AB}}
-\end{align}
-```
-
-- **Sherwood number** (ratio between convective mass transfer and molecular mass transfer)
-
-```{=tex}
-\begin{align}
-N_{\text{Sh}} = \frac{k_c' L}{D_{AB}}
-\end{align}
-```
-
-- **Reynolds number** (ratio between kinetic vs viscous forces of fluid flow)
-
-```{=tex}
-\begin{align}
-N_{\text{Re}} = \frac{L v \rho}{\mu}
-\end{align}
-```
-
-## How Are $k_c'$ Correlated By Dimensionless Numbers?
-
-- Idea: mass transfer in flowing fluid described by $v$, $\rho$, $\mu$, $c$, $D_{AB}$ and geometry (characteristic length $L$)
-- The combinations of these properties --> dimensionless number groups ($N_{\text{Sc}}$, $N_{\text{Sh}}$, $N_{\text{Re}}$)
-- The Chilton-Colburn $j$-factor analog has most successful use in mass transfer
-
-```{=tex}
-\begin{align}
-j_D &= \frac{k_c'}{v_{av}} (N_{\text{Sc}})^{2/3} \\
-    &= \boxed{\frac{k_c' L}{D_{AB}}} \boxed{\frac{\rho D_{AB}}{\mu}} \boxed{\frac{\mu}{L v_{av} \rho}} (N_\text{sc})^{2/3} \\
-	&= N_{\text{Sh}} N_{\text{Sc}}^{-1} N_{\text{Re}}^{-1} (N_\text{sc})^{2/3} \\
-	&= \frac{N_{\text{Sh}}}{N_{\text{Re}} N_{\text{Sc}}^{1/3}}
-\end{align}
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Summary
+In this lecture, we talked about
 
-- Good luck with the midterm exam!
+- The difficulty of studying boundary problems in mass transfer
+- The rise of equilibrium distribution coefficient $K$ and mass transfer coefficient $k$
+- Link between mass transfer coefficient $k$ and transfer layer
+
+## What To Learn Next
+
+The concept of mass transfer coefficient $k$ is both beautiful and
+ugly.
+
+- We **gain** the simplicity of expressing flux equations using simple
+formula,
+- We **lose** physical understanding about its origin in many systems
+
+In next lectures, we will see:
+
+- How to use mass transfer coefficients for different phases (gas, liquid, solid)
+- How convective fluid transport is expressed using coefficients
+- How to perform mass transfer analysis based on transfer coefficients
 
 
 

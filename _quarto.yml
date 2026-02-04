@@ -72,6 +72,7 @@ format:
     number-sections: false
     width: 1600
     height: 900
+    # scrollable: true
     
   html:
     theme: cosmo
