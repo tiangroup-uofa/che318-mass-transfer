@@ -173,7 +173,7 @@ N_A &= J_{Az}^*\\
   ```{=tex}
   \begin{align}
   \frac{\partial c_A}{\partial t}
-  = D_{AB}\frac{\partial^2 c_A}{\partial t^2}
+  = D_{AB}\frac{\partial^2 c_A}{\partial z^2}
   \end{align}
   ```
 - B.C. $c_A(z=0)=c_{A,s},\ c_A(z=\infty)=c_{A,b}$
