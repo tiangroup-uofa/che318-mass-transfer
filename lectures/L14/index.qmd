@@ -185,6 +185,11 @@ We can solve $c_{L, i}$ and $c_{g, i}$ given information about:
 
 ## Demonstration of Mixed Boundary Conditions
 
+```{=html}
+<iframe width="100%" height="900"
+		src="../../scripts/L14_boundary.html" title="Webpage example"></iframe>
+```
+
 
 ## Mass Transfer Coefficient In Different Forms
 
@@ -297,97 +302,7 @@ k_c' \, c
 :::
 :::
 
-## Example 1: Convective Flux Through A Tube
 
-
-Question: Consider steady-state, one-dimensional mass transfer of a
-binary gas mixture consisting of species $A$ and $B$ between two
-parallel planes, labeled (1) and (2). The total pressure of the system
-is $p_T = 700\ \text{kPa}$ and the temperature is maintained at $T =
-100 ^\circ\text{C}$. The gas-phase mass transfer coefficient from molar fraction is 
-$k_y’ = 1.5 \times 10^{-4}\ \text{kg mol}\cdot \text{m}^{-2} \cdot \text{s}^{-1}$. Flow in pipe 1 contains 65 mol% A, while flow in pipe 2 contains 45 mol% B.
-
-1. Find the values for fluxes $N_A$ and $N_B$
-2. Find the values (and units) for other coefficients $k_G'$ and $k_c'$
-
-
-## Solutions To Example 1
-
-:::{.callout-tip}
-- Mass transport normal to fluid can usually use $k$ to write the flux equation
-- Pay attention to the unit used
-:::
-
-Answer
-
-1. $N_A = -N_B = 3.0\times 10^{-5}\ \text{kg mol}\cdot \text{m}^{-2} \cdot \text{s}^{-1}$
-2. $k_G' = k_y' / p_T = 2.14\times 10^{-7}\ \text{kg mol}/(\text{m}^2 \cdot \text{s} \cdot {kPa})$
-3. $k_c' = k_y' RT / p_T = 6.65\times 10^{-4}\ \text{m}\cdot \text{s}^{-1}$
-
-## Example 2: Using $k$ For Diffusion Through Stagnant Film
-
-_Geankoplis Ex 7.2-1_ A large volume of pure gas $B$ at 2 atm pressure
-flows over a flat surface. Species $A$ is vaporizing from the surface
-into the gas stream. The liquid $A$ completely wets the surface of a
-blotting paper, so that the interface is always covered with liquid
-$A$. The partial pressure of species $A$ at $298\;\text{K}$ is
-$0.20\;\text{atm}$. 
-From textbook table, 
-$$ k_y' = 6.78 \times 10^{-5} \;\frac{\text{kg mol}}{\text{m}^2 \cdot \text{s}}$$.
-
-Calculate the evaporation rate $N_A$ and determine the values of the gas-phase mass transfer coefficients $k_y$ and $k_G$ for this system.
-
-## Solutions To Example 2
-
-:::{.callout-tip}
-- This is a diffusion through stagnant B system
-- Convert $k_y'$ to $k_y$ in stagnant B system first
-- Express $k_G$ in $\text{kg mol}/(\text{s} \cdot \text{m}^2 \cdot \text{atm})$ first
-:::
-
-Answer
-
-1. $y_{Bm} = 0.95$  👉 
-$k_y = k_y'/y_{Bm} = 7.138\times 10^{-5} \;\frac{\text{kg mol}}{\text{m}^2 \cdot \text{s}}$
-2. $y_G = 3.569 \times 10^{-5}\ \text{kg mol}/(\text{s} \cdot \text{m}^2 \cdot \text{atm})$
-3. $N_A = y_G (p_{A1} - p_{A2}) = 7.138 \times 10^{-6}\ \text{kg mol}\cdot \text{m}^{-2} \cdot \text{s}^{-1}$
-
-## Example 3: Measuring $k$ For Actual Systems
-
-Since we have $\text{[Flux]} = k \times \text{[Driving Force]}$, we can measure $k$ using given geometries.
-
-Question: solid benzoic acid (A) in a sphere with radius $r_0$ was
-place in a tube with water flowing in the system. The fluid was turned
-on for a certain time interval $\Delta t$ to remove dissolved A from
-the liquid. The masses of a dried sphere before and after the
-experiment were measured to be $m_1$ and $m_2$ ($m_2 - m_1 \ll
-m_1$). The solubility of A in water is $c_{As}$ and water contain no
-benzoid acid. Calculate the mass transfer coefficient of this
-system. What form of $k$ did you use?
-
-## Solutions To Example 3
-
-:::{.callout-tip}
-- Flow-induced flux, can be turbulent  👉 lumped $k_L$ term is valid
-- Link $N_A$ to mass loss rate
-:::
-
-Answer:
-
-- Relating flux equation to mass loss rate:
-```{=tex}
-\begin{align}
-N_A &= \frac{1}{4 \pi r_0^2} \frac{m_1 - m_2}{M_A \Delta t} \\
-&= k_L (c_{As} - 0)
-\end{align}
-```
-- Solve for $k_L$:
-
-```{=tex}
-\begin{align}
-k_L = \frac{1}{4 \pi r_0^2} \frac{m_1 - m_2}{c_{As} M_A \Delta t}
-\end{align}
-```
 
 
 ## Summary
