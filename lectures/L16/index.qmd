@@ -1,6 +1,6 @@
 ---
 title: "CHE 318 Lecture 16"
-subtitle: "Dimensionless Numbers In Mass Transfer"
+subtitle: "Midterm Exam Discussion"
 author: "Dr. Tian Tian"
 date: "2026-02-11"
 format:
@@ -22,427 +22,427 @@ format:
 :::
 
 
-## Learning Outcomes {.center}
+<!-- ## Learning Outcomes {.center} -->
 
-After today's lecture, you will be able to:
+<!-- After today's lecture, you will be able to: -->
 
-- Recall the nature behind dimensionless numbers
-- Describe how to correlate mass transfer behaviour with dimensionless numbers
-- Understand the usage of dimensionless numbers in different geometries
+<!-- - Recall the nature behind dimensionless numbers -->
+<!-- - Describe how to correlate mass transfer behaviour with dimensionless numbers -->
+<!-- - Understand the usage of dimensionless numbers in different geometries -->
 
-## Recap: Boundary Layer Theory
+<!-- ## Recap: Boundary Layer Theory -->
 
-The global mass transfer coefficient in a tube:
+<!-- The global mass transfer coefficient in a tube: -->
 
-```{=tex}
-\begin{align}
-k_c' = \frac{0.664 D_{AB}}{L} N_{Re}^{0.5} N_{Sc}^{1/3}
-\end{align}
-```
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- k_c' = \frac{0.664 D_{AB}}{L} N_{Re}^{0.5} N_{Sc}^{1/3} -->
+<!-- \end{align} -->
+<!-- ``` -->
 
-- $N_{Re}$: Reynolds number
-- $N_{Sc}$: Schmidt number
+<!-- - $N_{Re}$: Reynolds number -->
+<!-- - $N_{Sc}$: Schmidt number -->
 
-## Why Do We Need These Dimensionless Numbers?
+<!-- ## Why Do We Need These Dimensionless Numbers? -->
 
-- Expressing fluxes using $k$ coefficients are easy
-- But do we need to measure $k$ for each system specifically?
-   - Of course **NO**!
-- We can correlate the values of $k$ measured in different geometries, velocities using **dimensionless numbers**
-- Similar treatment exists in heat and momentum (fluid) transfer
+<!-- - Expressing fluxes using $k$ coefficients are easy -->
+<!-- - But do we need to measure $k$ for each system specifically? -->
+<!--    - Of course **NO**! -->
+<!-- - We can correlate the values of $k$ measured in different geometries, velocities using **dimensionless numbers** -->
+<!-- - Similar treatment exists in heat and momentum (fluid) transfer -->
 
-## Dimensionless Numbers In Mass Transfer {.smaller}
+<!-- ## Dimensionless Numbers In Mass Transfer {.smaller} -->
 
-- **General form**: $N_{\text{name}} = \dfrac{\text{Scale of effect 1}}{\text{Scale of Effect 2}}$
+<!-- - **General form**: $N_{\text{name}} = \dfrac{\text{Scale of effect 1}}{\text{Scale of Effect 2}}$ -->
 
-- **Schmidt number** (ratio between momentum diffusivity and molecular diffusivity)
+<!-- - **Schmidt number** (ratio between momentum diffusivity and molecular diffusivity) -->
 
-```{=tex}
-\begin{align}
-N_{\text{Sc}} = \frac{\mu}{\rho D_{AB}}
-\end{align}
-```
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- N_{\text{Sc}} = \frac{\mu}{\rho D_{AB}} -->
+<!-- \end{align} -->
+<!-- ``` -->
 
-- **Sherwood number** (ratio between convective mass transfer and molecular mass transfer)
+<!-- - **Sherwood number** (ratio between convective mass transfer and molecular mass transfer) -->
 
-```{=tex}
-\begin{align}
-N_{\text{Sh}} = \frac{k_c' L}{D_{AB}}
-\end{align}
-```
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- N_{\text{Sh}} = \frac{k_c' L}{D_{AB}} -->
+<!-- \end{align} -->
+<!-- ``` -->
 
-- **Reynolds number** (ratio between kinetic vs viscous forces of fluid flow)
+<!-- - **Reynolds number** (ratio between kinetic vs viscous forces of fluid flow) -->
 
-```{=tex}
-\begin{align}
-N_{\text{Re}} = \frac{L v \rho}{\mu}
-\end{align}
-```
-  - $L$: characteristic length of system
-  - Location specific $N_{\text{Re}, x}$ also used
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- N_{\text{Re}} = \frac{L v \rho}{\mu} -->
+<!-- \end{align} -->
+<!-- ``` -->
+<!--   - $L$: characteristic length of system -->
+<!--   - Location specific $N_{\text{Re}, x}$ also used -->
 
-## How Are $k_c'$ Correlated By Dimensionless Numbers?
+<!-- ## How Are $k_c'$ Correlated By Dimensionless Numbers? -->
 
-- Idea: mass transfer in flowing fluid described by $v$, $\rho$, $\mu$, $c$, $D_{AB}$ and geometry (characteristic length $L$)
-- The combinations of these properties --> dimensionless number groups ($N_{\text{Sc}}$, $N_{\text{Sh}}$, $N_{\text{Re}}$)
-- The Chilton-Colburn $j$-factor analog has most successful use in mass transfer
+<!-- - Idea: mass transfer in flowing fluid described by $v$, $\rho$, $\mu$, $c$, $D_{AB}$ and geometry (characteristic length $L$) -->
+<!-- - The combinations of these properties -\-> dimensionless number groups ($N_{\text{Sc}}$, $N_{\text{Sh}}$, $N_{\text{Re}}$) -->
+<!-- - The Chilton-Colburn $j$-factor analog has most successful use in mass transfer -->
 
-```{=tex}
-\begin{align}
-j_D &= f/2 \\
-&= \frac{k_c'}{v_{av}} (N_{\text{Sc}})^{2/3} \\
-    &= \boxed{\frac{k_c' L}{D_{AB}}} \boxed{\frac{\rho D_{AB}}{\mu}} \boxed{\frac{\mu}{L v_{av} \rho}} (N_\text{sc})^{2/3} \\
-	&= N_{\text{Sh}} N_{\text{Sc}}^{-1} N_{\text{Re}}^{-1} (N_\text{sc})^{2/3} \\
-	&= \frac{N_{\text{Sh}}}{N_{\text{Re}} N_{\text{Sc}}^{1/3}}
-\end{align}
-```
-
-- $f$ is the Fanning Friction Factor (can be found in table)
-
-## General Procedure To Calculate $k_c'$ {.smaller}
-
-1. Calculate Reynolds number $N_{Re}$ from fluid properties + geometry
-
-2. Determine flow regime (liquid)
-
-  - $N_{Re} < 2100$ → laminar flow
-  - $N_{Re} \ge 2100$ → turbulent flow
-
-3. Evaluate friction factor $f$  
-
-  - Laminar flow:  
-    $$
-    f = \frac{16}{N_{Re}}
-    $$
-  - Turbulent flow:  
-    $$
-    f = \frac{\tau_s}{\tfrac12 \rho v^2},\qquad
-    \tau_s = \frac{\Delta P_f\,\pi R^2}{2\pi R\,\Delta L}
-    $$
-
-4. Compute mass-transfer $j$-factor  
-  $$
-  j_D = \frac{f}{2}
-  $$
-
-5. Obtain mass-transfer coefficient  
-  $$
-  k_c' = j_D\,v_{av}\,N_{Sc}^{-2/3}
-  $$
-
-## Use of Empirical Mass Transfer Laws
-
-- In many systems, flux and / or concentration profiles become hard to have simple form
-- Luckily we can simplify typical mass transfer problems as different geometries
-  - Cyliner / Pipe
-  - Parallel plates
-  - Flow around sphere
-  - Packed bed
-- We will show a few case studies for different geometries
-- Dimensionless numbers ($N_{Re}$, $N_{Sc}$, $N_{Sh}$) help determine governing equations
-
-## Case 1: Mass Transfer for Flow Inside Pipes
-
-- Usually use the Linton & Sherwood chart
-- Valid for gas / liquid in both laminar & turbulent regimes
-
-## Flow Inside Pipes: Solution Procedure
-
-- Governing dimensionless quantity:
-
-```{=tex}
-\begin{align}
-\frac{W}{D_{AB}\rho L} &= N_{Re}N_{Sc} \frac{D}{L} \frac{\pi}{4} \\
-&= \frac{\text{[Total Forced Flow]} \text{(kg/s)}}{\text{[Total Diffusive Flow]} \text{(kg/s)}}
-\end{align}
-```
-
-- If gas 👉 use the "rodlike flow" line
-- If liquid, distinguish 2 cases
-  - parabolic flow ($N_{Re} < 2100;\ \frac{W}{D_{AB}\rho L} > 400$)
-  - turbulent flow ($N_{Re} > 2100;\ 0.6 < N_{Sc} < 3000$)
-
-## Flow Inside Pipes: Solution For Liquid
-
-:::{.columns}
-:::{.column width="50%"}
-**Parabolic flow**
-
-```{=tex}
-\begin{align}
-\frac{c_A - c_{A,s}}{c_{A,i} - c_{A,s}}
-&= 5.5
-\left[
-\frac{W}{D_{AB}\,\rho\,L}
-\right]^{-\tfrac{2}{3}}
-\end{align}
-```
-
-- $c_A$: exit concentration
-- $c_{A,i}, c_{A,s}$: inlet & surface concentration
-- $W$: flow rate in (kg/s)
-
-- $k_c'$ can be calculated by $j_D$
-:::
-
-:::{.column width="50%"}
-**Turbulent flow**
-
-```{=tex}
-\begin{align}
-N_{Sh}
-&= k_c'\left(\frac{D}{D_{AB}}\right) \\
-&= \frac{k_c\,p_{BM}}{P}
-\left(\frac{D}{D_{AB}}\right) \\
-&= 0.023
-\left(\frac{\rho D v}{\mu}\right)^{0.83}
-\left(\frac{\mu}{\rho D_{AB}}\right)^{0.33} \\
-&= 0.023\,
-N_{Re}^{0.83}\,
-N_{Sc}^{0.33}
-\end{align}
-```
-
-- Similar to the $j_D$ analog
-- Just need $N_{Re}$ and $N_{Sc}$ to determine $k_c'$
-- Characteristic length $D$ is pipe diameter!
-:::
-
-## Case 2: Flow Past Parallel Plates
-
-- Can be used for gases or evaporation of liquid
-- Distinguished between laminar & turbulent flow
-- $N_{Re}$ regime cutoff different in gas & liquid!
-- - Characteristic length $L$: length of plate in flow direction
-
-## Flow Past Parallel Plates: Results
-
-:::{.columns}
-:::{.column width="50%"}
-**Laminar flow** ($N_{Re} < 15,000$)
-
-```{=tex}
-\begin{align}
-j_D &= 0.664 N_{Re, L}^{-0.5} \\
-\frac{k_c' L}{D_{AB}} &= 0.664 N_{Re, L}^{0.5}
-N_{Sc}^{1/3}
-\end{align}
-```
-- This follows our derivation of boundary layer theory
-
-
-:::
-
-:::{.column width="50%"}
-**Turbulent flow**
-
-- Gas: $15,000 < N_{Re}< 300,000 $
-
-```{=tex}
-\begin{align}
-j_D = 0.036 N_{Re, L}^{-0.2}
-\end{align}
-```
-
-- Liquid: $600 < N_{Re}< 50,000$
-```{=tex}
-\begin{align}
-j_D = 0.99 N_{Re, L}^{-0.5}
-\end{align}
-```
-
-::: 
-:::
-
-## Case 3: Flow Past Single Sphere 
-
-- Frequent geometry in particle solutions
-- Low Reynolds regime 👉 solution for stagnant diffusion on spherical surface
-- High Reynolds regime 👉 correct $N_{Sh}$ and back calculate $k_c'$
-
-## Flow Past Single Sphere: Results
-
-:::{.columns}
-:::{.column width="35%"}
-**Low Reynolds** ($N_{Re} < 2$)
-
-```{=tex}
-\begin{align}
-N_A &= \boxed{\frac{2 D_{AB}}{D_p}} (c_{A1} - c_{A2}) \\
-    &= k_c (c_{A1} - c_{A2}) \\
-	&= \frac{k_c'}{x_{Bm}}(c_{A1} - c_{A2}) \\
-\end{align}
-```
-
-- For $x_{Bm} \approx 1$, we have:
-
-$$
-k_c' = \frac{2D_{AB}}{D_p}
-$$
-
-- Sherwood number: $N_{Sh} = 2$
-
-:::
-
-
-:::{.column width="65%"}
-
-**High Reynolds** ($N_{Re} > 2$)
-
-- Gas:
-```{=tex}
-\begin{align}
-&N_{Sh} = 2 + 0.552 N_{Re}^{0.53} N_{Sc}^{1/3} \\
-&0.6 < N_{Sc} < 2.7\;\ N_{Re} < 48000
-\end{align}
-```
-
-- Liquid:
-```{=tex}
-\begin{align}
-N_{Sh} &= 2 + 0.95 N_{Re}^{0.5} N_{Sc}^{1/3};\ N_{Re} < 2000\\
-N_{Sh} &= 0.347 N_{Re}^{0.62} N_{Sc}^{1/3};\ 2000 < N_{Re} < 17000
-\end{align}
-```
-
-- Back calculate $k_c' = N_{Sh} \frac{D_{AB}}{D_p}$
-:::
-:::
-
-## Case 4: Mass Transfer for Packed Beds
-
-- Very common geometry for chemical engineering
-  - Adsorption and desorption through solid particles (gases and liquids)
-  - Catalytic processes with very large surface area
-
-- Geometry characteristics: void fraction $\varepsilon$:
-  $$
-  \varepsilon
-  = \frac{\text{void space}}{\text{total space}}
-  = \frac{\text{void space}}{\text{void space} + \text{solid space}}
-  $$
-  - Typically $0.3 < \varepsilon < 0.5$
-  - Void fraction is difficult to measure experimentally
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- j_D &= f/2 \\ -->
+<!-- &= \frac{k_c'}{v_{av}} (N_{\text{Sc}})^{2/3} \\ -->
+<!--     &= \boxed{\frac{k_c' L}{D_{AB}}} \boxed{\frac{\rho D_{AB}}{\mu}} \boxed{\frac{\mu}{L v_{av} \rho}} (N_\text{sc})^{2/3} \\ -->
+<!-- 	&= N_{\text{Sh}} N_{\text{Sc}}^{-1} N_{\text{Re}}^{-1} (N_\text{sc})^{2/3} \\ -->
+<!-- 	&= \frac{N_{\text{Sh}}}{N_{\text{Re}} N_{\text{Sc}}^{1/3}} -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- - $f$ is the Fanning Friction Factor (can be found in table) -->
+
+<!-- ## General Procedure To Calculate $k_c'$ {.smaller} -->
+
+<!-- 1. Calculate Reynolds number $N_{Re}$ from fluid properties + geometry -->
+
+<!-- 2. Determine flow regime (liquid) -->
+
+<!--   - $N_{Re} < 2100$ → laminar flow -->
+<!--   - $N_{Re} \ge 2100$ → turbulent flow -->
+
+<!-- 3. Evaluate friction factor $f$   -->
+
+<!--   - Laminar flow:   -->
+<!--     $$ -->
+<!--     f = \frac{16}{N_{Re}} -->
+<!--     $$ -->
+<!--   - Turbulent flow:   -->
+<!--     $$ -->
+<!--     f = \frac{\tau_s}{\tfrac12 \rho v^2},\qquad -->
+<!--     \tau_s = \frac{\Delta P_f\,\pi R^2}{2\pi R\,\Delta L} -->
+<!--     $$ -->
+
+<!-- 4. Compute mass-transfer $j$-factor   -->
+<!--   $$ -->
+<!--   j_D = \frac{f}{2} -->
+<!--   $$ -->
+
+<!-- 5. Obtain mass-transfer coefficient   -->
+<!--   $$ -->
+<!--   k_c' = j_D\,v_{av}\,N_{Sc}^{-2/3} -->
+<!--   $$ -->
+
+<!-- ## Use of Empirical Mass Transfer Laws -->
+
+<!-- - In many systems, flux and / or concentration profiles become hard to have simple form -->
+<!-- - Luckily we can simplify typical mass transfer problems as different geometries -->
+<!--   - Cyliner / Pipe -->
+<!--   - Parallel plates -->
+<!--   - Flow around sphere -->
+<!--   - Packed bed -->
+<!-- - We will show a few case studies for different geometries -->
+<!-- - Dimensionless numbers ($N_{Re}$, $N_{Sc}$, $N_{Sh}$) help determine governing equations -->
+
+<!-- ## Case 1: Mass Transfer for Flow Inside Pipes -->
+
+<!-- - Usually use the Linton & Sherwood chart -->
+<!-- - Valid for gas / liquid in both laminar & turbulent regimes -->
+
+<!-- ## Flow Inside Pipes: Solution Procedure -->
+
+<!-- - Governing dimensionless quantity: -->
+
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- \frac{W}{D_{AB}\rho L} &= N_{Re}N_{Sc} \frac{D}{L} \frac{\pi}{4} \\ -->
+<!-- &= \frac{\text{[Total Forced Flow]} \text{(kg/s)}}{\text{[Total Diffusive Flow]} \text{(kg/s)}} -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- - If gas 👉 use the "rodlike flow" line -->
+<!-- - If liquid, distinguish 2 cases -->
+<!--   - parabolic flow ($N_{Re} < 2100;\ \frac{W}{D_{AB}\rho L} > 400$) -->
+<!--   - turbulent flow ($N_{Re} > 2100;\ 0.6 < N_{Sc} < 3000$) -->
+
+<!-- ## Flow Inside Pipes: Solution For Liquid -->
+
+<!-- :::{.columns} -->
+<!-- :::{.column width="50%"} -->
+<!-- **Parabolic flow** -->
+
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- \frac{c_A - c_{A,s}}{c_{A,i} - c_{A,s}} -->
+<!-- &= 5.5 -->
+<!-- \left[ -->
+<!-- \frac{W}{D_{AB}\,\rho\,L} -->
+<!-- \right]^{-\tfrac{2}{3}} -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- - $c_A$: exit concentration -->
+<!-- - $c_{A,i}, c_{A,s}$: inlet & surface concentration -->
+<!-- - $W$: flow rate in (kg/s) -->
+
+<!-- - $k_c'$ can be calculated by $j_D$ -->
+<!-- ::: -->
+
+<!-- :::{.column width="50%"} -->
+<!-- **Turbulent flow** -->
+
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- N_{Sh} -->
+<!-- &= k_c'\left(\frac{D}{D_{AB}}\right) \\ -->
+<!-- &= \frac{k_c\,p_{BM}}{P} -->
+<!-- \left(\frac{D}{D_{AB}}\right) \\ -->
+<!-- &= 0.023 -->
+<!-- \left(\frac{\rho D v}{\mu}\right)^{0.83} -->
+<!-- \left(\frac{\mu}{\rho D_{AB}}\right)^{0.33} \\ -->
+<!-- &= 0.023\, -->
+<!-- N_{Re}^{0.83}\, -->
+<!-- N_{Sc}^{0.33} -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- - Similar to the $j_D$ analog -->
+<!-- - Just need $N_{Re}$ and $N_{Sc}$ to determine $k_c'$ -->
+<!-- - Characteristic length $D$ is pipe diameter! -->
+<!-- ::: -->
+
+<!-- ## Case 2: Flow Past Parallel Plates -->
+
+<!-- - Can be used for gases or evaporation of liquid -->
+<!-- - Distinguished between laminar & turbulent flow -->
+<!-- - $N_{Re}$ regime cutoff different in gas & liquid! -->
+<!-- - - Characteristic length $L$: length of plate in flow direction -->
+
+<!-- ## Flow Past Parallel Plates: Results -->
+
+<!-- :::{.columns} -->
+<!-- :::{.column width="50%"} -->
+<!-- **Laminar flow** ($N_{Re} < 15,000$) -->
+
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- j_D &= 0.664 N_{Re, L}^{-0.5} \\ -->
+<!-- \frac{k_c' L}{D_{AB}} &= 0.664 N_{Re, L}^{0.5} -->
+<!-- N_{Sc}^{1/3} -->
+<!-- \end{align} -->
+<!-- ``` -->
+<!-- - This follows our derivation of boundary layer theory -->
+
+
+<!-- ::: -->
+
+<!-- :::{.column width="50%"} -->
+<!-- **Turbulent flow** -->
+
+<!-- - Gas: $15,000 < N_{Re}< 300,000 $ -->
+
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- j_D = 0.036 N_{Re, L}^{-0.2} -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- - Liquid: $600 < N_{Re}< 50,000$ -->
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- j_D = 0.99 N_{Re, L}^{-0.5} -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- :::  -->
+<!-- ::: -->
+
+<!-- ## Case 3: Flow Past Single Sphere  -->
+
+<!-- - Frequent geometry in particle solutions -->
+<!-- - Low Reynolds regime 👉 solution for stagnant diffusion on spherical surface -->
+<!-- - High Reynolds regime 👉 correct $N_{Sh}$ and back calculate $k_c'$ -->
+
+<!-- ## Flow Past Single Sphere: Results -->
+
+<!-- :::{.columns} -->
+<!-- :::{.column width="35%"} -->
+<!-- **Low Reynolds** ($N_{Re} < 2$) -->
+
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- N_A &= \boxed{\frac{2 D_{AB}}{D_p}} (c_{A1} - c_{A2}) \\ -->
+<!--     &= k_c (c_{A1} - c_{A2}) \\ -->
+<!-- 	&= \frac{k_c'}{x_{Bm}}(c_{A1} - c_{A2}) \\ -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- - For $x_{Bm} \approx 1$, we have: -->
+
+<!-- $$ -->
+<!-- k_c' = \frac{2D_{AB}}{D_p} -->
+<!-- $$ -->
+
+<!-- - Sherwood number: $N_{Sh} = 2$ -->
+
+<!-- ::: -->
+
+
+<!-- :::{.column width="65%"} -->
+
+<!-- **High Reynolds** ($N_{Re} > 2$) -->
+
+<!-- - Gas: -->
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- &N_{Sh} = 2 + 0.552 N_{Re}^{0.53} N_{Sc}^{1/3} \\ -->
+<!-- &0.6 < N_{Sc} < 2.7\;\ N_{Re} < 48000 -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- - Liquid: -->
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- N_{Sh} &= 2 + 0.95 N_{Re}^{0.5} N_{Sc}^{1/3};\ N_{Re} < 2000\\ -->
+<!-- N_{Sh} &= 0.347 N_{Re}^{0.62} N_{Sc}^{1/3};\ 2000 < N_{Re} < 17000 -->
+<!-- \end{align} -->
+<!-- ``` -->
+
+<!-- - Back calculate $k_c' = N_{Sh} \frac{D_{AB}}{D_p}$ -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- ## Case 4: Mass Transfer for Packed Beds -->
+
+<!-- - Very common geometry for chemical engineering -->
+<!--   - Adsorption and desorption through solid particles (gases and liquids) -->
+<!--   - Catalytic processes with very large surface area -->
+
+<!-- - Geometry characteristics: void fraction $\varepsilon$: -->
+<!--   $$ -->
+<!--   \varepsilon -->
+<!--   = \frac{\text{void space}}{\text{total space}} -->
+<!--   = \frac{\text{void space}}{\text{void space} + \text{solid space}} -->
+<!--   $$ -->
+<!--   - Typically $0.3 < \varepsilon < 0.5$ -->
+<!--   - Void fraction is difficult to measure experimentally -->
   
-## Correlation Equations In Packed Bed
+<!-- ## Correlation Equations In Packed Bed -->
 
-Correlation 1, applicable to:
+<!-- Correlation 1, applicable to: -->
 
-- gase with $10 < N_{Re} <10,000$
-- liquid with $10 < N_{Re} < 1500$
+<!-- - gase with $10 < N_{Re} <10,000$ -->
+<!-- - liquid with $10 < N_{Re} < 1500$ -->
 
-```{=tex}
-\begin{align}
-j_D &= j_H = \frac{0.4548}{\varepsilon} N_{Re}^(-0.4069) \\
-N_{Re} &= \frac{D_p v' \rho}{\mu}
-\end{align}
-```
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- j_D &= j_H = \frac{0.4548}{\varepsilon} N_{Re}^(-0.4069) \\ -->
+<!-- N_{Re} &= \frac{D_p v' \rho}{\mu} -->
+<!-- \end{align} -->
+<!-- ``` -->
 
-- $D_p$: (average) particle diameter
-- $v’$: superficial velocity in the tube without packing
+<!-- - $D_p$: (average) particle diameter -->
+<!-- - $v’$: superficial velocity in the tube without packing -->
 
-## Correlation Equations In Packed Bed (II)
+<!-- ## Correlation Equations In Packed Bed (II) -->
 
-Correlation 2, applicable to:
+<!-- Correlation 2, applicable to: -->
 
-- liquid with $0.0016 < N_{Re} < 55$, $165 < N_{Sc} < 70000$
+<!-- - liquid with $0.0016 < N_{Re} < 55$, $165 < N_{Sc} < 70000$ -->
 
-```{=tex}
-\begin{align}
-j_D = \frac{1.09}{\varepsilon}
-N_{Re}^(-2/3)
-\end{align}
-```
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- j_D = \frac{1.09}{\varepsilon} -->
+<!-- N_{Re}^(-2/3) -->
+<!-- \end{align} -->
+<!-- ``` -->
 
 
-- liquid with $55 < N_{Re} < 1500$, $165 < N_{Sc} < 10690$
+<!-- - liquid with $55 < N_{Re} < 1500$, $165 < N_{Sc} < 10690$ -->
 
-```{=tex}
-\begin{align}
-j_D = \frac{0.250}{\varepsilon}
-N_{Re}^(-0.31)
-\end{align}
-```
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- j_D = \frac{0.250}{\varepsilon} -->
+<!-- N_{Re}^(-0.31) -->
+<!-- \end{align} -->
+<!-- ``` -->
 
-## Correlation Equations In Packed Bed (III)
+<!-- ## Correlation Equations In Packed Bed (III) -->
 
-Correlation 3, applicable to fluidized beds
+<!-- Correlation 3, applicable to fluidized beds -->
 
--  $10 < N_{Re} < 4000$ (gas & liquid)
+<!-- -  $10 < N_{Re} < 4000$ (gas & liquid) -->
 
-```{=tex}
-\begin{align}
-j_D = \frac{0.4548}{\varepsilon}
-N_{Re}^(-0.4069)
-\end{align}
-```
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- j_D = \frac{0.4548}{\varepsilon} -->
+<!-- N_{Re}^(-0.4069) -->
+<!-- \end{align} -->
+<!-- ``` -->
 
--  $1 < N_{Re} < 10$ (liquid only)
+<!-- -  $1 < N_{Re} < 10$ (liquid only) -->
 
-```{=tex}
-\begin{align}
-j_D = \frac{1.1068}{\varepsilon}
-N_{Re}^(-0.72)
-\end{align}
-```
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- j_D = \frac{1.1068}{\varepsilon} -->
+<!-- N_{Re}^(-0.72) -->
+<!-- \end{align} -->
+<!-- ``` -->
 
-## Packed Bed Calculation Steps
+<!-- ## Packed Bed Calculation Steps -->
 
-1. Known value from operational column: $\varepsilon$, $V_b$ (total volume), $D_p$, $D_{AB}$, $\mu$, $\rho$, etc.
-2. Depend on the operational range, calculate $N_{Re}$, $N_Sc$ 👉 choose the equation for $j_D$
-3. Obtain $k_c$ from $j_D$ value
-4. Calculate flux $N_A$
-5. Estimate effective area $A_{eff}$ inside the columne 👉  $\overline{N}_A = A_{eff} N_A$
+<!-- 1. Known value from operational column: $\varepsilon$, $V_b$ (total volume), $D_p$, $D_{AB}$, $\mu$, $\rho$, etc. -->
+<!-- 2. Depend on the operational range, calculate $N_{Re}$, $N_Sc$ 👉 choose the equation for $j_D$ -->
+<!-- 3. Obtain $k_c$ from $j_D$ value -->
+<!-- 4. Calculate flux $N_A$ -->
+<!-- 5. Estimate effective area $A_{eff}$ inside the columne 👉  $\overline{N}_A = A_{eff} N_A$ -->
 
-## Caveats In Packed Bed Problems (1)
+<!-- ## Caveats In Packed Bed Problems (1) -->
 
-- Estimate the effective area?
-  - First calculate the effective surface area per volume $a$ then $A_{eff}$
-```{=tex}
-\begin{align}
-a &= \frac{6 (1 - \varepsilon)}{D_p} \\
-A_{eff} &= a V_b
-\end{align}
-```
-## Caveats In Packed Bed Problems (2)
+<!-- - Estimate the effective area? -->
+<!--   - First calculate the effective surface area per volume $a$ then $A_{eff}$ -->
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- a &= \frac{6 (1 - \varepsilon)}{D_p} \\ -->
+<!-- A_{eff} &= a V_b -->
+<!-- \end{align} -->
+<!-- ``` -->
+<!-- ## Caveats In Packed Bed Problems (2) -->
 
-- Use log-mean driving force correction
+<!-- - Use log-mean driving force correction -->
 
-```{=tex}
-\begin{align}
-\overline{N}_A &= A_{eff} N_A \\
-&= A_{eff} k_c \frac{
-(c_{A, i} - c_{A1}) - (c_{A, i} - c_{A2})}
-{
-\ln\!\frac{(c_{A, i} - c_{A1})}{(c_{A, i} - c_{A2})}
-}
-\end{align}
-```
-where
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- \overline{N}_A &= A_{eff} N_A \\ -->
+<!-- &= A_{eff} k_c \frac{ -->
+<!-- (c_{A, i} - c_{A1}) - (c_{A, i} - c_{A2})} -->
+<!-- { -->
+<!-- \ln\!\frac{(c_{A, i} - c_{A1})}{(c_{A, i} - c_{A2})} -->
+<!-- } -->
+<!-- \end{align} -->
+<!-- ``` -->
+<!-- where -->
 
-- $c_{A, i}$: surface concentration
-- $c_{A1}, c_{A2}$: in- and outlet concentrations
+<!-- - $c_{A, i}$: surface concentration -->
+<!-- - $c_{A1}, c_{A2}$: in- and outlet concentrations -->
 
-## Caveats In Packed Bed Problems (3)
+<!-- ## Caveats In Packed Bed Problems (3) -->
 
-- Mass-flow balance
+<!-- - Mass-flow balance -->
 
-```{=tex}
-\begin{align}
-\overline{N}_A &= A_{eff} N_A \\
-&= V (c_{A2} - c_{A1})
-\end{align}
-```
-where $V$ is the volumetric flow rate.
+<!-- ```{=tex} -->
+<!-- \begin{align} -->
+<!-- \overline{N}_A &= A_{eff} N_A \\ -->
+<!-- &= V (c_{A2} - c_{A1}) -->
+<!-- \end{align} -->
+<!-- ``` -->
+<!-- where $V$ is the volumetric flow rate. -->
 
-These equations will give rise to solving the flow in packed bed problem.
+<!-- These equations will give rise to solving the flow in packed bed problem. -->
 
-## Summary
+<!-- ## Summary -->
 
-- Dimensionless numbers can be used to correlate mass transfer problems in different flow rate, dimension etc
-- Typically, start with a known geometry (pipe? parallel plate? sphere? packed bed?)
-- Find the correlation with dimensionless numbers $N_{Re}$, $N_{Sc}$
-- Calculate the final mass transfer rate
+<!-- - Dimensionless numbers can be used to correlate mass transfer problems in different flow rate, dimension etc -->
+<!-- - Typically, start with a known geometry (pipe? parallel plate? sphere? packed bed?) -->
+<!-- - Find the correlation with dimensionless numbers $N_{Re}$, $N_{Sc}$ -->
+<!-- - Calculate the final mass transfer rate -->
 
 
 

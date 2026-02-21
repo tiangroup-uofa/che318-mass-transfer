@@ -62,7 +62,9 @@ format:
     #theme: [simple, reveal-course.scss]
     theme: [default]
     slide-number: true
-    chalkboard: false
+    chalkboard:
+      theme: whiteboard
+      buttons: true
     preview-links: auto
     transition: none
     navigation-mode: linear
