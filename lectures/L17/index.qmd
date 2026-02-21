@@ -8,7 +8,7 @@ format:
   revealjs:
     output-file: slides.html
   pdf:
-    output-file: L16.pdf
+    output-file: L17.pdf
 ---
 
 ::: {.content-visible when-format="html" unless-format="revealjs"}
@@ -98,7 +98,7 @@ N_{\text{Re}} = \frac{L v \rho}{\mu}
 
 ```{=tex}
 \begin{align}
-j_D &= f/2 \\
+j_D = f/2 \\
 &= \frac{k_c'}{v_{av}} (N_{\text{Sc}})^{2/3} \\
     &= \boxed{\frac{k_c' L}{D_{AB}}} \boxed{\frac{\rho D_{AB}}{\mu}} \boxed{\frac{\mu}{L v_{av} \rho}} (N_\text{sc})^{2/3} \\
 	&= N_{\text{Sh}} N_{\text{Sc}}^{-1} N_{\text{Re}}^{-1} (N_\text{sc})^{2/3} \\
@@ -108,7 +108,10 @@ j_D &= f/2 \\
 
 - $f$ is the Fanning Friction Factor (can be found in table)
 
-## General Procedure To Calculate $k_c'$ {.smaller}
+## General Procedure To Calculate $k_c'$
+
+:::{.columns}
+:::{.column width="50%"}
 
 1. Calculate Reynolds number $N_{Re}$ from fluid properties + geometry
 
@@ -128,6 +131,10 @@ j_D &= f/2 \\
     f = \frac{\tau_s}{\tfrac12 \rho v^2},\qquad
     \tau_s = \frac{\Delta P_f\,\pi R^2}{2\pi R\,\Delta L}
     $$
+    
+:::
+
+:::{.column width="50%"}
 
 4. Compute mass-transfer $j$-factor  
   $$
@@ -138,6 +145,9 @@ j_D &= f/2 \\
   $$
   k_c' = j_D\,v_{av}\,N_{Sc}^{-2/3}
   $$
+
+:::
+:::
 
 ## Use of Empirical Mass Transfer Laws
 
@@ -179,6 +189,7 @@ j_D &= f/2 \\
 
 :::{.columns}
 :::{.column width="50%"}
+
 **Parabolic flow**
 
 ```{=tex}
@@ -196,9 +207,11 @@ j_D &= f/2 \\
 - $W$: flow rate in (kg/s)
 
 - $k_c'$ can be calculated by $j_D$
+
 :::
 
 :::{.column width="50%"}
+
 **Turbulent flow**
 
 ```{=tex}
@@ -219,6 +232,8 @@ N_{Sc}^{0.33}
 - Similar to the $j_D$ analog
 - Just need $N_{Re}$ and $N_{Sc}$ to determine $k_c'$
 - Characteristic length $D$ is pipe diameter!
+
+:::
 :::
 
 ## Case 2: Flow Past Parallel Plates
@@ -226,12 +241,13 @@ N_{Sc}^{0.33}
 - Can be used for gases or evaporation of liquid
 - Distinguished between laminar & turbulent flow
 - $N_{Re}$ regime cutoff different in gas & liquid!
-- - Characteristic length $L$: length of plate in flow direction
+- Characteristic length $L$: length of plate in flow direction
 
 ## Flow Past Parallel Plates: Results
 
 :::{.columns}
 :::{.column width="50%"}
+
 **Laminar flow** ($N_{Re} < 15,000$)
 
 ```{=tex}
@@ -418,6 +434,7 @@ a &= \frac{6 (1 - \varepsilon)}{D_p} \\
 A_{eff} &= a V_b
 \end{align}
 ```
+
 ## Caveats In Packed Bed Problems (2)
 
 - Use log-mean driving force correction
