@@ -89,8 +89,6 @@ After today's lecture, you will be able to:
 - Analyze convective mass transfer in various geometries
 - Solving $k_c'$, $c$ and $N_A$ in convective mass transfer
 
-## Cheatsheet For Calculating Convective Mass Transfer
-
 ## Dimensionless Number 1: $N_{Re}$
 
 - **Reynolds number** measures ratio between kinetic vs viscous forces of fluid flow
@@ -277,6 +275,45 @@ The solubility of benzoic acid in water is 0.02948 kg mol/m$^3$, and the diffusi
 - Step 1: calculate $N_{Re}$, $N_{Sc}$. Regime?
 - Step 2: check the value $W/D_{AB} \rho L$. Able to use liquid formula?
 - Step 3: insert into equations
+
+:::{.columns}
+:::{.column width="50%"}
+
+**Parabolic flow**
+
+```{=tex}
+\begin{align}
+\frac{c_A - c_{A,s}}{c_{A,i} - c_{A,s}}
+&= 5.5
+\left[
+\frac{W}{D_{AB}\,\rho\,L}
+\right]^{-\tfrac{2}{3}}
+\end{align}
+```
+
+:::
+
+:::{.column width="50%"}
+
+**Turbulent flow**
+
+```{=tex}
+\begin{align}
+N_{Sh}
+&= k_c'\left(\frac{D}{D_{AB}}\right) \\
+&= \frac{k_c\,p_{BM}}{P}
+\left(\frac{D}{D_{AB}}\right) \\
+&= 0.023
+\left(\frac{\rho D v}{\mu}\right)^{0.83}
+\left(\frac{\mu}{\rho D_{AB}}\right)^{0.33} \\
+&= 0.023\,
+N_{Re}^{0.83}\,
+N_{Sc}^{0.33}
+\end{align}
+```
+
+:::
+:::
 
 
 ## Case 2: Flow Parallel To Flat Plates
