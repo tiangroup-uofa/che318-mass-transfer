@@ -368,10 +368,10 @@ c_{Ai} - (c_{Ai} - c_{A1})\exp(- \frac{A k_c}{Q})
 - Minimal height: $H_{\text{min}}$
 
 $$
-H_{\text{min}} = \frac{10 v_m D_p}{3 (1 - \epsilon) k_c'}
+H_{\text{min}} = \frac{5 v_m D_p}{6 (1 - \epsilon) k_c'}
 $$
 
-- In case 3 setup, $H_{\text{min}}=2.23$ m
+- In case 3 setup, $H_{\text{min}}=0.556$ m
 
 
 
