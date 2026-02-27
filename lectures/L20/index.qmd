@@ -1,0 +1,304 @@
+---
+title: "CHE 318 Lecture 20"
+subtitle: "Case Studies With Mass Transfer Coefficient (II)"
+author: "Dr. Tian Tian"
+date: "2026-02-27"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+  pdf:
+    output-file: L20.pdf
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L20.pdf)
+- Handwritten notes 👉 [Open in pdf](./public/L20_annotated.pdf)
+:::
+
+:::
+
+
+## Learning Outcomes {.center}
+
+After today's lecture, you will be able to:
+
+- Case studies using mass transfer coefficient and dimensionless numbers
+- Analyze convective mass transfer in various geometries
+- Solving $k_c'$, $c$ and $N_A$ in convective mass transfer
+
+
+## Cheatsheet For Mass Transfer Coefficient
+
+![Cheatsheet for using dimensionless numbers with $k_c'$. Printed version distributed in class](./public/cheatsheet.svg)
+
+
+## Case 2: Flow Parallel To Flat Plates
+
+- Can be used for gases or evaporation of liquid
+- Distinguished between laminar & turbulent flow
+- $N_{Re}$ regime cutoff different in gas & liquid!
+- Characteristic length $L$: length of plate in flow direction
+- [Flow parallel to flat plate: video](https://www.youtube.com/watch?v=zsO5BQA_CZk)
+
+
+## Flow Past Parallel Plates: Regimes
+
+:::{.columns}
+:::{.column width="50%"}
+
+**Laminar flow** ($N_{Re} < 15,000$)
+
+```{=tex}
+\begin{align}
+j_D &= 0.664 N_{Re, L}^{-0.5} \\
+\frac{k_c' L}{D_{AB}} &= 0.664 N_{Re, L}^{0.5}
+N_{Sc}^{1/3}
+\end{align}
+```
+- This follows our derivation of boundary layer theory
+
+
+:::
+
+:::{.column width="50%"}
+
+**Turbulent flow**
+
+- Gas: $15,000 < N_{Re}< 300,000$
+
+```{=tex}
+\begin{align}
+j_D = 0.036 N_{Re, L}^{-0.2}
+\end{align}
+```
+
+- Liquid: $600 < N_{Re}< 50,000$
+```{=tex}
+\begin{align}
+j_D = 0.99 N_{Re, L}^{-0.5}
+\end{align}
+```
+
+::: 
+:::
+
+## Case 2 Example
+
+Example 7.3-2: A large volume of pure water at 26.1 $^\circ$C is
+flowing parallel to a flat plate of solid benzoic acid, where
+$L=0.244$ m in the direction of flow. The water velocity is 0.061
+m/s. The solubility of benzoic acid in water is 0.02948 kg mol/m$^3$,
+and the diffusivity of benzoic acid in water is $1.245 \times 10^{-9}$
+m$^2$/s.  For water, $\mu=8.71\times 10^-4$ Pa$\cdot$s and $\rho=996$ kg/m$^3$ (basically the same conditions as in case 1-2).
+
+Calculate the mass-transfer coefficient $k_c$ and $N_A$.
+
+## Case 2: Solution Steps
+
+- Step 1: calculate $N_{Re}$, $N_{Sc}$. Regime?
+- Step 2: use flat-surface equations to calculate $j_D$
+- Step 3: convert $j_D$ to $k_c'$. Use $k_c = k_c'/x_{BM}$
+- Step 4: use master equation to get $N_A$
+
+## Case 3: Flow Past Single Sphere 
+
+- Frequent geometry in particle solutions
+- Low Reynolds regime 👉 solution for stagnant diffusion on spherical surface
+- High Reynolds regime 👉 correct $N_{Sh}$ and back calculate $k_c'$
+
+## Flow Past Single Sphere: Results
+
+:::{.columns}
+:::{.column width="35%"}
+**Low Reynolds** ($N_{Re} < 2$)
+
+```{=tex}
+\begin{align}
+N_A &= \boxed{\frac{2 D_{AB}}{D_p}} (c_{A1} - c_{A2}) \\
+    &= k_c (c_{A1} - c_{A2}) \\
+	&= \frac{k_c'}{x_{Bm}}(c_{A1} - c_{A2}) \\
+\end{align}
+```
+
+- For $x_{Bm} \approx 1$, we have:
+
+$$
+k_c' = \frac{2D_{AB}}{D_p}
+$$
+
+- Sherwood number: $N_{Sh} = 2$
+
+:::
+
+
+:::{.column width="65%"}
+
+**High Reynolds** ($N_{Re} > 2$)
+
+- Gas:
+```{=tex}
+\begin{align}
+&N_{Sh} = 2 + 0.552 N_{Re}^{0.53} N_{Sc}^{1/3} \\
+&0.6 < N_{Sc} < 2.7\;\ N_{Re} < 48000
+\end{align}
+```
+
+- Liquid:
+```{=tex}
+\begin{align}
+N_{Sh} &= 2 + 0.95 N_{Re}^{0.5} N_{Sc}^{1/3};\ N_{Re} < 2000\\
+N_{Sh} &= 0.347 N_{Re}^{0.62} N_{Sc}^{1/3};\ 2000 < N_{Re} < 17000
+\end{align}
+```
+
+- Back calculate $k_c' = N_{Sh} \frac{D_{AB}}{D_p}$
+:::
+:::
+
+## Case 4: Mass Transfer for Packed Beds
+
+- Very common geometry for chemical engineering
+  - Adsorption and desorption through solid particles (gases and liquids)
+  - Catalytic processes with very large surface area
+
+- Geometry characteristics: void fraction $\varepsilon$:
+  $$
+  \varepsilon
+  = \frac{\text{void space}}{\text{total space}}
+  = \frac{\text{void space}}{\text{void space} + \text{solid space}}
+  $$
+  - Typically $0.3 < \varepsilon < 0.5$
+  - Void fraction is difficult to measure experimentally
+  
+## Correlation Equations In Packed Bed
+
+Correlation 1, applicable to:
+
+- gase with $10 < N_{Re} <10,000$
+- liquid with $10 < N_{Re} < 1500$
+
+```{=tex}
+\begin{align}
+j_D &= j_H = \frac{0.4548}{\varepsilon} N_{Re}^{-0.4069} \\
+N_{Re} &= \frac{D_p v' \rho}{\mu}
+\end{align}
+```
+
+- $D_p$: (average) particle diameter
+- $v’$: superficial velocity in the tube without packing
+
+## Correlation Equations In Packed Bed (II)
+
+Correlation 2, applicable to:
+
+- liquid with $0.0016 < N_{Re} < 55$, $165 < N_{Sc} < 70000$
+
+```{=tex}
+\begin{align}
+j_D = \frac{1.09}{\varepsilon}
+N_{Re}^{-2/3}
+\end{align}
+```
+
+
+- liquid with $55 < N_{Re} < 1500$, $165 < N_{Sc} < 10690$
+
+```{=tex}
+\begin{align}
+j_D = \frac{0.250}{\varepsilon}
+N_{Re}^{-0.31}
+\end{align}
+```
+
+## Correlation Equations In Packed Bed (III)
+
+Correlation 3, applicable to fluidized beds
+
+-  $10 < N_{Re} < 4000$ (gas & liquid)
+
+```{=tex}
+\begin{align}
+j_D = \frac{0.4548}{\varepsilon}
+N_{Re}^{-0.4069}
+\end{align}
+```
+
+-  $1 < N_{Re} < 10$ (liquid only)
+
+```{=tex}
+\begin{align}
+j_D = \frac{1.1068}{\varepsilon}
+N_{Re}^{-0.72}
+\end{align}
+```
+
+## Packed Bed Calculation Steps
+
+1. Known value from operational column: $\varepsilon$, $V_b$ (total volume), $D_p$, $D_{AB}$, $\mu$, $\rho$, etc.
+2. Depend on the operational range, calculate $N_{Re}$, $N_Sc$ 👉 choose the equation for $j_D$
+3. Obtain $k_c$ from $j_D$ value
+4. Calculate flux $N_A$
+5. Estimate effective area $A_{eff}$ inside the columne 👉  $\overline{N}_A = A_{eff} N_A$
+
+## Caveats In Packed Bed Problems (1)
+
+- Estimate the effective area?
+  - First calculate the effective surface area per volume $a$ then $A_{eff}$
+```{=tex}
+\begin{align}
+a &= \frac{6 (1 - \varepsilon)}{D_p} \\
+A_{eff} &= a V_b
+\end{align}
+```
+
+## Caveats In Packed Bed Problems (2)
+
+- Use log-mean driving force correction
+
+```{=tex}
+\begin{align}
+\overline{N}_A &= A_{eff} N_A \\
+&= A_{eff} k_c \frac{
+(c_{A, i} - c_{A1}) - (c_{A, i} - c_{A2})}
+{
+\ln\!\frac{(c_{A, i} - c_{A1})}{(c_{A, i} - c_{A2})}
+}
+\end{align}
+```
+where
+
+- $c_{A, i}$: surface concentration
+- $c_{A1}, c_{A2}$: in- and outlet concentrations
+
+## Caveats In Packed Bed Problems (3)
+
+- Mass-flow balance
+
+```{=tex}
+\begin{align}
+\overline{N}_A &= A_{eff} N_A \\
+&= V (c_{A2} - c_{A1})
+\end{align}
+```
+where $V$ is the volumetric flow rate.
+
+These equations will give rise to solving the flow in packed bed problem.
+
+## Summary
+
+- Dimensionless numbers can be used to correlate mass transfer problems in different flow rate, dimension etc
+- Typically, start with a known geometry (pipe? parallel plate? sphere? packed bed?)
+- Find the correlation with dimensionless numbers $N_{Re}$, $N_{Sc}$
+- Calculate the final mass transfer rate
+
+
+
+
+
+
+
+
