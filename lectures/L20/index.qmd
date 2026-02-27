@@ -30,10 +30,9 @@ After today's lecture, you will be able to:
 - Analyze convective mass transfer in various geometries
 - Solving $k_c'$, $c$ and $N_A$ in convective mass transfer
 
-
 ## Cheatsheet For Mass Transfer Coefficient
 
-![Cheatsheet for using dimensionless numbers with $k_c'$. Printed version distributed in class](./public/cheatsheet.svg)
+![Cheatsheet for using dimensionless numbers with $k_c'$. Printed version distributed in class](../L19/public/cheatsheet.svg)
 
 
 ## Case 2: Flow Parallel To Flat Plates
@@ -161,11 +160,18 @@ N_{Sh} &= 0.347 N_{Re}^{0.62} N_{Sc}^{1/3};\ 2000 < N_{Re} < 17000
 
 ## Case 4: Mass Transfer for Packed Beds
 
-- Very common geometry for chemical engineering
-  - Adsorption and desorption through solid particles (gases and liquids)
-  - Catalytic processes with very large surface area
+<!-- - Very common geometry for chemical engineering -->
+<!--   - Adsorption and desorption through solid particles (gases and liquids) -->
+<!--   - Catalytic processes with very large surface area -->
+
+- Video for [fluidized packed bed](https://www.youtube.com/watch?v=lFhrpSJZzck)
+
+![Packed bed structure](./public/packed-bed.png)
+
+## Packed Bed: Geometries
 
 - Geometry characteristics: void fraction $\varepsilon$:
+
   $$
   \varepsilon
   = \frac{\text{void space}}{\text{total space}}
@@ -173,6 +179,12 @@ N_{Sh} &= 0.347 N_{Re}^{0.62} N_{Sc}^{1/3};\ 2000 < N_{Re} < 17000
   $$
   - Typically $0.3 < \varepsilon < 0.5$
   - Void fraction is difficult to measure experimentally
+  
+- Total Effective Area for spherical particles:
+
+  $$
+  A = \frac{6(1 - \epsilon)}{D_p} V_b  
+  $$
   
 ## Correlation Equations In Packed Bed
 
@@ -236,33 +248,54 @@ N_{Re}^{-0.72}
 \end{align}
 ```
 
-## Packed Bed Calculation Steps
+<!-- ## Packed Bed Calculation Steps -->
 
-1. Known value from operational column: $\varepsilon$, $V_b$ (total volume), $D_p$, $D_{AB}$, $\mu$, $\rho$, etc.
-2. Depend on the operational range, calculate $N_{Re}$, $N_Sc$ 👉 choose the equation for $j_D$
-3. Obtain $k_c$ from $j_D$ value
-4. Calculate flux $N_A$
-5. Estimate effective area $A_{eff}$ inside the columne 👉  $\overline{N}_A = A_{eff} N_A$
+<!-- 1. Known value from operational column: $\varepsilon$, $V_b$ (total volume), $D_p$, $D_{AB}$, $\mu$, $\rho$, etc. -->
+<!-- 2. Depend on the operational range, calculate $N_{Re}$, $N_Sc$ 👉 choose the equation for $j_D$ -->
+<!-- 3. Obtain $k_c$ from $j_D$ value -->
+<!-- 4. Calculate flux $N_A$ -->
+<!-- 5. Estimate effective area $A_{eff}$ inside the columne 👉  $\overline{N}_A = A_{eff} N_A$ -->
 
-## Caveats In Packed Bed Problems (1)
+## Case 3: Comparison Between Geometries
 
-- Estimate the effective area?
-  - First calculate the effective surface area per volume $a$ then $A_{eff}$
-```{=tex}
-\begin{align}
-a &= \frac{6 (1 - \varepsilon)}{D_p} \\
-A_{eff} &= a V_b
-\end{align}
-```
+_Adapted from Problem 7.3-3_. Let's estimate the gas-phase mass
+transfer coefficient $k_G$ (kg mol/(m$^2$ s Pa)) for mass transfer of
+water vapour to solids with different shapes. Consider a water vapour
+(A) in air (B) at 338.6 K and 101.32 Pa flowing through a big duct
+containing solids with various geometries. The flow velocity is 3.66
+m/s. The water vapour concentration is small, so property of air is
+used ($\mu=2.03\times 10^-5$ Pa$\cdot$s, $\rho=1.043$ kg/m$^3$). From
+the table, $D_{AB} = 2.88 \times 10^{-5}$ m$^2$/s at 315 K. Compare
+the values for following geometries, which case?
 
-## Caveats In Packed Bed Problems (2)
+a) Flow parallel to flat plate with length $L=2.54$ cm
+b) A single sphere with diameter $D=2.54$ cm
+c) Packed beds using spheres of average diameter $D_p=2.54$ cm and $\epsilon=0.35$
 
+## Case 3: Results
+
+::: {.callout-tip}
+- Do not forget to correct $D_{AB}$ for temperature!
+- Choose the right $N_{\text{Sh}}$ or $j_D$ formula according to $N_{\text{Re}}$ and $N_{\text{Sc}}$
+- $k_G \approx k_G' = k_c' / (RT)$
+:::
+
+- Flat surface: $k_G = 1.738\times 10^{-8}$ kg mol/(m$^2$ s Pa). $N_{\text{Sh}} = 38.03$
+- Single sphere: $k_G = 1.984\times 10^{-8}$ kg mol/(m$^2$ s Pa). $N_{\text{Sh}} = 43.40$
+- Packed bed: $k_G = 7.60\times 10^{-8}$ kg mol/(m$^2$ s Pa). $N_{\text{Sh}} = 166.32$
+
+Packed bed clearly wins!
+
+
+## Mass Balance In Packed Beds
+
+- It is usually desirable to calculate the overall $N_A$ in packed bed
 - Use log-mean driving force correction
 
 ```{=tex}
 \begin{align}
-\overline{N}_A &= A_{eff} N_A \\
-&= A_{eff} k_c \frac{
+\overline{N}_A &= A N_A \\
+&= A k_c \frac{
 (c_{A, i} - c_{A1}) - (c_{A, i} - c_{A2})}
 {
 \ln\!\frac{(c_{A, i} - c_{A1})}{(c_{A, i} - c_{A2})}
@@ -280,13 +313,67 @@ where
 
 ```{=tex}
 \begin{align}
-\overline{N}_A &= A_{eff} N_A \\
-&= V (c_{A2} - c_{A1})
+\overline{N}_A &= A N_A \\
+&= Q (c_{A2} - c_{A1})
 \end{align}
 ```
-where $V$ is the volumetric flow rate.
+where $Q$ is the volumetric flow rate (m$^3$ / s).
 
-These equations will give rise to solving the flow in packed bed problem.
+How do we get these? Still the [In] - [Out] + [Gen] = 0 balance equation.
+
+## Alternative Form For Packed Bed
+
+- Rearrange the mass balance equation we get:
+
+```{=tex}
+\begin{align}
+\ln\!\left(
+\frac{c_{Ai} - c_{A1}}{c_{Ai} - c_{A2}}
+\right) = \frac{A k_c}{Q}
+\end{align}
+```
+
+- Expression for $c_{A2}$
+
+```{=tex}
+\begin{align}
+c_{A2} = 
+c_{Ai} - (c_{Ai} - c_{A1})\exp(- \frac{A k_c}{Q})
+\end{align}
+```
+
+- Analog to previous example of reactive wall in [Lecture 11](../L11)!
+
+$$
+c_{A2} = c_{Ai} - (c_{Ai} - c_{A1})\exp(- \frac{4 k_c}{Dv_m}L)
+$$
+
+## Case 4: Packed Bed Design 
+
+The equation shows the outlet concentration will be saturated when the tube is long enough.
+
+```{=tex}
+\begin{align}
+c_{A2} = 
+c_{Ai} - (c_{Ai} - c_{A1})\exp(- \frac{A k_c}{Q})
+\end{align}
+```
+
+- Consider all parameters in case 3, how high should we design the packed bed to ensure saturated outlet concentration?
+- $D_p=2.54$ cm, $\epsilon=0.35$, $k_c'=0.214$ m/s, $v_m=3.66$ m/s
+- You can consider $\frac{A k_c}{Q} = 5$
+
+## Case 4: Packed Bed Design -- Results
+
+- Minimal height: $H_{\text{min}}$
+
+$$
+H_{\text{min}} = \frac{10 v_m D_p}{3 (1 - \epsilon) k_c'}
+$$
+
+- In case 3 setup, $H_{\text{min}}=2.23$ m
+
+
 
 ## Summary
 
