@@ -24,10 +24,10 @@ format:
 ::: {.content-visible when-format="html" unless-format="revealjs"}
 
 ::: {.callout-note}
-This lecture contains the overview of dimensionless number relation to mass transfer coefficients. Detailed discussions will be included in [Lecture 18](../L18), [Lecture 19](../L19) and [Lecture 20](../L20)
+This lecture contains the overview of dimensionless number relation to mass transfer coefficients. Detailed discussions will be included in [Lecture 18](../L18), [Lecture 19](../L19), [Lecture 20](../L20) and [Lecture 21](../L21)
 :::
 
-::
+:::
 
 ## Learning Outcomes {.center}
 
@@ -429,12 +429,12 @@ N_{Re}^{-0.72}
 2. Depend on the operational range, calculate $N_{Re}$, $N_Sc$ 👉 choose the equation for $j_D$
 3. Obtain $k_c$ from $j_D$ value
 4. Calculate flux $N_A$
-5. Estimate effective area $A_{eff}$ inside the columne 👉  $\overline{N}_A = A_{eff} N_A$
+5. Estimate effective area $A_{\text{eff}}$ inside the columne 👉  $\overline{N}_A = A_{\text{eff}} N_A$
 
 ## Caveats In Packed Bed Problems (1)
 
 - Estimate the effective area?
-  - First calculate the effective surface area per volume $a$ then $A_{eff}$
+  - First calculate the effective surface area per volume $a$ then $A_{\text{eff}}$
 ```{=tex}
 \begin{align}
 a &= \frac{6 (1 - \varepsilon)}{D_p} \\
@@ -444,12 +444,12 @@ A_{eff} &= a V_b
 
 ## Caveats In Packed Bed Problems (2)
 
-- Use log-mean driving force correction
+- Use log-mean driving force (see [Lecture 21](../L21))
 
 ```{=tex}
 \begin{align}
-\overline{N}_A &= A_{eff} N_A \\
-&= A_{eff} k_c \frac{
+\overline{N}_A &= A_{\text{eff}} N_A \\
+&= A_{\text{eff}} k_c \frac{
 (c_{A, i} - c_{A1}) - (c_{A, i} - c_{A2})}
 {
 \ln\!\frac{(c_{A, i} - c_{A1})}{(c_{A, i} - c_{A2})}
@@ -468,10 +468,10 @@ where
 ```{=tex}
 \begin{align}
 \overline{N}_A &= A_{eff} N_A \\
-&= V (c_{A2} - c_{A1})
+&= Q (c_{A2} - c_{A1})
 \end{align}
 ```
-where $V$ is the volumetric flow rate.
+where $Q$ is the volumetric flow rate (unit m$^3$/s).
 
 These equations will give rise to solving the flow in packed bed problem.
 
