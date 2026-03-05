@@ -21,6 +21,13 @@ format:
 
 :::
 
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+This lecture contains the overview of dimensionless number relation to mass transfer coefficients. Detailed discussions will be included in [Lecture 18](../L18), [Lecture 19](../L19) and [Lecture 20](../L20)
+:::
+
+::
 
 ## Learning Outcomes {.center}
 
@@ -474,11 +481,3 @@ These equations will give rise to solving the flow in packed bed problem.
 - Typically, start with a known geometry (pipe? parallel plate? sphere? packed bed?)
 - Find the correlation with dimensionless numbers $N_{Re}$, $N_{Sc}$
 - Calculate the final mass transfer rate
-
-
-
-
-
-
-
-
