@@ -278,29 +278,6 @@ plt.show()
 - Flux: $N_A =0.29 \times 10^{-3}$ kg mol/m$^2$/s
 - Direction of flux: gas to liquid
 
-
-## Local Overall Mass Transfer Coefficients
-
-- Knowing $k_x'$ and $k_y'$ allows us to calculate the interfacial concentration $(x_Ai, y_Ai)$
-- **However**, in many industrial applications exact $k_x'$ and $k_y'$ are hard to find
-- Use of overall mass transfer coefficients
-
-![](./public/local-coeff.png)
-
-## Relation Between Overall And Exact Mass Transfer Coefficients
-
-- Exact coefficient $k_x$, $k_y$: driving force $y_{AG} - y_{Ai}$
-
-$$
-N_A = k_y(y_{AG} - y_{Ai})
-$$
-
-- Overall coefficient $K_x$, $K_y$: driving force $y_{AG}-y_A^*$
-
-$$
-N_A = K_y (y_{AG} - y_A^*) = K_x (x_A^* - x_{AL})
-$$
-
   
 
 

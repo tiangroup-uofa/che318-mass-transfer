@@ -1,22 +1,22 @@
 ---
-title: "CHE 318 Lecture 21"
+title: "CHE 318 Lecture 23"
 subtitle: "In-Depth Analysis of Packed Bed Columns"
 author: "Dr. Tian Tian"
-date: "2026-03-02"
+date: "2026-03-06"
 format:
   html: {}
   revealjs:
     output-file: slides.html
   pdf:
-    output-file: L21.pdf
+    output-file: L23.pdf
 ---
 
 ::: {.content-visible when-format="html" unless-format="revealjs"}
 
 ::: {.callout-note}
 - Slides 👉  [Open presentation🗒️](./slides.html)
-- PDF version of course note  👉 [Open in pdf](./L21.pdf)
-- Handwritten notes 👉 [Open in pdf](./public/L21_annotated.pdf)
+- PDF version of course note  👉 [Open in pdf](./L23.pdf)
+- Handwritten notes 👉 [Open in pdf](./public/L23_annotated.pdf)
 :::
 
 :::
@@ -26,266 +26,313 @@ format:
 
 After today's lecture, you will be able to recall:
 
-- Compare the mass transfer coefficients for different geometries vs packed bed
-- Mass balance equation in packed bed columns
-- Concentration / pressure profile inside a packed column
+- Analysis of overall mass balance between 2 phases
+- Identify the operating line in the equilibrium diagram
+- Calculate the outlet molar fraction and minimum flow rate in 2-phase absorption tower
 
-## Recall From Last Week: Mass Transfer Correlations
+## Recall: Reading An Equilibrium Diagram
 
-- Goal: calculate $k_c'$ from:
-  - geometry ($L_D, L, D_P$, etc)
-  - properties ($\mu, \rho, D_{AB}, v$, etc)
+:::{.columns}
+:::{.column width="50%"}
 
-- Calculate $N_{\text{Re}}$, $N_{\text{Sc}}$
+Key features:
 
-- Get $j_D$ and / or $N_{\text{Sh}}$ to back-calculate $k_c'$
+- x-axis & y-axis meaning?
+- Points on the eq. curve?
+- Points above and below eq. curve?
+- How to get interfacial fraction?
+- Slope of line to interfacial points? 
 
-## A Deeper Look Into Packed Bed
-
-![](./public/cheatsheet-packedbed-only.svg)
-
-## Recall From Last Week: Comparison Between Geometries
-
-_Adapted from Problem 7.3-3_. Let's estimate the gas-phase mass
-transfer coefficient $k_G$ (kg mol/(m$^2$ s Pa)) for mass transfer of
-water vapour to solids with different shapes. Consider a water vapour
-(A) in air (B) at 338.6 K and 101.32 Pa flowing through a big duct
-containing solids with various geometries. The flow velocity is 3.66
-m/s. The water vapour concentration is small, so property of air is
-used ($\mu=2.03\times 10^-5$ Pa$\cdot$s, $\rho=1.043$ kg/m$^3$). From
-the table, $D_{AB} = 2.88 \times 10^{-5}$ m$^2$/s at 315 K. Compare
-the values for following geometries, which case?
-
-a) Flow parallel to flat plate with length $L=2.54$ cm
-b) A single sphere with diameter $D=2.54$ cm
-c) Packed beds using spheres of average diameter $D_p=2.54$ cm and $\epsilon=0.35$
-
-## Case 3: Results
-
-::: {.callout-tip}
-- Do not forget to correct $D_{AB}$ for temperature!
-- Choose the right $N_{\text{Sh}}$ or $j_D$ formula according to $N_{\text{Re}}$ and $N_{\text{Sc}}$
-- $k_G \approx k_G' = k_c' / (RT)$
 :::
 
-- Flat surface: $k_G = 1.738\times 10^{-8}$ kg mol/(m$^2$ s Pa). $N_{\text{Sh}} = 38.03$
-- Single sphere: $k_G = 1.984\times 10^{-8}$ kg mol/(m$^2$ s Pa). $N_{\text{Sh}} = 43.40$
-- Packed bed: $k_G = 7.60\times 10^{-8}$ kg mol/(m$^2$ s Pa). $N_{\text{Sh}} = 166.32$
+:::{.column width="50%"}
 
-Packed bed clearly wins!
+![](./public/blank-eq-diag.png){width="95%"}
 
-## Why Packed Bed Columns Have Better Mass Transfer?
+:::
 
-- Packed bed geometry provides large surface-to-volume ratio ($\epsilon$ and $D_p$)
+:::
 
-- The boundary layer length $\delta c$ is small due to continuous disruption of liquid/gas interface
+## Local Overall Mass Transfer Coefficients
 
-- Overall $k_c'$ is larger than single geometry
+- Knowing $k_x$ and $k_y$ (film coefficients) allows us to calculate the interfacial concentration $(x_{Ai}, y_{Ai})$
+- **However**, in many industrial applications exact $k_x$ and $k_y$ are hard to find
+- Use of overall mass transfer coefficients
 
-- Pressure drop $\Delta p$ over the column can be larger than other types!
+![](./public/local-coeff.png)
 
-## Compute Mass Transfer In Packed Bed Columns
+## Relation Between Overall And Exact Mass Transfer Coefficients
 
-In a packed bed design, it is often desired to know the following quantities:
-
-1) The outlet concentration $c_{A2}$
-2) The total flux of mass transfer accross interface
-
-- It is still desired to use [In] - [Out] + [Gen] = [Acc]
-- What are each of these quantities?
-
-
-
-## Mass Balance In Packed Beds
-
-- Volumetric flow rate is $Q$ (unit m$^3$/s)
-- Inlet, outlet concentration: $c_{A1}$, $c_{A2}$
-- Cross sectional area $S$
-- Interfacial mass transfer flux $N_A$, effective area $A_{\text{eff}}$
-
-```{=tex}
-\begin{align}
-\text{[In]} - \text{[Out]} + \text{[Gen]} &= \text{[Acc]} \\
-Q (c_{A1} - c_{A2}) + A_{\text{eff}} \hat{N}_A = 0
-\end{align}
-```
-
-## The Effective Area $A_{\text{eff}}$
-
-- $A_{\text{eff}}$ related to the surface-to-volume ratio $a$ and total bed volume $V_b$
-
-```{=tex}
-\begin{align}
-A_{\text{eff}} = a V_{b}
-\end{align}
-```
-
-- For spheres, we can derive $a$ (unit m$^2$/m$^3$)
-
-```{=tex}
-\begin{align}
-a = \frac{6(1 - \epsilon)}{D_p}
-\end{align}
-```
-
-## How To Get $\hat{N}_A$?
-
-- $\hat{N}_A$ is the **average** mass transfer flux accross the interface.
-- To solve it, we still use a control volume from $z$ to $z+ dz$
-- Locally, driving force $c_{Ai} - c_{A}(z)$
-- Local mass transfer flux
-
-```{=tex}
-\begin{align}
-N_A(z) = k_c \left[c_{Ai} - c_{A}(z)\right]
-\end{align}
-```
-
-## Differential Equation for $c_A(z)$
-
-```{=tex}
-\begin{align}
-N_A a S dz &= Q d c_A \\
-\frac{k_c a S}{Q} dz
-&= \frac{d c_A}{c_{Ai} - c_{A}(z)}
-\end{align}
-```
-
-Integrating over $z$ we get:
-
-```{=tex}
-\begin{align}
-\ln\!\left(
-\frac{c_{Ai} - c_{A1}}{c_{Ai} - c_{A}(z)}
-\right) = \frac{k_c a S z}{Q}
-\end{align}
-```
-
-## Concentration Profile Of Packed Bed (Single Phase)
-
-- When $c_{Ai}$ is constant (e.g. solid-gas interface), concentration follows:
-
-```{=tex}
-\begin{align}
-c_{A}(z) = 
-c_{Ai} - (c_{Ai} - c_{A1})\exp(- \frac{k_c a S}{Q} z)
-\end{align}
-```
-
-- Analog: reactive wall in pipe system (unsteady-state mass transfer in [Lecture 11](../L11))
-
-```{=tex}
-\begin{align}
-c_{A}(z) = c_{Ai} - (c_{Ai} - c_{A1})\exp(- \frac{4 k_c z}{Dv_m})
-\end{align}
-```
-
-The pipe wall problem corresponds to $a=4 / D$, similar to a packed bed problem.
-
-- Clearly, packed bed can achieve saturation much faster, because $D_p$ is usually a few mm to 1 inch.
-
-
-
-
-
-## Outlet Concentration For Packed Bed
-
-- If a packed bed column has height $H$, outlet concentration $c_{A2}$ follows:
-
-```{=tex}
-\begin{align}
-c_{A2} = 
-c_{Ai} - (c_{Ai} - c_{A1})\exp(- \frac{k_c a S H}{Q})
-\end{align}
-```
-
-- Rearrange gives
-
-```{=tex}
-\begin{align}
-\ln\!\left(
-\frac{c_{Ai} - c_{A1}}{c_{Ai} - c_{A2}}
-\right)
-&= \frac{k_c a S H}{Q} \\
-&= \frac{k_c A_{\text{eff}}}{Q}
-\end{align}
-```
-
-## Solving The Average Mass Transfer Flux $\hat{N}_A$
-
-- We can further use the mass balance equation $Q(c_{A1} - c_{A2}) + \hat{N}_A A_{\text{eff}} = 0$.
-- Use the fact $c_{A2} - c_{A1} = (c_{Ai} - c_{A1}) - (c_{Ai} - c_{A2})$
-
-
-<!-- ```{=tex} -->
-<!-- \begin{align} -->
-<!-- Q(c_{A2} - c_{A1}) &= k_c A_{\text{eff}} \frac{c_{A2} - c_{A1}}{\ln\!\left( \frac{c_{Ai} - c_{A1}}{c_{Ai} - c_{A2}} \right)} \\ -->
-<!-- &= k_c A_{\text{eff}} \frac{(c_{Ai} - c_{A1}) - (c_{Ai} - c_{A2})}{\ln\!\left( -->
-<!-- \frac{c_{Ai} - c_{A1}}{c_{Ai} - c_{A2}} -->
-<!-- \right)} -->
-<!-- \end{align} -->
-<!-- ``` -->
-
-That gives us
+- Exact coefficient $k_x$, $k_y$: driving force $y_{AG} - y_{Ai}$
 
 $$
-\hat{N}_{A} = k_c \frac{(c_{Ai} - c_{A1}) - (c_{Ai} - c_{A2})}{\ln\!\left(
-\frac{c_{Ai} - c_{A1}}{c_{Ai} - c_{A2}} \right)}
+N_A = k_y(y_{AG} - y_{Ai})
 $$
 
-
-## Average Mass Transfer Flux By Log-Mean Driving Force
-
-The previous result means the average driving force in a
-exponentially-changing concentration profile like in packed bed,
-should be expressed in **log-mean driving force** form.
-
-It is an expression we will frequently see in other column setups with mixing interfaces
+- Overall coefficient $K_x$, $K_y$: driving force $y_{AG}-y_A^*$
 
 $$
-\hat{N}_{A} = k_c \frac{(c_{Ai} - c_{A1}) - (c_{Ai} - c_{A2})}{\ln\!\left(
-\frac{c_{Ai} - c_{A1}}{c_{Ai} - c_{A2}}
-\right)}
+N_A = K_y (y_{AG} - y_A^*) = K_x (x_A^* - x_{AL})
 $$
 
-![](./public/log-mean-df.png)
+## $K_x$ and $K_y$ On A Diagram
 
+- What are the driving forces associated with $K_x$ and $K_y$?
 
+![](./public/local-coeff.png)
 
-## Case 4: Packed Bed Design 
+## $(x, y)$ Relation In A Reactor
 
-In this lecture, we show that the outlet concentration will be
-saturated when the tube is long enough.
+- Consider an absorption tower with gas inlet at $y_{A1}$ and outlet at
+  $y_{A2}$
+- The gas solute is continuously absorbed by the flowing water phase
+- Which is larger, $y_{A1}$ or $y_{A2}$?
+
+## Absorption Operating Line in Equilibrium Diagram
+
+:::{.callout-tip}
+- Mass balance tells us $y_{A1} > y_{A2}$
+- A series of $(x, y)$ points during the operation forms the **operating line**
+:::
+
+![](./public/operation-line.svg)
+
+## What Questions Do We Want To Study?
+
+:::{.columns}
+:::{.column width="50%"}
+
+Given information about the absorption tower, can we answer?
+
+- In- and out-let molar fractions ✅
+- Required liquid / gas flow rate ✅
+- Concentration profile → **needs to know** $N_A$
+- Height of tower needed → **needs to know** $N_A$
+
+:::
+
+:::{.column width="50%"}
+
+![](./public/control-volume.svg){width="85%"}
+
+:::
+
+:::
+
+## Mass Balance In Whole Control Volume
+
+:::{.columns}
+:::{.column width="50%"}
+
+Mass balance for 2 phases:
 
 ```{=tex}
 \begin{align}
-c_{A2} = 
-c_{Ai} - (c_{Ai} - c_{A1})\exp(- \frac{A k_c}{Q})
+\text{In}_{\text{liq}} + \text{In}_{\text{gas}}
+ &= \text{Out}_{\text{liq}} + \text{Out}_{\text{gas}} \\
+L_2 x_2 + V_1 y_1 &= L_1 x_1 + V_2 y_2
 \end{align}
 ```
 
-- Consider all parameters in case 3, how high should we design the packed bed to ensure saturated outlet concentration?
-- $D_p=2.54$ cm, $\epsilon=0.35$, $k_c'=0.214$ m/s, $v_m=3.66$ m/s
-- You can consider effective saturation means $\frac{A k_c}{Q} = 5$
+- $L_1 = L' + L_{x1}$ ($L'$: flow rate inert liquid)
+- $V_1 = V' + V_{y1}$ ($V'$: flow rate inert gas)
 
-## Case 4: Packed Bed Design -- Results
 
-- Minimal height: $H_{\text{min}}$
+:::
+
+:::{.column width="50%"}
+
+![](./public/control-volume-show-inout.svg){width="85%"}
+
+:::
+
+:::
+
+## Explanation For Flow Rates
+
+:::{.callout-note}
+Other flow rates: $Q$ (m$^3$/s); $W$ (kg/s); $v$ (m/s)
+:::
+
+- $L$: molar flow rate (kg mol/s) for liquid phase
+  - $L'$: flow rate for inert liquid
+  - $L_{x1}$: flow rate for A at molar fraction $x_1$
+- $V$: molar flow rate (kg mol/s) for gas phase
+  - $V'$: flow rate for inert gas
+  - $V_{y1}$: flow rate for A at molar fraction $y_1$
+
+## Mass Balance For Operating Line
+
+The two ends of the operating line $(x_1, y_1)$ and $(x_2, y_2)$ follow:
+
+```{=tex}
+\begin{align}
+L'\left(\frac{x_2}{1 - x_2}\right)
++
+V'\left(\frac{y_1}{1 - y_1}\right)
+=
+L'\left(\frac{x_1}{1 - x_1}\right)
++
+V'\left(\frac{y_2}{1 - y_2}\right)
+\end{align}
+```
+
+## Meaning of the Operating Line
+
+When $1 - x_1 \approx 1$ and $1 - y_1 \approx 1$, we can rewrite the
+mass balance equation for any $(x, y)$ along the operating line
+
+:::{.columns}
+:::{.column width="50%"}
+
+```{=tex}
+\begin{align}
+y = \left(\frac{L'}{V'}\right) x +
+\left[ y_1 -
+\left(
+\frac{L'}{V'}
+\right)x_1
+\right]
+\end{align}
+```
+
+:::
+
+:::{.column width="50%"}
+
+![](./public/operation-line-slope.svg){width="85%"}
+
+
+:::
+
+:::
+
+## Absorption Tower Design Requirements
+
+In absorption tower, we usually know the following quantities:
+
+- Gas inlet fraction $y_1$ and flow rate $V_1$
+  - $V'$ can be calculated
+- Liquid inlet fraction $x_2$ (usually $x_2=0$)
+- The equilibrium curve $y=f_{\text{eq}}(x)$
+
+One of the following design goals may be asked:
+
+1. Know the flow rate $L'$ → Determine $y_2$
+2. $y_2$ needs to be at certain value → Determine $L'$
+
+![](./public/control-volume-show-inout.svg){.absolute right=20 bottom=20 width="35%"}
+
+## Minimum Operating Line for Absorption Tower
+
+For question 2, we know the requirement for $y_2$, combine with the
+equilibrium chart, there is a minimum liquid flow rate
+$L'_{\text{min}}$.
+
+![](./public/min-operation-line.svg)
+
+## Flow Rate In Absorption Tower
+
+From the dilute regime operating line, the slope is determined by
+$\left(\dfrac{L'}{V'}\right)$. Although there is a minimal
+$\left(\dfrac{L'}{V'}\right)$ requirement, practical operating line
+has slope that follows
 
 $$
-H_{\text{min}} = \frac{5 v_m D_p}{6 (1 - \epsilon) k_c'}
+\left(\dfrac{L'}{V'}\right) \approx 1.5 \times \text{[Slope of Eq. Curve]}
 $$
 
-- In case 3 setup, $H_{\text{min}}=0.556$ m
+- If $L'/V'$ is too high, the column usually needs a larger diameter to compensate the pressure drop.
+- If $L'/V'$ is too low, a taller absorption tower is needed for sufficient contact area.
 
+## Example 1: Determine the Outlet Composition
 
+A mixture of gas A in air kept at total pressure of 1 atm flows
+through an absorption tower with flowing water at 293 K. The inlet gas
+flow rate is $V_1 = 100$ kg mol/h, and inlet $y_1 = 0.20$. The liquid
+inlet flow rate is $L' = 300$ kg mol/h and inlet contains no dissolved
+gas ($x_2=0$). At the outlets the gas-liquid phases reach equilibrium following the Henry's law:
+
+$$
+y_2 = m x_1
+$$
+
+Calculate the outlet mole fraction $y_2$ and $x_1$ for the following cases:
+
+1) A is CO$_2$, $m = 1.42\times 10^3$
+2) A is SO$_2$, $m \approx 10$
+
+## Example 2: Solution Process
+
+- Write the mass balance equation
+
+```{=tex}
+\begin{align}
+L'\left(\frac{x_2}{1 - x_2}\right)
++
+V'\left(\frac{y_1}{1 - y_1}\right)
+=
+L'\left(\frac{x_1}{1 - x_1}\right)
++
+V'\left(\frac{y_2}{1 - y_2}\right)
+\end{align}
+```
+
+- Obtain $L'$ and $V'$
+
+- $x_1$ and $y_2$ relation from Henry's law
+
+## Example 2: Results
+
+:::{.callout-warning}
+$y_1$ and $y_2$ are supposedly large, so $1 - y_1 \approx 1$ is not correct!
+:::
+```{python}
+#| echo: false
+import math
+from scipy.optimize import root
+
+x_2 = 0.0
+y_1 = 0.20
+V_p = 100 * (1 - y_1)
+L_p = 300
+
+def mass_balance(x_1, m):
+    lhs = L_p * (x_2 / (1-x_2)) + V_p * (y_1 / (1 - y_1))
+    y_2 = m * x_1
+    rhs = L_p * (x_1 / (1-x_1)) + V_p * (y_2 / (1 - y_2))
+    res = lhs - rhs
+    return res
+
+def solve_system(m, x_guess=0.0):
+    assert m > 0
+    res = root(mass_balance, x0=x_guess, args=(m,))
+    x_1 = res.x[0]
+    y_2 = m * x_1
+    return x_1, y_2
+
+# CO2
+x_1, y_2 = solve_system(m=0.142e4)
+print(f"CO2 system: x_1 = {x_1:.3e}, y_2= {y_2:.3f}")
+
+# SO2
+x_1, y_2 = solve_system(m=10.0)
+print(f"SO2 system: x_1 = {x_1:.3e}, y_2= {y_2:.3f}")    
+```
+
+## Example 2: Quanlitative Analysis
+
+- Slope of operating line $L'/V'$  
+- Slope of equilibrium curve $m$
+- CO$_2$: $m \gg L'/V'$, can be treated as if gas phase concentration is fixed!
+- SO$_2$: measurable decrease of SO$_2$ fraction in outlet gas
 
 ## Summary
 
-- Dimensionless numbers can be used to correlate mass transfer problems in different flow rate, dimension etc
-- Typically, start with a known geometry (pipe? parallel plate? sphere? packed bed?)
-- Find the correlation with dimensionless numbers $N_{Re}$, $N_{Sc}$
-- Calculate the final mass transfer rate
+- Reading equilibrium chart and operating line
+- Mass balance equation for 2 phases
+- Solving the flow rate -- concentration relation 
+
 
 
 
