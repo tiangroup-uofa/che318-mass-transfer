@@ -252,7 +252,7 @@ $$
 
 
 
-## Example 4: Packed Bed Design 
+## Case 4: Packed Bed Design 
 
 In this lecture, we show that the outlet concentration will be
 saturated when the tube is long enough.
@@ -268,7 +268,7 @@ c_{Ai} - (c_{Ai} - c_{A1})\exp(- \frac{A k_c}{Q})
 - $D_p=2.54$ cm, $\epsilon=0.35$, $k_c'=0.214$ m/s, $v_m=3.66$ m/s
 - You can consider effective saturation means $\frac{A k_c}{Q} = 5$
 
-## Example 4: Packed Bed Design -- Results
+## Case 4: Packed Bed Design -- Results
 
 - Minimal height: $H_{\text{min}}$
 

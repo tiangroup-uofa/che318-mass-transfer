@@ -21,6 +21,7 @@ format:
 
 :::
 
+
 ::: {.content-visible when-format="html" unless-format="revealjs"}
 
 ::: {.callout-note}
@@ -28,6 +29,8 @@ This lecture contains the overview of dimensionless number relation to mass tran
 :::
 
 :::
+
+---
 
 ## Learning Outcomes {.center}
 

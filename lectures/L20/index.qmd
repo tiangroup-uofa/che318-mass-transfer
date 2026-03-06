@@ -85,7 +85,7 @@ j_D = 0.99 N_{Re, L}^{-0.5}
 ::: 
 :::
 
-## Case 2 Example
+## Example For Flat Plate
 
 Example 7.3-2: A large volume of pure water at 26.1 $^\circ$C is
 flowing parallel to a flat plate of solid benzoic acid, where
@@ -96,12 +96,23 @@ m$^2$/s.  For water, $\mu=8.71\times 10^-4$ Pa$\cdot$s and $\rho=996$ kg/m$^3$ (
 
 Calculate the mass-transfer coefficient $k_c$ and $N_A$.
 
-## Case 2: Solution Steps
+## Flat Surface: Solution Steps
 
 - Step 1: calculate $N_{Re}$, $N_{Sc}$. Regime?
 - Step 2: use flat-surface equations to calculate $j_D$
 - Step 3: convert $j_D$ to $k_c'$. Use $k_c = k_c'/x_{BM}$
 - Step 4: use master equation to get $N_A$
+
+## Flat Surface Example: Results
+
+:::{.callout-tip}
+We can use $x_{BM}=1$ in this case
+:::
+
+- $N_{\text{Re}}=1.700\times10^4$, $N_{\text{Sc}}=702$
+- Use **liquid turbulent flow**: $j_D = 0.99 N_{\text{Re}}^{-0.5}$ = 0.00758
+- $k_c' = j_D v N_{\text{Sc}}^{-2/3} = 5.85\times 10^{-6}$ m/s
+- $N_A = 1.726 \times 10^{-7}$ kg mol/m$^2$/s
 
 ## Case 3: Flow Past Single Sphere 
 
@@ -248,15 +259,7 @@ N_{Re}^{-0.72}
 \end{align}
 ```
 
-<!-- ## Packed Bed Calculation Steps -->
-
-<!-- 1. Known value from operational column: $\varepsilon$, $V_b$ (total volume), $D_p$, $D_{AB}$, $\mu$, $\rho$, etc. -->
-<!-- 2. Depend on the operational range, calculate $N_{Re}$, $N_Sc$ 👉 choose the equation for $j_D$ -->
-<!-- 3. Obtain $k_c$ from $j_D$ value -->
-<!-- 4. Calculate flux $N_A$ -->
-<!-- 5. Estimate effective area $A_{eff}$ inside the columne 👉  $\overline{N}_A = A_{eff} N_A$ -->
-
-## Case 3: Comparison Between Geometries
+## Example 3: Comparison Between Geometries
 
 _Adapted from Problem 7.3-3_. Let's estimate the gas-phase mass
 transfer coefficient $k_G$ (kg mol/(m$^2$ s Pa)) for mass transfer of
@@ -272,7 +275,7 @@ a) Flow parallel to flat plate with length $L=2.54$ cm
 b) A single sphere with diameter $D=2.54$ cm
 c) Packed beds using spheres of average diameter $D_p=2.54$ cm and $\epsilon=0.35$
 
-## Case 3: Results
+## Example 3: Results
 
 ::: {.callout-tip}
 - Do not forget to correct $D_{AB}$ for temperature!
@@ -287,93 +290,6 @@ c) Packed beds using spheres of average diameter $D_p=2.54$ cm and $\epsilon=0.3
 Packed bed clearly wins!
 
 
-## Mass Balance In Packed Beds
-
-- It is usually desirable to calculate the overall $N_A$ in packed bed
-- Use log-mean driving force correction
-
-```{=tex}
-\begin{align}
-\overline{N}_A &= A N_A \\
-&= A k_c \frac{
-(c_{A, i} - c_{A1}) - (c_{A, i} - c_{A2})}
-{
-\ln\!\frac{(c_{A, i} - c_{A1})}{(c_{A, i} - c_{A2})}
-}
-\end{align}
-```
-where
-
-- $c_{A, i}$: surface concentration
-- $c_{A1}, c_{A2}$: in- and outlet concentrations
-
-## Caveats In Packed Bed Problems (3)
-
-- Mass-flow balance
-
-```{=tex}
-\begin{align}
-\overline{N}_A &= A N_A \\
-&= Q (c_{A2} - c_{A1})
-\end{align}
-```
-where $Q$ is the volumetric flow rate (m$^3$ / s).
-
-How do we get these? Still the [In] - [Out] + [Gen] = 0 balance equation.
-
-## Alternative Form For Packed Bed
-
-- Rearrange the mass balance equation we get:
-
-```{=tex}
-\begin{align}
-\ln\!\left(
-\frac{c_{Ai} - c_{A1}}{c_{Ai} - c_{A2}}
-\right) = \frac{A k_c}{Q}
-\end{align}
-```
-
-- Expression for $c_{A2}$
-
-```{=tex}
-\begin{align}
-c_{A2} = 
-c_{Ai} - (c_{Ai} - c_{A1})\exp(- \frac{A k_c}{Q})
-\end{align}
-```
-
-- Analog to previous example of reactive wall in [Lecture 11](../L11)!
-
-$$
-c_{A2} = c_{Ai} - (c_{Ai} - c_{A1})\exp(- \frac{4 k_c}{Dv_m}L)
-$$
-
-## Case 4: Packed Bed Design 
-
-The equation shows the outlet concentration will be saturated when the tube is long enough.
-
-```{=tex}
-\begin{align}
-c_{A2} = 
-c_{Ai} - (c_{Ai} - c_{A1})\exp(- \frac{A k_c}{Q})
-\end{align}
-```
-
-- Consider all parameters in case 3, how high should we design the packed bed to ensure saturated outlet concentration?
-- $D_p=2.54$ cm, $\epsilon=0.35$, $k_c'=0.214$ m/s, $v_m=3.66$ m/s
-- You can consider $\frac{A k_c}{Q} = 5$
-
-## Case 4: Packed Bed Design -- Results
-
-- Minimal height: $H_{\text{min}}$
-
-$$
-H_{\text{min}} = \frac{5 v_m D_p}{6 (1 - \epsilon) k_c'}
-$$
-
-- In case 3 setup, $H_{\text{min}}=0.556$ m
-
-
 
 ## Summary
 
@@ -381,6 +297,7 @@ $$
 - Typically, start with a known geometry (pipe? parallel plate? sphere? packed bed?)
 - Find the correlation with dimensionless numbers $N_{Re}$, $N_{Sc}$
 - Calculate the final mass transfer rate
+- Geometry plays an important role in determining $k_c'$!
 
 
 
