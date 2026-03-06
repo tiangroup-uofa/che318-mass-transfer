@@ -28,7 +28,7 @@ jobs:
           python-version: 3.13
       - name: Setup marimo packages
         run: |
-          pip install marimo jupyter scipy
+          pip install marimo jupyter scipy numpy matplotlib
       - name: Setup quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
