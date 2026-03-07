@@ -40,7 +40,7 @@ def _(mo):
     """
     ).batch(
         v1=mo.ui.number(value=181.4, step=0.1, ),
-        y1=mo.ui.number(value=0.25, step=0.01),
+        y1=mo.ui.number(value=0.55, step=0.01),
         y2=mo.ui.number(value=0.02, step=0.001),
         x2=mo.ui.number(value=0.0001, step=1e-4, ),
         L_prime=mo.ui.number(value=200, step=0.01)
