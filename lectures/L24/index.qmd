@@ -268,6 +268,15 @@ Use gas-phase example, from geometry of the equilibrium diagram:
 
 ![](./public/low-solu.png)
 
+## Example 2: estimate overall mass transfer coefficients
+
+Use the conditions from example 1: bulk phase point $P=(0.10, 0.380)$, $k_x'=1.967\times 10^{-3}$ kg mol/m$^2$/s and $k_y' = 1.465\times 10^{-3}$ kg mol/m$^2$/s, estimate $K_y'$?
+
+![](./public/ex1-plot.png)
+
+## Example 2: solutions
+
+![](./public/solution-ex2.png)
 
 ## Summary
 
