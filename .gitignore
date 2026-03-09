@@ -1,6 +1,7 @@
 /__marimo__/
 /mossball/
 _site/
+.DS_Store
 
 scripts/.nojekyll
 scripts/*.html
