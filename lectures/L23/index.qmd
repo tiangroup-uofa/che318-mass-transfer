@@ -1,6 +1,6 @@
 ---
 title: "CHE 318 Lecture 23"
-subtitle: "In-Depth Analysis of Packed Bed Columns"
+subtitle: "Mass Transfer In Two-Phase Column: Operating Line"
 author: "Dr. Tian Tian"
 date: "2026-03-06"
 format:
