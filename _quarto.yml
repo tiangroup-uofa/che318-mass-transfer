@@ -58,6 +58,9 @@ website:
           - lectures/L21/index.qmd
           - lectures/L22/index.qmd
           - lectures/L23/index.qmd
+          - lectures/L24/index.qmd
+          - lectures/L25/index.qmd
+          - lectures/L26/index.qmd
       - section: "Interactive Demos"
         contents:
           - scripts.qmd

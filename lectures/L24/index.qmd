@@ -232,9 +232,42 @@ Use gas-phase example, from geometry of the equilibrium diagram:
 - The transport equation becomes a "resistance-in-series" analog
 
 ```{=tex}
+\begin{align}
 \text{[Total resistance in gas]} &= \sum \text{resistance in each phase} \\
 \frac{1}{K_y} &= \sum f_i \frac{1}{k_i}
+\end{align}
 ```
+
+## Case 1: Overall $K_y$ in gas phase for highly liquid-soluble A
+
+- Local slope $m'$ is small
+- Transfer resistance is mainly in gas!
+- Design rule: tune $k_y$ --> more efficient mass transfer
+
+```{=tex}
+\begin{align}
+\frac{1}{K_y} &= \frac{1}{k_y}+\frac{m'}{k_x}\\
+&\approx \frac{1}{k_y}
+\end{align}
+```
+
+![](./public/high-solu.png)
+
+## Case 2: Overall $K_x$ in liquid phase for low solubility A
+
+- Local slope $m''$ is large
+- Transfer resistance is mainly in liquid!
+- Design rule: tune $k_x$ --> more efficient mass transfer
+
+```{=tex}
+\begin{align}
+\frac{1}{K_x} &= \frac{1}{m'' k_y}+\frac{1}{k_x}\\
+&\approx \frac{1}{k_x}
+\end{align}
+```
+
+![](./public/low-solu.png)
+
 
 ## Summary
 
