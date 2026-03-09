@@ -1,5 +1,6 @@
 /__marimo__/
 /mossball/
+_site/
 
 scripts/.nojekyll
 scripts/*.html
