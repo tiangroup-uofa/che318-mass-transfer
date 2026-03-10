@@ -1,6 +1,6 @@
 ---
 title: "CHE 318 Lecture 24"
-subtitle: "Mass Transfer In Two-Phase Column: Realistic Situations"
+subtitle: "Mass Transfer In Two-Phase Column: Concentration Profile"
 author: "Dr. Tian Tian"
 date: "2026-03-09"
 format:
