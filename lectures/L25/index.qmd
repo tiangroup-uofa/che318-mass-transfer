@@ -404,7 +404,13 @@ Final result: $Z=1.911$ m
 
 
 
+$$
+(1 - y)_{im} = \frac{(1 - y_{AG}) - (1 - y_{Ai})}{\ln\! \frac{1 - y_{AG}}{1 - y_{Ai}}}
+$$
 
+$$
+(y - y_i)_{m} = \frac{(y_{1} - y_{i1}) - (y_{2} - y_{i2})}{\ln\! \frac{y_{1} - y_{i1}}{y_2 - y_{i2}}}
+$$
 
 
 
