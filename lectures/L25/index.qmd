@@ -30,6 +30,10 @@ After today's lecture, you will be able to:
 - Recall expression for total tower height in column
 - In depth critical analysis for the gas-liquid balance
 
+## Cheatsheet for packed bed design
+
+![Physical copies distributed in class](../L25/cheatsheet-2phase.svg)
+
 ## Two-phase column: what have learned so far?
 
 For two-phase mass transfer (solid-state packed bed, liquid-gas

@@ -30,6 +30,11 @@ After today's lecture, you will be able to:
 - Recall the concepts of transfer unit and number of units in packed bed design
 - Understand the process of solving the tower height in realistic concentration profiles
 
+## Cheatsheet for packed bed design
+
+![Physical copies distributed in class](../L25/cheatsheet-2phase.svg)
+
+
 
 ## Recall: packed tower height equation (individual phase)
 
@@ -243,7 +248,6 @@ Z &= \int_{y_2}^{y_1} \frac{V dy}{\frac{k'_y a S}{(1 - y)_{im}} (1 - y)(y - y_i)
 ![](./public/ex2-step2.png)
 
 Final integration result: $Z = 1.588$ m
-
 
 
 
