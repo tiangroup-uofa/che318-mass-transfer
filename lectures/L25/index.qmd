@@ -32,7 +32,7 @@ After today's lecture, you will be able to:
 
 ## Cheatsheet for packed bed design
 
-![Physical copies distributed in class](../L25/cheatsheet-2phase.svg)
+![Physical copies distributed in class](../L25/public/cheatsheet-2phase.svg)
 
 ## Two-phase column: what have learned so far?
 
