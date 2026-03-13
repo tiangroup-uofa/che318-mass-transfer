@@ -1,22 +1,22 @@
 ---
-title: "CHE 318 Lecture 24"
-subtitle: "Mass Transfer In Two-Phase Column: Concentration Profile"
+title: "CHE 318 Lecture 26"
+subtitle: "Designing Packed Beds For Concentrated Systems"
 author: "Dr. Tian Tian"
-date: "2026-03-09"
+date: "2026-03-13"
 format:
   html: {}
   revealjs:
     output-file: slides.html
   pdf:
-    output-file: L24.pdf
+    output-file: L26.pdf
 ---
 
 ::: {.content-visible when-format="html" unless-format="revealjs"}
 
 ::: {.callout-note}
 - Slides 👉  [Open presentation🗒️](./slides.html)
-- PDF version of course note  👉 [Open in pdf](./L24.pdf)
-- Handwritten notes 👉 [Open in pdf](./public/L24_annotated.pdf)
+- PDF version of course note  👉 [Open in pdf](./L26.pdf)
+- Handwritten notes 👉 [Open in pdf](./public/L26_annotated.pdf)
 :::
 
 :::
@@ -26,265 +26,238 @@ format:
 
 After today's lecture, you will be able to:
 
-- Recall the general mass transfer flux in stagnant B films
-- Apply the rule to find interfacial concentration and flux
-- Analysis for mass balance equation _inside_ the absorption column
+- Review general procedure of designing a packed tower in arbitrary concentration conditions
+- Recall the concepts of transfer unit and number of units in packed bed design
+- Understand the process of solving the tower height in realistic concentration profiles
 
 
-## Recall of last week: two-phase mass transfer
+## Recall: packed tower height equation (individual phase)
 
-Useful tool: equilibrium diagram
-
-:::{.columns}
-:::{.column width="50%"}
-
-Key features:
-
-- x-axis & y-axis meaning?
-- Points on and below curve?
-- Equilibrium line and operating line?
-- Points above and below eq. line?
-- Meaning of operating line with flow rates?
-
-:::
-
-:::{.column width="50%"}
-
-![](./public/blank-eq-diag.png){width="95%"}
-
-:::
-
-:::
-
-## Recap: Key equation 1 -- Flux relation
-
-For **very diluted** (EMCD-like) system, the flux equation in each phase follows:
+General equation for gas. What the meanings for each term?
 
 ```{=tex}
 \begin{align}
-N_A = k_y' (y_{AG} - y_{Ai}) = k_x' (x_{Ai} - x_{AL})
+Z
+&=
+\int_{y_2}^{y_1}
+\frac{V'}{k_y'aS}
+\cdot
+\frac{(1-y)_{im}}{(1-y)^2(y-y_{i})}
+\, dy \\
+&= \int_{y_2}^{y_1}
+\frac{V}{k_y'aS}
+\cdot
+\frac{(1-y)_{im}}{(1-y)(y-y_{i})}
+\, dy
 \end{align}
 ```
 
-This leads to the slope to the eq. line as:
+## Recall: height equation for diluted system
+
+If $x<0.1$ and $y<0.1$, typically use (for gas phase):
+
+$$
+Z = \left[ \frac{V}{k'_y a S} \frac{(1 - y)_{im}}{1 - y} \right] \int_{y_2}^{y_1} \frac{dy}{y - y_i}
+$$
+
+or even simpler
+
+$$
+Z = \left[ \frac{V}{k'_y a S} \right] \int_{y_2}^{y_1} \frac{dy}{y - y_i}
+$$
+
+what insights can we get?
+
+## Motivation: transfer units for packed beds
+
+From unit analysis, the term $\frac{V}{k'_y a S}$ characterizes the
+height. We often use the concept of **transfer unit** to determine the
+performance of mass transfer in each phase. For gas phase, we have the
+"height" of the transfer unit $H_G$ as
 
 ```{=tex}
 \begin{align}
-\text{Slope} &= - \frac{y_{AG} - y_{Ai}}{x_{Ai} - x_{AL}} \\
-             &= -\frac{k_x'}{k_y'}
+H_G = \frac{V}{k_y' a S}
 \end{align}
 ```
 
-## Recap: Key equation 2 -- Mass balance (2-phase)
+- $H_G$ is controlled by ratio of flow rate and mass transfer in gas phase
+- smaller $H_G$ means more efficient packing (thus needing shorter tower)
 
-If we only care what possible $(x, y)$ points are in the tower, can
-use 2-phase mass balance:
+## Define the number of transfer units
 
+The rest of the equation for $Z$ can be rewritten as "number of
+transfer units", similar to theoertical number of trays in a tray
+tower. For gas phase general case, we have
 
 ```{=tex}
 \begin{align}
-L'\left(\frac{x_2}{1 - x_2}\right)
-+
-V'\left(\frac{y_1}{1 - y_1}\right)
+N_G
 =
-L'\left(\frac{x_1}{1 - x_1}\right)
-+
-V'\left(\frac{y_2}{1 - y_2}\right)
+\int_{y_2}^{y_1}
+\frac{(1-y)_{im}}{(1-y)(y-y_i)}
+\,dy
 \end{align}
 ```
 
-In **very diluted** (EMCD-like) system, we have
-operating line with a slope of $L'/V'$.
-
-- Given inlet $y_1$ and target $x_2, y_2$ 👉 minimal operating $L'$ (see Assignment 6!)
-- Given actual $L'$ 👉 predict output $x_1$
-
-## What can we improve from last week's picture?
-
-**Applicability**
-
-- Instead of focusing on **very diluted** ($1-x\approx 1-y \approx 1$), derive equations for general, diffusion through stagnant film case
-- Solving interfacial composition for general case
-
-**Case study**: height requirement in packed absorption tower
-
-- How tall should the tower / column be, given the mass transfer coefficients?
-
-## More accurate slope for interfacial connection
-
-For non-dilute systems, $1-x_{AL}$ and $1-y_{AG}$ may not be close to
-
-- The relation between $(x_{AL}, y_{AG})$ and $(x_{Ai}, y_{Ai})$ is no longer linear
-- Need correction using log-mean composition terms
-- Usual description: diffusion of $A$ through non-diffusing $B$
-
-## Practical relation 1: flux relation for stagnant-film case
-
-Still require the same flux through gas and liquid films:
+For dilute system, we can approximate $N_G$ by
 
 ```{=tex}
 \begin{align}
-N_A
-=
-\frac{k_y'}{(1-y)_{im}} (y_{AG}-y_{Ai})
-=
-\frac{k_x'}{(1-x)_{im}} (x_{Ai}-x_{AL})
+N_G &= \int_{y_2}^{y_1}
+\frac{dy}{y-y_i} \\
+&= \frac{y_1 - y_2}{(y - y_i)_m}
 \end{align}
 ```
 
-So the line connecting bulk point to interface point has slope:
+## Transfer unit view of packed bed
+
+For dilute system, we can see that
 
 ```{=tex}
 \begin{align}
-\text{Slope}
-&=
-\frac{y_{AG}-y_{Ai}}{x_{AL}-x_{Ai}} \\
-&=
--\frac{k_x'/(1-x)_{im}}{k_y'/(1-y)_{im}}
+Z &= H_G N_G \\
+  &= H_G \frac{y_1 - y_2}{(y - y_i)_m}
 \end{align}
 ```
 
-- uses: log mean correction $(1-x){im}$ and $(1-y){im}$
-- depend on the actual location
+- Total height $Z$ is a stack of "transfer units" with height $H_G$
+- Number of the units is governed by the total absorption $(y_1 - y_2)$ and driving force $(y - y_i)_m$
+- Need to absorb more (larger $(y_1 - y_2)$)? 👉 higher tower
+- Operation line close to equilibrium? 👉 higher tower
 
-## Note: log mean correction to interfacial flux
+## Example 1: packed bed height estimation using transfer units
 
-- The notations $(1 - x)_{im}$ and $(1 - y)_{im}$ are log mean
-  values for inert composition between bulk and interface
-- Just $x_{Bm}$ in the steady-state diffusion problems
-- Will be frequently used in this week's lecture!
+Similar example in [Lecture 24](../L24), Acetone is being absorbed by
+water in a packed bed column having a cross sectional area of 0.186
+m$^2$ at 293 K and 1 atm. The inlet air contains 2.6 mol% acetone and
+outlet contains 0.5%. The gas flow is 13.65 kg mol inert air per
+hour. The pure water inlet flow is 45.36 kg mol water per hour. The
+coefficient $k_y' a$ is estimated to be $3.78 \times 10^{-2}$ kg
+mol/(s·m$^3$) and $k_x' a$ is $6.16 \times 10^{-2}$ kg
+mol/(s·m$^3$). The equilibrium line can be approximated by $y = 1.186 x$.
+
+a) Now calculate the height using the dilute regime equation
+b) Now calculate the height using $H_G$ and $N_G$ statements
+
+## Example 1 diagram
+
+![](./public/ex1-solution.png)
+
+## Example 1 solution
+
+Key numbers during calculation:
+
+1. Liquid outlet $x_1 = 0.00648$
+2. $(1 - y)_{im} \approx (1 - x)_{im} \approx 1$ 👉 use dilute regime is justified
+3. $(y - y_i)_{m} = 0.00602$
+4. Average $V = (V_1 + V_2)/2 =3.852 \times 10^{-3}$ kg mol/s
+
+Final results:
+
+1. $Z=1.911$ m
+2. $H_G=0.548$ m, $N_G=3.488$
+
+## Practical estimation of $k_y’ a$ or $H_G$
+
+In real packed beds, coefficients are often obtained from correlations (using dimensionless numbers etc), which may depend on:
+
+
+- $N_{Re}$, $N_{Sc}$
+- Weight flow rates $G_y$, $G_x$
+- Packing type (shape? diameter?)
+
+![](./public/packed-geom.png)
+
+## Design of packed bed in realistic situations
+
+In many industrial applications, engineers are either interested in
+one of the approach to estimate the desired tower height:
+
+1. Estimate the correlation of $k_y' a$ and $k_x' a$ as functions of $G_x$ and $G_y$
+
+$$
+k_y'a = f_y(G_x, G_y, \text{pack type});\quad k_y'a = f_x(G_x, G_y, \text{pack type})
+$$
+
+2. Estimate $H_G$ (and / or $H_L$) from the correlation
+
+$$
+H_G = f_G(G_x, G_y, N_{Sc}, \text{pack type})
+$$
+
+Either way, the flow rates are locally dependent, so integration should be used. Let's a detailed  example from textbook.
+
+## Example 2: concentrated packed bed design
+
+(Example 10.7-1) A tower packed with 25.3 mm ceramic rings is used to
+absorb SO$_2$ from aire using pure water at 293 K and 1 atm. The
+entering gas contains 20 mol% SO$_2$ and leaving gas has 2 mol%. The
+inert air flow is $6.53\times10^{-4}$ kg mol/s and inlet water flow is
+$4.20\times10^{-2}$ kg mol/s. Cross sectional area of the tower is
+0.0929 m$^2$. From literature, the film mass transfer coefficients are estimated as
+
+$$
+k_y' a = 0.0594 G_y^{0.7} G_x^{0.25} \qquad  k_x' a = 0.152 G_x^{0.82}
+$$
+
+where $G_x$ and $G_y$ are total weight of liquid / gas flow per second per area, respectively. Estimate the tower height needed.
+
+## Example 2: steps?
+
+We have seen $y_2 = 0.2$, so in general the dilute solution is not
+accurate. Use the following steps instead:
+
+1. **At each point** on the operating line: determine $(x,y)$
+2. Use local flow rates $V_y$, $L_x$ to find
+   - $G_y = M_{\text{air}} V' + M_{A}V_y$
+   - $G_x = M_{\text{water}} L' + M_{A}V_x$
+3. Calculate $k_y' a$ and $k_x' a$ for each point 
+4. Use trial-and-error / numerical method to determine $(x_i,y_i)$
+5. Integrate through the bed to get $Z$
+
+## Notes on the integration
+
+The height equation is basically integration of a function $f(y)$ over the column. Manual integration using trapezoidal rule usually require at least 5 points along $y$
 
 ```{=tex}
 \begin{align}
-(1-x)_{im} &= x_{Bm} \\
-&= \frac{(1 - x_{Ai}) - (1-x_{AL})}{
-\ln\!\left(
-\frac{(1 - x_{Ai})}{(1-x_{AL})}
-\right)
-}
+Z &= \int_{y_2}^{y_1} \frac{V dy}{\frac{k'_y a S}{(1 - y)_{im}} (1 - y)(y - y_i)} \\
+  &= \int_{y_2}^{y_1} f(y) dy \\
+  &= \sum_{j=0}^{n-1} [f(y_j) + f(y_{j + 1})] \frac{y_{j+1} - y_{j}}{2}
 \end{align}
 ```
 
-## Example 1: finding the interfacial composition (stagnant B)
+![](./public/non-linear-inte.png)
 
-![](./public/question-10-4-1.png)
+## Example 2: operating line
 
-## Solution steps for solving interfacial composition (general case)
+![](./public/ex2-operating.png)
 
-Manual trial-and-error steps:
+## Example 2: textbook solutions (1)
 
-1. Start from bulk point $P$
-2. Guess slope using current correction terms (initially $(1-x)_{im} = (1-y)_{im} = 1$)
-3. Connect to equilibrium curve to get $(x_{Ai}, y_{Ai})$
-4. Update $(1-x){im}$ and $(1-y){im}$, calculate new slope
-5. Is new slope in 4) converged?
-   - No 👉 go back to step 2
-   - Yes 👉 continue to step 6
-6. Get final $(x_{Ai}, y_{Ai})$ and $N_A$
+![](./public/ex2-step1.png)
 
-## Example 1: step 1 (follow textbook)
+## Example 2: textbook solutions (2)
 
-![](./public/ex1-step1.png)
+![](./public/ex2-step2.png)
 
-## Example 1: step 2 (follow textbook)
-
-![](./public/ex1-step2.png)
+Final integration result: $Z = 1.588$ m
 
 
-## Practical relation 2: link overall coefficient to film coefficients
-
-- We learned last week that writing flux equations using $K_x'$ and $K_y'$ are usually easier
-than $k_x'$ and $k_y'$
-- What is the relation between them?
-- Take gas-phase, diffusion through stagnant film
-
-```{=tex}
-\begin{align}
-N_A
-&=
-\frac{k_y'}{(1-y)_{im}}(y_{AG}-y_{Ai}) \\
-&=
-\frac{K_y'}{(1-y)_{*m}}(y_{AG}-y_A^*) \\
-&=
-K_y (y_{AG}-y_A^*)
-\end{align}
-```
-
-$(1-y)_{*m}$: log mean between $(1-y_{AG})$ and $(1-y_A^*)$
 
 
-## Geometric interpretation of overall $K$
 
-Use gas-phase example, from geometry of the equilibrium diagram:
-
-```{=tex}
-\begin{align}
-\frac{1}{K_y}=\frac{1}{k_y}+\frac{m'}{k_x}
-\end{align}
-```
-
-![](./public/local-coeff-stagB.png)
-
-## Transport resistance and overall mass transfer coefficients
-
-- The overall mass transfer coefficient $K$ basically tells which
-  transport resistance is dominant ($k$ inversely proportional to resistance)
-- The transport equation becomes a "resistance-in-series" analog
-
-```{=tex}
-\begin{align}
-\text{[Total resistance in gas]} &= \sum \text{resistance in each phase} \\
-\frac{1}{K_y} &= \sum f_i \frac{1}{k_i}
-\end{align}
-```
-
-## Case 1: Overall $K_y$ in gas phase for highly liquid-soluble A
-
-- Local slope $m'$ is small
-- Transfer resistance is mainly in gas!
-- Design rule: tune $k_y$ --> more efficient mass transfer
-
-```{=tex}
-\begin{align}
-\frac{1}{K_y} &= \frac{1}{k_y}+\frac{m'}{k_x}\\
-&\approx \frac{1}{k_y}
-\end{align}
-```
-
-![](./public/high-solu.png)
-
-## Case 2: Overall $K_x$ in liquid phase for low solubility A
-
-- Local slope $m''$ is large
-- Transfer resistance is mainly in liquid!
-- Design rule: tune $k_x$ --> more efficient mass transfer
-
-```{=tex}
-\begin{align}
-\frac{1}{K_x} &= \frac{1}{m'' k_y}+\frac{1}{k_x}\\
-&\approx \frac{1}{k_x}
-\end{align}
-```
-
-![](./public/low-solu.png)
-
-## Example 2: estimate overall mass transfer coefficients
-
-Use the conditions from example 1: bulk phase point $P=(0.10, 0.380)$, $k_x'=1.967\times 10^{-3}$ kg mol/m$^2$/s and $k_y' = 1.465\times 10^{-3}$ kg mol/m$^2$/s, estimate $K_y'$?
-
-![](./public/ex1-plot.png)
-
-## Example 2: solutions
-
-![](./public/solution-ex2.png)
 
 ## Summary
 
-- In-depth analysis of diffusion through stagnant interfacial equilibrium
-- Geometric interpretation of equilibrium diagram
-- Case studies for interfacial composition & mass transfer coefficient
+In this lecture we have seen how the height of a realistic packed bed
+tower is calculated and how to obtain relative statements using the
+transfer unit concepts.
 
-So far we have built _almost all_ prerequisite for solving the concentration profile in the absorption tower! We will discuss that in upcoming [Lecture 25](../L25)
+In next weeks, we will talk about the final topic: mass transfer
+coupled with heat transfer. One useful example will be the
+humidification tower. 
 
 
 
