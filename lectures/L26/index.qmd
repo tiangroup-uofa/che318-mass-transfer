@@ -32,7 +32,7 @@ After today's lecture, you will be able to:
 
 ## Cheatsheet for packed bed design
 
-![Physical copies distributed in class](../L25/cheatsheet-2phase.svg)
+![Physical copies distributed in class](../L25/public/cheatsheet-2phase.svg)
 
 
 
@@ -215,8 +215,8 @@ accurate. Use the following steps instead:
 
 1. **At each point** on the operating line: determine $(x,y)$
 2. Use local flow rates $V_y$, $L_x$ to find
-   - $G_y = M_{\text{air}} V' + M_{A}V_y$
-   - $G_x = M_{\text{water}} L' + M_{A}V_x$
+   - $G_y = (M_{\text{air}} V' + M_{A}V_y)/S$
+   - $G_x = (M_{\text{water}} L' + M_{A}V_x)/S$
 3. Calculate $k_y' a$ and $k_x' a$ for each point 
 4. Use trial-and-error / numerical method to determine $(x_i,y_i)$
 5. Integrate through the bed to get $Z$
