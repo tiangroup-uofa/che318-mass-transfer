@@ -31,605 +31,288 @@ After today's lecture, you will be able to:
 - Analyze the temperature dependency of humidity
 - Understand the arise of enthalpy and latent heat in water-air system
 
+## Humidification process: why is it relevant?
 
----
+Edmonton's winter is harsh! How do we make our home more humid?
 
-title: "CHE 318 Lecture" subtitle: "Humidification Operations and Cooling Towers" author: "Dr. Tian Tian" format: html: {} revealjs: slide-number: true chalkboard: false
+![A random [reddit post](https://www.reddit.com/r/Edmonton/comments/1h4i16d/please_edmonton_educate_me/)](./public/reddit-post-humidity.png)
 
-Humidification operations: cooling towers
+## The humidification process: two-phase mass & heat transfer
 
-Use air to cool liquid water
+In order to increase the humidity in a room during Edmonton's harsh
+winter, you decide to buy a humidifier. Your knowledge from the CHE
+318 course may actually be helpful! A few questions to think about:
 
-A small fraction of water evaporates into the gas
+- What is humidity, anyway?
+- Types of humidifiers available at the marker?
+- How do each of them work?
+- Is it efficient for my use scenario?
 
-Cooling comes mainly from latent heat removal
+## Humidifiers: how do they work?
 
-Key idea:
+- What is the common feature? Increase water content in air
+- Can you use mass transfer concepts to explain their mechanism?
 
+![[Wikihow comparison on humidifiers](https://www.wikihow.com/Diffuser-vs-Humidifier)](./public/humidifier.png)
 
-\text{liquid water loses energy} \rightarrow \text{water evaporates} \rightarrow \text{air gains } H \text{ and enthalpy}
+## Concept 1: humidity
 
+**Humidity** $H$ (an absolute value)
 
----
+- Definition: kg of water vapor per kg dry air at certain temperature
 
-What a cooling tower does
+- For water-air systems where mole weights are $M_A$ and $M_B$, respectively, also link to partial pressure $p_A$
 
-Warm water enters from the top
+$$
+H = \frac{M_A p_A}{M_B(p_T-p_A)}
+$$
 
-Air enters from the bottom
+- For air-water, can simply as
 
-Packing creates large gas-liquid contact area
+$$
+H = 0.622\frac{p_A}{p_T-p_A}
+$$
 
-Water leaves cooler
+## Concept 2: saturation vapour pressure and saturation humidity
 
-Air leaves warmer and more humid
+At each temperature $T$, at equilibrium water-air interface, the
+pressure is **saturation vapour pressure** $p_{\mathrm{vap}}$. The
+(absolute) humidity at this partial pressure is the **saturation humidity** $H_s$:
 
+$$
+H_s = 0.622\frac{p_{\mathrm{vap}}}{p_T-p_{\mathrm{vap}}}
+$$
 
+## Concept 3: percent humidity and relative humidity
 
+These two are often confused with each other so treat with caution.
 
+- **Percent humidity**, percentage of current humidity $H$ with respect to saturation humidity $H_s$
+  - Often appear in ChemE textbooks and charts: easy to calculate with $H$
 
----
+$$
+H_p = \left(\frac{H}{H_s}\right) \times 100\%
+$$
 
-Humidity
+- **Relative humidity**: percentage of current partial pressure $p_A$ with respect to (saturation) vapour pressure $p_{\mathrm{vap}}$
+  - The actual one used in household humidity sensor (also called R.H.)
 
-Humidity $H$:
+$$
+H_R = \left(\frac{p_A}{p_{\mathrm{vap}}}\right) \times 100\%
+$$
 
-kg of water vapor per kg dry air
 
+$H_p$ and $H_R$ are generally not the same. The approximation $H_p \approx H_R$ only applies at low humidity.
 
-For water-air systems,
+## Relationship between $H_p$ and $H_R$
 
+Using the ideal gas law, it can be shown that
 
-H=\frac{M_A p_A}{M_B(P_T-p_A)}
+```{=tex}
+\begin{align}
+H_p &= \frac{p_A}{p_{\text{vap}}} \frac{p_T - p_{\text{vap}}}{p_T - p_A} \\
+    &= H_R \frac{p_T - p_{\text{vap}}}{p_T - p_A}
+\end{align}
+```
 
-For air-water,
+Since $p_A \leq p_{\text{vap}}$, we can show that $H_p \leq H_R$ always holds.
 
+## Example of percentage / relative humidity calculation
 
-H = 0.622\frac{p_A}{P_T-p_A}
+![](./public/ex9-3-1.png)
 
-$p_A$: partial pressure of water vapor
 
-$P_T$: total pressure
+## Concept 4: dew point
 
+**Dew point**: temperature at which the vapor in air just becomes saturated / condensed.
 
 
----
+At dew point, $p_A = p_{\mathrm{vap}}(T_{\mathrm{dew}})$
 
-Saturation humidity and related definitions
+- Lower dew point means drier air (compared with current temperature $p_{\text{vap}}$
 
-Saturation humidity $H_s$:
+![](./public/dew-point-window.jpg)
 
-humidity when gas is saturated with water vapor
 
+## Concept 5: humid heat
 
+**Humid heat** $c_s$: heat required to raise $1$ kg _dry air_ plus its
+  associated vapor by $1$ K. Think of it as the specific heat / heat
+  capacity for air-water mixture.
 
-H_s = 0.622\frac{p_{\mathrm{vap}}}{P_T-p_{\mathrm{vap}}}
 
-Percent humidity:
+For air-water, when dry air and water vapour have heat capacities $c_B$ and $c_A$, respectively, the humid heat is
 
-
-H_p = 100\left(\frac{H}{H_s}\right)
-
-Relative humidity:
-
-
-H_R = 100\left(\frac{p_A}{p_{\mathrm{vap}}}\right)
-
-$H_p \ne H_R$
-
-They are equal only approximately at low humidity
-
-
-
----
-
-Dew point
-
-Dew point:
-
-temperature at which the vapor in air just becomes saturated
-
-
-At dew point,
-
-
-p_A = p_{\mathrm{vap}}(T_{\mathrm{dew}})
-
-Lower dew point means drier air
-
-Dew point comes directly from vapor pressure data
-
-
-
----
-
-Humid heat
-
-Humid heat $c_s$:
-
-heat required to raise $1$ kg dry air plus its associated vapor by $1$ K
-
-
-For air-water,
-
-
+$$
 c_s = c_B + Hc_A
+$$
 
-c_s = 1.005 + 1.88H
+Useful relation to remember:
 
-Units:
-
-kJ/(kg dry air K)
-
-
-
-
----
-
-Heat required for a humid gas stream
-
-For a stream containing dry air and water vapor,
+$$
+c_s = 1.005 + 1.88H\quad \text{[kJ/(kg dry air K)]}
+$$
 
 
+## Heat required for a humid gas stream
+
+The relation for $c_s$ tells us that heating up a gas stream for humid
+air requires more energy than drier one. For a stream containing dry
+air and water vapor, such heat is:
+
+$$
 Q = w_B c_s \Delta T
+$$
 
-$w_B$:
-
-mass flow rate of dry air
-
-
-This is sensible heating of the gas-vapor mixture
+where $w_B$ is mass flow rate of dry air in kg / s. Note such energy
+is usually called **sensible** heating of the gas-vapor mixture,
+because it is directly proportional to $\Delta T$.
 
 
+## Concept 6: Humid volume
 
----
-
-Humid volume
-
-Humid volume $v_H$:
-
-volume occupied by $1$ kg dry air plus its associated water vapor
-
+**Humid volume** $v_H$: volume occupied by $1$ kg dry air plus its
+  associated water vapor at certain pressure. (This is less useful
+  than other quantities for cooling process).
 
 
 At 1 atm:
 
+$$
 v_H = \frac{22.41}{273}\left(\frac{1}{28.97}+\frac{H}{18.02}\right)T
+$$
 
 At general pressure:
 
-v_H = \left(\frac{1}{28.97}+\frac{H}{18.02}\right)\frac{22.41}{273}T\left(\frac{1.013\times 10^5}{P_T}\right)
+$$
+v_H = \left(\frac{1}{28.97}+\frac{H}{18.02}\right)\frac{22.41}{273}T\left(\frac{1.013\times 10^5}{p_T}\right)
+$$
 
-$T$ in K
+where $T$ is in Kelvin, $p_T$ is in Pa, and $v_H$ is in m$^3$. 
 
 
 
----
+## Concept 7: enthalpy of humid air
 
-Enthalpy of humid air
+Humid air **enthalpy** $H_y$ includes:
 
-Humid air enthalpy includes:
+- **sensible heat** of dry air and vapor: proportional to $\Delta T$
+- **latent heat** carried by water vapor: caused by phase-change, $T$ remains the same
 
-sensible heat of dry air and vapor
+![](./public/T-vs-heat-energy.png)
 
-latent heat carried by water vapor
+## Enthalpy of humid air: general form:
 
+- Usually written as $H_y$ (not to be confused with other forms of humidity $H$, $H_p$ and $H_R$).
+- Unit: kJ / kg dry air
+- Enthalpy is a _relative_ quantity, so a reference temperature $T_0$ should be used (usually $T=0\ ^\circ\mathrm{C}$)
 
+$$
+H_y = c_s(T-T_0) + H\lambda_0
+$$
 
-General form:
+For air-water with $T_0=0^\circ\mathrm{C}$, and $T$ uses Celcius:
 
-H_g = c_s(T-T_0) + H\lambda_0
+$$
+H_y = (1.005 + 1.88H)T + 2501.4H\quad \text{[kJ/kg dry air]}
+$$
 
-For air-water with $T_0=0^\circ\mathrm{C}$:
+## Everything at one place: the humidity / psychrometric chart
 
-H_g = (1.005 + 1.88H)T + 2501.4H
+Psychrometric: greek for _psychro_ (cold) + _metric_ (measure), relating to the measurement of temperature drop when water evaporates.
 
-Units:
+![](./public/humidity-chart.png)
 
-kJ/kg dry air
+## Reading the humidity / psychrometric chart (level 1)
 
+Find where $H$, $H_p$, dew point $T_{\tex{dew}}$ are?
 
+![](./public/humidity-chart-mark.png)
 
+## Example 2: humidifier design
 
----
+A living room of 60 m$^2$ at 22 $^\circ$C has a relative humidity of
+20% due to continuous heating. Your and your roomate wish to purchase
+a humidifer that can humidify the living room up to 45% relative
+humidity. Assume the floor-ceiling distance is 3 m, calculate the
+weight of water needed to humidify the whole room. Can you use the
+humidity chart to estimate?
 
-Wet-bulb temperature
+## Example 2: steps
 
-Wet-bulb temperature $T_w$:
-
-quasi-equilibrium temperature reached by a small amount of water in adiabatic contact with air
-
-
-Measured with a wetted surface or damp wick
-
-Evaporation cools the wetted surface
-
-Therefore,
-
-
-T_w \le T_{\mathrm{dry\ bulb}}
-
-Drier air gives a larger wet-bulb depression
-
-
-
----
-
-Why wet-bulb temperature matters
-
-Cooling towers approach the wet-bulb temperature of the entering air
-
-Wet-bulb temperature is the practical lower limit for water cooling
-
-If air is already humid, evaporation is weaker
-
-If air is dry, evaporation is stronger
-
-
-
----
-
-Mass transfer at the wet surface
-
-Vapor flux from wet surface to bulk gas:
-
-
-N_A = k_y (y_w - y)
-
-$y_w$:
-
-interfacial vapor composition at the wet surface
-
-
-$y$:
-
-bulk gas vapor composition
-
-
-For dilute water vapor in air,
-
-
-y \propto H
-
-So the flux can be written in humidity form as well.
-
-
----
-
-Coupled heat and mass transfer near the wet surface
-
-Heat transferred from gas to the wet surface:
-
-
-q = h(T-T_w)A
-
-This heat supplies evaporation at the surface:
-
-
-q = M_A\lambda_w(N_A A)
-
-Combining heat and mass transfer gives
-
-
-q = M_B k_y \lambda_w (H_w - H)A
-
-This leads to the psychrometric ratio:
-
-
-\frac{H-H_w}{T-T_w} = -\frac{h}{M_B k_y \lambda_w}
-
-
----
-
-Physical meaning of the psychrometric ratio
-
-Compares heat-transfer ability to mass-transfer ability
-
-Links temperature difference to humidity difference
-
-Explains why wet-bulb lines appear on a psychrometric chart
-
-Important for humidification and cooling tower analysis
-
-
-
----
-
-Reading the psychrometric chart
-
-A psychrometric chart relates:
-
-dry-bulb temperature
-
-humidity
-
-relative humidity
-
-wet-bulb temperature
-
-enthalpy
-
-
-It lets us determine gas state without repeated property calculations
-
-Common workflow:
-
-locate $T$
-
-locate humidity or relative humidity
-
-read $T_w$, $H_g$, and other properties
-
-
-
-
-
-
----
-
-Cooling tower picture: process intuition
-
-Warm water contacts unsaturated air
-
-Some water evaporates
-
-Remaining liquid cools
-
-Air leaves with:
-
-higher humidity
-
-higher enthalpy
-
-often higher temperature
-
-
-Main driving force for evaporation:
-
-
-p_{\mathrm{vap}}|_{T_w} - p_A
-
-
----
-
-Key operating notes for cooling towers
-
-Water cannot be cooled below the entering-air wet-bulb temperature
-
-In practice,
-
-
-T_{\mathrm{water,out}} \gtrsim T_w
-
-Air-side resistance usually controls the cooling rate
-
-Contact area is critical
-
-Packing strongly improves performance
-
-Air flow may be natural draft or forced draft
-
-
-
----
-
-Important design insights
-
-Cooling is not just sensible heat transfer
-
-Evaporation is the dominant mechanism
-
-The gas phase is usually the limiting phase
-
-Lower inlet-air humidity improves tower performance
-
-More interfacial area increases cooling capacity
-
-Wet-bulb temperature is the key reference temperature
-
-
-
----
-
-What to remember
-
-$H$ measures water vapor per kg dry air
-
-$H_s$, $H_p$, $H_R$, and dew point describe gas moisture state
-
-$c_s$, $v_H$, and $H_g$ are useful humid-air properties
-
-$T_w$ is central to humidification and cooling tower analysis
-
-Cooling towers work by coupled heat and mass transfer
-
-The lowest achievable water temperature is controlled by air wet-bulb temperature
-
-## Cheatsheet for packed bed design
-
-![Physical copies distributed in class](../L25/public/cheatsheet-2phase.svg)
-
-
-
-## Recall: packed tower height equation (individual phase)
-
-General equation for gas. What the meanings for each term?
+1. Read the saturation vapour pressure from $H_s$ ($H_s = 0.017$)
 
 ```{=tex}
 \begin{align}
-Z
-&=
-\int_{y_2}^{y_1}
-\frac{V'}{k_y'aS}
-\cdot
-\frac{(1-y)_{im}}{(1-y)^2(y-y_{i})}
-\, dy \\
-&= \int_{y_2}^{y_1}
-\frac{V}{k_y'aS}
-\cdot
-\frac{(1-y)_{im}}{(1-y)(y-y_{i})}
-\, dy
+H_s &= 0.622 \frac{p_{\text{vap}}}(p_T - p_{\text{vap}}) = 0.017 \\
+p_{\text{vap}} &= 2.69\ \text{kPa}
 \end{align}
 ```
 
-## Recall: height equation for diluted system
+from the vapour data it gets $p_{\text{vap}} = 2.64$ kPa, pretty close!
 
-If $x<0.1$ and $y<0.1$, typically use (for gas phase):
-
-$$
-Z = \left[ \frac{V}{k'_y a S} \frac{(1 - y)_{im}}{1 - y} \right] \int_{y_2}^{y_1} \frac{dy}{y - y_i}
-$$
-
-or even simpler
-
-$$
-Z = \left[ \frac{V}{k'_y a S} \right] \int_{y_2}^{y_1} \frac{dy}{y - y_i}
-$$
-
-what insights can we get?
-
-## Motivation: transfer units for packed beds
-
-From unit analysis, the term $\frac{V}{k'_y a S}$ characterizes the
-height. We often use the concept of **transfer unit** to determine the
-performance of mass transfer in each phase. For gas phase, we have the
-"height" of the transfer unit $H_G$ as
+2. Estimate weight of water $\Delta m_A$
 
 ```{=tex}
 \begin{align}
-H_G = \frac{V}{k_y' a S}
+\Delta m_A &= \frac{\Delta p_A V M_A}{RT} \\
+           &=  \frac{(H_{R1} - H_{R0}) p_{\text{vap}} V M_A}{RT} \\
+	   &\approx 0.87\ \text{kg}
 \end{align}
 ```
 
-- $H_G$ is controlled by ratio of flow rate and mass transfer in gas phase
-- smaller $H_G$ means more efficient packing (thus needing shorter tower)
+Does it make sense? The requirement for water tank will be a lower bound.
 
-## Define the number of transfer units
+## Mythbusting time (1)
 
-The rest of the equation for $Z$ can be rewritten as "number of
-transfer units", similar to theoertical number of trays in a tray
-tower. For gas phase general case, we have
+My weather app shows that outside is $-12\ ^{circ}$C and R.H. is 74%, whene the dew point is $-16\ ^{circ}$C. What does all that mean?
 
-```{=tex}
-\begin{align}
-N_G
-=
-\int_{y_2}^{y_1}
-\frac{(1-y)_{im}}{(1-y)(y-y_i)}
-\,dy
-\end{align}
-```
+:::{.callout-tip}
+A useful note is that the **lower** dew point is
+compared with current temperature, the **drier** air appears to be
+:::
 
-For dilute system, we can approximate $N_G$ by
+## Mythbusting time (2)
 
-```{=tex}
-\begin{align}
-N_G &= \int_{y_2}^{y_1}
-\frac{dy}{y-y_i} \\
-&= \frac{y_1 - y_2}{(y - y_i)_m}
-\end{align}
-```
+In the previous scenario $-12\ ^{circ}$C and R.H. is 74%,  when I open the door, my humidity in home immediately drops! Why?
 
-## Transfer unit view of packed bed
+- The calculated $H_R$ at room temperature is only 6.7% if fully filled with outside air.
 
-For dilute system, we can see that
+:::{.callout-tip}
+$H_R$ (or R.H.) only measures up at current temperature. When moving water content at different $T$, $H_R$ will change. 
 
-```{=tex}
-\begin{align}
-Z &= H_G N_G \\
-  &= H_G \frac{y_1 - y_2}{(y - y_i)_m}
-\end{align}
-```
+- cold air 👉 appears to be dry at high T
+- warm air 👉 appears to be humid at low T
+:::
 
-- Total height $Z$ is a stack of "transfer units" with height $H_G$
-- Number of the units is governed by the total absorption $(y_1 - y_2)$ and driving force $(y - y_i)_m$
-- Need to absorb more (larger $(y_1 - y_2)$)? 👉 higher tower
-- Operation line close to equilibrium? 👉 higher tower
+## Mythbusting time (3)
 
-## Example 1: packed bed height estimation using transfer units
+Why does "humid hot" environment feels much hotter than "dry hot" environment, even if the apparent $T$ is the same?
 
-Similar example in [Lecture 24](../L24), Acetone is being absorbed by
-water in a packed bed column having a cross sectional area of 0.186
-m$^2$ at 293 K and 1 atm. The inlet air contains 2.6 mol% acetone and
-outlet contains 0.5%. The gas flow is 13.65 kg mol inert air per
-hour. The pure water inlet flow is 45.36 kg mol water per hour. The
-coefficient $k_y' a$ is estimated to be $3.78 \times 10^{-2}$ kg
-mol/(s·m$^3$) and $k_x' a$ is $6.16 \times 10^{-2}$ kg
-mol/(s·m$^3$). The equilibrium line can be approximated by $y = 1.186 x$.
+- Calculate the enthalpy of air-water mixture, $H_y$ significantly increases when relative humidity is high!
+- Human body relies on cooling to survive. At high $T$ high $H_R$, both driving forces for evaporation are reduced:
+  - $T_{\text{body}} - T_{\text{env}}$ becomes small 👉 bad dissipation
+  - $p_{A, \text{body}} - p_{A, \text{env}}$ becomes small  👉 evaporation suppressed
 
-a) Now calculate the height using the dilute regime equation
-b) Now calculate the height using $H_G$ and $N_G$ statements
-
-## Example 1 diagram
-
-![](./public/ex1-solution.png)
-
-## Example 1 solution
-
-Key numbers during calculation:
-
-1. Liquid outlet $x_1 = 0.00648$
-2. $(1 - y)_{im} \approx (1 - x)_{im} \approx 1$ 👉 use dilute regime is justified
-3. $(y - y_i)_{m} = 0.00602$
-4. Average $V = (V_1 + V_2)/2 =3.852 \times 10^{-3}$ kg mol/s
-
-Final results:
-
-1. $Z=1.911$ m
-2. $H_G=0.548$ m, $N_G=3.488$
-
-## Practical estimation of $k_y’ a$ or $H_G$
-
-In real packed beds, coefficients are often obtained from correlations (using dimensionless numbers etc), which may depend on:
+:::{.callout-tip}
+The sensible specific heat for air-water mixture does not change significantly, even if water vapour's heat capacity is higher. (absolute $H$ is always 0.1 when $T<50\ ^{\circ}$C)
+:::
 
 
-- $N_{Re}$, $N_{Sc}$
-- Weight flow rates $G_y$, $G_x$
-- Packing type (shape? diameter?)
+## What to learn next
 
-![](./public/packed-geom.png)
-
-## Design of packed bed in realistic situations
-
-In many industrial applications, engineers are either interested in
-one of the approach to estimate the desired tower height:
-
-1. Estimate the correlation of $k_y' a$ and $k_x' a$ as functions of $G_x$ and $G_y$
-
-$$
-k_y'a = f_y(G_x, G_y, \text{pack type});\quad k_y'a = f_x(G_x, G_y, \text{pack type})
-$$
-
-2. Estimate $H_G$ (and / or $H_L$) from the correlation
-
-$$
-H_G = f_G(G_x, G_y, N_{Sc}, \text{pack type})
-$$
-
-Either way, the flow rates are locally dependent, so integration should be used. Let's a detailed  example from textbook.
-
-## Example 2: concentrated packed bed design
-
-(Example 10.7-1) A tower packed with 25.3 mm ceramic rings is used to
-absorb SO$_2$ from aire using pure water at 293 K and 1 atm. The
-entering gas contains 20 mol% SO$_2$ and leaving gas has 2 mol%. The
-inert air flow is $6.53\times10^{-4}$ kg mol/s and inlet water flow is
-$4.20\times10^{-2}$ kg mol/s. Cross sectional area of the tower is
-0.0929 m$^2$. From literature, the
-
-
+In industrial applications, evaporation of water into vapour is used
+to cool hot liquid. We will discuss in detail how to solve this using
+the concept of enthalpy in next lecture.
 
 
 
 ## Summary
 
-In this lecture we have seen how the height of a realistic packed bed
-tower is calculated and how to obtain relative statements using the
-transfer unit concepts.
-
-In next weeks, we will talk about the final topic: mass transfer
-coupled with heat transfer. One useful example will be the
-humidification tower. 
+- Demistifying the humidifaction process: it's just mass transfer + heat transfer
+- General concepts in humidification
+- Different forms of humidity
+- Humidity-dependent enthalpy and use of humidity chart
 
 
 

@@ -278,3 +278,6 @@ index_files/
 .DS_Store
 .DS_Store
 *.quarto_ipynb_*
+.DS_Store
+.DS_Store
+.DS_Store
