@@ -31,6 +31,9 @@ After today's lecture, you will be able to:
 - Understand the origin of latent heat, wet-bulb temperature
 - Recall steps to read the psychrometric chart on the adiabatic saturation curve
 
+## Cheatsheet for Humidification Process
+
+![Charts distributed in class.](./public/humidification.svg)
 
 ## Measuring Humidity: The Two-Bulb Hygrometer
 
@@ -44,10 +47,11 @@ Before electronic sensors, humidity was measured using a **two-thermometer setup
 
 :::
 
-:::{.column width="80%"}
+:::{.column width="20%"}
 
-![Two-bulb hygrometer](./public/hygrometer.jpg){width="95%"}
+![Two-bulb hygrometer](./public/hygrometer.jpg)
 
+:::
 :::
 
 
@@ -133,7 +137,8 @@ H = \frac{\text{kg }H_2O}{\text{kg dry air}}
 ```
 
 The mole fraction of vapor is
-```
+
+```{=tex}
 \begin{align}
 y = \frac{H/M_A}{1/M_B + H/M_A}
 \end{align}
@@ -141,7 +146,7 @@ y = \frac{H/M_A}{1/M_B + H/M_A}
 
 Since humidity is typically small
 
-```
+```{=tex}
 \begin{align}
 y \approx \frac{M_B}{M_A}H
 \end{align}

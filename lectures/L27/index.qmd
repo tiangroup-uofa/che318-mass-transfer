@@ -225,7 +225,7 @@ Psychrometric: greek for _psychro_ (cold) + _metric_ (measure), relating to the 
 
 ## Reading the humidity / psychrometric chart (level 1)
 
-Find where $H$, $H_p$, dew point $T_{\tex{dew}}$ are?
+Find where $H$, $H_p$, dew point $T_{\text{dew}}$ are?
 
 ![](./public/humidity-chart-mark.png)
 
