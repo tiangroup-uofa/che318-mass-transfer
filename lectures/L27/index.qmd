@@ -44,8 +44,8 @@ winter, you decide to buy a humidifier. Your knowledge from the CHE
 318 course may actually be helpful! A few questions to think about:
 
 - What is humidity, anyway?
-- Types of humidifiers available at the marker?
-- How do each of them work?
+- Types of humidifiers available?
+- How does each of them work?
 - Is it efficient for my use scenario?
 
 ## Humidifiers: how do they work?
@@ -205,7 +205,7 @@ Humid air **enthalpy** $H_y$ includes:
 
 - Usually written as $H_y$ (not to be confused with other forms of humidity $H$, $H_p$ and $H_R$).
 - Unit: kJ / kg dry air
-- Enthalpy is a _relative_ quantity, so a reference temperature $T_0$ should be used (usually $T=0\ ^\circ\mathrm{C}$)
+- Enthalpy is a _relative_ quantity, so a reference temperature $T_0$ should be used (usually $T=0\ ^{\circ}\mathrm{C}$)
 
 $$
 H_y = c_s(T-T_0) + H\lambda_0
@@ -265,7 +265,7 @@ Does it make sense? The requirement for water tank will be a lower bound.
 
 ## Mythbusting time (1)
 
-My weather app shows that outside is $-12\ ^{circ}$C and R.H. is 74%, whene the dew point is $-16\ ^{circ}$C. What does all that mean?
+My weather app shows that outside is $-12\ ^\circ$C and R.H. is 74%, whene the dew point is $-16\ ^\circ$C. What does all that mean?
 
 :::{.callout-tip}
 A useful note is that the **lower** dew point is
@@ -274,7 +274,7 @@ compared with current temperature, the **drier** air appears to be
 
 ## Mythbusting time (2)
 
-In the previous scenario $-12\ ^{circ}$C and R.H. is 74%,  when I open the door, my humidity in home immediately drops! Why?
+In the previous scenario $-12\ ^\circ$C and R.H. is 74%,  when I open the door, my humidity in home immediately drops! Why?
 
 - The calculated $H_R$ at room temperature is only 6.7% if fully filled with outside air.
 
@@ -295,7 +295,7 @@ Why does "humid hot" environment feels much hotter than "dry hot" environment, e
   - $p_{A, \text{body}} - p_{A, \text{env}}$ becomes small  👉 evaporation suppressed
 
 :::{.callout-tip}
-The sensible specific heat for air-water mixture does not change significantly, even if water vapour's heat capacity is higher. (absolute $H$ is always 0.1 when $T<50\ ^{\circ}$C)
+The sensible specific heat for air-water mixture does not change significantly, even if water vapour's heat capacity is higher. (absolute $H$ is always 0.1 when $T<50\ ^\circ$C)
 :::
 
 
@@ -303,7 +303,7 @@ The sensible specific heat for air-water mixture does not change significantly, 
 
 In industrial applications, evaporation of water into vapour is used
 to cool hot liquid. We will discuss in detail how to solve this using
-the concept of enthalpy in next lecture.
+the concept of enthalpy in next lecture.👉
 
 
 
