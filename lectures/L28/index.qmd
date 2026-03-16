@@ -49,7 +49,7 @@ Before electronic sensors, humidity was measured using a **two-thermometer setup
 
 :::{.column width="20%"}
 
-![Two-bulb hygrometer](./public/hygrometer.jpg)
+![Two-bulb hygrometer](./public/hygrometer.jpg){height="500px"}
 
 :::
 :::
@@ -261,7 +261,7 @@ p_{sat}(T_w) - p_A
   2. evaporative cooling systems
   3. humidification process
 
-# What to Learn Next
+##  What to Learn Next
 
 The wet-bulb experiment connects **heat transfer** and **mass
 transfer**, and the evaporation rate depends on the **vapor pressure
