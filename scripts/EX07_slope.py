@@ -70,7 +70,7 @@ def _(default_curve_func, mo, np, plt, setup, solve_slope):
         plt.plot(x2, y2, "o", markersize=6, color="tab:blue")
         plt.text(x2, y2 - 0.02, s="$(x_{{Ai}}, y_{{Ai}})$", va="top", ha="center")
         plt.xlabel("Liquid composition $x$")
-        plt.ylabel("Liquid composition $y$")
+        plt.ylabel("Gas composition $y$")
         plt.legend()
         return output, plt.gca()
 
