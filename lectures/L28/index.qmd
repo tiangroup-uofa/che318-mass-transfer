@@ -1,6 +1,6 @@
 ---
 title: "CHE 318 Lecture 28"
-subtitle: "Introduction of Humidification Process"
+subtitle: "Humidification Process II"
 author: "Dr. Tian Tian"
 date: "2026-03-18"
 format:
@@ -34,6 +34,82 @@ After today's lecture, you will be able to:
 ## Cheatsheet for Humidification Process
 
 ![Charts distributed in class.](./public/humidification.svg)
+
+## Reading the humidity / psychrometric chart (level 1)
+
+Find where $H$, $H_p$, dew point $T_{\text{dew}}$ are?
+
+![](./public/humidity-chart-mark.png)
+
+## Example 2: humidifier design
+
+A living room of 60 m$^2$ at 22 $^\circ$C has a relative humidity of
+20% due to continuous heating. Your and your roomate wish to purchase
+a humidifer that can humidify the living room up to 45% relative
+humidity. Assume the floor-ceiling distance is 3 m, calculate the
+weight of water needed to humidify the whole room. Can you use the
+humidity chart to estimate?
+
+## Example 2: steps
+
+1. Read the saturation vapour pressure from $H_s$ ($H_s = 0.017$)
+
+```{=tex}
+\begin{align}
+H_s &= 0.622 \frac{p_{\text{vap}}}{p_T - p_{\text{vap}}} = 0.017 \\
+p_{\text{vap}} &= 2.69\ \text{kPa}
+\end{align}
+```
+
+from the vapour data it gets $p_{\text{vap}} = 2.64$ kPa, pretty close!
+
+2. Estimate weight of water $\Delta m_A$
+
+```{=tex}
+\begin{align}
+\Delta m_A &= \frac{\Delta p_A V M_A}{RT} \\
+           &=  \frac{(H_{R1} - H_{R0}) p_{\text{vap}} V M_A}{RT} \\
+	   &\approx 0.87\ \text{kg}
+\end{align}
+```
+
+Does it make sense? The requirement for water tank will be a lower bound.
+
+## Mythbusting time (1)
+
+My weather app shows that outside is $-12\ ^\circ$C and R.H. is 74%, whene the dew point is $-16\ ^\circ$C. What does all that mean?
+
+:::{.callout-tip}
+A useful note is that the **lower** dew point is
+compared with current temperature, the **drier** air appears to be
+:::
+
+## Mythbusting time (2)
+
+In the previous scenario $-12\ ^\circ$C and R.H. is 74%,  when I open the door, my humidity in home immediately drops! Why?
+
+- The calculated $H_R$ at room temperature is only 6.7% if fully filled with outside air.
+
+:::{.callout-tip}
+$H_R$ (or R.H.) only measures up at current temperature. When moving water content at different $T$, $H_R$ will change. 
+
+- cold air 👉 appears to be dry at high T
+- warm air 👉 appears to be humid at low T
+:::
+
+## Mythbusting time (3)
+
+Why does "humid hot" environment feels much hotter than "dry hot" environment, even if the apparent $T$ is the same?
+
+- Calculate the enthalpy of air-water mixture, $H_y$ significantly increases when relative humidity is high!
+- Human body relies on cooling to survive. At high $T$ high $H_R$, both driving forces for evaporation are reduced:
+  - $T_{\text{body}} - T_{\text{env}}$ becomes small 👉 bad dissipation
+  - $p_{A, \text{body}} - p_{A, \text{env}}$ becomes small  👉 evaporation suppressed
+
+:::{.callout-tip}
+The sensible specific heat for air-water mixture does not change significantly, even if water vapour's heat capacity is higher. (absolute $H$ is always 0.1 when $T<50\ ^\circ$C)
+:::
+
 
 ## Measuring Humidity: The Two-Bulb Hygrometer
 
@@ -180,7 +256,7 @@ Combining heat transfer ($q$) and mass transfer ($N_A$) relations gives
 Note $\frac{H - H_w}{T - T_w}$ means the slope of a line on the
 psychrometric chart. The slope is almost identical to **adiabatic line**!
 
-## Psychrometric chart: adiabatic line
+## Psychrometric chart: adiabatic line (level 2)
 
 The $(T_d, H_{\text{in}})$ and $(T_w, H_{\text{out}})$ points are
 along the adiabatic line (no external heat exchange). For water-air system, the adiabatic line and cooling line are very close and often not distinguished.
