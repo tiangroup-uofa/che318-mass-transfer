@@ -290,6 +290,52 @@ such relation allows us to use the humidity chart's adiabatic saturation curve.
 Such simplification may not be applicable for other liquid, such as benzene!
 :::
 
+## Humidity Chart Example
+
+Determine using the psychrometric chart for a humid air at $40^\circ$ that has a wet-bulb temperature of 20 $^\circ$:
+
+- humidity $H$
+- percent humidity $H_p$
+- dew point $T_{\text{dew}}$
+- humid heat $c_s$
+- enthalpy $H_y$
+
+:::{.callout-tip}
+The big difference between $T_d$ and $T_w$ must indicate a low relative humidity
+:::
+
+## Humidity Chart: Steps
+
+- $y-axis$ readout: $H \approx 0.0065$
+
+![](./public/humidity-chart-ex1.png)
+
+## Humidity Chart: Results
+
+- $H_p \approx 13\%$
+- (optionally) $H_R \approx 14 \%$ ($H_R > H_p$)
+- Dew point: $\approx 8^\circ C$
+- Humid heat: $c_s \approx 1.02$ kJ / kg dry air
+- Enthalpy: $H_y \approx 57$ kJ / kg dry air
+
+## What Does Wet-Bulb Temperature Indicate?
+
+- The wet-bulb temperature represents (when saturated) the **maximum
+cooling** achievable by evaporation, and it not confined to the wet-bulb setup.
+
+- The evaporation process is driven by vapor pressure difference
+(y-difference in psychrometric chart)
+
+```{=tex}
+\begin{align}
+p_{sat}(T_w) - p_A
+\end{align}
+```
+
+- Applicable to:
+  1. cooling towers
+  2. evaporative cooling systems
+  3. humidification process
 
 ##  What to Learn Next
 
