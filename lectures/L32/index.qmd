@@ -1,22 +1,22 @@
 ---
-title: "CHE 318 Lecture 31"
-subtitle: "Cooling Tower Design (II)"
+title: "CHE 318 Lecture 32"
+subtitle: "Cooling Tower Design (III)"
 author: "Dr. Tian Tian"
-date: "2026-03-18"
+date: "2026-03-27"
 format:
   html: {}
   revealjs:
     output-file: slides.html
   pdf:
-    output-file: L28.pdf
+    output-file: L32.pdf
 ---
 
 ::: {.content-visible when-format="html" unless-format="revealjs"}
 
 ::: {.callout-note}
 - Slides 👉  [Open presentation🗒️](./slides.html)
-- PDF version of course note  👉 [Open in pdf](./L28.pdf)
-- Handwritten notes 👉 [Open in pdf](./public/L28_annotated.pdf)
+- PDF version of course note  👉 [Open in pdf](./L32.pdf)
+- Handwritten notes 👉 [Open in pdf](./public/L32_annotated.pdf)
 :::
 
 :::
