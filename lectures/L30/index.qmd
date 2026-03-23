@@ -170,7 +170,7 @@ and a slope of $\frac{L \cdot c_L}{G}$
 Similar to absorption tower, but since we're **below** the equilibrium
 line 👉 use tangent construction to fine $G_{\text{min}}$
 
-![](./public/chat-gmin.png)
+![](./public/chart-gmin.png)
 
 
 
