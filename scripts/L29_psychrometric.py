@@ -34,20 +34,35 @@ def _(H_sat, T_current, mo):
         label="Current humidity $H$",
     )
     #H_current
-    return (H_current,)
+
+    show_switch = mo.ui.switch(value=True, label="Display solution?")
+    return H_current, show_switch
 
 
 @app.cell
-def _(H_current, T_current, mo, temp_range):
-    mo.hstack([temp_range, T_current, H_current], wrap=True, align="start")
+def _(H_current, T_current, mo, show_switch, temp_range):
+    mo.hstack([temp_range, T_current, H_current, show_switch], wrap=True, align="start")
     return
 
 
 @app.cell
-def _(H_current, T_current, display_plot, mo, show_point, temp_range):
+def _(
+    H_current,
+    T_current,
+    display_plot,
+    mo,
+    show_point,
+    show_switch,
+    temp_range,
+):
     ax = display_plot(T_min=temp_range.value[0], T_max=temp_range.value[1])
-    ax, summary = show_point(ax, T=T_current.value, H=H_current.value)
-    mo.hstack([summary, ax], widths=[1, 3])
+    if show_switch.value:
+        ax, summary = show_point(ax, T=T_current.value, H=H_current.value)
+        display = mo.hstack([summary, ax], widths=[1, 3])
+    else:
+        display = ax
+
+    display
     return
 
 
