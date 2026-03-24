@@ -35,7 +35,7 @@ def _(H_sat, T_current, mo):
     )
     #H_current
 
-    show_switch = mo.ui.switch(value=True, label="Display solution?")
+    show_switch = mo.ui.switch(value=False, label="Display solution?")
     return H_current, show_switch
 
 

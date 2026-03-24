@@ -13,8 +13,8 @@ def _(mo):
     - $T_{{L2}}$ (℃): {T2}
     - $h_L \\cdot a$ (kJ/m$^3$ s K): {hLa}
     - $k_G \\cdot a \\cdot P$ (kg mol/s m$^3$): {kGaP}
-    - Liquid rate $L$ (kg / s): {L}
-    - Gas rate $G$ (kg / s): {G}
+    - Liquid rate $L$ (kg / s m$^2$): {L}
+    - Gas rate $G$ (kg / s m$^2$): {G}
     - Display diagonal lines? {switch}
     - Points for integral {npts}
     """).batch(
