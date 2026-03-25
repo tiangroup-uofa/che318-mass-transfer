@@ -129,7 +129,7 @@ of gas phase $H_y$ vs the bulk temperature in liquid $T_L$.
 - From psychrometric chart 100% line
 
 $$
-H_y = c_s (T - T_0) + H \lambda_0 = (1.008 + 1.88H) + 2501.4H
+H_y = c_s (T - T_0) + H \lambda_0 = (1.008 + 1.88H)T + 2501.4H
 $$
 
 ## Meaning of the enthalpy - temperature chart
@@ -139,38 +139,6 @@ $$
 
 ![](./public/chart-blank.png)
 
-## Question 2: what is the operating line?
-
-Recall in the case of absorption packed-bed tower, we solved a mass
-balance equation to describe operating line in the $x-y$ diagram. The
-same applies to the cooling tower. An energy balance is used
-
-```{=tex}
-\begin{align}
-\text{Energy}_{\text{In}} &= \text{Energy}_{\text{Out}} \\
-G (H_{y2} - H_{y1}) &= L c_L (T_{L2} - T_{L1})
-\end{align}
-```
-
-## Meaning of the mass balance & operating line
-
-The operating line in cooling tower is just a **linear line** with expression
-
-$$
-G (H_y - H_{y1}) = L \cdot c_L (T_L - T_{L1})
-$$
-
-and a slope of $\frac{L \cdot c_L}{G}$
-
-
-![](./public/chart-blank.png)
-
-## Question 3: what is the minimal flow rate?
-
-Similar to absorption tower, but since we're **below** the equilibrium
-line 👉 use tangent construction to fine $G_{\text{min}}$
-
-![](./public/chart-gmin.png)
 
 
 
