@@ -33,7 +33,7 @@ After today's lecture, you will be able to:
 
 ## Cheatsheet for Cooling Tower
 
-![Charts distributed in class.](./public/cheatsheet-cooling-tower.svg)
+![Charts distributed in class.](../L30/public/cheatsheet-cooling-tower.svg)
 
 ## Recap: what do we solve for cooling tower?
 
