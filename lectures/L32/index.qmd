@@ -31,337 +31,237 @@ After today's lecture, you will be able to:
 - Understand the origin of latent heat, wet-bulb temperature
 - Recall steps to read the psychrometric chart on the adiabatic saturation curve
 
-## Cheatsheet for Humidification Process
+## Cheatsheet for Cooling Tower
 
-![Charts distributed in class.](./public/humidification.svg)
+![Charts distributed in class.](../L30/public/cheatsheet-cooling-tower.svg)
 
-## Reading the humidity / psychrometric chart (level 1)
 
-Find where $H$, $H_p$, dew point $T_{\text{dew}}$ are?
+## Recap: interfacial energy transfer
 
-![](./public/humidity-chart-mark.png)
-
-## Example 2: humidifier design
-
-A living room of 60 m$^2$ at 22 $^\circ$C has a relative humidity of
-20% due to continuous heating. Your and your roomate wish to purchase
-a humidifer that can humidify the living room up to 45% relative
-humidity. Assume the floor-ceiling distance is 3 m, calculate the
-weight of water needed to humidify the whole room. Can you use the
-humidity chart to estimate?
-
-## Example 2: steps
-
-1. Read the saturation vapour pressure from $H_s$ ($H_s = 0.017$)
+We wanted to solve the differential form
 
 ```{=tex}
 \begin{align}
-H_s &= 0.622 \frac{p_{\text{vap}}}{p_T - p_{\text{vap}}} = 0.017 \\
-p_{\text{vap}} &= 2.69\ \text{kPa}
+L c_L dT_L &= h_L a (T_L - T_{Li}) dz
 \end{align}
 ```
 
-from the vapour data it gets $p_{\text{vap}} = 2.64$ kPa, pretty close!
+- L.H.S.: sensible heat in liquid $L c_L dT_L = h_L a (T_L - T_{Li}) dz$
+- R.H.S.: sensible + latent heat in gas
 
-2. Estimate weight of water $\Delta m_A$
+## Recap: solving the energy transfer in gas-phase
+
+For the latent heat $q_{G, \lambda}$, it is solved by
 
 ```{=tex}
 \begin{align}
-\Delta m_A &= \frac{\Delta p_A V M_A}{RT} \\
-           &=  \frac{(H_{R1} - H_{R0}) p_{\text{vap}} V M_A}{RT} \\
-	   &\approx 0.87\ \text{kg}
+q_{G, \lambda} &= M_A N_A \lambda_0 \\
+               &= M_A k_y a dz (y_i - y) \lambda_0 \\
+	       &\approx M_A k_G a P dz \frac{M_B}{M_A}(H_i - H) \lambda_0 \\
+	       &= M_B \lambda_0 k_G a P dz (H_i - H_G)
 \end{align}
 ```
 
-Does it make sense? The requirement for water tank will be a lower bound.
+- The derivation for $q_{G, \lambda}$ uses the fact $y \approx \frac{M_B}{M_A} H$
+- Pressure-based coefficient $k_G a$ often used instead of $k_y a$
 
-## Mythbusting time (1)
+## Energy transfer in liquid: final results
 
-My weather app shows that outside is $-12\ ^\circ$C and R.H. is 74%, whene the dew point is $-16\ ^\circ$C. What does all that mean?
+Adding the sensible & latent heat in liquid side gives
 
-:::{.callout-tip}
-A useful note is that the **lower** dew point is
-compared with current temperature, the **drier** air appears to be
-:::
+```{=tex}
+\begin{align}
+G dH_y &= q_{G,S} + q_{G,\lambda} \\
+       &= h_G a dz (T_i - T_G) + \lambda_0 a N_A M_A \\
+       &= h_G a dz (T_i - T_G) + M_B \lambda_0 k_G a P dz (H_i - H_G)
+\end{align}
+```
 
-## Mythbusting time (2)
+As can be expected, both temperature and humidity driving forces should exhist.
 
-In the previous scenario $-12\ ^\circ$C and R.H. is 74%,  when I open the door, my humidity in home immediately drops! Why?
+## Energy transfer in liquid: adiabatic process
 
-- The calculated $H_R$ at room temperature is only 6.7% if fully filled with outside air.
-
-:::{.callout-tip}
-$H_R$ (or R.H.) only measures up at current temperature. When moving water content at different $T$, $H_R$ will change. 
-
-- cold air 👉 appears to be dry at high T
-- warm air 👉 appears to be humid at low T
-:::
-
-## Mythbusting time (3)
-
-Why does "humid hot" environment feels much hotter than "dry hot" environment, even if the apparent $T$ is the same?
-
-- Calculate the enthalpy of air-water mixture, $H_y$ significantly increases when relative humidity is high!
-- Human body relies on cooling to survive. At high $T$ high $H_R$, both driving forces for evaporation are reduced:
-  - $T_{\text{body}} - T_{\text{env}}$ becomes small 👉 bad dissipation
-  - $p_{A, \text{body}} - p_{A, \text{env}}$ becomes small  👉 evaporation suppressed
-
-:::{.callout-tip}
-The sensible specific heat for air-water mixture does not change significantly, even if water vapour's heat capacity is higher. (absolute $H$ is always 0.1 when $T<50\ ^\circ$C)
-:::
-
-
-## Measuring Humidity: The Two-Bulb Hygrometer
-
-:::{.columns}
-:::{.column width="80%"}
-
-Before electronic sensors, humidity was measured using a **two-thermometer setup**
-
-- One thermometer measures **dry-bulb temperature** $T_d$
-- The second thermometer is wrapped with a **wet wick** and measures **wet-bulb temperature** $T_w$ ($T_w < T_d$)
-
-:::
-
-:::{.column width="20%"}
-
-![Two-bulb hygrometer](./public/hygrometer.jpg){height="500px"}
-
-:::
-:::
-
-
-
-## What Does the Wet Bulb Tell Us?
-
-The wet bulb is a **steady state** evaporative cooling experiment, which can be generalized for interfacial evaporation problem:
-
-- In and outlet temperatures are the same, while outlet humidity is higher
-- Evaporation consumes **latent heat**
-
-
-![](./public/wet-bulb-balance.png)
-
-
-## Concept of Wet-Bulb Temperature
-
-- The wet-bulb temperature $T_w$ is the temperature reached by a **wet surface exposed to air**
+Since the evaporation at interface is similar to the adiabatic
+process, the following relation (see [Lecture 29](../L29)) can be used:
 
 $$
-T_w < T_d
+\frac{h_G a}{M_B k_y a} = \frac{h_G a}{M_B k_G P} \approx c_s
 $$
 
-- $T_d$ = dry-bulb temperature  
-- $T_w$ = wet-bulb temperature
-- The difference between $T_w$ and $T_d$ indicates the inlet air humidity
-
-
-## Moist Air Enthalpy
-
-From [Lecture 27](../L27), the specific enthalpy of moist air can be written as
+which gives heat transfer in gas phase as
 
 ```{=tex}
 \begin{align}
-H_{y} = (1.005 + 1.88H)(T - T_0) + 2501.4H
+G dH_y &= c_s M_B k_G a P dz (T_i - T_G) + M_B \lambda_0 k_G a P dz (H_i - H_G) \\
+       &= M_B k_G a P dz \left[ c_s (T_i - T_G) + \lambda_0 (H_i - H_G) \right] \\
+       &= M_B k_G a P dz (H_{yi} - H_y)
 \end{align}
 ```
 
-- Increase the absolute humidity $H$ must cause $H_y$ to increase 👉
-gas phase takes heat from liquid.
-- Solving the heat + mass balance will give solution to $T_w$.
+## Heat transfer at interfaces: implications
 
-## Heat Balance Around the Wet Bulb
-
-Consider the control volume around the wet bulb. Heat transferred from
-the air is used to evaporate water, linked by the heat-mass balance (need a bit prerequisite in heat transfer):
+What are the implications for the follong equation?
 
 ```{=tex}
 \begin{align}
-q = M_A \lambda_w A N_A
+G dH_y &= M_B k_G a P dz (H_{yi} - H_y)
 \end{align}
 ```
 
-- $m_A$: molecular weight of water
-- $\lambda_w$: latent heat of vaporization at $T_w$ (44045 kJ/kg mol at 1 atm)
-- $A$: area of the wetted surface
-- $N_A$: molar flux of evaporating water
+- The enthalpy in the gas phase $H_y$ has an associated "transfer coefficient" $M_B k_G a P$!
+- That justifies our choice of Enthalpy - Temperature chart.
+  - **Enthalpy driving force** in gas phase
+  - **Temperature driving force** in liquid phase
 
+## Interfacial flux equation for cooling tower
 
-## R.H.S.: Mass Transfer at the Interface
-
-The evaporation rate can be written as
+Combining the L.H.S with R.H.S we get
 
 ```{=tex}
 \begin{align}
-N_A = k_y (y_w - y)
+M_B k_G a P dz (H_{yi} - H_y) &= h_L a (T_L - T_{Li}) dz \\
+\frac{H_{yi} - H_y}{T_{Li} - T_{L}} &= -\frac{h_L a }{M_B k_G a P}
 \end{align}
 ```
 
-- $k_y$: gas-phase mass transfer coefficient (since $y_{BM} \approx 1$, $k_y \approx k_y'$)
-- $y_w$: vapor mole fraction at the interface (saturated at $T_w$)
-- $y$: vapor mole fraction in bulk air
+- The slope to find interfacial $(H_{yi}, T_{Li})$ is $-\frac{h_L a }{M_B k_G a P}$
+- No longer need to do iterative slope searching, only 1 calculation!
 
+## Link to humidity chart adiabatic saturation curves
 
-## Converting Humidity to Mole Fraction
-
-We can further change $y$ to the humidity $H$ for dilute system. Since humidity is define as weight ratio:
-
-```{=tex}
-\begin{align}
-H = \frac{\text{kg }H_2O}{\text{kg dry air}}
-\end{align}
-```
-
-The mole fraction of vapor is
-
-```{=tex}
-\begin{align}
-y = \frac{H/M_A}{1/M_B + H/M_A}
-\end{align}
-```
-
-Since humidity is typically small
-
-```{=tex}
-\begin{align}
-y \approx \frac{M_B}{M_A}H
-\end{align}
-```
-
-
-## L.H.S. Heat Transfer to the Wet Surface
-
-The heat flux $q$ in L.H.S. from the air to the wet surface is
-
-```{=tex}
-\begin{align}
-q = h (T - T_w) A
-\end{align}
-```
-
-where $h$ is heat transfer coefficient in the Fourier's law $q = -h \Delta T$
-
-## Wet-Bulb Setup: Final Results
-
-Combining heat transfer ($q$) and mass transfer ($N_A$) relations gives
-
-```{=tex}
-\begin{align}
-\frac{H - H_w}{T - T_w}
-=
-- \frac{h}{M_B k_y \lambda_w}
-\end{align}
-```
-
-Note $\frac{H - H_w}{T - T_w}$ means the slope of a line on the
-psychrometric chart. The slope is almost identical to **adiabatic line**!
-
-## Psychrometric chart: adiabatic line (level 2)
-
-The $(T_d, H_{\text{in}})$ and $(T_w, H_{\text{out}})$ points are
-along the adiabatic line (no external heat exchange). For water-air system, the adiabatic line and cooling line are very close and often not distinguished.
-
-![](./public/humidity-chart-adia.png)
-
-## Deeper Look Into The Cooling Process (1)
-
-What does the adiabatic line tells us? It is basically a process that
-each point has the same humid enthalpy, and no change of heat to external system:
+Recall in [Lecture 29](../L29), the slope of adiabatic curves in
+psychrometric chart is given by
 
 $$
-H = c_s (T - T_0) + H \lambda_0 = \text{[Const]}
+\frac{H_w - H}{T_w - T} = - \frac{h_G}{M_B k_y \lambda_w}
 $$
 
-- Increase humidity ➡ decrease $T$
-- Lowest temperature can reach in the system at certain $H_{\text{out}}$ is $T_w$
-- Lowest temperature can reach when air is saturated is $T_s$
-
-##  Deeper Look Into The Cooling Process (2)
-
-For water-air, one handy property is that
+On the other hand the slope to find interfacial $(H_{yi}, T_{Li})$ in cooling tower is
 
 $$
-\frac{h}{M_B k_y} \approx 1.005 \approx c_s \qquad \text{[kJ / kg air]}
+\frac{H_{yi} - H_y}{T_{Li} - T_{L}} = -\frac{h_L a }{M_B k_G a P}
 $$
 
-such relation allows us to use the humidity chart's adiabatic saturation curve.
+They have very similar forms, but be careful one is purely in gas phase and the other describes the 2-phase equilibrium.
+
+## Solving the tower height
+
+If only use the R.H.S result
+
+```{=tex}
+\begin{align}
+G dH_y &= M_B k_G a P dz (H_{yi} - H_y)
+\end{align}
+```
+
+we can obtain the total tower height by integration
+
+```{=tex}
+\begin{align}
+Z &= \int_{0}^{Z} dz \\
+  &= \int_{H_{y1}}^{H_{y2}} \frac{G}{M_B k_G a P} \frac{dH_y}{H_{yi} - H_y}
+\end{align}
+```
 
 :::{.callout-warning}
-Such simplification may not be applicable for other liquid, such as benzene!
+The integral is carried out over $d H_y$, not $T_L$!
 :::
 
-## Humidity Chart Example
+## Steps to solve the cooling tower
 
-Determine using the psychrometric chart for a humid air at $40^\circ$ that has a wet-bulb temperature of 20 $^\circ$:
+Similar to absorption tower, cooling tower design typically involves the following steps
 
-- humidity $H$
-- percent humidity $H_p$
-- dew point $T_{\text{dew}}$
-- humid heat $c_s$
-- enthalpy $H_y$
+1. Plot the saturated air enthalpy $H_{yi}$ vs liquid temperature $T_L$ (usually a given chart)
+2. Knowing the entering air conditions $T_{G1}$ and $H_1$ (humidity), calculate the enthlpy $H_{y1}$ (not saturated).
+3. The tower bottom $(T_{L1}, H_{y1})$ on the operating line is determined from $T_{L1}$ requirement
+4. Find the minimal gas flow rate $G_{min}$ and practical operating $G$, determine tower top operating line point $(T_{L2}, H_{y2})$
+5. Know the $h_L a$ and $k_G a P$ (or $k_y a$) values, pick several points along the operating line, use slope $-\frac{h_L a }{M_B k_G a P}$ to find $H_{yi}$ and calculate $1 / (H_{yi} - H_y)$
+6. Numerically integrate $\int_{H_{y1}}^{H_{y2}} 1 / (H_{yi} - H_y) dH_y$ and $\frac{G}{M_B k_G a P}$ to find $Z$
 
-:::{.callout-tip}
-The big difference between $T_d$ and $T_w$ must indicate a low relative humidity
+## Cooling tower design problem example
+
+![](./public/cooling-example-txt.png)
+
+:::{.callout-note}
+A similar example is given in Assignment 8. Be careful about the units!
 :::
 
-## Humidity Chart: Steps
+## Finding the humidity of inlet air
 
-- $y-axis$ readout: $H \approx 0.0065$
+```{=html}
+<iframe width="100%" height="800"
+		src="../../scripts/L29_psychrometric.html" title="Webpage example"></iframe>
+```
 
-![](./public/humidity-chart-ex1.png)
+## Interfacial demo
 
-## Humidity Chart: Results
+```{=html}
+<iframe width="100%" height="800"
+		src="../../scripts/L31_enthalpy_chart.html" title="Webpage example"></iframe>
+```
 
-- $H_p \approx 13\%$
-- (optionally) $H_R \approx 14 \%$ ($H_R > H_p$)
-- Dew point: $\approx 8^\circ C$
-- Humid heat: $c_s \approx 1.02$ kJ / kg dry air
-- Enthalpy: $H_y \approx 57$ kJ / kg dry air
+## Textbook solution (1)
 
-## What Does Wet-Bulb Temperature Indicate?
+![](./public/example-ans-1.png)
 
-- The wet-bulb temperature represents (when saturated) the **maximum
-cooling** achievable by evaporation, and it not confined to the wet-bulb setup.
+## Textbook solution (2)
 
-- The evaporation process is driven by vapor pressure difference
-(y-difference in psychrometric chart)
+![](./public/example-ans-2.png)
+
+## Textbook solution (3)
+
+We get $Z = 7.03$ m, pretty close!
+
+![](./public/example-ans-3.png)
+
+## Final question: what if we wanted to know the $T_G$ as well?
+
+:::{:callout-note}
+Advanced discussion. May not appear in final exam.
+:::
+
+For the change of bulk-gas temperature $T_G$, the following energy
+flux equation can be given for the sensible heat in gas $q_{G, S}$:
 
 ```{=tex}
 \begin{align}
-p_{sat}(T_w) - p_A
+c_s G dT_G &= h_G a dz (T_{Gi} - T_{G}) \\
+           &= h_G a dz (T_{Li} - T_{G})
 \end{align}
 ```
 
-- Applicable to:
-  1. cooling towers
-  2. evaporative cooling systems
-  3. humidification process
+For comparison we also have the change of bulk liquid temperature expressed as 
 
-##  What to Learn Next
+```{=tex}
+\begin{align}
+c_L L dT_L &= M_B k_G a P  dz (H_{yi} - H_{y})
+\end{align}
+```
 
-The wet-bulb experiment connects **heat transfer** and **mass
-transfer**, and the evaporation rate depends on the **vapor pressure
-driving force**.
-
-Next topics we will study:
-
-- Gas-phase mass transfer during evaporation
-- Interfacial equilibrium between water and air
-- Driving force expressed as $(y_w - y)$ or $(p_{sat} - p_A)$
+Our goal is to find a differential equation so that $T_G$ can be
+integrated from $T_{G1}$ (cool air intake)
 
 
+## Solving the ODE for $T_G$
 
-## Summary
+Combine the energy balance equations for $T_G$ and $T_L$ gives
 
-- Reading humidity chart for cooling process
-- Wet-bulb temperature and its origin
-- Calculation of humidity values from the chart + equation
+```{=tex}
+\begin{align}
+\frac{c_L L}{c_s G} \frac{dT_L}{dT_G} &= \frac{M_B k_G a P}{h_G a} \frac{H_{yi} - H_{y}}{T_{Li} - T_G} \\
+d T_G &= \frac{c_L L}{G} \frac{T_{Li} - T_G}{H_{yi} - H_{y}} d T_L
+\end{align}
+```
 
+- Again, we cancel out $c_S = \frac{h_G a}{M_B k_G a P}$.  This is an
+- intergratable ODE, given that at any $(T_L, H_y)$, we can calculate $H_{yi}$ without needing $T_G$
 
+## Integrating $T_G$: graphical explanation
 
-
-
-
+```{=html}
+<iframe width="100%" height="800"
+		src="../../scripts/L31_enthalpy_chart_full.html" title="Webpage example"></iframe>
+```
 
 
 

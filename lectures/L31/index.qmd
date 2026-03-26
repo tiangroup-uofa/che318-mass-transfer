@@ -134,65 +134,14 @@ The L.H.S. $G dH_{y}$ requires some attention, since such heat flux requires bot
 ```{=tex}
 \begin{align}
 G dH_y &= q_{G,S} + q_{G,\lambda} \\
-       &= h_G a dz (T_i - T_G) + \lambda_0 a N_A M_A \\
-       &= h_G a dz (T_i - T_G) + M_B \lambda_0 k_G a P dz (H_i - H_G)
+       &= h_G a dz (T_i - T_G) + \lambda_0 a N_A M_A
 \end{align}
 ```
 
-- The derivation for $q_{G, \lambda}$ uses the fact $y \approx \frac{M_B}{M_A} H$
-- Pressure-based coefficient $k_G a$ often used instead of $k_y a$
+The results can be further simplified, which will be covered in [Lecture 32](../L32).
 
-## Heat transfer at interfaces (3)
 
-Since the evaporation at interface is similar to the adiabatic
-process, the following relation (see [Lecture 29](../L29)) can be used:
 
-$$
-\frac{h_G a}{M_B k_y a} = \frac{h_G a}{M_B k_G P} \approx c_s
-$$
 
-which gives heat transfer in gas phase as
 
-```{=tex}
-\begin{align}
-G dH_y &= c_s M_B k_G a P dz (T_i - T_G) + M_B \lambda_0 k_G a P dz (H_i - H_G) \\
-       &= M_B k_G a P dz \left[ c_s (T_i - T_G) + \lambda_0 (H_i - H_G) \right] \\
-       &= M_B k_G a P dz (H_{yi} - H_y)
-\end{align}
-```
 
-## Heat transfer at interfaces (4)
-
-What are the implications for the follong equation?
-
-```{=tex}
-\begin{align}
-G dH_y &= M_B k_G a P dz (H_{yi} - H_y)
-\end{align}
-```
-
-- The enthalpy in the gas phase $H_y$ has an associated "transfer coefficient" $M_B k_G a P$!
-- That justifies our choice of Enthalpy - Temperature chart.
-  - Enthalpy driving force in gas phase
-  - Temperature driving force in liquid phase
-
-## Interfacial flux equation for cooling tower
-
-Combining the L.H.S with R.H.S we get
-
-```{=tex}
-\begin{align}
-M_B k_G a P dz (H_{yi} - H_y) &= h_L a (T_L - T_{Li}) dz \\
-\frac{H_{yi} - H_y}{T_{Li} - T_{L}} &= -\frac{h_L a }{M_B k_G a P }
-\end{align}
-```
-
-- The slope to find interfacial $(H_{yi}, T_{Li})$ is $-\frac{h_L a }{M_B k_G a P }$
-- No longer need to do iterative slope searching, only 1 calculation!
-
-## Interfacial demo
-
-```{=html}
-<iframe width="100%" height="800"
-		src="../../scripts/L31_enthalpy_chart.html" title="Webpage example"></iframe>
-```
