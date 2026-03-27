@@ -7,18 +7,13 @@ app = marimo.App(width="medium")
 @app.cell
 def _(mo):
     setup = mo.md("""
+    ## Similar to the previous case in cooling tower, how about we solve the gas temperature $T_G$?
+
     - Temp range in chart (℃) {T_range}
-    - $T_{{L1}}$ (℃) {T1}
-    - $T_{{G1}}$ (℃) {TG1}
-    - $H_{{y1}}$ (kJ/kg): {Hy1}
-    - $T_{{L2}}$ (℃): {T2}
-    - $h_L \\cdot a$ (kJ/m$^3$ s K): {hLa}
-    - $k_G \\cdot a \\cdot P$ (kg mol/s m$^3$): {kGaP}
-    - Liquid rate $L$ (kg / s m$^2$): {L}
-    - Gas rate $G$ (kg / s m$^2$): {G}
-    - Display diagonal lines? {switch}
-    - Points for integral {npts}
-    - Display $T_G$ solution? {switch_tg}
+    - $T_{{L1}}$ (℃) {T1}; $H_{{y1}}$ (kJ/kg): {Hy1}; $T_{{L2}}$ (℃): {T2};
+    - $h_L \\cdot a$ (kJ/m$^3$ s K): {hLa}; $k_G \\cdot a \\cdot P$ (kg mol/s m$^3$): {kGaP}
+    - Liquid rate $L$ (kg / s m$^2$): {L}; Gas rate $G$ (kg / s m$^2$): {G}
+    - Display diagonal lines? {switch} Points for integral {npts}; Display $T_G$ solution? {switch_tg}
     """).batch(
         T_range=mo.ui.range_slider(
             start=10, stop=85, step=5, value=(25, 55), show_value=True
@@ -35,7 +30,7 @@ def _(mo):
         switch_tg=mo.ui.switch(value=False),
         npts=mo.ui.slider(value=5, start=3, stop=25, step=1, show_value=True),
     )
-    # setup
+    setup
     return (setup,)
 
 
@@ -46,7 +41,6 @@ def _(
     display_integration,
     display_operating_line,
     display_tg_solution,
-    mo,
     setup,
 ):
     setup_value = setup.value
@@ -83,8 +77,8 @@ def _(
     else:
         integrant, summary = None, None
 
-
-    mo.hstack([setup, ax], widths=[1, 2])
+    ax
+    # mo.hstack([setup, ax], widths=[1, 2])
     return integrant, summary
 
 
@@ -101,6 +95,7 @@ def _(integrant, mo, summary):
 @app.cell
 def _(
     H_sat,
+    cumulative_trapezoid,
     enthalpy,
     integrate_TG_profile,
     mo,
@@ -153,7 +148,7 @@ def _(
         return
 
 
-    def display_operating_line(ax, T_L1, H_y1, T_L2, L, G, eq_line):
+    def display_operating_line(ax, T_L1, H_y1, T_L2, L, G, eq_line, current_height_pct=None):
         """Display operating line"""
 
         if not (T_L2 > T_L1):
@@ -249,6 +244,8 @@ def _(
             integrant["1/(H_yi - H_y)"], integrant["H_y"]
         )
         print(integral_value)
+        Z_cum_trap = cumulative_trapezoid(integrant["1/(H_yi - H_y)"],
+                                          integrant["H_y"], initial=0) * factor
         Z = factor * integral_value
         summary = mo.md(f"""
         Tower height $Z={Z:.2f}$ m, Transfer unit $H_G={factor:.2f}$ m
@@ -345,7 +342,7 @@ def _(UnivariateSpline, fsolve, np):
         dTG = (L*c_L / G) * (T_Li - T_G) / (H_yi - H_y) dTL
         """
         cL = 4.187
-    
+
         T_L = np.asarray(op_line["T_L"], dtype=float)
         H_y = np.asarray(op_line["H_y"], dtype=float)
         T_i, H_yi = slope_to_interface(
@@ -384,10 +381,11 @@ def _():
     import matplotlib.pyplot as plt
     import numpy as np
     from scipy.interpolate import UnivariateSpline
+    from scipy.integrate import cumulative_trapezoid
     import pandas as pd
     from scipy.optimize import fsolve
 
-    return UnivariateSpline, fsolve, np, pd, plt
+    return UnivariateSpline, cumulative_trapezoid, fsolve, np, pd, plt
 
 
 @app.cell

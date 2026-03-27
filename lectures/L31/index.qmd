@@ -16,7 +16,7 @@ format:
 ::: {.callout-note}
 - Slides 👉  [Open presentation🗒️](./slides.html)
 - PDF version of course note  👉 [Open in pdf](./L31.pdf)
-- Handwritten notes 👉 [Open in pdf](./public/L31_annotated.pdf)
+- Handwritten notes 👉 [Open in pdf](../L29/public/L29-L32_annotated.pdf)
 :::
 
 :::
