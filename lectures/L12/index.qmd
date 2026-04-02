@@ -28,12 +28,12 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- **Recall** concepts in steady state and unsteady state mass transfer
-- **Practice** step-by-step solution to sample problems
-- **Analyze** typical pitfalls in concepts of mass transfer
-- **Familiarize** with convective mass transfer concepts
+- **Recall** key ideas from steady-state and unsteady-state mass transfer.
+- **Describe** representative midterm-style solution steps.
+- **Identify** common conceptual pitfalls in mass transfer problems.
+- **Relate** convective mass transfer ideas to earlier diffusion topics.
 
 ## Midterm Exam Announcement {.center}
 
@@ -174,8 +174,6 @@ Conclusion:
 ## Summary
 
 - Good luck with the midterm exam!
-
-
 
 
 

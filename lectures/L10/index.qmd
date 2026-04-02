@@ -48,11 +48,12 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- **Formulate** unsteady-state mass balances with appropriate assumptions and simplifications
-- **Identify** accumulation, transport, and generation terms in typical 1D mass transfer problems
-- **Interpret** time-dependent concentration profiles in unsteady-state mass transfer examples
+- **Recall** the steps used to formulate unsteady-state mass balances.
+- **Identify** boundary and initial conditions for typical 1D mass transfer problems.
+- **Apply** coupled balance-and-flux equations to transient diffusion examples.
+- **Describe** time-dependent concentration profiles in unsteady-state systems.
 
 
 ## B.C. Case 1. Concentration at surfaces
@@ -342,8 +343,6 @@ Solve:
 
 - Step-by-step solution to diffusion through stagnant B
 - Diffusion and reaction system setup
-
-
 
 
 

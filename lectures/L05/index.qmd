@@ -35,12 +35,12 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- **Recall** differences between diffusion in gas and in liquid 
-- **Describe** the limiting cases of mass transport in liquid
-- **Solve** EMCD, stagnant B and general cases for transport in liquid
-- **Analyze** analogs between mass transport solution in gas and liquid
+- **Recall** key differences in diffusion behavior in gases, liquids, and solids.
+- **Identify** limiting cases of mass transport in liquid systems.
+- **Apply** EMCD, stagnant-B, and general-case flux equations for liquid transport.
+- **Describe** gas-phase transport analogs in liquid and solid systems.
 
 ## Diffusion in Liquid
 
@@ -484,4 +484,3 @@ At $t=0$, the distance from the tube top to the liquid surface is $z_0 = 0.0388$
 
 
 ---
-

@@ -33,13 +33,13 @@ format:
 
 ## Learning Outcomes {.center}
 
-(Continue from Lecture 06) After today's lecture, you will be able to:
+(Continue from Lecture 06) After this lecture, you will be able to:
 
-- **Identify** the difference between diffusion in various geometries
-- **Describe** the approximations used for simplifying the soluton for $N_A$
-- **Recall** the reason to choose stagnant B solution for spherical diffusion
-- **Solve** pseudo-steady state diffusion problem
-- **Analyze** solutions of P.S.S solution and calculate diffusivity through experiment
+- **Recall** how geometry changes the diffusion area and flux expression.
+- **Describe** approximations used in spherical and non-uniform-area diffusion problems.
+- **Identify** when the stagnant-B formulation applies to spherical evaporation problems.
+- **Apply** pseudo-steady-state analysis to diffusion problems with changing diffusion paths.
+- **Calculate** diffusivities from evaporation data in non-planar geometries.
 
 ## Diffusion Through Varying Cross-Sectional Area
 
@@ -325,8 +325,6 @@ methos!
 
 - Solving diffusion through varying cross-section
 - Pseudo-steady state solutions to diffusion-evaporation problems
-
-
 
 
 

@@ -42,17 +42,15 @@ $$
 
 ---
 
-## Learning Outcomes
+## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- **Distinguish** diffusion vs convection mechanisms
-- **Recall** common cases in defining the $N_A$ and $N_B$ relation
-- **Apply** constraints to select the right case
-- **Solve**:
-  - Equimolar counter diffusion (EMCD)
-  - Diffusion through stagnant B
-- **Analyze** different solutions for EMCD and stagnant B
+- **Recall** the difference between diffusion and convection mechanisms in binary mixtures.
+- **Identify** common transport cases from the relation between $N_A$ and $N_B$.
+- **Describe** the governing constraint for a given gas-diffusion setup.
+- **Apply** flux equations for equimolar counter diffusion and diffusion through stagnant B.
+- **Analyze** how the stagnant-B assumption changes concentration profiles and driving forces.
 
 
 --- 
@@ -441,12 +439,11 @@ d N_A / dz &= -cD_{AB} \frac{d}{dx}
 
 ---
 
-## Wrap-up
+## Summary
 
-- “Case selection”: choosing the right constraint
-- Different **constraints** lead to different solvable cases
-- **Equimolar counter diffusion (EMCD):** linear concentration profiles
-- **Stagnant B:** non-linear profiles and logarithmic driving force
-- **Stagnant ≠ no diffusion:** 👉 $N_B = 0$
+- Choosing the right transport constraint is the key first step in solving binary diffusion problems.
+- Equimolar counter diffusion leads to linear concentration and partial-pressure profiles.
+- Diffusion through stagnant B produces non-linear profiles and a logarithmic driving-force form.
+- The statement "stagnant B" means $N_B = 0$, not "no diffusion."
 
 **Next lecture:** we remove simplifying constraints and discuss the **general case**

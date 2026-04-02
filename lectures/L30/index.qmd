@@ -25,10 +25,11 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Recall the process describing the cooling tower
-- Analyze the enthalpy-temperature chart
+- **Recall** the core transport processes that occur in a cooling tower.
+- **Describe** the enthalpy-temperature chart used for cooling-tower analysis.
+- **Relate** cooling-tower design questions to the packed absorption framework.
 
 
 ## Cheatsheet for Cooling Tower
@@ -139,6 +140,10 @@ $$
 
 ![](./public/chart-blank.png)
 
+## Summary
 
+- Cooling towers cool water by coupling evaporation with heat transfer to the gas stream.
+- The enthalpy-temperature chart provides a convenient way to represent equilibrium and operating behavior.
+- Cooling-tower design follows the same broad structure as absorption analysis: equilibrium, balances, fluxes, and height.
 
 

@@ -21,6 +21,14 @@ format:
 :::
 
 
+## Learning Outcomes {.center}
+
+After this lecture, you will be able to:
+
+- **Recall** the main themes assessed in the midterm exam.
+- **Identify** which course topics need additional practice before moving forward.
+- **Describe** follow-up study priorities based on discussion of common difficulties.
+
 ## Notes
 
 ::: {.callout-note}
@@ -30,3 +38,9 @@ midterm questions and solutions to the course website, but you're
 welcome to check the instructor.
 
 :::
+
+## Summary
+
+- This lecture is dedicated to midterm discussion rather than new course content.
+- The goal is to clarify common questions and identify topics that need more review.
+- The discussion prepares the class to transition into the next section of the course.

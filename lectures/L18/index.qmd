@@ -89,11 +89,11 @@ Please use the bullet points in this recitation to review the previous topics.
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Case studies using mass transfer coefficient and dimensionless numbers
-- Analyze convective mass transfer in various geometries
-- Solving $k_c'$, $c$ and $N_A$ in convective mass transfer
+- **Recall** key governing equations from steady, unsteady, and convective mass transfer.
+- **Describe** the roles of Reynolds, Schmidt, and Sherwood numbers in coefficient correlations.
+- **Identify** how $k_c'$, concentration, and flux are linked in convective mass transfer problems.
 
 ## Dimensionless Number 1: $N_{Re}$
 

@@ -34,11 +34,11 @@ This lecture contains the overview of dimensionless number relation to mass tran
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Recall the nature behind dimensionless numbers
-- Describe how to correlate mass transfer behaviour with dimensionless numbers
-- Understand the usage of dimensionless numbers in different geometries
+- **Recall** the physical meaning of key dimensionless numbers in mass transfer.
+- **Describe** how Reynolds, Schmidt, and Sherwood numbers correlate mass transfer behavior.
+- **Identify** suitable dimensionless correlations for different flow geometries.
 
 ## Recap: Boundary Layer Theory
 

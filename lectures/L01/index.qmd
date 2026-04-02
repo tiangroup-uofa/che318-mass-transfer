@@ -26,15 +26,15 @@ format:
 #### The University of Alberta acknowledges that we are located on Treaty 6 territory, and respects the histories, languages, and cultures of the First Nations, Métis, Inuit, and all First Peoples of Canada, whose presence continues to enrich our vibrant community.
 
 
-## Learning Outcomes
+## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- **Identify** the key components of the course syllabus, content and grading schemes.
-- **Recall** common interaction methods and resources available in the course.
+- **Recall** the key components of the course syllabus, content, and grading scheme.
+- **Identify** the main communication methods and learning resources available in the course.
 - **Define** basic concepts in mass transfer, including concentration, mass fraction, and molar flux.
-- **State** Fick's First Law of Diffusion and **identify** its components and units
-- **Describe** the general shape of solutions for stationary Fick's Law.
+- **State** Fick's First Law of Diffusion and **identify** its terms and units.
+- **Describe** the general shape of steady-state concentration profiles from Fick's Law.
 
 ## Course Information
 
@@ -351,6 +351,4 @@ What we learned today:
 - Governing equation of mass transfer
 
 **See you next time!**
-
-
 

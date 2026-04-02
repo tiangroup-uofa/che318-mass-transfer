@@ -24,12 +24,12 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Recall the process describing the evaporation process
-- Analyze the enthalpy relation during evaporation
-- Understand the origin of latent heat, wet-bulb temperature
-- Recall steps to read the psychrometric chart on the adiabatic saturation curve
+- **Recall** the operating-line framework on the cooling-tower enthalpy-temperature chart.
+- **Identify** the minimum gas flow rate using the tangent condition.
+- **Describe** interfacial heat- and mass-transfer balances for cooling towers.
+- **Analyze** the roles of sensible and latent heat in the gas-side energy balance.
 
 ## Cheatsheet for Cooling Tower
 
@@ -140,7 +140,11 @@ G dH_y &= q_{G,S} + q_{G,\lambda} \\
 
 The results can be further simplified, which will be covered in [Lecture 32](../L32).
 
+## Summary
 
+- The operating line for a cooling tower comes directly from the overall energy balance.
+- Minimum gas flow is identified by a tangent construction on the enthalpy-temperature chart.
+- Interfacial balances separate the liquid sensible-heat term from the gas sensible-plus-latent contribution.
 
 
 

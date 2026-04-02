@@ -31,11 +31,11 @@ format:
 
 ## Learning Outcomes {.center}
 
-(Continue from Lecture 07) After today's lecture, you will be able to:
+(Continue from Lecture 07) After this lecture, you will be able to:
 
-- **Solve** P.S.S problems in spherical coordinates
-- **Recall** difference between steady and unsteady state solutions
-- **Analyze** time-dependent concentration profiles for U.S.S situations.
+- **Recall** the meaning of the pseudo-steady-state assumption in spherical coordinates.
+- **Identify** differences between pseudo-steady-state and fully unsteady descriptions.
+- **Describe** how changing path length affects time-dependent diffusion behavior.
 
 # P.S.S Examples (continued)
 
@@ -390,8 +390,6 @@ method!
 ## Summary
 - Pseudo-steady state solutions to diffusion-evaporation problems
 - We will discuss about unsteady state mass transfer next lecture!
-
-
 
 
 

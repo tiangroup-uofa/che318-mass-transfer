@@ -24,11 +24,11 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Recall theoretical models for mass transfer coefficients
-- Understand the "interface thickness" associated with mass transfer
-- Analyze different power laws associated with $D_{AB}$ to $k_c'$
+- **Recall** the major theoretical models used for mass transfer coefficients.
+- **Describe** the physical meaning of the effective interface thickness in each theory.
+- **Compare** predicted power-law trends between $D_{AB}$ and $k_c'$ across the models.
 
 ## Example 1: Convective Flux Through A Tube
 
@@ -712,8 +712,6 @@ Why do we need dimensionless numbers? We will see in the next lecture.
 <!-- \end{align} -->
 <!-- ``` -->
 <!-- where $V$ is the volumetric flow rate -->
-
-
 
 
 

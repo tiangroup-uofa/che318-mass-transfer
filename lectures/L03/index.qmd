@@ -58,13 +58,13 @@ $
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- **Derive** general solution for mass transport in binary gas mixture
-- **Define** the conditions for each cases we have studied so far
-- **Formulate** governing equations for various case systems
-- **Apply** general solution to defined problem
-- **Analyze** pressure / concentration profile
+- **Recall** the conditions associated with common binary gas-transport cases.
+- **Describe** the general solution for mass transport in a binary gas mixture.
+- **Formulate** governing equations for common binary-diffusion systems.
+- **Apply** the general solution to flux and composition calculations.
+- **Analyze** pressure and concentration profiles predicted by the model.
 
 ## Deriving the General Solution (I)
 
@@ -449,15 +449,12 @@ We can extract $D_{AB}$ usingt the slope of the plot!
 ^[Geankoplis Table 6.2-1]
 
 
----
-
 ## Summary
 
-- General solution for $N_B = k N_A$
-- Like stagnant B case, general solution take a **logarithm** form for $N_A$
-- When $x_{A1}$ and $x_{A_2}$ are determined, the flux $N_A$ is controlled by the relation between $N_B$ and $N_A$
-- The ratio between $N_B$ and $N_A$ depends on the system and setup
-- Diffusivity $D_{AB}$ can be determined by EMCD through two-bulb setup
+- General solutions for $N_B = k N_A$ extend the earlier EMCD and stagnant-B cases.
+- The resulting flux expression takes a logarithmic form, similar to the stagnant-B solution.
+- Once boundary compositions are known, the flux is controlled by the relation between $N_A$ and $N_B$.
+- The two-bulb experiment provides a practical way to determine gas diffusivity.
 
 ---
 
@@ -480,9 +477,5 @@ $$
 $$
 D_{AB} \propto  \frac{T^{1.75}}{P} \left(\frac{1}{m_A} + \frac{1}{m_B} \right)^{\frac{1}{2}}
 $$
-
-
-
-
 
 

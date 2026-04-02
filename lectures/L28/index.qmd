@@ -24,12 +24,12 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Recall the process describing the evaporation process
-- Analyze the enthalpy relation during evaporation
-- Understand the origin of latent heat, wet-bulb temperature
-- Recall steps to read the psychrometric chart on the adiabatic saturation curve
+- **Recall** humidification and cooling paths on the psychrometric chart.
+- **Describe** the origin of wet-bulb temperature and latent-heat effects during evaporation.
+- **Analyze** adiabatic saturation using coupled heat and mass balances.
+- **Apply** the psychrometric chart to obtain humidity-related properties.
 
 ## Cheatsheet for Humidification Process
 
@@ -310,8 +310,6 @@ Next topics we will study:
 - Reading humidity chart for cooling process
 - Wet-bulb temperature and its origin
 - Calculation of humidity values from the chart + equation
-
-
 
 
 

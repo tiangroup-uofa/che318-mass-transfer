@@ -24,11 +24,11 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to recall:
+After this lecture, you will be able to:
 
-- Compare the mass transfer coefficients for different geometries vs packed bed
-- Mass balance equation in packed bed columns
-- Concentration / pressure profile inside a packed column
+- **Recall** how packed-bed mass transfer coefficients compare with those of other geometries.
+- **Describe** mass-balance equations for packed-bed columns.
+- **Identify** concentration and pressure profiles inside a packed column.
 
 ## Recall From Last Week: Mass Transfer Correlations
 
@@ -286,8 +286,6 @@ $$
 - Typically, start with a known geometry (pipe? parallel plate? sphere? packed bed?)
 - Find the correlation with dimensionless numbers $N_{Re}$, $N_{Sc}$
 - Calculate the final mass transfer rate
-
-
 
 
 

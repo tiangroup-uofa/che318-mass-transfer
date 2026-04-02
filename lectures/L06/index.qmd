@@ -39,13 +39,13 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- **Identify** the difference between diffusion in various geometries
-- **Describe** the approximations used for simplifying the soluton for $N_A$
-- **Recall** the reason to choose stagnant B solution for spherical diffusion
-- **Solve** pseudo-steady state diffusion problem
-- **Analyze** solutions of P.S.S solution and calculate diffusivity through experiment
+- **Recall** how diffusion equations change across planar, cylindrical, and spherical geometries.
+- **Describe** approximations used to simplify expressions for $N_A$.
+- **Identify** when the stagnant-B framework is appropriate for spherical-diffusion problems.
+- **Apply** pseudo-steady-state analysis to diffusion problems in variable-area systems.
+- **Calculate** diffusivities from evaporation-based experiments.
 
 # Examples for Diffusion in Liquid and Solid
 
@@ -419,8 +419,6 @@ This framework can be used to solve diffusion through:
 
 - Solving various examples in liquid and gas diffusion systems
 - Use of weight %, log-mean molar ratio, solubility and permeability
-
-
 
 
 

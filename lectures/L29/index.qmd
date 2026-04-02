@@ -24,11 +24,11 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Solve practical humidification problems
-- Describe the fundamentals behind the heat and mass transfer in cooling towers
-- Analyze the similarity between cooling and absorption towers
+- **Apply** psychrometric relations and charts to practical humidification problems.
+- **Describe** the coupled heat- and mass-transfer mechanisms in cooling towers.
+- **Compare** cooling-tower analysis with absorption-tower analysis.
 
 ## Cheatsheet for Humidification Process
 
@@ -251,7 +251,9 @@ G (H_{y} - H_{y1}) &= L c_L (T_{L} - T_{L1})
 
 ## Summary
 
-
+- Psychrometric-chart tools can be used to solve practical humidification calculations.
+- Cooling towers combine evaporative mass transfer with heat transfer from the liquid stream.
+- The cooling-tower framework parallels absorption-tower analysis through equilibrium and operating-line ideas.
 
 
 

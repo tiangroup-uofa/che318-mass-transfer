@@ -29,11 +29,12 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- **Derive** mass balance and flux with reaction terms
-- **Identify** B.C. and I.C. for reaction-related problems
-- **Apply** simplifications for U.S.S. problems with generation terms
+- **Recall** how reaction terms enter diffusion equations.
+- **Identify** boundary and initial conditions for reaction-related transport problems.
+- **Apply** simplifying assumptions to unsteady-state reaction-diffusion models.
+- **Analyze** how reaction terms alter concentration profiles and controlling behavior.
 
 
 ## U.S.S Example 2: Transport Through A Reactive Wall
@@ -302,29 +303,27 @@ To solve unsteady and steady state problem, use the following steps:
 5. If steady state, use one of the solution examples 
 6. Do integration / calculation
 
+## Problem-Solving Checklist
+
+- Write the unsteady-state mass balance first.
+- Add the appropriate reaction term and transport relation.
+- Apply the correct flux, boundary, and initial conditions.
+
+
+
+
+
+
+
+
+
+
+
 ## Summary
 
-- Writing mass balance equation for unsteady state problems 
-- Apply conditions for reaction
-- Apply conditions for fluxes
-
-
-
-
-
-
-
-
-
-
-
-## Summary
-
-- Unsteady state mass transfer governing equation
-- Step-by-step solution to diffusion through stagnant B
-- Diffusion and reaction system setup
-
-
+- Coupling diffusion with reaction changes both the governing equation and the boundary conditions.
+- Simplifying assumptions can turn difficult reaction-diffusion models into solvable forms.
+- Reactive-wall and catalytic examples show how concentration profiles reveal the controlling mechanism.
 
 
 

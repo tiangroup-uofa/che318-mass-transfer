@@ -24,11 +24,11 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Recall the general mass transfer flux in stagnant B films
-- Apply the rule to find interfacial concentration and flux
-- Analysis for mass balance equation _inside_ the absorption column
+- **Recall** the stagnant-film flux relation for two-phase mass transfer.
+- **Apply** film and equilibrium relations to determine interfacial compositions and fluxes.
+- **Describe** how internal column mass balances shape local driving forces.
 
 
 ## Recall of last week: two-phase mass transfer
@@ -285,8 +285,6 @@ Use the conditions from example 1: bulk phase point $P=(0.10, 0.380)$, $k_x'=1.9
 - Case studies for interfacial composition & mass transfer coefficient
 
 So far we have built _almost all_ prerequisite for solving the concentration profile in the absorption tower! We will discuss that in upcoming [Lecture 25](../L25)
-
-
 
 
 

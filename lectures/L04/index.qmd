@@ -151,12 +151,12 @@ There are several limiting cases. Let's assume $x_{A1} > x_{A2}$ for simplicity,
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- **Recall** multiple theories of molecular diffusivity 
-- **Analyze** the diffusivity $D_{AB}$ as function of $(T, P)$
-- **Derive** new diffusivity values from standard table
-- **Formulate** governing equations for different scenarios measuring the diffusivity
+- **Recall** major theories used to estimate molecular diffusivity.
+- **Describe** how the diffusivity $D_{AB}$ changes with temperature and pressure.
+- **Apply** tabulated reference data to estimate diffusivity values.
+- **Formulate** governing equations for common diffusivity-measurement scenarios.
 
 ---
 
@@ -545,4 +545,3 @@ calculate()
 - Several theories predict the value for $D_{AB}$ with certain accuracy
 - Chapman-Enkog theory and Fuller method both have $D_{AB}\propto T^n/P$ form
 - Fuller method more often used as it can approximate $D_{AB}$ solely by taking values from table
-

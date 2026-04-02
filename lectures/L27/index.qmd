@@ -24,12 +24,12 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Recall fundamental knowledge about humidity 
-- Understand the different ways of expressing water contentin air
-- Analyze the temperature dependency of humidity
-- Understand the arise of enthalpy and latent heat in water-air system
+- **Recall** common measures used to express water content in air.
+- **Describe** how humidity changes with temperature and saturation conditions.
+- **Apply** equations for humid-air properties such as humid heat and enthalpy.
+- **Explain** why humidification couples mass transfer with heat effects.
 
 ## Humidification process: why is it relevant?
 
@@ -313,8 +313,6 @@ the concept of enthalpy in next lecture.👉
 - General concepts in humidification
 - Different forms of humidity
 - Humidity-dependent enthalpy and use of humidity chart
-
-
 
 
 

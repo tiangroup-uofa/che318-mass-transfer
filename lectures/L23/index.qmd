@@ -24,11 +24,11 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to recall:
+After this lecture, you will be able to:
 
-- Analysis of overall mass balance between 2 phases
-- Identify the operating line in the equilibrium diagram
-- Calculate the outlet molar fraction and minimum flow rate in 2-phase absorption tower
+- **Recall** the overall mass-balance framework for two-phase absorption systems.
+- **Identify** the operating line on an equilibrium diagram.
+- **Apply** equations to calculate outlet composition and minimum flow rate for an absorption tower.
 
 ## Recall: Reading An Equilibrium Diagram
 
@@ -332,8 +332,6 @@ print(f"SO2 system: x_1 = {x_1:.3e}, y_2= {y_2:.3f}")
 - Reading equilibrium chart and operating line
 - Mass balance equation for 2 phases
 - Solving the flow rate -- concentration relation 
-
-
 
 
 

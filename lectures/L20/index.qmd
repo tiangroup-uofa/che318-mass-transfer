@@ -24,11 +24,11 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Case studies using mass transfer coefficient and dimensionless numbers
-- Analyze convective mass transfer in various geometries
-- Solving $k_c'$, $c$ and $N_A$ in convective mass transfer
+- **Recall** characteristic features of convective mass transfer over flat plates, spheres, and packed beds.
+- **Identify** suitable empirical correlations for each geometry and flow regime.
+- **Apply** equations to calculate $k_c'$, concentration changes, and fluxes in representative case studies.
 
 ## Cheatsheet For Mass Transfer Coefficient
 
@@ -298,8 +298,6 @@ Packed bed clearly wins!
 - Find the correlation with dimensionless numbers $N_{Re}$, $N_{Sc}$
 - Calculate the final mass transfer rate
 - Geometry plays an important role in determining $k_c'$!
-
-
 
 
 

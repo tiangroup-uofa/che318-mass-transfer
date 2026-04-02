@@ -24,11 +24,11 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to recall:
+After this lecture, you will be able to:
 
-- Recall the interface equilibrium conditions
-- Describe the procedures to interpret the equilibrium diagram
-- Derive steps to calculate interfacial concentration balances 
+- **Recall** the equilibrium conditions that apply at phase interfaces.
+- **Describe** equilibrium diagrams for two-phase mass transfer systems.
+- **Apply** coupled flux and equilibrium relations to determine interfacial compositions.
 
 ## What Systems Have We Studies So Far?
 
@@ -287,8 +287,6 @@ plt.show()
 - Real industrial applications involve mass transfer between 2 phases
 - Equilibrium plots are extremely useful for elucidating the interfacial balance
 - Describe driving force and interfacial concentrations from the equilibrium plot
-
-
 
 
 

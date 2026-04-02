@@ -24,11 +24,11 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Analysis of mass balance in two-phase column
-- Recall expression for total tower height in column
-- In depth critical analysis for the gas-liquid balance
+- **Recall** the differential mass-balance framework for two-phase columns.
+- **Describe** expressions for packed-column height from local transfer relations.
+- **Analyze** coupled gas-liquid concentration profiles along the column.
 
 ## Cheatsheet for packed bed design
 
@@ -415,8 +415,6 @@ $$
 $$
 (y - y_i)_{m} = \frac{(y_{1} - y_{i1}) - (y_{2} - y_{i2})}{\ln\! \frac{y_{1} - y_{i1}}{y_2 - y_{i2}}}
 $$
-
-
 
 
 

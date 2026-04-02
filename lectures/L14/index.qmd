@@ -30,12 +30,12 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Remember the flux equations using mass transfer coefficient in different phases
-- Recall the motivation of using mass transfer coefficient
-- Analyze mass transfer coefficients' units
-- Distinguish between mass transfer coefficients in different forms
+- **Recall** flux equations written with mass transfer coefficients in different phases.
+- **Describe** why coefficient-based descriptions are useful for interfacial transport.
+- **Identify** the units and meanings of common mass transfer coefficients.
+- **Apply** conversions between coefficient forms used in gas- and liquid-phase analyses.
 
 ## Realistic Interfacial Concentration Profiles
 
@@ -306,11 +306,10 @@ k_c' \, c
 
 
 ## Summary
-In this lecture, we talked about
 
-- The difficulty of studying boundary problems in mass transfer
-- The rise of equilibrium distribution coefficient $K$ and mass transfer coefficient $k$
-- Link between mass transfer coefficient $k$ and transfer layer
+- Interfacial concentration profiles depend on equilibrium constraints and the relative resistance of each phase.
+- Matching fluxes across the interface allows us to determine interfacial compositions.
+- Mass transfer coefficients can be expressed in multiple forms, but their units and meanings must be tracked carefully.
 
 ## What To Learn Next
 
@@ -326,10 +325,6 @@ In next lectures, we will see:
 - How to use mass transfer coefficients for different phases (gas, liquid, solid)
 - How convective fluid transport is expressed using coefficients
 - How to perform mass transfer analysis based on transfer coefficients
-
-
-
-
 
 
 

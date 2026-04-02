@@ -24,12 +24,12 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Recall the process describing the evaporation process
-- Analyze the enthalpy relation during evaporation
-- Understand the origin of latent heat, wet-bulb temperature
-- Recall steps to read the psychrometric chart on the adiabatic saturation curve
+- **Recall** the form of the cooling-tower height equation from coupled heat- and mass-transfer balances.
+- **Describe** interfacial enthalpy driving forces using the enthalpy-temperature chart.
+- **Apply** the design procedure to estimate tower height for a representative cooling-tower problem.
+- **Analyze** how the model can be extended to predict the bulk-gas temperature profile.
 
 ## Cheatsheet for Cooling Tower
 
@@ -264,4 +264,8 @@ d T_G &= \frac{c_L L}{G} \frac{T_{Li} - T_G}{H_{yi} - H_{y}} d T_L
 ```
 
 
+## Summary
 
+- Cooling-tower height can be obtained by integrating the interfacial enthalpy driving force across the column.
+- The enthalpy-temperature chart provides the graphical information needed to evaluate interfacial states.
+- The same framework can be extended to estimate the bulk-gas temperature profile when needed.

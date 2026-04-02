@@ -24,11 +24,11 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Review general procedure of designing a packed tower in arbitrary concentration conditions
-- Recall the concepts of transfer unit and number of units in packed bed design
-- Understand the process of solving the tower height in realistic concentration profiles
+- **Recall** the general procedure for designing a packed tower in concentrated systems.
+- **Describe** the concepts of transfer unit and number of transfer units in packed-bed design.
+- **Apply** realistic concentration profiles to estimate tower height.
 
 ## Cheatsheet for packed bed design
 
@@ -262,8 +262,6 @@ transfer unit concepts.
 In next weeks, we will talk about the final topic: mass transfer
 coupled with heat transfer. One useful example will be the
 humidification tower. 
-
-
 
 
 

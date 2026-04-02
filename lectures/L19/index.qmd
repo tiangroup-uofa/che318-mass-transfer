@@ -24,11 +24,11 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Case studies using mass transfer coefficient and dimensionless numbers
-- Analyze convective mass transfer in various geometries
-- Solving $k_c'$, $c$ and $N_A$ in convective mass transfer
+- **Recall** the steps for convective mass transfer calculations using coefficient correlations and dimensionless numbers.
+- **Apply** equations to calculate $k_c'$, outlet concentration, and flux for internal-flow problems.
+- **Describe** how geometry and flow regime influence pipe mass transfer.
 
 
 ## General Procedure To Calculate $k_c'$
@@ -220,5 +220,3 @@ The following numbers were obtained
 
 - Learn to use the coefficient chart to solve for different systems
 - Case study of transport in a tube geometry
-
-

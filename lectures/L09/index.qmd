@@ -29,12 +29,12 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- **Recall** difference between steady and unsteady state solutions
-- **Derive** mass balance and flux equations in unsteady state problems
-- **Identify** the generation and accumulation terms in typical transport problems
-- **Analyze** time-dependent concentration profiles for U.S.S situations.
+- **Recall** the difference between steady-state and unsteady-state mass transfer problems.
+- **Derive** transient mass-balance and flux equations for diffusion systems.
+- **Identify** accumulation and generation terms in typical transport models.
+- **Analyze** time-dependent concentration profiles in unsteady diffusion problems.
 
 ## What Is Unsteady-State Mass Transfer?
 
@@ -454,8 +454,6 @@ For U.S.S M.T, we typically need
 - Unsteady state mass transfer governing equation
 - Step-by-step solution to diffusion through stagnant B
 - Diffusion and reaction system setup
-
-
 
 
 

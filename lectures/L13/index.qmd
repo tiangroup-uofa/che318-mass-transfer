@@ -30,11 +30,11 @@ format:
 
 ## Learning Outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- **Recall** motivations for study convective mass transfer
-- **Describe** key assumptions in simplifying mass transfer coefficients in multiple phases and turbulent flow
-- **Analyze** the units for mass transfer coefficients
+- **Recall** why convective mass transfer coefficients are introduced.
+- **Describe** assumptions used to simplify coefficient-based transport models.
+- **Identify** common forms and units of mass transfer coefficients.
 
 # Example Questions (Continued)
 
@@ -123,32 +123,17 @@ Boundary conditions?
 
 
 ## Summary
-In this lecture, we talked about
 
-- Solving long-answer questions in midterm
-- The difficulty of studying boundary problems in mass transfer
-- The rise of equilibrium distribution coefficient $K$ and mass transfer coefficient $k$
+- This lecture bridged the midterm review with the transition to convective mass transfer.
+- Boundary problems motivate the need for equilibrium distribution coefficients and mass transfer coefficients.
+- Mass transfer coefficients provide a practical way to express convective transport.
 
 ## What To Learn Next
 
 - We will introduce the **mass transfer coefficient** $k$ as a general parameter for convective mass transfer
-
-<!-- - The concept of mass transfer coefficient $k$ is both beautiful and -->
-<!-- ugly. -->
-
-<!-- - We **gain** the simplicity of expressing flux equations using simple -->
-<!-- formula, -->
-<!-- - We **lose** physical understanding about its origin in many systems -->
-
-<!-- In next lectures, we will see: -->
-
 - How to use mass transfer coefficients for different phases (gas, liquid, solid)
 - How convective fluid transport is expressed using coefficients
 - How to perform mass transfer analysis based on transfer coefficients
-
-
-
-
 
 
 
