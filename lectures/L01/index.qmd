@@ -79,7 +79,7 @@ After this lecture, you will be able to:
 
 - **Midterm Exam:** 30%
   - In class (**50 min**), closed book
-  - Time to be determined by end of Janurary 2026
+  - Time to be determined by end of January 2026
 
 - **Final Exam:** 45%
   - In person
@@ -191,18 +191,20 @@ Participation link: https://app.wooclap.com/318L01?from=instruction-slide
 
 We will only deal with **SI units** in this course!
 
-- (Molar) Concentraion of A: $c_{A}$
+- (Molar) Concentration of A: $c_{A}$
   - Unit: $\text{mol}\cdot\text{m}^{-3}$ or $\text{kg mol}\cdot\text{m}^{-3}$
   - Total concentration: $c_{T} = \sum_i c_{i} = c_A + c_B + \cdots$
   
-- Molar fraction of A: $x_{A} = \dfrac{c_A}{c_T}$
+- Molar fraction of A: $x_{A} = \dfrac{c_A}{c_T} = \dfrac{c_A}{c_A + c_B}$
+  - For ideal gas: $x_A = \dfrac{p_A}{p_T}$ (partial pressure of A and total pressure, respectively)
 
-- Molar ratio (or binary mixture): $Y_A = \dfrac{x_A}{x_B} = \dfrac{x_A}{1 - y_x}$
-    - For ideal gas: $x_A = \dfrac{p_A}{p_T}$ (partial pressure of A and total pressure, respectively)
+- Molar ratio (for a binary mixture): $Y_A = \dfrac{x_A}{x_B} = \dfrac{x_A}{1 - x_A}$
+  - Molar ratio $Y_A$ is less commonly used, unless for absorption tower in [Lecture 23](../L23)
+    
 	
 ## Basic quantities and their units in mass transfer (2)
 
-- Mass concentraion of A: $\rho_A$
+- Mass concentration of A: $\rho_A$
   -Unit: $\text{kg}\cdot\text{m}^{-3}$
   - Total mass concentration $\rho_{T} = \sum_i \rho_{i} = \rho_A + \rho_B + \cdots$
   - $c_i = \dfrac{\rho_i}{m_i}$ ($m_i$: molecular weight<span style="margin-left: 1em;"></span>unit $\text{kg}\cdot\text{kg mol}^{-1}$ **Non-SI!**)

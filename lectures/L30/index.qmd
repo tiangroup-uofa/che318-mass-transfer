@@ -38,7 +38,7 @@ After this lecture, you will be able to:
 
 ## Introduction to cooling tower
 
-Chemical plants often uses water cooling tower for heat exchange. What is its mechanism?
+Chemical plants often use water cooling towers for heat exchange. What is the mechanism?
 
 ![](../L29/public/cooling-tower-mechanism.png)
 
@@ -120,7 +120,7 @@ down into
 
 For the cooling tower, we're interested in both **humidity of gas**
 and **energy transfer** at interface. Instead of using just
-psychrometric chart ($H$ vs $T$), a better choice is plot the enthalpy
+psychrometric chart ($H$ vs $T$), a better choice is to plot the enthalpy
 of gas phase $H_y$ vs the bulk temperature in liquid $T_L$.
 
 ## Cooling tower chart: how is it constructed?

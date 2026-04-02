@@ -97,7 +97,7 @@ In **very diluted** (EMCD-like) system, we have
 operating line with a slope of $L'/V'$.
 
 - Given inlet $y_1$ and target $x_2, y_2$ 👉 minimal operating $L'$ (see Assignment 6!)
-- Given actual $L'$ 👉 predict output $x_1$
+- Given actual $L'$ 👉 predict outlet $x_1$
 
 ## What can we improve from last week's picture?
 
@@ -285,6 +285,5 @@ Use the conditions from example 1: bulk phase point $P=(0.10, 0.380)$, $k_x'=1.9
 - Case studies for interfacial composition & mass transfer coefficient
 
 So far we have built _almost all_ prerequisite for solving the concentration profile in the absorption tower! We will discuss that in upcoming [Lecture 25](../L25)
-
 
 

@@ -84,7 +84,7 @@ and a slope of $\frac{L \cdot c_L}{G}$. ($c_L \approx 4.18$ kJ / kg · K)
 ## Question 3: what is the minimal flow rate?
 
 Similar to absorption tower, but since we're **below** the equilibrium
-line 👉 use tangent construction to fine $G_{\text{min}}$
+line 👉 use tangent construction to find $G_{\text{min}}$
 
 ![](../L30/public/chart-gmin.png)
 

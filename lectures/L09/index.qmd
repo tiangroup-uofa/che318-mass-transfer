@@ -81,7 +81,7 @@ N_A = J_{Az}^* + x_A(N_A + N_B)
 \end{align*}
 ```
 
-- Amount of material moved **in** and **out** of controled volume
+- Amount of material moved **in** and **out** of the control volume
 - $J_{Az}^*$: Fick's first law of diffusion
 - Can be used for S.S ($d N_A/dz = 0$) and U.S.S
 :::
@@ -179,7 +179,7 @@ D_{AB}\nabla^2 c_A
 ```
 
 
-- Case 3: Constant $\rho$ and $D_{AB}$ (e.g. imcompressible liquids)
+- Case 3: Constant $\rho$ and $D_{AB}$ (e.g. incompressible liquids)
 ```{=tex}
 \begin{align}
 \frac{\partial c_A}{\partial t}
@@ -199,7 +199,7 @@ For U.S.S M.T, we typically need
 2. Initial conditions $c_A(z, t=0)$
 3. Boundary conditions (B.C.)
    - Dirichlet B.C. (e.g. $c_A(z=0) = c_0$)
-   - Neumann B.D. (e.g. $N_A(z=0) = N_{A0}$, constant flux)
+   - Neumann B.C. (e.g. $N_A(z=0) = N_{A0}$, constant flux)
 4. Solving analytically or numerically
 5. Get $c_A(z, t)$, $x_A(z, t)$, $N_A(x, t)$
 6. Steady-state solutions often means $c_A(z, t\to \infty)$
@@ -454,7 +454,6 @@ For U.S.S M.T, we typically need
 - Unsteady state mass transfer governing equation
 - Step-by-step solution to diffusion through stagnant B
 - Diffusion and reaction system setup
-
 
 
 

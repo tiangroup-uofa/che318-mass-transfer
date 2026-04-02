@@ -40,7 +40,7 @@ After this lecture, you will be able to:
 - Date: Feb 09, 2026 (Monday)
 - Time: 50 min during class
 - Question types:
-  - Multichoice questions (conceptual, no derivation)
+  - Multiple-choice questions (conceptual, no derivation)
   - Short-answer questions (conceptual, no derivation)
   - Long-answer questions (derivation and / or calculation)
 - Formula sheet / calculator policy: refer to course syllabus
@@ -174,4 +174,3 @@ Conclusion:
 ## Summary
 
 - Good luck with the midterm exam!
-

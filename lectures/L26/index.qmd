@@ -92,7 +92,7 @@ H_G = \frac{V}{k_y' a S}
 ## Define the number of transfer units
 
 The rest of the equation for $Z$ can be rewritten as "number of
-transfer units", similar to theoertical number of trays in a tray
+transfer units", similar to the theoretical number of trays in a tray
 tower. For gas phase general case, we have
 
 ```{=tex}
@@ -176,13 +176,13 @@ In real packed beds, coefficients are often obtained from correlations (using di
 
 ## Design of packed bed in realistic situations
 
-In many industrial applications, engineers are either interested in
-one of the approach to estimate the desired tower height:
+In many industrial applications, engineers are interested in
+one of the approaches to estimate the desired tower height:
 
 1. Estimate the correlation of $k_y' a$ and $k_x' a$ as functions of $G_x$ and $G_y$
 
 $$
-k_y'a = f_y(G_x, G_y, \text{pack type});\quad k_y'a = f_x(G_x, G_y, \text{pack type})
+k_y'a = f_y(G_x, G_y, \text{pack type});\quad k_x'a = f_x(G_x, G_y, \text{pack type})
 $$
 
 2. Estimate $H_G$ (and / or $H_L$) from the correlation
@@ -191,12 +191,12 @@ $$
 H_G = f_G(G_x, G_y, N_{Sc}, \text{pack type})
 $$
 
-Either way, the flow rates are locally dependent, so integration should be used. Let's a detailed  example from textbook.
+Either way, the flow rates are locally dependent, so integration should be used. Let's see a detailed example from the textbook.
 
 ## Example 2: concentrated packed bed design
 
 (Example 10.7-1) A tower packed with 25.3 mm ceramic rings is used to
-absorb SO$_2$ from aire using pure water at 293 K and 1 atm. The
+absorb SO$_2$ from air using pure water at 293 K and 1 atm. The
 entering gas contains 20 mol% SO$_2$ and leaving gas has 2 mol%. The
 inert air flow is $6.53\times10^{-4}$ kg mol/s and inlet water flow is
 $4.20\times10^{-2}$ kg mol/s. Cross sectional area of the tower is
@@ -262,7 +262,6 @@ transfer unit concepts.
 In next weeks, we will talk about the final topic: mass transfer
 coupled with heat transfer. One useful example will be the
 humidification tower. 
-
 
 
 

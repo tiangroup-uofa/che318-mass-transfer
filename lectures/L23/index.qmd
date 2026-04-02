@@ -40,7 +40,7 @@ Key features:
 - x-axis & y-axis meaning?
 - Points on the eq. curve?
 - Points above and below eq. curve?
-- How to get interfacial fraction?
+- How to get interfacial composition?
 - Slope of line to interfacial points? 
 
 :::
@@ -332,7 +332,6 @@ print(f"SO2 system: x_1 = {x_1:.3e}, y_2= {y_2:.3f}")
 - Reading equilibrium chart and operating line
 - Mass balance equation for 2 phases
 - Solving the flow rate -- concentration relation 
-
 
 
 

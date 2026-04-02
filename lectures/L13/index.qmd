@@ -70,7 +70,7 @@ After this lecture, you will be able to:
 
 Our current knowledge cannot answer questions like this:
 
-- If chemical species A is transferred between two difference phases, what is the concentration in each phase?
+- If chemical species A is transferred between two different phases, what is the concentration in each phase?
 - How do we solve the mass transfer when $c$ is not uniform? (See long answer question 2)
 - What if fluid becomes turbulent?
 
@@ -100,7 +100,7 @@ boundaries. This is something we _in theory_ can solve using U.S.S. But what are
 
 Question: a polymer membrane of thickness $2Δ$ contains a chemical
 with uniform concentration $c_0$ initially. At $t=0$, it is suddenly
-submerged into a solution containing the same chemical with concentration $c_1$. The volume of liquid is very large that concentration remains $c_1$ far away from the membrane-liquid interface.
+submerged into a solution containing the same chemical with concentration $c_1$. The volume of liquid is so large that the concentration remains $c_1$ far away from the membrane-liquid interface.
 Model the concentration profile $c(z)$ inside the membrane, and calculate the total chemical absorption rate.
 
 ## Solving the polymer membrane mass transfer problem
@@ -134,4 +134,3 @@ Boundary conditions?
 - How to use mass transfer coefficients for different phases (gas, liquid, solid)
 - How convective fluid transport is expressed using coefficients
 - How to perform mass transfer analysis based on transfer coefficients
-

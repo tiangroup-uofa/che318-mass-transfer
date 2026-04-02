@@ -95,7 +95,7 @@ on for a certain time interval $\Delta t$ to remove dissolved A from
 the liquid. The masses of a dried sphere before and after the
 experiment were measured to be $m_1$ and $m_2$ ($m_2 - m_1 \ll
 m_1$). The solubility of A in water is $c_{As}$ and water contain no
-benzoid acid. Calculate the mass transfer coefficient of this
+benzoic acid. Calculate the mass transfer coefficient of this
 system. What form of $k$ did you use?
 
 ## Solutions to example 3
@@ -712,7 +712,6 @@ Why do we need dimensionless numbers? We will see in the next lecture.
 <!-- \end{align} -->
 <!-- ``` -->
 <!-- where $V$ is the volumetric flow rate -->
-
 
 
 

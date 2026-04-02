@@ -34,7 +34,7 @@ After this lecture, you will be able to:
 
 ![Physical copies distributed in class](../L25/public/cheatsheet-2phase.svg)
 
-## Two-phase column: what have learned so far?
+## Two-phase column: what have we learned so far?
 
 For two-phase mass transfer (solid-state packed bed, liquid-gas
 absorption tower, etc.), our previous lectures have given:
@@ -227,7 +227,7 @@ $$
 Z = \left[ \frac{V}{k'_x a S} \frac{(1 - x)_{im}}{1 - x} \right] \int_{x_2}^{x_1} \frac{dx}{x_i - x}
 $$
 
-Replacing $_{im}$ subscript to $_{*m}$ and use overall coefficients will have another sets of equations.
+Replacing $_{im}$ subscripts with $_{*m}$ and using overall coefficients gives another set of equations.
 
 ## Further simplification: log mean driving force
 
