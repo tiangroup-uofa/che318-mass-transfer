@@ -22,7 +22,7 @@ format:
 :::
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -30,12 +30,12 @@ After this lecture, you will be able to:
 - **Identify** suitable empirical correlations for each geometry and flow regime.
 - **Apply** equations to calculate $k_c'$, concentration changes, and fluxes in representative case studies.
 
-## Cheatsheet For Mass Transfer Coefficient
+## Cheatsheet for mass transfer coefficient
 
 ![Cheatsheet for using dimensionless numbers with $k_c'$. Printed version distributed in class](../L19/public/cheatsheet.svg)
 
 
-## Case 2: Flow Parallel To Flat Plates
+## Case 2: flow parallel to flat plates
 
 - Can be used for gases or evaporation of liquid
 - Distinguished between laminar & turbulent flow
@@ -44,7 +44,7 @@ After this lecture, you will be able to:
 - [Flow parallel to flat plate: video](https://www.youtube.com/watch?v=zsO5BQA_CZk)
 
 
-## Flow Past Parallel Plates: Regimes
+## Flow past parallel plates: regimes
 
 :::{.columns}
 :::{.column width="50%"}
@@ -85,7 +85,7 @@ j_D = 0.99 N_{Re, L}^{-0.5}
 ::: 
 :::
 
-## Example For Flat Plate
+## Example for flat plate
 
 Example 7.3-2: A large volume of pure water at 26.1 $^\circ$C is
 flowing parallel to a flat plate of solid benzoic acid, where
@@ -96,14 +96,14 @@ m$^2$/s.  For water, $\mu=8.71\times 10^-4$ Pa$\cdot$s and $\rho=996$ kg/m$^3$ (
 
 Calculate the mass-transfer coefficient $k_c$ and $N_A$.
 
-## Flat Surface: Solution Steps
+## Flat surface: solution steps
 
 - Step 1: calculate $N_{Re}$, $N_{Sc}$. Regime?
 - Step 2: use flat-surface equations to calculate $j_D$
 - Step 3: convert $j_D$ to $k_c'$. Use $k_c = k_c'/x_{BM}$
 - Step 4: use master equation to get $N_A$
 
-## Flat Surface Example: Results
+## Flat surface example: results
 
 :::{.callout-tip}
 We can use $x_{BM}=1$ in this case
@@ -114,13 +114,13 @@ We can use $x_{BM}=1$ in this case
 - $k_c' = j_D v N_{\text{Sc}}^{-2/3} = 5.85\times 10^{-6}$ m/s
 - $N_A = 1.726 \times 10^{-7}$ kg mol/m$^2$/s
 
-## Case 3: Flow Past Single Sphere 
+## Case 3: flow past single sphere 
 
 - Frequent geometry in particle solutions
 - Low Reynolds regime 👉 solution for stagnant diffusion on spherical surface
 - High Reynolds regime 👉 correct $N_{Sh}$ and back calculate $k_c'$
 
-## Flow Past Single Sphere: Results
+## Flow past single sphere: results
 
 :::{.columns}
 :::{.column width="35%"}
@@ -169,7 +169,7 @@ N_{Sh} &= 0.347 N_{Re}^{0.62} N_{Sc}^{1/3};\ 2000 < N_{Re} < 17000
 :::
 :::
 
-## Case 4: Mass Transfer for Packed Beds
+## Case 4: mass transfer for packed beds
 
 <!-- - Very common geometry for chemical engineering -->
 <!--   - Adsorption and desorption through solid particles (gases and liquids) -->
@@ -179,7 +179,7 @@ N_{Sh} &= 0.347 N_{Re}^{0.62} N_{Sc}^{1/3};\ 2000 < N_{Re} < 17000
 
 ![Packed bed structure](./public/packed-bed.png)
 
-## Packed Bed: Geometries
+## Packed bed: geometries
 
 - Geometry characteristics: void fraction $\varepsilon$:
 
@@ -197,7 +197,7 @@ N_{Sh} &= 0.347 N_{Re}^{0.62} N_{Sc}^{1/3};\ 2000 < N_{Re} < 17000
   A = \frac{6(1 - \epsilon)}{D_p} V_b  
   $$
   
-## Correlation Equations In Packed Bed
+## Correlation equations in packed bed
 
 Correlation 1, applicable to:
 
@@ -214,7 +214,7 @@ N_{Re} &= \frac{D_p v' \rho}{\mu}
 - $D_p$: (average) particle diameter
 - $v’$: superficial velocity in the tube without packing
 
-## Correlation Equations In Packed Bed (II)
+## Correlation equations in packed bed (II)
 
 Correlation 2, applicable to:
 
@@ -237,7 +237,7 @@ N_{Re}^{-0.31}
 \end{align}
 ```
 
-## Correlation Equations In Packed Bed (III)
+## Correlation equations in packed bed (III)
 
 Correlation 3, applicable to fluidized beds
 
@@ -259,7 +259,7 @@ N_{Re}^{-0.72}
 \end{align}
 ```
 
-## Example 3: Comparison Between Geometries
+## Example 3: comparison between geometries
 
 _Adapted from Problem 7.3-3_. Let's estimate the gas-phase mass
 transfer coefficient $k_G$ (kg mol/(m$^2$ s Pa)) for mass transfer of
@@ -275,7 +275,7 @@ a) Flow parallel to flat plate with length $L=2.54$ cm
 b) A single sphere with diameter $D=2.54$ cm
 c) Packed beds using spheres of average diameter $D_p=2.54$ cm and $\epsilon=0.35$
 
-## Example 3: Results
+## Example 3: results
 
 ::: {.callout-tip}
 - Do not forget to correct $D_{AB}$ for temperature!
@@ -298,7 +298,6 @@ Packed bed clearly wins!
 - Find the correlation with dimensionless numbers $N_{Re}$, $N_{Sc}$
 - Calculate the final mass transfer rate
 - Geometry plays an important role in determining $k_c'$!
-
 
 
 

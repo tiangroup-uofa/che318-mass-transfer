@@ -22,7 +22,7 @@ format:
 :::
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -31,7 +31,7 @@ After this lecture, you will be able to:
 - **Describe** how geometry and flow regime influence pipe mass transfer.
 
 
-## General Procedure To Calculate $k_c'$
+## General procedure to calculate $k_c'$
 
 - Dimensionless numbers solely from geometry and property: $N_{Re}$, $N_{Sc}$
 - Dimensionless number having $k_c'$: $N_{Sh}$
@@ -40,13 +40,13 @@ After this lecture, you will be able to:
   - Expression for different geometry / fluid flow
   - Use Table / Chart
 
-## Cheatsheet For Mass Transfer Coefficient
+## Cheatsheet for mass transfer coefficient
 
 ![Cheatsheet for using dimensionless numbers with $k_c'$. Printed version distributed in class](./public/cheatsheet.svg)
 
 
 
-## Example 1: Mass Transfer for Flow Inside Pipes
+## Example 1: mass transfer for flow inside pipes
 
 Problem 7.3.1: A tube is coated on the inside with naphthalene and has
 inside diameter of 20 mm & a total length of 1.10 m. Air at 318 K and
@@ -56,11 +56,11 @@ Physical properties: $D_{AB} = 6.92\times 10^{-6}\ \text{m}^2/\text{s}$, vapour 
 
 
 
-## Flow Inside Pipe: Chart
+## Flow inside pipe: chart
 
 ![](./public/fluid-pipe-chart.png)
 
-## Flow Inside Pipes: Solution Procedure
+## Flow inside pipes: solution procedure
 
 - Governing dimensionless quantity:
 
@@ -76,7 +76,7 @@ Physical properties: $D_{AB} = 6.92\times 10^{-6}\ \text{m}^2/\text{s}$, vapour 
   - parabolic flow ($N_{Re} < 2100;\ \frac{W}{D_{AB}\rho L} > 400$)
   - turbulent flow ($N_{Re} > 2100;\ 0.6 < N_{Sc} < 3000$)
 
-## Flow Inside Pipes: Solution For Liquid
+## Flow inside pipes: solution for liquid
 
 :::{.columns}
 :::{.column width="50%"}
@@ -127,7 +127,7 @@ N_{Sc}^{0.33}
 :::
 :::
 
-## Review Example 1: Solution Steps
+## Review example 1: solution steps
 
 Problem 7.3.1: A tube is coated on the inside with naphthalene and has
 inside diameter of 20 mm & a total length of 1.10 m. Air at 318 K and
@@ -137,26 +137,26 @@ Physical properties: $D_{AB} = 6.92\times 10^{-6}\ \text{m}^2/\text{s}$, vapour 
 
 - Step 1: Calculate $N_{Re}$, $N_{Sc}$. Which regime?
 
-## Review Example 1: Solution Steps
+## Review example 1: solution steps
 
 - Step 2: find normalized concentration on chart
 
 ![](./public/fluid-pipe-chart.png){width="65%"}
 
-## Example 1: Follow up
+## Example 1: follow up
 
 1) How will the outlet concentration change, if we double the gas velocity (i.e. $v_m = 1.6$ m/s)?
 
 2) If gas-phase $D_{AB}$ becomes smaller, how will the outlet concentration change?
 
-## Example 1-2: Pipe Mass Transfer In Liquid
+## Example 1-2: pipe mass transfer in liquid
 
 Problem 7.3-2: Pure water at 26.1°C ($ρ = 996\ \text{kg}/\text{m}^3$, $\mu = 8.71\times 10^{-4}$ Pa·s) flows at an average velocity of 0.0305 m/s through a tube of
 inside diameter 6.35 mm. The tube is 1.829 m long, and the last 1.22 m of the tube wall is coated with benzoic acid.
 
 The solubility of benzoic acid in water is 0.02948 kg mol/m$^3$, and the diffusivity of benzoic acid in water is $1.245 \times 10^{-9}$ m$^2$/s. For water, $\mu=8.71\times 10^-4$ Pa$\cdot$s and $\rho=996$ kg/m$^3$. Calculate the cross-sectional average concentration of benzoic acid at the outlet.
 
-## Example 1-2: Solution Steps
+## Example 1-2: solution steps
 
 - Step 1: calculate $N_{Re}$, $N_{Sc}$. Regime?
 - Step 2: check the value $W/D_{AB} \rho L$. Able to use liquid formula?
@@ -201,7 +201,7 @@ N_{Sc}^{0.33}
 :::
 :::
 
-## Example 1-2: Results
+## Example 1-2: results
 
 :::{.callout-note}
 - Use $L_D=6.35$ mm for $N_{\text{Re}}$

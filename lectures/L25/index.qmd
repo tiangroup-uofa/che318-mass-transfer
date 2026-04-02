@@ -22,7 +22,7 @@ format:
 :::
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -415,6 +415,3 @@ $$
 $$
 (y - y_i)_{m} = \frac{(y_{1} - y_{i1}) - (y_{2} - y_{i2})}{\ln\! \frac{y_{1} - y_{i1}}{y_2 - y_{i2}}}
 $$
-
-
-

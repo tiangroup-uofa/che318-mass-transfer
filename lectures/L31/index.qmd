@@ -22,7 +22,7 @@ format:
 :::
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -31,7 +31,7 @@ After this lecture, you will be able to:
 - **Describe** interfacial heat- and mass-transfer balances for cooling towers.
 - **Analyze** the roles of sensible and latent heat in the gas-side energy balance.
 
-## Cheatsheet for Cooling Tower
+## Cheatsheet for cooling tower
 
 ![Charts distributed in class.](../L30/public/cheatsheet-cooling-tower.svg)
 
@@ -145,7 +145,3 @@ The results can be further simplified, which will be covered in [Lecture 32](../
 - The operating line for a cooling tower comes directly from the overall energy balance.
 - Minimum gas flow is identified by a tangent construction on the enthalpy-temperature chart.
 - Interfacial balances separate the liquid sensible-heat term from the gas sensible-plus-latent contribution.
-
-
-
-

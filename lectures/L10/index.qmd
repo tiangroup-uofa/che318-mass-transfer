@@ -21,7 +21,7 @@ format:
 
 :::
 
-## Midterm Exam Announcement {.center}
+## Midterm exam announcement {.center}
 
 - Date: Feb 09, 2026 (Monday)
 - Time: 50 min during class
@@ -31,7 +31,7 @@ format:
   - Long-answer questions (derivation and / or calculation)
 - Formula sheet / calculator policy: refer to course syllabus
 
-## Midterm Exam Questions {.center}
+## Midterm exam questions {.center}
 
 - Covers up to unsteady state mass transport
 - Sample questions to be released this week on Canvas
@@ -46,7 +46,7 @@ format:
 - Boundary conditions and initial conditions
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -56,7 +56,7 @@ After this lecture, you will be able to:
 - **Describe** time-dependent concentration profiles in unsteady-state systems.
 
 
-## B.C. Case 1. Concentration at surfaces
+## B.C. case 1. concentration at surfaces
 
 ![Concentration at phase interfaces](./public/bc-conc.svg){width="55%"}
 
@@ -67,7 +67,7 @@ $$
 c_{A}\vert_{\text{surf}} = c_{As}\qquad\text{eq. solubility}
 $$
 
-## B.C. Case 2: Chemical Reactions
+## B.C. case 2: chemical reactions
 
 ![Boundary condition for reaction](./public/bc-reaction.svg){width="55%"}
 
@@ -83,7 +83,7 @@ N_A\big|_{\text{surf}} = \nu_A\, r_A
 - Generally Neumann boundary
 - $\nu_A$: stoichiometric ratio
 
-## B.C. Case 3: Constant Flux
+## B.C. case 3: constant flux
 
 ![Constant flux B.C.](./public/const-flux-bc.svg){width="55%"}
 
@@ -91,7 +91,7 @@ N_A\big|_{\text{surf}} = \nu_A\, r_A
 - E.g. inpenetratable surface to stagnant gas $N_{B, \text{surf}} = 0$
 - **Does not** mean $N_{A}(z)$ or $N_B(z)$ elsewhere is constant!
 
-## U.S.S Example 1: Diffusion Through Stagnant B
+## U.S.S example 1: diffusion through stagnant B
 
 We have seen in previous examples how to solve the molar flux of
 liquid evaporating into stagnant air. Let's see the same system but in unsteady state.
@@ -101,7 +101,7 @@ inside a vertical tube at constant temperature $T$ and pressure
 $p_T$. At the vent of the system dry air is continuous blown. Plot the
 molar fraction $x_A$ as a function of $z$ and time $t$. Assume the liquid level is $L$ away from the vent and does not change during the evaporation process.
 
-## Step 1: Species Mass Balance (Unsteady, 1D)
+## Step 1: species mass balance (unsteady, 1D)
 
 For a differential slice $A\,dz$, write the mass balance
 
@@ -116,7 +116,7 @@ A N_A \vert_{z=z} - A N_A \vert_{z=z+\Delta z}
 
 We would have $\frac{\partial c_B}{\partial t} = -\frac{\partial N_B}{\partial z}$
 
-## Step 2: Couple With Flux Equation
+## Step 2: couple with flux equation
 
 This is a diffusion through stagnant B case, we can directly write
 
@@ -131,7 +131,7 @@ N_A(z, t) = -c_T D_{AB}\frac{\partial x_A(z, t)}{\partial z} + x_A \left[N_A(z, 
 - $N_B=0$ only at $z=0$ (liquid interface)
 - **Do not** write the steady state $N_A$ solution!
 
-## Step 3: Conservation Equations
+## Step 3: conservation equations
 
 Generally, we still need to know the relation between $N_A$ and $N_B$
 to solve the mass-balance-flux equations.
@@ -146,7 +146,7 @@ The total concentration $c_T=c_A + c_B$ is conserved, therefore we have constrai
 \end{align}
 ```
 
-## Step 4: Boundary Conditions
+## Step 4: boundary conditions
 
 Boundary conditions (Left, Right, any time)
 
@@ -161,7 +161,7 @@ N_A(0, t) = -\frac{c_T D_{AB}}{1 - x_{A0}}\frac{\partial x_A(0, t)}{\partial z}
 \end{align}
 ```
 
-## Step 5: Final solution
+## Step 5: final solution
 
 - Unsteady state flux equation (stagnant B)
 
@@ -184,7 +184,7 @@ N_A = -c_T D_{AB} \frac{\partial x_A}{\partial z}
 
 - Analytical solution exists, but numerical solution is more convenient
 
-## U.S.S Diffusion Through Stagnant B: Analytical Solution
+## U.S.S diffusion through stagnant B: analytical solution
 
 $x_A{z, t}$ has an analytical solution if $L \rightarrow \infty$ (See Bird. _Transport Phenomena_ Ch 20.1):
 ```{=tex}
@@ -210,7 +210,7 @@ $\operatorname{erf}$ is the **error function**:
 - Higher $D_{AB}$ 👉 faster towards steady state! (Wooclap question 3, L09)
 - Penetration depth: $L_p \approx \sqrt{4D_{AB} t}$
 
-## Numerical Solutions To Evaporation Problem
+## Numerical solutions to evaporation problem
 
 The numerical solution using finite difference (FD) methods is beyond
 CHE 318, but we can briefly breakdown the process into:
@@ -220,7 +220,7 @@ CHE 318, but we can briefly breakdown the process into:
 - Convert PDE into a system of ODEs in time
 - Integrate in time using standard ODE solvers
 
-## U.S.S Diffusion Through Stagnant B: Demo
+## U.S.S diffusion through stagnant B: demo
 
 ```{=html}
 <iframe width="100%" height="900"
@@ -228,7 +228,7 @@ CHE 318, but we can briefly breakdown the process into:
 ```
 
 
-## U.S.S Example 2: Transport Through A Catalyst Wall
+## U.S.S example 2: transport through a catalyst wall
 
 **Question**: A gas mixture containing species A flows through a
 cylindrical conduit of diameter $D$ with a constant mean velocity
@@ -248,7 +248,7 @@ Assume:
 - constant $T$, $P$, and physical properties
 - no reaction outside the catalyst region
 
-## Step 1: Mass Balance
+## Step 1: mass balance
 
 Consider a differential gas-phase control volume of thickness $\Delta z$ that intersects the catalytic wall.
 
@@ -275,7 +275,7 @@ N_A\big|_{z+\Delta z}
 \end{align}
 ```
 
-## Step 2: Coupling With Flux Equation
+## Step 2: coupling with flux equation
 
 
 Use the convection–diffusion flux (constant $v_m$):
@@ -303,7 +303,7 @@ v_m\,\frac{\partial c_A}{\partial z}
 \end{align}
 ```
 
-## Step 3: General Equation for M.T + Surface Reaction
+## Step 3: general equation for M.T + surface reaction
 
 ```{=tex}
 \begin{align}
@@ -343,10 +343,4 @@ Solve:
 
 - Step-by-step solution to diffusion through stagnant B
 - Diffusion and reaction system setup
-
-
-
-
-
-
 

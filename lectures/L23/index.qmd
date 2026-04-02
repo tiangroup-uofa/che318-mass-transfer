@@ -22,7 +22,7 @@ format:
 :::
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -30,7 +30,7 @@ After this lecture, you will be able to:
 - **Identify** the operating line on an equilibrium diagram.
 - **Apply** equations to calculate outlet composition and minimum flow rate for an absorption tower.
 
-## Recall: Reading An Equilibrium Diagram
+## Recall: reading an equilibrium diagram
 
 :::{.columns}
 :::{.column width="50%"}
@@ -53,7 +53,7 @@ Key features:
 
 :::
 
-## Local Overall Mass Transfer Coefficients
+## Local overall mass transfer coefficients
 
 - Knowing $k_x$ and $k_y$ (film coefficients) allows us to calculate the interfacial concentration $(x_{Ai}, y_{Ai})$
 - **However**, in many industrial applications exact $k_x$ and $k_y$ are hard to find
@@ -61,7 +61,7 @@ Key features:
 
 ![](./public/local-coeff.png)
 
-## Relation Between Overall And Exact Mass Transfer Coefficients
+## Relation between overall and exact mass transfer coefficients
 
 - Exact coefficient $k_x$, $k_y$: driving force $y_{AG} - y_{Ai}$
 
@@ -75,20 +75,20 @@ $$
 N_A = K_y (y_{AG} - y_A^*) = K_x (x_A^* - x_{AL})
 $$
 
-## $K_x$ and $K_y$ On A Diagram
+## $K_x$ and $K_y$ on a diagram
 
 - What are the driving forces associated with $K_x$ and $K_y$?
 
 ![](./public/local-coeff.png)
 
-## $(x, y)$ Relation In A Reactor
+## $(x, y)$ relation in a reactor
 
 - Consider an absorption tower with gas inlet at $y_{A1}$ and outlet at
   $y_{A2}$
 - The gas solute is continuously absorbed by the flowing water phase
 - Which is larger, $y_{A1}$ or $y_{A2}$?
 
-## Absorption Operating Line in Equilibrium Diagram
+## Absorption operating line in equilibrium diagram
 
 :::{.callout-tip}
 - Mass balance tells us $y_{A1} > y_{A2}$
@@ -97,7 +97,7 @@ $$
 
 ![](./public/operation-line.svg)
 
-## What Questions Do We Want To Study?
+## What questions do we want to study?
 
 :::{.columns}
 :::{.column width="50%"}
@@ -119,7 +119,7 @@ Given information about the absorption tower, can we answer?
 
 :::
 
-## Mass Balance In Whole Control Volume
+## Mass balance in whole control volume
 
 :::{.columns}
 :::{.column width="50%"}
@@ -148,7 +148,7 @@ L_2 x_2 + V_1 y_1 &= L_1 x_1 + V_2 y_2
 
 :::
 
-## Explanation For Flow Rates
+## Explanation for flow rates
 
 :::{.callout-note}
 Other flow rates: $Q$ (m$^3$/s); $W$ (kg/s); $v$ (m/s)
@@ -161,7 +161,7 @@ Other flow rates: $Q$ (m$^3$/s); $W$ (kg/s); $v$ (m/s)
   - $V'$: flow rate for inert gas
   - $V_{y1}$: flow rate for A at molar fraction $y_1$
 
-## Mass Balance For Operating Line
+## Mass balance for operating line
 
 The two ends of the operating line $(x_1, y_1)$ and $(x_2, y_2)$ follow:
 
@@ -177,7 +177,7 @@ V'\left(\frac{y_2}{1 - y_2}\right)
 \end{align}
 ```
 
-## Meaning of the Operating Line
+## Meaning of the operating line
 
 When $1 - x_1 \approx 1$ and $1 - y_1 \approx 1$, we can rewrite the
 mass balance equation for any $(x, y)$ along the operating line
@@ -207,7 +207,7 @@ y = \left(\frac{L'}{V'}\right) x +
 
 :::
 
-## Absorption Tower Design Requirements
+## Absorption tower design requirements
 
 In absorption tower, we usually know the following quantities:
 
@@ -223,7 +223,7 @@ One of the following design goals may be asked:
 
 ![](./public/control-volume-show-inout.svg){.absolute right=20 bottom=20 width="35%"}
 
-## Minimum Operating Line for Absorption Tower
+## Minimum operating line for absorption tower
 
 For question 2, we know the requirement for $y_2$, combine with the
 equilibrium chart, there is a minimum liquid flow rate
@@ -231,7 +231,7 @@ $L'_{\text{min}}$.
 
 ![](./public/min-operation-line.svg)
 
-## Flow Rate In Absorption Tower
+## Flow rate in absorption tower
 
 From the dilute regime operating line, the slope is determined by
 $\left(\dfrac{L'}{V'}\right)$. Although there is a minimal
@@ -245,7 +245,7 @@ $$
 - If $L'/V'$ is too high, the column usually needs a larger diameter to compensate the pressure drop.
 - If $L'/V'$ is too low, a taller absorption tower is needed for sufficient contact area.
 
-## Example 1: Determine the Outlet Composition
+## Example 1: determine the outlet composition
 
 A mixture of gas A in air kept at total pressure of 1 atm flows
 through an absorption tower with flowing water at 293 K. The inlet gas
@@ -262,7 +262,7 @@ Calculate the outlet mole fraction $y_2$ and $x_1$ for the following cases:
 1) A is CO$_2$, $m = 1.42\times 10^3$
 2) A is SO$_2$, $m \approx 10$
 
-## Example 2: Solution Process
+## Example 2: solution process
 
 - Write the mass balance equation
 
@@ -282,7 +282,7 @@ V'\left(\frac{y_2}{1 - y_2}\right)
 
 - $x_1$ and $y_2$ relation from Henry's law
 
-## Example 2: Results
+## Example 2: results
 
 :::{.callout-warning}
 $y_1$ and $y_2$ are supposedly large, so $1 - y_1 \approx 1$ is not correct!
@@ -320,7 +320,7 @@ x_1, y_2 = solve_system(m=10.0)
 print(f"SO2 system: x_1 = {x_1:.3e}, y_2= {y_2:.3f}")    
 ```
 
-## Example 2: Quanlitative Analysis
+## Example 2: quanlitative analysis
 
 - Slope of operating line $L'/V'$  
 - Slope of equilibrium curve $m$
@@ -332,7 +332,6 @@ print(f"SO2 system: x_1 = {x_1:.3e}, y_2= {y_2:.3f}")
 - Reading equilibrium chart and operating line
 - Mass balance equation for 2 phases
 - Solving the flow rate -- concentration relation 
-
 
 
 

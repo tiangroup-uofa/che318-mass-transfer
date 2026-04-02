@@ -22,7 +22,7 @@ format:
 :::
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -30,7 +30,7 @@ After this lecture, you will be able to:
 - **Describe** the coupled heat- and mass-transfer mechanisms in cooling towers.
 - **Compare** cooling-tower analysis with absorption-tower analysis.
 
-## Cheatsheet for Humidification Process
+## Cheatsheet for humidification process
 
 ![Charts distributed in class.](./public/humidification.svg)
 
@@ -57,7 +57,7 @@ along the adiabatic line (no external heat exchange). For water-air system, the 
 ![](./public/humidity-chart-adia.png)
 
 
-## Humidity Chart Example
+## Humidity chart example
 
 Determine using the psychrometric chart for a humid air at $40^\circ$ that has a wet-bulb temperature of 20 $^\circ$:
 
@@ -82,7 +82,7 @@ Determine using the psychrometric chart for a humid air at $40^\circ$ that has a
 The big difference between $T_d$ and $T_w$ must indicate a low relative humidity
 :::
 
-## Humidity Chart: Steps
+## Humidity chart: steps
 
 - $y$-axis readout:
   - $H(40\ ^\circ{}\text{C}) \approx 0.0065$
@@ -90,7 +90,7 @@ The big difference between $T_d$ and $T_w$ must indicate a low relative humidity
 
 ![](./public/humidity-chart-ex1.png)
 
-## Humidity Chart: Results
+## Humidity chart: results
 
 - $H_p \approx 13\%$
 - (optionally) $H_R \approx 14 \%$ ($H_R > H_p$)
@@ -98,7 +98,7 @@ The big difference between $T_d$ and $T_w$ must indicate a low relative humidity
 - Humid heat: $c_s \approx 1.02$ kJ / kg dry air
 - Enthalpy: $H_y \approx 57$ kJ / kg dry air
 
-## Deeper Look Into The Cooling Process (1)
+## Deeper look into the cooling process (1)
 
 What does the adiabatic line tells us? It is basically a process that
 each point has the same humid enthalpy, and no change of heat to external system:
@@ -111,7 +111,7 @@ $$
 - Lowest temperature can reach in the system at certain $H_{\text{out}}$ is $T_w$
 - Lowest temperature can reach when air is saturated is $T_s$
 
-##  Deeper Look Into The Cooling Process (2)
+##  Deeper look into the cooling process (2)
 
 For water-air, one handy property is that
 
@@ -130,7 +130,7 @@ Such simplification may not be applicable for other liquid, such as benzene!
 
 ![](./public/cooling-thought-exp.svg)
 
-## What Does Wet-Bulb Temperature Indicate?
+## What does wet-bulb temperature indicate?
 
 - The wet-bulb temperature $T_w$ represents (when saturated) the **maximum
 cooling** achievable by evaporation, and it not confined to the wet-bulb setup.
@@ -254,10 +254,6 @@ G (H_{y} - H_{y1}) &= L c_L (T_{L} - T_{L1})
 - Psychrometric-chart tools can be used to solve practical humidification calculations.
 - Cooling towers combine evaporative mass transfer with heat transfer from the liquid stream.
 - The cooling-tower framework parallels absorption-tower analysis through equilibrium and operating-line ideas.
-
-
-
-
 
 
 

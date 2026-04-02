@@ -26,7 +26,7 @@ format:
 - Steady state solution from mass balance equations
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -35,7 +35,7 @@ After this lecture, you will be able to:
 - **Identify** common conceptual pitfalls in mass transfer problems.
 - **Relate** convective mass transfer ideas to earlier diffusion topics.
 
-## Midterm Exam Announcement {.center}
+## Midterm exam announcement {.center}
 
 - Date: Feb 09, 2026 (Monday)
 - Time: 50 min during class
@@ -45,13 +45,13 @@ After this lecture, you will be able to:
   - Long-answer questions (derivation and / or calculation)
 - Formula sheet / calculator policy: refer to course syllabus
 
-## Midterm Exam Questions {.center}
+## Midterm exam questions {.center}
 
 - Covers up to unsteady state mass transport
 - Sample questions to be released this week on Canvas
 - Use our [AI helper](https://gemini.google.com/gem/f2d47200f0bf) wisely!
 
-## Key Concepts of Mass Transfer
+## Key concepts of mass transfer
 
 - **Q: What is mass transfer about**?
   - Moving of chemical species through space
@@ -68,7 +68,7 @@ After this lecture, you will be able to:
 
 ::: {.content-visible when-format="html"}
 
-## A Mindmap For Mass Transfer Part I
+## A mind map for mass transfer part I
 
 ```{mermaid}
 mindmap
@@ -119,11 +119,11 @@ mindmap
 - We will give a few "what do we look for" and "potential pitfalls"
 - Always remember to draw the diagram and list conditions!
 
-## Short Answer Question
+## Short answer question
 
 ![](./public/sa-1.png){width="100%"}
 
-## Short Answer Question 1 -- Key Points
+## Short answer question 1 -- key points
 
 - Surface area of droplet -- sphere -- $4 \pi r_0^2$
 - Total flux per droplet -- $\overline{N}_A = 4 \pi r_0^2 N_A$ (bonus: the flux is described by stagnant B solution)
@@ -135,21 +135,21 @@ Conclusion:
 - smaller particle $r_0$  👉 larger combined area 👉 larger total flux / amount of absorption
 - (bonus) in practice you want to balance between making smaller droplets, and energy cost for producing the droplets
 
-## Long Answer Question 1
+## Long answer question 1
 
 ![](./public/la-1.png){width="100%"}
 
-## Long Answer Question 1 -- Key Points
+## Long answer question 1 -- key points
 
 - Sign in $N_A$ or $J_{Az}^*$
 - EMCD situation
 - Use Fuller method to calibrate $D_{AB}$ ($\propto T^{1.5}/P$)
 
-## Long Answer Question 2
+## Long answer question 2
 
 ![](./public/la-2.png){width="100%"}
 
-## Long Answer Question 2 -- Key Points
+## Long answer question 2 -- key points
 
 - Diagram (a cylinder with in/out diameter & length)
 - Solid diffusion 👉 EMCD-like equation (diffusion only)
@@ -160,11 +160,11 @@ Conclusion:
 - $c_A$ from solubility
 
 
-## Long Answer Question 3
+## Long answer question 3
 
 ![](./public/la-3.png){width="100%"}
 
-## Long Answer Question 3 -- Key Points
+## Long answer question 3 -- key points
 
 - Diagram (convection in axial / z-axis; diffusion in radial / r-axis)
 - Mass balance in control volume
@@ -174,9 +174,4 @@ Conclusion:
 ## Summary
 
 - Good luck with the midterm exam!
-
-
-
-
-
 

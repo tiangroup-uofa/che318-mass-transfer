@@ -28,7 +28,7 @@ format:
 - Sample questions from previous exams
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -38,11 +38,11 @@ After this lecture, you will be able to:
 
 # Example Questions (Continued)
 
-## Long Answer Question 2
+## Long answer question 2
 
 ![](./public/la-2.png){width="100%"}
 
-## Long Answer Question 2 -- Key Points
+## Long answer question 2 -- key points
 
 - Diagram (a cylinder with in/out diameter & length)
 - Solid diffusion 👉 EMCD-like equation (diffusion only)
@@ -53,11 +53,11 @@ After this lecture, you will be able to:
 - $c_A$ from solubility
 
 
-## Long Answer Question 3
+## Long answer question 3
 
 ![](./public/la-3.png){width="100%"}
 
-## Long Answer Question 3 -- Key Points
+## Long answer question 3 -- key points
 
 - Diagram (convection in axial / z-axis; diffusion in radial / r-axis)
 - Mass balance in control volume
@@ -66,7 +66,7 @@ After this lecture, you will be able to:
 
 # Convective Mass Transfer
 
-## Remaining Questions From Unsteady State Mass Transfer
+## Remaining questions from unsteady state mass transfer
 
 Our current knowledge cannot answer questions like this:
 
@@ -74,7 +74,7 @@ Our current knowledge cannot answer questions like this:
 - How do we solve the mass transfer when $c$ is not uniform? (See long answer question 2)
 - What if fluid becomes turbulent?
 
-## What We Want To Solve In Part II: A Real Engineering Problem
+## What we want to solve in part II: a real engineering problem
 
 You work in a pipeline maintenance team in Enbridge and need to remove a sticky, unwanted coating from the inner wall of a pipeline. There are a few design questions:
 
@@ -93,7 +93,7 @@ You work in a pipeline maintenance team in Enbridge and need to remove a sticky,
 - Total volume of flushing liquid required
 - Total flushing time to reach acceptable cleanliness
 
-## Mass Transfer Between Phases: Unsteady State Analysis
+## Mass transfer between phases: unsteady state analysis
 
 We will first look at the first problem, $c_A$ between phase
 boundaries. This is something we _in theory_ can solve using U.S.S. But what are the boundary conditions?
@@ -103,7 +103,7 @@ with uniform concentration $c_0$ initially. At $t=0$, it is suddenly
 submerged into a solution containing the same chemical with concentration $c_1$. The volume of liquid is very large that concentration remains $c_1$ far away from the membrane-liquid interface.
 Model the concentration profile $c(z)$ inside the membrane, and calculate the total chemical absorption rate.
 
-## Solving The Polymer Membrane Mass Transfer Problem
+## Solving the polymer membrane mass transfer problem
 
 Use the standard procedure for the polymer phase, ignore convection inside
 
@@ -128,13 +128,10 @@ Boundary conditions?
 - Boundary problems motivate the need for equilibrium distribution coefficients and mass transfer coefficients.
 - Mass transfer coefficients provide a practical way to express convective transport.
 
-## What To Learn Next
+## What to learn next
 
 - We will introduce the **mass transfer coefficient** $k$ as a general parameter for convective mass transfer
 - How to use mass transfer coefficients for different phases (gas, liquid, solid)
 - How convective fluid transport is expressed using coefficients
 - How to perform mass transfer analysis based on transfer coefficients
-
-
-
 

@@ -22,7 +22,7 @@ format:
 :::
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -30,7 +30,7 @@ After this lecture, you will be able to:
 - **Describe** mass-balance equations for packed-bed columns.
 - **Identify** concentration and pressure profiles inside a packed column.
 
-## Recall From Last Week: Mass Transfer Correlations
+## Recall from last week: mass transfer correlations
 
 - Goal: calculate $k_c'$ from:
   - geometry ($L_D, L, D_P$, etc)
@@ -40,11 +40,11 @@ After this lecture, you will be able to:
 
 - Get $j_D$ and / or $N_{\text{Sh}}$ to back-calculate $k_c'$
 
-## A Deeper Look Into Packed Bed
+## A deeper look into packed bed
 
 ![](./public/cheatsheet-packedbed-only.svg)
 
-## Recall From Last Week: Comparison Between Geometries
+## Recall from last week: comparison between geometries
 
 _Adapted from Problem 7.3-3_. Let's estimate the gas-phase mass
 transfer coefficient $k_G$ (kg mol/(m$^2$ s Pa)) for mass transfer of
@@ -60,7 +60,7 @@ a) Flow parallel to flat plate with length $L=2.54$ cm
 b) A single sphere with diameter $D=2.54$ cm
 c) Packed beds using spheres of average diameter $D_p=2.54$ cm and $\epsilon=0.35$
 
-## Case 3: Results
+## Case 3: results
 
 ::: {.callout-tip}
 - Do not forget to correct $D_{AB}$ for temperature!
@@ -74,7 +74,7 @@ c) Packed beds using spheres of average diameter $D_p=2.54$ cm and $\epsilon=0.3
 
 Packed bed clearly wins!
 
-## Why Packed Bed Columns Have Better Mass Transfer?
+## Why packed bed columns have better mass transfer?
 
 - Packed bed geometry provides large surface-to-volume ratio ($\epsilon$ and $D_p$)
 
@@ -84,7 +84,7 @@ Packed bed clearly wins!
 
 - Pressure drop $\Delta p$ over the column can be larger than other types!
 
-## Compute Mass Transfer In Packed Bed Columns
+## Compute mass transfer in packed bed columns
 
 In a packed bed design, it is often desired to know the following quantities:
 
@@ -96,7 +96,7 @@ In a packed bed design, it is often desired to know the following quantities:
 
 
 
-## Mass Balance In Packed Beds
+## Mass balance in packed beds
 
 - Volumetric flow rate is $Q$ (unit m$^3$/s)
 - Inlet, outlet concentration: $c_{A1}$, $c_{A2}$
@@ -110,7 +110,7 @@ Q (c_{A1} - c_{A2}) + A_{\text{eff}} \hat{N}_A = 0
 \end{align}
 ```
 
-## The Effective Area $A_{\text{eff}}$
+## The effective area $A_{\text{eff}}$
 
 - $A_{\text{eff}}$ related to the surface-to-volume ratio $a$ and total bed volume $V_b$
 
@@ -128,7 +128,7 @@ a = \frac{6(1 - \epsilon)}{D_p}
 \end{align}
 ```
 
-## How To Get $\hat{N}_A$?
+## How to get $\hat{N}_A$?
 
 - $\hat{N}_A$ is the **average** mass transfer flux accross the interface.
 - To solve it, we still use a control volume from $z$ to $z+ dz$
@@ -141,7 +141,7 @@ N_A(z) = k_c \left[c_{Ai} - c_{A}(z)\right]
 \end{align}
 ```
 
-## Differential Equation for $c_A(z)$
+## Differential equation for $c_A(z)$
 
 ```{=tex}
 \begin{align}
@@ -161,7 +161,7 @@ Integrating over $z$ we get:
 \end{align}
 ```
 
-## Concentration Profile Of Packed Bed (Single Phase)
+## Concentration profile of packed bed (single phase)
 
 - When $c_{Ai}$ is constant (e.g. solid-gas interface), concentration follows:
 
@@ -188,7 +188,7 @@ The pipe wall problem corresponds to $a=4 / D$, similar to a packed bed problem.
 
 
 
-## Outlet Concentration For Packed Bed
+## Outlet concentration for packed bed
 
 - If a packed bed column has height $H$, outlet concentration $c_{A2}$ follows:
 
@@ -211,7 +211,7 @@ c_{Ai} - (c_{Ai} - c_{A1})\exp(- \frac{k_c a S H}{Q})
 \end{align}
 ```
 
-## Solving The Average Mass Transfer Flux $\hat{N}_A$
+## Solving the average mass transfer flux $\hat{N}_A$
 
 - We can further use the mass balance equation $Q(c_{A1} - c_{A2}) + \hat{N}_A A_{\text{eff}} = 0$.
 - Use the fact $c_{A2} - c_{A1} = (c_{Ai} - c_{A1}) - (c_{Ai} - c_{A2})$
@@ -234,7 +234,7 @@ $$
 $$
 
 
-## Average Mass Transfer Flux By Log-Mean Driving Force
+## Average mass transfer flux by log-mean driving force
 
 The previous result means the average driving force in a
 exponentially-changing concentration profile like in packed bed,
@@ -252,7 +252,7 @@ $$
 
 
 
-## Example 4: Packed Bed Design 
+## Example 4: packed bed design 
 
 In this lecture, we show that the outlet concentration will be
 saturated when the tube is long enough.
@@ -268,7 +268,7 @@ c_{Ai} - (c_{Ai} - c_{A1})\exp(- \frac{A k_c}{Q})
 - $D_p=2.54$ cm, $\epsilon=0.35$, $k_c'=0.214$ m/s, $v_m=3.66$ m/s
 - You can consider effective saturation means $\frac{A k_c}{Q} = 5$
 
-## Example 4: Packed Bed Design -- Results
+## Example 4: packed bed design -- results
 
 - Minimal height: $H_{\text{min}}$
 
@@ -286,7 +286,6 @@ $$
 - Typically, start with a known geometry (pipe? parallel plate? sphere? packed bed?)
 - Find the correlation with dimensionless numbers $N_{Re}$, $N_{Sc}$
 - Calculate the final mass transfer rate
-
 
 
 

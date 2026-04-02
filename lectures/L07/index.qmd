@@ -31,7 +31,7 @@ format:
   - pressure - solubility - permeability
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 (Continue from Lecture 06) After this lecture, you will be able to:
 
@@ -41,7 +41,7 @@ format:
 - **Apply** pseudo-steady-state analysis to diffusion problems with changing diffusion paths.
 - **Calculate** diffusivities from evaporation data in non-planar geometries.
 
-## Diffusion Through Varying Cross-Sectional Area
+## Diffusion through varying cross-sectional area
 
 **Steady state mass balance**
 
@@ -64,7 +64,7 @@ At steady state:
 - $\overline{N}_A$ is constant
 - $N_A$ varies with position if $A(z)$ (or $A(r)$) varies
 
-## Applications of Variable-Area Diffusion
+## Applications of variable-area diffusion
 
 ![](./public/vary-area.png){width="75%"}
 
@@ -88,7 +88,7 @@ This framework can be used to solve diffusion through:
 :::
 :::
 
-## Case Study 1: Diffusion Through a Sphere
+## Case study 1: diffusion through a sphere
 
 :::{.columns}
 :::{.column width="50%"}
@@ -118,7 +118,7 @@ N_A\!\left(1 - \frac{p_A}{p_T}\right)
 \end{align}
 ```
 
-## Stagnant B in a Sphere: Reformulation
+## Stagnant B in a sphere: reformulation
 
 For spherical symmetry, $N_A(r)$ varies with $r$ and **cannot** appear alone in the balance equation L.H.S
 
@@ -134,7 +134,7 @@ $$
 \end{align}
 ```
 
-## Stagnant B in a Sphere: Final Results
+## Stagnant B in a sphere: final results
 
 ```{=tex}
 \begin{align}
@@ -149,7 +149,7 @@ $$
 This looks very similar to the 1D stagnant B solution in cartesian
 coordinates. We can simplify it in several occations.
 
-## Stagnant B in a Sphere: Far-Field Limit ($r_2 \gg r_1$)
+## Stagnant B in a sphere: far-field limit ($r_2 \gg r_1$)
 
 **Special case:** $r_2 \gg r_1$ (often $r_2 \to \infty$)
 
@@ -179,7 +179,7 @@ N_{A1} = \frac{D_{AB}}{r_1}\left(c_{A1} - c_{A2}\right)
 \end{align}
 ```
 
-## Spherical Diffusion: Thin Shell Limit $r_1 \approx r_2$
+## Spherical diffusion: thin shell limit $r_1 \approx r_2$
 
 **Special case:** thin membrane / shell  
 $\Delta r = r_2 - r_1 \ll r_1$
@@ -206,7 +206,7 @@ N_{A1} = \frac{D_{AB}}{RT}\frac{p_T}{p_{Bm}}
 
 This acts like a 1D stagnant-B film with thickness $\Delta r$! (See lecture 3 wooclap question.)
 
-## Case 2: Diffusion Through a Non-uniform Area Conduit
+## Case 2: diffusion through a non-uniform area conduit
 
 Conditions:
 
@@ -233,7 +233,7 @@ _Can you solve for $N_{A1}$_?
 
 # Examples for Pseudo Steady State (P.S.S)
 
-## Example 1: Diffusion Through Stagnant B with Changing Path Length
+## Example 1: diffusion through stagnant B with changing path length
 
 _Adapted from Geankoplis 6.2-3_
 
@@ -257,7 +257,7 @@ $$
 t_F = \frac{\rho_A (z_F^2 - z_0^2) RT p_{Bm}}{2 D_{AB} M_A p_{T}} \frac{1}{(p_{A1} - p_{A2})}
 $$
 
-## Example 2: Determine $D_{AB}$ Through Evaporation
+## Example 2: determine $D_{AB}$ through evaporation
 
 _Adapted from Griskey 10-2_
 
@@ -286,7 +286,7 @@ Answer:
 1. Pseudo-steady state: $D_{AB} = 8.56\times{}10^{-6}\ \text{m}^2/\text{s}$
 1. $N_A$ constant: $D_{AB} = 8.75\times{}10^{-6}\ \text{m}^2/\text{s}$ ($+2.2\%$ error)
 
-## Example 3: P.S.S For Diffusion Through Sphere
+## Example 3: P.S.S for diffusion through sphere
 
 _Adapted from Geankoplis Ex 6.2-4_
 
@@ -325,10 +325,6 @@ methos!
 
 - Solving diffusion through varying cross-section
 - Pseudo-steady state solutions to diffusion-evaporation problems
-
-
-
-
 
 
 

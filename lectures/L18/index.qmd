@@ -87,7 +87,7 @@ Please use the bullet points in this recitation to review the previous topics.
 
 ---
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -95,7 +95,7 @@ After this lecture, you will be able to:
 - **Describe** the roles of Reynolds, Schmidt, and Sherwood numbers in coefficient correlations.
 - **Identify** how $k_c'$, concentration, and flux are linked in convective mass transfer problems.
 
-## Dimensionless Number 1: $N_{Re}$
+## Dimensionless number 1: $N_{Re}$
 
 - **Reynolds number** measures ratio between kinetic vs viscous forces of fluid flow
 - $L_D$: characteristic length of system
@@ -115,7 +115,7 @@ N_{\text{Re}} = \frac{L_D v \rho}{\mu}
 ![$N_{Re}$ for exhause pipe](./public/exhause-pipe-reynolds.jpeg)
 
 
-## Dimensionless Number 2: $N_{Sc}$
+## Dimensionless number 2: $N_{Sc}$
 
 - **Schmidt number**: ratio between momentum diffusivity and molecular diffusivity
 - Related to ratio of hydrodynamic layer and mass transfer layer thickness
@@ -136,7 +136,7 @@ N_{\text{Sc}} = \frac{\mu}{\rho D_{AB}}
 ![Analog of Prandt number](./public/boundary-layer.png)
 
 
-## Dimensionless Number 3: $N_{Sh}$
+## Dimensionless number 3: $N_{Sh}$
 
 - **Sherwood number**: ratio between convective mass transfer and molecular mass transfer
 - Has $k_c'$ inside! --> Usually a back-calculated number
@@ -149,7 +149,7 @@ N_{\text{Sh}} = \frac{k_c' L}{D_{AB}}
 
 
 
-## How Are $k_c'$ Correlated By Dimensionless Numbers?
+## How are $k_c'$ correlated by dimensionless numbers?
 
 - The combinations of these properties --> dimensionless number groups 
 - The Chilton-Colburn $j_D$-factor: link to $N_{\text{Sc}}$, $N_{\text{Sh}}$, $N_{\text{Re}}$
@@ -162,7 +162,7 @@ j_D = f/2
 \end{align}
 ```
 
-## General Procedure To Calculate $k_c'$
+## General procedure to calculate $k_c'$
 
 - Dimensionless numbers solely from geometry and property: $N_{Re}$, $N_{Sc}$
 - Dimensionless number having $k_c'$: $N_{Sh}$

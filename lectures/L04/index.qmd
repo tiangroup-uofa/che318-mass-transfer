@@ -58,14 +58,14 @@ N_A = \frac{ c_T D_{AB}}{(z_2 - z_1)}
   
 - Brief discussion about diffusivity measurement: two-bulb setup
 
-## Demonstration of General Solution
+## Demonstration of general solution
 
 ```{=html}
 <iframe width="100%" height="800"
 		src="../../scripts/L03_xa_profile.html" title="Webpage example"></iframe>
 ```
 
-## Interaction Time!
+## Interaction time!
 
 [participation link](https://app.wooclap.com/318L04?from=instruction-slide)
 
@@ -75,7 +75,7 @@ N_A = \frac{ c_T D_{AB}}{(z_2 - z_1)}
 
 ---
 
-## Convection-Driven Flux Change
+## Convection-driven flux change
 
 ![](./public/NA_comparison_plots.svg){#fig-na-comp width="100%"}
 	
@@ -86,7 +86,7 @@ N_A = \frac{ c_T D_{AB}}{(z_2 - z_1)}
 
 ---
 
-## Detailed Explanation for Convection-Driven Flux Change
+## Detailed explanation for convection-driven flux change
 
 ::: {.callout-note}
 Advanced topic, not shown in presentation
@@ -149,7 +149,7 @@ There are several limiting cases. Let's assume $x_{A1} > x_{A2}$ for simplicity,
 
 ---
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -160,7 +160,7 @@ After this lecture, you will be able to:
 
 ---
 
-## Let's Look At The General Mass Transfer Equation (Again)
+## Let's look at the general mass transfer equation (again)
 
 $$
 N_A = \frac{D_{AB} c_T}{(z_2 - z_1)} 
@@ -185,7 +185,7 @@ What else value(s) do we need to solve $N_A$?
 
 ---
 
-## Motivation to Have Theory About Diffusivity {.center}
+## Motivation to have theory about diffusivity {.center}
 
 - Solving the general solution for gas mass transfer requires parameter $D_{AB}$ (and $D_{BA}$)!
 - Measuring every $D_{AB}$ pair for gases is tedious
@@ -195,7 +195,7 @@ What else value(s) do we need to solve $N_A$?
 
 ---
 
-## Molecular Diffusivity Theory -- Kinetic Theory
+## Molecular diffusivity theory -- kinetic theory
 
 In dilute gas regime ($p_T \approx \text{atm}$), the kinetic behaviour
 of gas molecules can be described using kinetic theory. A few
@@ -207,7 +207,7 @@ assumptions are made:
 ![Scheme of gas kinetic theory](./public/kinetic-theory-gas.png){width="80%"}
 
 
-## Kinetic Theory -- Key Results
+## Kinetic theory -- key results
 
 There are some results from the kinetic theory:
 ^[adapted from *BSL Transport Phenomena ch 17.3*]
@@ -250,7 +250,7 @@ $$
 
 ---
 
-## Kinetic Theory -- Mass Transfer
+## Kinetic theory -- mass transfer
 
 When there is only molecular diffusion (no convection), at plane $z=0$, the flux can be described by:
 
@@ -278,7 +278,7 @@ We can now link $D_{AB}$ to microscopic properties!
 
 ---
 
-## Kinetic Theory of Diffusivity -- Conclusion
+## Kinetic theory of diffusivity -- conclusion
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -306,7 +306,7 @@ Assumptions:
 
 --- 
 
-## Molecular Diffusivity -- Chapman-Enskog Theory
+## Molecular diffusivity -- Chapman-Enskog theory
 
 We can take real interaction between molecules into the kinetic theory!
 
@@ -326,7 +326,7 @@ We can take real interaction between molecules into the kinetic theory!
   
 ---
 
-## Chapman-Enskog Theory: How to Use
+## Chapman-Enskog theory: how to use
 ```{=tex}
 \begin{align}
   D_{AB} = \frac{1.8583\times{}10^{-7} T^{3/2}}
@@ -346,7 +346,7 @@ Resulting $D_{AB}$ is in $\text{m}^2 \cdot \text{s}^{-1}$
 
 ---
 
-## Chapman-Enskog Theory & Lennard Jones Potential
+## Chapman-Enskog theory & Lennard-Jones potential
 
 - Parameters $\sigma_{AB}$ and $\Omega_{D, AB}$ can be derived using Lennard-Jones (LJ) potential
 - LJ potential described the interaction energy $U_{AB}$ between 2 molecules at distance $r$ follows:
@@ -372,7 +372,7 @@ Check online [course materials]() for the $\Omega_{D, AB}$ table!
 
 ---
 
-## Molecular Diffusivity Theory -- Fuller Method
+## Molecular diffusivity theory -- Fuller method
 
 The Chapman Enskog theory can be difficult to use, engineers need some simplied empirical rules.
 
@@ -391,7 +391,7 @@ D_{AB} &= \frac{1.0\times{}10^{-7} T^{1.75} }{p_T \left[ (\sum \nu_A)^{1/3} + (\
 
 ---
 
-## Fuller Method: How to Use
+## Fuller method: how to use
 
 ```{=tex}
 \begin{align}
@@ -409,7 +409,7 @@ The Fuller method formula in *Geankoplis book* need to use the following units:
 
 Resulting $D_{AB}$ is in $\text{m}^2 \cdot \text{s}^{-1}$
 
-## How to Use the Fuller Method From a Table
+## How to use the Fuller method from a table
 
 We need to determine $\sum \nu_A$ and $\sum \nu_B$,
 *Check Table 6.2-2 of Geankoplis 4th ed*.
@@ -426,7 +426,7 @@ We need to determine $\sum \nu_A$ and $\sum \nu_B$,
 	= \nu(\text{C}) \cdot x + \nu(\text{H}) \cdot y + \nu(\text{O}) \cdot z
 	$$
 
-## Estimating $D_{AB}$ At Different $(T, P)$
+## Estimating $D_{AB}$ at different $(T, P)$
 
 For the same pair of (A, B), both the Chapman-Enskog and Fuller methods have the same form
 $$
@@ -446,7 +446,7 @@ Fuller method is often used in chemical engineering, where $n=1.75$.
 
 ---
 
-## Example 1: Chapman-Enskog Theory vs Fuller Method
+## Example 1: Chapman-Enskog theory vs Fuller method
 
 Question: calculate the diffusivity $D_{AB}$ for methan--ethan system at 313 K and 1 atm.
 
@@ -476,7 +476,7 @@ The experimental value at this condition is $D_{AB}=1.84\times 10^{-5}\ \text{m}
 
 ---
 
-## Solution to Example 1:
+## Solution to example 1:
 
 ```{python}
 #| echo: false

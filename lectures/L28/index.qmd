@@ -22,7 +22,7 @@ format:
 :::
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -31,7 +31,7 @@ After this lecture, you will be able to:
 - **Analyze** adiabatic saturation using coupled heat and mass balances.
 - **Apply** the psychrometric chart to obtain humidity-related properties.
 
-## Cheatsheet for Humidification Process
+## Cheatsheet for humidification process
 
 ![Charts distributed in class.](./public/humidification.svg)
 
@@ -111,7 +111,7 @@ The sensible specific heat for air-water mixture does not change significantly, 
 :::
 
 
-## Measuring Humidity: The Two-Bulb Hygrometer
+## Measuring humidity: the two-bulb hygrometer
 
 :::{.columns}
 :::{.column width="80%"}
@@ -132,7 +132,7 @@ Before electronic sensors, humidity was measured using a **two-thermometer setup
 
 
 
-## What Does the Wet Bulb Tell Us?
+## What does the wet bulb tell us?
 
 The wet bulb is a **steady state** evaporative cooling experiment, which can be generalized for interfacial evaporation problem:
 
@@ -143,7 +143,7 @@ The wet bulb is a **steady state** evaporative cooling experiment, which can be 
 ![](./public/wet-bulb-balance.png)
 
 
-## Concept of Wet-Bulb Temperature
+## Concept of wet-bulb temperature
 
 - The wet-bulb temperature $T_w$ is the temperature reached by a **wet surface exposed to air**
 
@@ -156,7 +156,7 @@ $$
 - The difference between $T_w$ and $T_d$ indicates the inlet air humidity
 
 
-## Moist Air Enthalpy
+## Moist air enthalpy
 
 From [Lecture 27](../L27), the specific enthalpy of moist air can be written as
 
@@ -170,7 +170,7 @@ H_{y} = (1.005 + 1.88H)(T - T_0) + 2501.4H
 gas phase takes heat from liquid.
 - Solving the heat + mass balance will give solution to $T_w$.
 
-## Heat Balance Around the Wet Bulb
+## Heat balance around the wet bulb
 
 Consider the control volume around the wet bulb. Heat transferred from
 the air is used to evaporate water, linked by the heat-mass balance (need a bit prerequisite in heat transfer):
@@ -187,7 +187,7 @@ q = M_A \lambda_w A N_A
 - $N_A$: molar flux of evaporating water
 
 
-## R.H.S.: Mass Transfer at the Interface
+## R.H.S.: mass transfer at the interface
 
 The evaporation rate can be written as
 
@@ -202,7 +202,7 @@ N_A = k_y (y_w - y)
 - $y$: vapor mole fraction in bulk air
 
 
-## Converting Humidity to Mole Fraction
+## Converting humidity to mole fraction
 
 We can further change $y$ to the humidity $H$ for dilute system. Since humidity is define as weight ratio:
 
@@ -229,7 +229,7 @@ y \approx \frac{M_B}{M_A}H
 ```
 
 
-## L.H.S. Heat Transfer to the Wet Surface
+## L.H.S. heat transfer to the wet surface
 
 The heat flux $q$ in L.H.S. from the air to the wet surface is
 
@@ -241,7 +241,7 @@ q = h (T - T_w) A
 
 where $h$ is heat transfer coefficient in the Fourier's law $q = -h \Delta T$
 
-## Wet-Bulb Setup: Final Results
+## Wet-bulb setup: final results
 
 Combining heat transfer ($q$) and mass transfer ($N_A$) relations gives
 
@@ -263,7 +263,7 @@ along the adiabatic line (no external heat exchange). For water-air system, the 
 
 ![](./public/humidity-chart-adia.png)
 
-## Deeper Look Into The Cooling Process (1)
+## Deeper look into the cooling process (1)
 
 What does the adiabatic line tells us? It is basically a process that
 each point has the same humid enthalpy, and no change of heat to external system:
@@ -276,7 +276,7 @@ $$
 - Lowest temperature can reach in the system at certain $H_{\text{out}}$ is $T_w$
 - Lowest temperature can reach when air is saturated is $T_s$
 
-##  Deeper Look Into The Cooling Process (2)
+##  Deeper look into the cooling process (2)
 
 For water-air, one handy property is that
 
@@ -291,7 +291,7 @@ Such simplification may not be applicable for other liquid, such as benzene!
 :::
 
 
-##  What to Learn Next
+## What to learn next
 
 The wet-bulb experiment connects **heat transfer** and **mass
 transfer**, and the evaporation rate depends on the **vapor pressure
@@ -310,9 +310,6 @@ Next topics we will study:
 - Reading humidity chart for cooling process
 - Wet-bulb temperature and its origin
 - Calculation of humidity values from the chart + equation
-
-
-
 
 
 

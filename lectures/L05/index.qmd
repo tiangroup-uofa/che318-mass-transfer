@@ -33,7 +33,7 @@ format:
 - Solving examples
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -42,7 +42,7 @@ After this lecture, you will be able to:
 - **Apply** EMCD, stagnant-B, and general-case flux equations for liquid transport.
 - **Describe** gas-phase transport analogs in liquid and solid systems.
 
-## Diffusion in Liquid
+## Diffusion in liquid
 
 Recall our general transport phenomena equation in [Lecture 1](../L01)
 
@@ -60,7 +60,7 @@ Molecular density of liquid (_value_) is much higher than gas (_value_) !
   - $D_{AB}\vert_{l} \approx 10^{-5} D_{AB}\vert_{g}$
   - $D_{AB}\vert_{l} \approx 10^{-12} \sim 10^{-10}\ \text{m}^2\cdot\text{s}^-1$
 
-## Diffusion in Liquid (2)
+## Diffusion in liquid (2)
 
 Unlike in gas, $D_{AB}\vert_{l}$ is usually dependent on the molar fraction of $A$
 
@@ -69,7 +69,7 @@ Unlike in gas, $D_{AB}\vert_{l}$ is usually dependent on the molar fraction of $
 
 ---
 
-## Mass Transport in Liquid -- Example 1 EMCD
+## Mass transport in liquid -- example 1 EMCD
 
 The equimolar counter diffusion (EMCD) case in liquid also satisfies $N_A + N_B = 0$
 
@@ -83,7 +83,7 @@ Often for dilute A solution, we can rewrite the EMCD solution using average conc
 
 
 
-## EMCD Solution in Liquid
+## EMCD solution in liquid
 
 ```{=tex}
 \begin{align}
@@ -105,7 +105,7 @@ $$
 
 ---
 
-## Example 2 Stagnant $B$ ($N_B = 0$)
+## Example 2 stagnant $B$ ($N_B = 0$)
 
 - EMCD in liquid is very rare, stagnant B case more frequent
 - Typical setup: diffusion through liquid films, where liquid molecules cannot permeate the barrier
@@ -134,7 +134,7 @@ N_A
 
 ---
 
-## Stagnant $B$: Further Discussions
+## Stagnant $B$: further discussions
 
 - $x_{B,m}$ is the log-mean value of $x_B$
 - In diluted A through stagnant B, we often have $x_{B1} \approx x_{B2} \approx 1$
@@ -153,7 +153,7 @@ N_A
 \end{align}
 ```
 
-## Diffusivity in Liquid
+## Diffusivity in liquid
 
 Experimentally measured $D_{AB}$ in liquid:
 
@@ -161,7 +161,7 @@ Experimentally measured $D_{AB}$ in liquid:
 
 ---
 
-## Prediction of Diffusivity in Liquid
+## Prediction of diffusivity in liquid
 
 - Molecular diffusion in liquid encounters much more collision than gas phase!
 - Kinetic theory is not applicable!
@@ -178,7 +178,7 @@ $$
 
 where $\mu_{AB}$ is the mobility of A in B
 
-## Einstein-Stokes Equation for $D_{AB}$
+## Einstein-Stokes equation for $D_{AB}$
 
 **Stokes–Einstein correlation** for diffusivity in liquids:
 
@@ -209,7 +209,7 @@ $$
 
 ---
 
-## Semi-Empirical Wilke–Chang Equation for Liquids
+## Semi-empirical Wilke–Chang equation for liquids
 
 $$
 D_{AB}
@@ -238,7 +238,7 @@ $$
 :::
 :::
 
-## Wilke–Chang Equation, $\phi$ values
+## Wilke–Chang equation, $\phi$ values
 
 **Association parameter $\phi$**
 
@@ -250,7 +250,7 @@ $$
 
 ---
 
-## Diffusion in Solids
+## Diffusion in solids
 
 - **Slowest** mode of mass transfer
 - **Vital to industry**:
@@ -261,7 +261,7 @@ $$
 
 ---
 
-## Type 1: Homogeneous Solids
+## Type 1: homogeneous solids
 
 - Uniform solid matrix
 - Diffusion follows **Fick’s law**
@@ -276,7 +276,7 @@ $$
 
 
 
-## Type 1: General Flux Equation for Solids
+## Type 1: general flux equation for solids
 
 For diffusion of $A$ in a **homogeneous solid**:
 
@@ -302,7 +302,7 @@ $$
 
 ---
 
-## Final Flux Expression (Concentration Form)
+## Final flux expression (concentration form)
 
 Key properties for diffusion in solids:
 
@@ -328,7 +328,7 @@ Assumptions:
 
 ---
 
-## How Do We Know $c_{A}$?
+## How do we know $c_{A}$?
 
 For this type of problem, we are often interested in the gas solubility in solid, where $c_A \propto p_{A}$. When expressed using the solubility $S$ :
 
@@ -348,7 +348,7 @@ Often we also express the **permeability** of a gas ($P_{M}$) in solid using $P_
 
 ---
 
-## Type 2: Inhomogeneous Solids
+## Type 2: inhomogeneous solids
 
 - Non-uniform structure
 - Diffusion through:
@@ -365,7 +365,7 @@ Examples:
 
 ---
 
-## Flux in Porous Solids
+## Flux in porous solids
 
 Steady-state diffusion of $A$ through a porous solid:
 
@@ -383,7 +383,7 @@ $$
   - typically 1.5–5 for solids
 
 
-## Effective Diffusivity
+## Effective diffusivity
 
 Porous-media effects are lumped into an **effective diffusivity**:
 
@@ -402,7 +402,7 @@ $$
 
 # Example Problems
 
-## General Steps
+## General steps
 
 See [handwritten notes](./public/L05_annotated.pdf) for step-by-step solutions.
 
@@ -413,7 +413,7 @@ See [handwritten notes](./public/L05_annotated.pdf) for step-by-step solutions.
 5. Apply boundary conditions (optional)
 6. Solve for the molar flux
 
-## Example 1: EMCD Basics
+## Example 1: EMCD basics
 
 _Adapted from Geankoplis 6.2-1_
 
@@ -424,7 +424,7 @@ The binary diffusivity of ammonia in nitrogen is $D_{AB} = 0.230 \times 10^{-4}$
 
 1) Determine values for fluxes of A and B.
 
-## Example 2: EMCD in Two-Bulb Setup
+## Example 2: EMCD in two-bulb setup
 
 Two bulbs with $V_1=V_2$ are connected by a narrow tube of length $L=0.15$ m and diameter $d=1$ mm. The system is at $T=25\ ^\circ$C and $P=1$ atm. Species $A$ is $N_2$ and species $B$ is $H_2$, with $D_{AB}=0.784$ cm$^2$/s.
 
@@ -442,7 +442,7 @@ At time $t=t_1$:
 2) Find the value for $v_{Ad}$ (diffusive velocity)
 
 
-## Example 3: Diffusion Through Stagnant B with Changing Path Length
+## Example 3: diffusion through stagnant B with changing path length
 
 _Adapted from Geankoplis 6.2-3_
 
@@ -454,7 +454,7 @@ As diffusion proceeds, the liquid level drops slowly, so $z$ increases with time
 
 _Hint: use pseudo steady-state assumption_
 
-## Example 4: Determine $D_{AB}$ Through Evaporation
+## Example 4: determine $D_{AB}$ through evaporation
 
 _Adapted from Griskey 10-2_
 

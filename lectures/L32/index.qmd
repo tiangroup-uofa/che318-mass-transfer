@@ -22,7 +22,7 @@ format:
 :::
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -31,7 +31,7 @@ After this lecture, you will be able to:
 - **Apply** the design procedure to estimate tower height for a representative cooling-tower problem.
 - **Analyze** how the model can be extended to predict the bulk-gas temperature profile.
 
-## Cheatsheet for Cooling Tower
+## Cheatsheet for cooling tower
 
 ![Charts distributed in class.](../L30/public/cheatsheet-cooling-tower.svg)
 

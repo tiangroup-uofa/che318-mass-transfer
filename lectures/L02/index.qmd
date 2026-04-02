@@ -42,7 +42,7 @@ $$
 
 ---
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -55,7 +55,7 @@ After this lecture, you will be able to:
 
 --- 
 
-## Recap: Fick's 1st Law of Diffusion
+## Recap: Fick's 1st law of diffusion
 
 Diffusion flux of A in B, z-direction follows:
 
@@ -81,7 +81,7 @@ $$
 
 ---
 
-## Behaviour of Molecular Diffusion
+## Behaviour of molecular diffusion
 
 :::: {.columns}
 
@@ -105,7 +105,7 @@ $$
 
 ---
 
-## Typical $D_{AB}$ Range
+## Typical $D_{AB}$ range
 
 ```{=html}
 <iframe width="100%" height="800"
@@ -113,7 +113,7 @@ $$
 ```
 
 
-## A Common Misconception
+## A common misconception
 
 Search for any youtube video with *"diffusion experiment dye"*
 
@@ -123,7 +123,7 @@ Can we **verify** whether the scenario seen is Ficknian diffusion?
 
 ---
 
-## Diffusion vs Convection Length Scale
+## Diffusion vs convection length scale
 
 :::: {.columns}
 
@@ -152,7 +152,7 @@ $v_{m} = 10^{-3} \mathrm{m/s}$
 ---
 
 
-## Diffusion vs Convection Summary
+## Diffusion vs convection summary
 
 ::: columns
 ::: column
@@ -177,7 +177,7 @@ $v_{m} = 10^{-3} \mathrm{m/s}$
 
 ---
 
-## A Note on Setups
+## A note on setups
 
 ##### Reference frame
 - $J_{Az}^{*}$ refers to the fluid plane frame (hence the $*$)
@@ -196,7 +196,7 @@ $$
 
 ---
 
-## Governing Equation for $N_A$ and $N_B$
+## Governing equation for $N_A$ and $N_B$
 
 The common way of expressing the governing equation is
 
@@ -217,7 +217,7 @@ How can we solve these?
 
 ---
 
-## Three Limiting Cases
+## Three limiting cases
 
 :::: {.columns}
 
@@ -266,7 +266,7 @@ General Case
 
 --- 
 
-## Case 1: Equimolar Counter Diffusion (EMCD)
+## Case 1: equimolar counter diffusion (EMCD)
 
 - Condition: $N_A + N_B = 0$
 - No bulk fluid motion
@@ -290,7 +290,7 @@ Since $x_A + x_B = 1$, we have $D_{AB} = D_{BA}$
 
 ---
 
-## Solving EMCD: Flux $N_A$
+## Solving EMCD: flux $N_A$
 
 Assume S.S., constant $D_{AB}$ and integrate from $z_1$ to $z_2$
 
@@ -322,7 +322,7 @@ N_A = \frac{D_{AB}}{RT(z_2 - z_1)}(p_{A1} - p_{A2})
 
 
 
-## Case 2: Diffusion Through Stagnant B
+## Case 2: diffusion through stagnant B
 
 Definition: **stagnant** species B means zero molar flux in the lab frame:
 $$
@@ -340,7 +340,7 @@ The governing equation becomes:
 \end{align}
 ```
 
-## Solving Stagnant B Case
+## Solving stagnant B case
 
 We again do an integration by separating variables:
 
@@ -367,7 +367,7 @@ N_A = \frac{c_TD_{AB}}{(z_2-z_1)}
 
 ---
 
-## Various Forms of Stagnant B Solution
+## Various forms of stagnant B solution
 
 - In concentration and molar fraction
 
@@ -389,7 +389,7 @@ N_A = \frac{p_TD_{AB}}{RT(z_2-z_1)}
 
 --- 
 
-## Log-mean Form
+## Log-mean form
 
 Historically, engineers liked to write the stagnant B equation using linear terms.
 
@@ -418,7 +418,7 @@ N_A = \frac{D_{AB}}{RT(z_2-z_1)}
 
 ---
 
-## Solving Concentration Profiles in Stagnant B
+## Solving concentration profiles in stagnant B
 
 - We will utilize the fact $d N_A / dz = 0$ (S.S). 
 - Do we have $d c_A / dz = 0$ like in EMCD?

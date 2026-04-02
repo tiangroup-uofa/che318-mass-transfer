@@ -22,7 +22,7 @@ format:
 :::
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -30,7 +30,7 @@ After this lecture, you will be able to:
 - **Describe** equilibrium diagrams for two-phase mass transfer systems.
 - **Apply** coupled flux and equilibrium relations to determine interfacial compositions.
 
-## What Systems Have We Studies So Far?
+## What systems have we studies so far?
 
 The most complex case is probably a packed-bed column.
 
@@ -45,7 +45,7 @@ The most complex case is probably a packed-bed column.
   - Mass transfer may occur accross 2 phase interfaces
   - Equilibrium concentration at interfaces are usually not fixed
 
-## Examples of 2-Phase Mass Transfer (1)
+## Examples of 2-phase mass transfer (1)
 
 **Absorption tower**
 
@@ -56,7 +56,7 @@ The most complex case is probably a packed-bed column.
 
 ![](./public/absorption-tower.png)
 
-## Examples of 2-Phase Mass Transfer (2)
+## Examples of 2-phase mass transfer (2)
 
 **Extraction apparatus** (liquid-gas)
 
@@ -66,7 +66,7 @@ The most complex case is probably a packed-bed column.
 
 ![](./public/essense-oil-extraction.png)
 
-## Examples of 2-Phase Mass Transfer (3)
+## Examples of 2-phase mass transfer (3)
 
 **Extraction apparatus** (liquid-liquid)
 
@@ -76,14 +76,14 @@ The most complex case is probably a packed-bed column.
 
 ![](./public/sco2-extraction.png)
 
-## Common Feature Of 2-Phase Mass Transfer
+## Common feature of 2-phase mass transfer
 
 - Flow rate and interface transfer are usually orthogonal
 - Interface concentration has discontinuity
 
 ![](./public/common-2phase.svg)
 
-## Mass Balance Equation In 2-Phase M.T.
+## Mass balance equation in 2-phase M.T.
 
 Overall mass balance between liquid and gas
 
@@ -98,7 +98,7 @@ Overall mass balance between liquid and gas
 - In and outlet usually can be described by $\text{[Flow rate]}\times \text{[Concentration]}$
 - Depends on the direction of flow and control volume!
 
-## Mass Balance Equation In Single Phase
+## Mass balance equation in single phase
 
 In each phase, we can use our knowledge from [packed bed lecture](../L21), e.g.
 
@@ -113,7 +113,7 @@ Q (c_1 - c_2) + A_{\text{eff}} \hat{N}_{\text{eff}} &= 0
 - Cannot use packed-bed solution for $\hat{N}_{\text{eff}}$ because interfacial concentration can vary!
 
 
-## How Can We Describe The Interfacial Transport?
+## How can we describe the interfacial transport?
 
 In [Lecture 14](../L14) we discussed the interfacial concentration and mass balance. We need to know
 1) The equilibrium constant $K$ at the interface
@@ -121,7 +121,7 @@ In [Lecture 14](../L14) we discussed the interfacial concentration and mass bala
 
 ![](../L14/public/distribution-coeff-profile.png){width="95%"}
 
-## The Equilibrium Plot For Gas-Liquid Interface
+## The equilibrium plot for gas-liquid interface
 
 Most commonly in industry we can use the equilibrium plot between A's
 molar fractions in gas $y_A$ (or $p_A$) and liquid $x_A$, respectively.
@@ -134,26 +134,26 @@ $$
 
 ![](./public/henry-law.png)
 
-## Reading An Equilibrium Plot (1)
+## Reading an equilibrium plot (1)
 
 Meaning of points on the equilibrium curve -- interfacial concentraion
 
 ![](./public/eq-template1.svg)
 
-## Reading An Equilibrium Plot (2)
+## Reading an equilibrium plot (2)
 
 - Points above the equilibrium curve 👉 $N_A$: gas → liquid (vice versa)
 
 ![](./public/eq-template2.svg)
 
-## Reading An Equilibrium Plot (3)
+## Reading an equilibrium plot (3)
 
 - Non-equilibrium point + line with slope $-k_x / k_y$ 👉 interfacial concentration
 
 
 ![](./public/eq-template3.svg)
 
-## Equilibrium Phase: Flux Balance
+## Equilibrium phase: flux balance
 
 - The slope + intercept method stems from the flux balance between phases
 
@@ -173,7 +173,7 @@ k_y (y_{AG} - y_{Ai}) &= k_x (x_{Ai} - x_{AL})
 \end{align}
 ```
 
-## Example 1: Finding Equilibrium Interface Concentrations
+## Example 1: finding equilibrium interface concentrations
 
 A solute is being absorbed from a gas mixture of A and B in a
 wetted-wall tower, with the liquid flowing downwards. At a certain
@@ -196,7 +196,7 @@ $(0.20, 0.131), (0.25, 0.187), (0.30, 0.265), (0.35, 0.385)$
 4) Read the intersect with equilibrium curve as $(x_{Ai}, y_{Ai})$
 5) Calculate $N_A = k_y (y_{AG} - y_{Ai})$
 
-## Example 1: Solution Plot
+## Example 1: solution plot
 
 ```{python}
 #| echo: false
@@ -271,7 +271,7 @@ plt.legend()
 plt.show()
 ```
 
-## Example 1: Answers
+## Example 1: answers
 
 - Slope of curve $-k_x/k_y = -1.343$
 - Interfacial concentration $(x_{Ai}, y_{Ai}) = (0.246, 0.180)$
@@ -287,8 +287,5 @@ plt.show()
 - Real industrial applications involve mass transfer between 2 phases
 - Equilibrium plots are extremely useful for elucidating the interfacial balance
 - Describe driving force and interfacial concentrations from the equilibrium plot
-
-
-
 
 

@@ -27,7 +27,7 @@ format:
 - Conclusion of steady state mass transfer
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -36,7 +36,7 @@ After this lecture, you will be able to:
 - **Identify** accumulation and generation terms in typical transport models.
 - **Analyze** time-dependent concentration profiles in unsteady diffusion problems.
 
-## What Is Unsteady-State Mass Transfer?
+## What is unsteady-state mass transfer?
 
 ![](./public/1D-mt.png){width="65%" .center}
 
@@ -50,7 +50,7 @@ After this lecture, you will be able to:
 - Common in transient diffusion, start-up, and response problems
 - **More general** than S.S.
 
-## Governing Equation for U.S.S M.T.
+## Governing equation for U.S.S M.T.
 
 Consider a control volume in 1D transport, the mass balance equation becomes
 
@@ -68,7 +68,7 @@ S \Delta z \frac{\partial c_A}{\partial t}
 where $r_{A}$ is the generation rate for A (e.g. local reaction). 
 This is the governing equation for all time-dependent mass transfer!
 
-## Comparison between Flux equation and Mass Balance
+## Comparison between flux equation and mass balance
 
 :::{.columns}
 :::{.column width="50%"}
@@ -103,7 +103,7 @@ N_A = J_{Az}^* + x_A(N_A + N_B)
 
 :::
 
-## Mass Balance: Extension to 3D
+## Mass balance: extension to 3D
 
 ![Illustration of divergence](./public/divergence-operator.png){width="75%" .center}
 
@@ -124,7 +124,7 @@ N_A = J_{Az}^* + x_A(N_A + N_B)
 
 ---
 
-## How To Analyze A U.S.S Problem
+## How to analyze a U.S.S problem
 
 Unsteady state mass transfer is not intimidating if you follow these steps
 
@@ -137,7 +137,7 @@ Unsteady state mass transfer is not intimidating if you follow these steps
 
 ---
 
-## Dissecting the General Equation for Mass Balance
+## Dissecting the general equation for mass balance
 
 ```{=tex}
 \begin{align*}
@@ -154,7 +154,7 @@ r_A - \frac{\partial c_A}{\partial t}
 - In general this is hard to solve (coupling fluid with mass transfer)
 - Often interested in several limiting cases
 
-## Special Cases of Unsteady-State Mass Transfer
+## Special cases of unsteady-state mass transfer
 
 - Case 1: EMCD for gases at constant $p_T$, $r_A = 0$ (Fick’s second law)
    - There is **no negative sign** in Fick's second law!
@@ -204,7 +204,7 @@ For U.S.S M.T, we typically need
 5. Get $c_A(z, t)$, $x_A(z, t)$, $N_A(x, t)$
 6. Steady-state solutions often means $c_A(z, t\to \infty)$
 
-## Unsteady State Mass Transfer: Calculation Overview
+## Unsteady state mass transfer: calculation overview
 
 ![A "solver engine" for unsteady state mass transfer](./public/uss-engine.png){width="85%"}
 
@@ -454,9 +454,6 @@ For U.S.S M.T, we typically need
 - Unsteady state mass transfer governing equation
 - Step-by-step solution to diffusion through stagnant B
 - Diffusion and reaction system setup
-
-
-
 
 
 

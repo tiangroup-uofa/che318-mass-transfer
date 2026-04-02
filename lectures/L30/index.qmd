@@ -23,7 +23,7 @@ format:
 
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -32,7 +32,7 @@ After this lecture, you will be able to:
 - **Relate** cooling-tower design questions to the packed absorption framework.
 
 
-## Cheatsheet for Cooling Tower
+## Cheatsheet for cooling tower
 
 ![Charts distributed in class.](./public/cheatsheet-cooling-tower.svg)
 
@@ -103,13 +103,13 @@ down into
 - **Flux equation**: how to express $N_A$ in gas phase?
 - **Column height**: how to derive the differential equation and solve for desired tower height?
 
-## Temperature - Humidity relation in a cooling tower (1)
+## Temperature - humidity relation in a cooling tower (1)
 
 - In the **upper** part of the tower, temperature in liquid is hotter than bulk gas
 
 ![](./public/upper.png)
 
-## Temperature - Humidity relation in a cooling tower (2)
+## Temperature - humidity relation in a cooling tower (2)
 
 - In the **lower** part of the tower, temperature in liquid is hotter than bulk gas
 
@@ -145,5 +145,3 @@ $$
 - Cooling towers cool water by coupling evaporation with heat transfer to the gas stream.
 - The enthalpy-temperature chart provides a convenient way to represent equilibrium and operating behavior.
 - Cooling-tower design follows the same broad structure as absorption analysis: equilibrium, balances, fluxes, and height.
-
-

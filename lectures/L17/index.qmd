@@ -32,7 +32,7 @@ This lecture contains the overview of dimensionless number relation to mass tran
 
 ---
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -40,7 +40,7 @@ After this lecture, you will be able to:
 - **Describe** how Reynolds, Schmidt, and Sherwood numbers correlate mass transfer behavior.
 - **Identify** suitable dimensionless correlations for different flow geometries.
 
-## Recap: Boundary Layer Theory
+## Recap: boundary layer theory
 
 The global mass transfer coefficient in a tube:
 
@@ -53,7 +53,7 @@ k_c' = \frac{0.664 D_{AB}}{L} N_{Re}^{0.5} N_{Sc}^{1/3}
 - $N_{Re}$: Reynolds number
 - $N_{Sc}$: Schmidt number
 
-## Why Do We Need These Dimensionless Numbers?
+## Why do we need these dimensionless numbers?
 
 - Expressing fluxes using $k$ coefficients are easy
 - But do we need to measure $k$ for each system specifically?
@@ -61,7 +61,7 @@ k_c' = \frac{0.664 D_{AB}}{L} N_{Re}^{0.5} N_{Sc}^{1/3}
 - We can correlate the values of $k$ measured in different geometries, velocities using **dimensionless numbers**
 - Similar treatment exists in heat and momentum (fluid) transfer
 
-## Dimensionless Numbers In Mass Transfer {.smaller}
+## Dimensionless numbers in mass transfer {.smaller}
 
 - **General form**: $N_{\text{name}} = \dfrac{\text{Scale of effect 1}}{\text{Scale of Effect 2}}$
 
@@ -91,7 +91,7 @@ N_{\text{Re}} = \frac{L v \rho}{\mu}
   - $L$: characteristic length of system
   - Location specific $N_{\text{Re}, x}$ also used
 
-## Meaning of Dimensionless Numbers -- $N_{Re}$
+## Meaning of dimensionless numbers -- $N_{Re}$
 
 - $N_{Re}$: laminar flow vs turbulent flow
 - Varies with characteristic length $L_D$ (diameter for a pipe)
@@ -100,7 +100,7 @@ N_{\text{Re}} = \frac{L v \rho}{\mu}
 
 
 
-## How Are $k_c'$ Correlated By Dimensionless Numbers?
+## How are $k_c'$ correlated by dimensionless numbers?
 
 - Idea: mass transfer in flowing fluid described by $v$, $\rho$, $\mu$, $c$, $D_{AB}$ and geometry (characteristic length $L$)
 - The combinations of these properties --> dimensionless number groups ($N_{\text{Sc}}$, $N_{\text{Sh}}$, $N_{\text{Re}}$)
@@ -118,7 +118,7 @@ j_D = f/2 \\
 
 - $f$ is the Fanning Friction Factor (can be found in table)
 
-## General Procedure To Calculate $k_c'$
+## General procedure to calculate $k_c'$
 
 :::{.columns}
 :::{.column width="50%"}
@@ -159,7 +159,7 @@ j_D = f/2 \\
 :::
 :::
 
-## Use of Empirical Mass Transfer Laws
+## Use of empirical mass transfer laws
 
 - In many systems, flux and / or concentration profiles become hard to have simple form
 - Luckily we can simplify typical mass transfer problems as different geometries
@@ -170,16 +170,16 @@ j_D = f/2 \\
 - We will show a few case studies for different geometries
 - Dimensionless numbers ($N_{Re}$, $N_{Sc}$, $N_{Sh}$) help determine governing equations
 
-## Case 1: Mass Transfer for Flow Inside Pipes
+## Case 1: mass transfer for flow inside pipes
 
 - Usually use the Linton & Sherwood chart
 - Valid for gas / liquid in both laminar & turbulent regimes
 
-## Flow Inside Pipe: Chart
+## Flow inside pipe: chart
 
 ![](./public/fluid-pipe-chart.png)
 
-## Flow Inside Pipes: Solution Procedure
+## Flow inside pipes: solution procedure
 
 - Governing dimensionless quantity:
 
@@ -195,7 +195,7 @@ j_D = f/2 \\
   - parabolic flow ($N_{Re} < 2100;\ \frac{W}{D_{AB}\rho L} > 400$)
   - turbulent flow ($N_{Re} > 2100;\ 0.6 < N_{Sc} < 3000$)
 
-## Flow Inside Pipes: Solution For Liquid
+## Flow inside pipes: solution for liquid
 
 :::{.columns}
 :::{.column width="50%"}
@@ -246,14 +246,14 @@ N_{Sc}^{0.33}
 :::
 :::
 
-## Case 2: Flow Past Parallel Plates
+## Case 2: flow past parallel plates
 
 - Can be used for gases or evaporation of liquid
 - Distinguished between laminar & turbulent flow
 - $N_{Re}$ regime cutoff different in gas & liquid!
 - Characteristic length $L$: length of plate in flow direction
 
-## Flow Past Parallel Plates: Results
+## Flow past parallel plates: results
 
 :::{.columns}
 :::{.column width="50%"}
@@ -294,13 +294,13 @@ j_D = 0.99 N_{Re, L}^{-0.5}
 ::: 
 :::
 
-## Case 3: Flow Past Single Sphere 
+## Case 3: flow past single sphere 
 
 - Frequent geometry in particle solutions
 - Low Reynolds regime 👉 solution for stagnant diffusion on spherical surface
 - High Reynolds regime 👉 correct $N_{Sh}$ and back calculate $k_c'$
 
-## Flow Past Single Sphere: Results
+## Flow past single sphere: results
 
 :::{.columns}
 :::{.column width="35%"}
@@ -349,7 +349,7 @@ N_{Sh} &= 0.347 N_{Re}^{0.62} N_{Sc}^{1/3};\ 2000 < N_{Re} < 17000
 :::
 :::
 
-## Case 4: Mass Transfer for Packed Beds
+## Case 4: mass transfer for packed beds
 
 - Very common geometry for chemical engineering
   - Adsorption and desorption through solid particles (gases and liquids)
@@ -364,7 +364,7 @@ N_{Sh} &= 0.347 N_{Re}^{0.62} N_{Sc}^{1/3};\ 2000 < N_{Re} < 17000
   - Typically $0.3 < \varepsilon < 0.5$
   - Void fraction is difficult to measure experimentally
   
-## Correlation Equations In Packed Bed
+## Correlation equations in packed bed
 
 Correlation 1, applicable to:
 
@@ -381,7 +381,7 @@ N_{Re} &= \frac{D_p v' \rho}{\mu}
 - $D_p$: (average) particle diameter
 - $v’$: superficial velocity in the tube without packing
 
-## Correlation Equations In Packed Bed (II)
+## Correlation equations in packed bed (II)
 
 Correlation 2, applicable to:
 
@@ -404,7 +404,7 @@ N_{Re}^{-0.31}
 \end{align}
 ```
 
-## Correlation Equations In Packed Bed (III)
+## Correlation equations in packed bed (III)
 
 Correlation 3, applicable to fluidized beds
 
@@ -426,7 +426,7 @@ N_{Re}^{-0.72}
 \end{align}
 ```
 
-## Packed Bed Calculation Steps
+## Packed bed calculation steps
 
 1. Known value from operational column: $\varepsilon$, $V_b$ (total volume), $D_p$, $D_{AB}$, $\mu$, $\rho$, etc.
 2. Depend on the operational range, calculate $N_{Re}$, $N_Sc$ 👉 choose the equation for $j_D$
@@ -434,7 +434,7 @@ N_{Re}^{-0.72}
 4. Calculate flux $N_A$
 5. Estimate effective area $A_{\text{eff}}$ inside the columne 👉  $\overline{N}_A = A_{\text{eff}} N_A$
 
-## Caveats In Packed Bed Problems (1)
+## Caveats in packed bed problems (1)
 
 - Estimate the effective area?
   - First calculate the effective surface area per volume $a$ then $A_{\text{eff}}$
@@ -445,7 +445,7 @@ A_{eff} &= a V_b
 \end{align}
 ```
 
-## Caveats In Packed Bed Problems (2)
+## Caveats in packed bed problems (2)
 
 - Use log-mean driving force (see [Lecture 21](../L21))
 
@@ -464,7 +464,7 @@ where
 - $c_{A, i}$: surface concentration
 - $c_{A1}, c_{A2}$: in- and outlet concentrations
 
-## Caveats In Packed Bed Problems (3)
+## Caveats in packed bed problems (3)
 
 - Mass-flow balance
 

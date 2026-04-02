@@ -21,12 +21,12 @@ format:
 
 :::
 
-## Land Acknowledgement {.center}
+## Land acknowledgement {.center}
 
 #### The University of Alberta acknowledges that we are located on Treaty 6 territory, and respects the histories, languages, and cultures of the First Nations, Métis, Inuit, and all First Peoples of Canada, whose presence continues to enrich our vibrant community.
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -36,7 +36,7 @@ After this lecture, you will be able to:
 - **State** Fick's First Law of Diffusion and **identify** its terms and units.
 - **Describe** the general shape of steady-state concentration profiles from Fick's Law.
 
-## Course Information
+## Course information
 
 - **Course:** CH E 318 – Mass Transfer
 - **Term:** Winter 2026
@@ -44,7 +44,7 @@ After this lecture, you will be able to:
 - **Time:** 10:00 – 10:50
 - **Location:** MEC 3-1
 
-## Meet the Instructor
+## Meet the instructor
 
 - **Office**: DICE 12-245
 
@@ -57,7 +57,7 @@ After this lecture, you will be able to:
 - Research fields: machine learning, multiscale materials simulations, computational tools
 - Let’s enjoy learning together!
 
-## TAs & Seminar Sessions
+## TAs & seminar sessions
 
 - **Teaching Assistants**
   - Ethan Lockwood — elockwoo@ualberta.ca
@@ -72,7 +72,7 @@ After this lecture, you will be able to:
   - Worked examples and discussion
   - Concept clarification and Q&A
   
-## Course Grading
+## Course grading
 - **Assignments:** 25%
   - 8 total (best 7 counted)
   - Deadlines to be posted on Canvas.
@@ -101,7 +101,7 @@ Our primary textbook for this course is:
   />
 </div>
   
-## What do Mass Transfer Study (1)?
+## What do mass transfer study (1)?
 
 Scent diffuser:
 $$
@@ -120,7 +120,7 @@ $$
   />
 </div>
 
-## What do Mass Transfer Study (2)?
+## What do mass transfer study (2)?
 
 Thin-membrane gas exchange:
 $$
@@ -139,7 +139,7 @@ $$
   />
 </div>
 
-## What do Mass Transfer Study (3)?
+## What do mass transfer study (3)?
 
 Packed tower: 
 
@@ -159,7 +159,7 @@ $$
   />
 </div>
 
-## What do Mass Transfer Study (4)?
+## What do mass transfer study (4)?
 
 Manhattan project ($U^{235}$ enrichment) ☢️: 
 
@@ -179,7 +179,7 @@ $$
   />
 </div>
 
-## Let’s Get to Know You!
+## Let’s get to know you!
 
 We will use Wooclap in this course!
 
@@ -187,7 +187,7 @@ Participation link: https://app.wooclap.com/318L01?from=instruction-slide
 
 *Results to be published after the class*
 
-## Basic Quantities and Their Units in Mass Transfer (1)
+## Basic quantities and their units in mass transfer (1)
 
 We will only deal with **SI units** in this course!
 
@@ -200,7 +200,7 @@ We will only deal with **SI units** in this course!
 - Molar ratio (or binary mixture): $Y_A = \dfrac{x_A}{x_B} = \dfrac{x_A}{1 - y_x}$
     - For ideal gas: $x_A = \dfrac{p_A}{p_T}$ (partial pressure of A and total pressure, respectively)
 	
-## Basic Quantities and Their Units in Mass Transfer (2)
+## Basic quantities and their units in mass transfer (2)
 
 - Mass concentraion of A: $\rho_A$
   -Unit: $\text{kg}\cdot\text{m}^{-3}$
@@ -211,7 +211,7 @@ We will only deal with **SI units** in this course!
 
 - For *chemists* in this class, engineering unit $\text{kg\ mol} = \text{kmol} = 1000\ \text{mol}$
 
-## Introduction to Molecular Transport Equations (1)
+## Introduction to molecular transport equations (1)
 
 <div style="width: 80%;">
   <img
@@ -231,7 +231,7 @@ $$
 \dfrac{\text{[driving force]}}{\text{[resistance]}}
 $$
 
-## Introduction to Molecular Transport Equations (2)
+## Introduction to molecular transport equations (2)
 
 The governing equation for transport phenomena can also be written as
 
@@ -246,7 +246,7 @@ Properties $\Gamma$ to be transferred:
 - Heat (thermodynamics / heat transfer)
 - **Species** (**mass transfer**)
 
-##  Introduction to Molecular Transport Equations (3)
+##  Introduction to molecular transport equations (3)
 
 Units:
 
@@ -258,7 +258,7 @@ Units:
 
 - Why is there a **negative** sign before $\delta$?": to match the sign of the flux
 
-## Fick's First Law of Diffusion
+## Fick's first law of diffusion
 
 The flux due to diffusion is described in Fick's first law (more details next lecture).
 
@@ -277,7 +277,7 @@ The flux due to diffusion is described in Fick's first law (more details next le
   J^*_{Az} = - D_{AB} \frac{1}{RT}\frac{d p_A}{d z}
   $$
   
-## Fick's First Law in Velocity Term
+## Fick's first law in velocity term
 
 The flux can also be written using velocity terms:
 
@@ -289,7 +289,7 @@ The flux can also be written using velocity terms:
   - $\overline{c}_{A}$: average concentration of A ($\text{mol}\cdot\text{m}^{-3}$)
   - Which reference frame is used?
   
-## Combining Diffusion and Convection
+## Combining diffusion and convection
 
 - Real-world mass transfer scenarios have diffusion + convection
 - Using a lab frame, the total mass transfer flux can be written in diffusive + fluid velocities
@@ -305,7 +305,7 @@ $$
 - $c_A$ is the molar concentration of A ($\text{mol}\cdot\text{m}^{-3}$)
 - $v_m$ is the average velocity of the mixture ($\text{m}\cdot\text{s}^{-1}$)
 
-## Governing Equation: Diffusion + Convection
+## Governing equation: diffusion + convection
 
 For **binary mixture** of A and B, we have total flux for 2 components $N$:
 
@@ -327,7 +327,7 @@ $$
 
 This is the **governing equation** for all steady-state mass transfer in the following lectures!
 
-## Brief Introduction to Course AI Helper
+## Brief introduction to course AI helper
 
 - A Socratic Gemini chatbot aiming to help course learning and key concepts
 - **Access the AI helper here:**
@@ -351,4 +351,3 @@ What we learned today:
 - Governing equation of mass transfer
 
 **See you next time!**
-

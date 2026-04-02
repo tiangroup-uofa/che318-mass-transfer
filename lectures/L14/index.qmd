@@ -28,7 +28,7 @@ format:
 - Introduction to boundary concentration problem
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -37,7 +37,7 @@ After this lecture, you will be able to:
 - **Identify** the units and meanings of common mass transfer coefficients.
 - **Apply** conversions between coefficient forms used in gas- and liquid-phase analyses.
 
-## Realistic Interfacial Concentration Profiles
+## Realistic interfacial concentration profiles
 
 At the boundary, it is often convenient to use the equilibrium
 concentration ratio between gas ($c_i$) and liquid ($c_{Li}$). This constant, often called the **equilibrium distribution coefficient**, is defined as:
@@ -53,7 +53,7 @@ K &= \frac{\text{[Conc. at gas side]}}{\text{[Conc. at liquid side]}} \\
 - We have already seen similar concepts in solubility in liquid / solid diffusion equations!
 - $K$ can be a value range from $0$ to $\infty$ 👉 what does that mean?
 
-## Interfacial Concentration Profile For Different $K$
+## Interfacial concentration profile for different $K$
 
 - The interfacial concentration values depend on the value of $K$!
 - What else determines the interfacial balance? 👉 matching of interfacial fluxes $N_A$ at both sides!
@@ -61,7 +61,7 @@ K &= \frac{\text{[Conc. at gas side]}}{\text{[Conc. at liquid side]}} \\
 ![_Geankoplis Figure 7.1.3_](./public/distribution-coeff-profile.png){width="95%"}
 
 
-## Match of Interfacial Fluxes
+## Match of interfacial fluxes
 
 **At equilibrium**, if there is no resistance when transferring A between the interface, what is the mass balance equation?
 
@@ -80,7 +80,7 @@ How do we model $N_A$ in each phase?
 - In general we use the phenomenal relation $\text{[Flux]} = \text{[Driving Force]} / \text{[Resistance]}$
 
 
-## General Flux Equation For Convective Transport Regime
+## General flux equation for convective transport regime
 
 - The driving force is the concentration difference "bulk concentration" and "interfacial concentration"
 - The resistance is lumped into one coefficient $k_c'$, **mass transfer coefficient**.
@@ -95,7 +95,7 @@ N_A = k_c' (c_{L, b} - c_{Li})
 - The unit of $k_c'$?  👉  $\text{m}\cdot\text{s}^{-1}$
 - $k_c'$ can be $\infty$! 👉 No transfer resistance inside the bulk phase
 
-## Where Does $k_c'$ Come From (I)?
+## Where does $k_c'$ come from (I)?
 
 Simplified view: transport resistance of A from bulk to the interface occurs inside an interfacial film with thickness
 $\delta$. We can write $N_A$ at steady state using already known results
@@ -122,7 +122,7 @@ N_A &= \boxed{\frac{D_{AB}}{\delta (1 - \frac{c}{c_T} )}} (c_{L, b} - c_{L, i}) 
 - Can be written both by $k_c'$ or $k_c$ terms
 - One can expect $k_c$ contain the $1/x_{Bm}$ term!
 
-## Where Does $k_c$ Come From (II)?
+## Where does $k_c$ come from (II)?
 
 The mass transfer coefficient $k_c$ is even valid for systems with effective $D_{AB}$!
 
@@ -149,14 +149,14 @@ N_A &= \boxed{\frac{D_{AB} + \epsilon_m}{\delta}} (c_{L, b} - c_{L, i}) \\
 - $\epsilon_m$ is the "Eddie diffusivity" (correction to $D_{AB}$ due to turbulence)
 - General case for $\epsilon_m$ is non-trivial to solve!
 
-## Implications of Mass Transfer Coefficient $k_c'$
+## Implications of mass transfer coefficient $k_c'$
 
 - Really convenient to use! 
 - In reality, $k_c'$ is not a physics-based quantity, it depends on system / condition
 - $k_c' \propto D_{AB}^n$ in realistic systems
 - We will discuss about different theories that explains the relation between $k_c'$ and $D_{AB}$ (penetration theory, film theory, boundary theory) in coming weeks
 
-## Balance Equations At Interfaces
+## Balance equations at interfaces
 
 We now have 2 equations to determine the interfacial concentrations!
 
@@ -183,7 +183,7 @@ We can solve $c_{L, i}$ and $c_{g, i}$ given information about:
 - Equilibrium distribution coefficient $K$
 - Mass transfer coefficients $k_c$ in each phase
 
-## Demonstration of Mixed Boundary Conditions
+## Demonstration of mixed boundary conditions
 
 ```{=html}
 <iframe width="100%" height="900"
@@ -191,7 +191,7 @@ We can solve $c_{L, i}$ and $c_{g, i}$ given information about:
 ```
 
 
-## Mass Transfer Coefficient In Different Forms
+## Mass transfer coefficient in different forms
 
 When using $k$ to express flux, we have the **same form** (_Geankoplis Table 7.2.1_)
 
@@ -236,7 +236,7 @@ But:
 - $k_c'$ and $k_c$ are two different coefficients
 - $k_c'$, $k_L'$, $k_G'$ have different units
 
-## Naming Convention and Units
+## Naming convention and units
 
 - Superscript: EMCD $k'_{\text{driving force}}$; Convective / stagnant B $k_{\text{driving force}}$
 
@@ -247,7 +247,7 @@ But:
 | Liquid (alt. form)    | $k_L$, $k_L'$                | –                                                                 | –                                                                       |
 | Unit of $k$                  | $\text{m}\cdot\text{s}^{-1}$ | $\dfrac{\text{kg mol}}{\text{s} \cdot \text{m}^2 \cdot \text{Pa}}$ | $\dfrac{\text{kg mol}}{\text{s} \cdot \text{m}^2 \cdot \text{mol frac}}$ |
 
-## Conversions Between Mass Transfer Coefficients
+## Conversions between mass transfer coefficients
 
 :::{.columns}
 :::{.column width="50%"}
@@ -311,7 +311,7 @@ k_c' \, c
 - Matching fluxes across the interface allows us to determine interfacial compositions.
 - Mass transfer coefficients can be expressed in multiple forms, but their units and meanings must be tracked carefully.
 
-## What To Learn Next
+## What to learn next
 
 The concept of mass transfer coefficient $k$ is both beautiful and
 ugly.
@@ -325,7 +325,4 @@ In next lectures, we will see:
 - How to use mass transfer coefficients for different phases (gas, liquid, solid)
 - How convective fluid transport is expressed using coefficients
 - How to perform mass transfer analysis based on transfer coefficients
-
-
-
 

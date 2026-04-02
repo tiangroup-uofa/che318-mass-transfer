@@ -37,7 +37,7 @@ format:
   - Use of solubility $S$
   - Permeability $P_{M} = S D_{AB}$
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -130,7 +130,7 @@ b. $N_A = 1.144\times{}10^{-10}\ \text{kg mol}\cdot\text{m}^{-2}\cdot\text{s}^{-
 
 # Solving Diffusion Through Varying Area
 
-## Diffusion Through Varying Cross-Sectional Area
+## Diffusion through varying cross-sectional area
 
 **Steady state mass balance**
 
@@ -153,7 +153,7 @@ At steady state:
 - $\overline{N}_A$ is constant
 - $N_A$ varies with position if $A(z)$ (or $A(r)$) varies
 
-## Applications of Variable-Area Diffusion
+## Applications of variable-area diffusion
 
 ![](./public/vary-area.png){width="75%"}
 
@@ -419,9 +419,6 @@ This framework can be used to solve diffusion through:
 
 - Solving various examples in liquid and gas diffusion systems
 - Use of weight %, log-mean molar ratio, solubility and permeability
-
-
-
 
 
 

@@ -22,7 +22,7 @@ format:
 :::
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -169,7 +169,7 @@ is usually called **sensible** heating of the gas-vapor mixture,
 because it is directly proportional to $\Delta T$.
 
 
-## Concept 6: Humid volume
+## Concept 6: humid volume
 
 **Humid volume** $v_H$: volume occupied by $1$ kg dry air plus its
   associated water vapor at certain pressure. (This is less useful
@@ -313,9 +313,6 @@ the concept of enthalpy in next lecture.👉
 - General concepts in humidification
 - Different forms of humidity
 - Humidity-dependent enthalpy and use of humidity chart
-
-
-
 
 
 

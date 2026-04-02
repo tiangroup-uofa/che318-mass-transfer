@@ -22,7 +22,7 @@ format:
 :::
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -56,7 +56,7 @@ Key features:
 
 :::
 
-## Recap: Key equation 1 -- Flux relation
+## Recap: key equation 1 -- flux relation
 
 For **very diluted** (EMCD-like) system, the flux equation in each phase follows:
 
@@ -75,7 +75,7 @@ This leads to the slope to the eq. line as:
 \end{align}
 ```
 
-## Recap: Key equation 2 -- Mass balance (2-phase)
+## Recap: key equation 2 -- mass balance (2-phase)
 
 If we only care what possible $(x, y)$ points are in the tower, can
 use 2-phase mass balance:
@@ -238,7 +238,7 @@ Use gas-phase example, from geometry of the equilibrium diagram:
 \end{align}
 ```
 
-## Case 1: Overall $K_y$ in gas phase for highly liquid-soluble A
+## Case 1: overall $K_y$ in gas phase for highly liquid-soluble A
 
 - Local slope $m'$ is small
 - Transfer resistance is mainly in gas!
@@ -253,7 +253,7 @@ Use gas-phase example, from geometry of the equilibrium diagram:
 
 ![](./public/high-solu.png)
 
-## Case 2: Overall $K_x$ in liquid phase for low solubility A
+## Case 2: overall $K_x$ in liquid phase for low solubility A
 
 - Local slope $m''$ is large
 - Transfer resistance is mainly in liquid!
@@ -285,10 +285,6 @@ Use the conditions from example 1: bulk phase point $P=(0.10, 0.380)$, $k_x'=1.9
 - Case studies for interfacial composition & mass transfer coefficient
 
 So far we have built _almost all_ prerequisite for solving the concentration profile in the absorption tower! We will discuss that in upcoming [Lecture 25](../L25)
-
-
-
-
 
 
 

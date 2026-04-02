@@ -22,7 +22,7 @@ format:
 :::
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -262,9 +262,6 @@ transfer unit concepts.
 In next weeks, we will talk about the final topic: mass transfer
 coupled with heat transfer. One useful example will be the
 humidification tower. 
-
-
-
 
 
 

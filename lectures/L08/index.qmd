@@ -29,7 +29,7 @@ format:
 - Solving examples with pseudo steady state assumption
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 (Continue from Lecture 07) After this lecture, you will be able to:
 
@@ -39,7 +39,7 @@ format:
 
 # P.S.S Examples (continued)
 
-## Example 1: Diffusion Through Stagnant B with Changing Path Length
+## Example 1: diffusion through stagnant B with changing path length
 
 _Adapted from Geankoplis 6.2-3_
 
@@ -63,7 +63,7 @@ $$
 t_F = \frac{\rho_A (z_F^2 - z_0^2) RT p_{Bm}}{2 D_{AB} M_A p_{T}} \frac{1}{(p_{A1} - p_{A2})}
 $$
 
-## Example 2: Determine $D_{AB}$ Through Evaporation
+## Example 2: determine $D_{AB}$ through evaporation
 
 _Adapted from Griskey 10-2_
 
@@ -92,7 +92,7 @@ Answer:
 1. Pseudo-steady state: $D_{AB} = 8.56\times{}10^{-6}\ \text{m}^2/\text{s}$
 1. $N_A$ constant: $D_{AB} = 8.75\times{}10^{-6}\ \text{m}^2/\text{s}$ ($+2.2\%$ error)
 
-## Example 3: P.S.S For Diffusion Through Sphere
+## Example 3: P.S.S for diffusion through sphere
 
 _Adapted from Geankoplis Ex 6.2-4_
 
@@ -390,10 +390,6 @@ method!
 ## Summary
 - Pseudo-steady state solutions to diffusion-evaporation problems
 - We will discuss about unsteady state mass transfer next lecture!
-
-
-
-
 
 
 
