@@ -136,7 +136,7 @@ N_A(z, t) = -c_T D_{AB}\frac{\partial x_A(z, t)}{\partial z} + x_A \left[N_A(z, 
 Generally, we still need to know the relation between $N_A$ and $N_B$
 to solve the mass-balance-flux equations.
 
-The total concentration $c_T=c_A + c_B$ is conserved, therefore we have constrains
+The total concentration $c_T=c_A + c_B$ is conserved, therefore we have constraints
 
 ```{=tex}
 \begin{align}
@@ -343,4 +343,3 @@ Solve:
 
 - Step-by-step solution to diffusion through stagnant B
 - Diffusion and reaction system setup
-

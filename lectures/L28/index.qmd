@@ -44,8 +44,8 @@ Find where $H$, $H_p$, dew point $T_{\text{dew}}$ are?
 ## Example 2: humidifier design
 
 A living room of 60 m$^2$ at 22 $^\circ$C has a relative humidity of
-20% due to continuous heating. Your and your roomate wish to purchase
-a humidifer that can humidify the living room up to 45% relative
+20% due to continuous heating. You and your roommate wish to purchase
+a humidifier that can humidify the living room up to 45% relative
 humidity. Assume the floor-ceiling distance is 3 m, calculate the
 weight of water needed to humidify the whole room. Can you use the
 humidity chart to estimate?
@@ -77,7 +77,7 @@ Does it make sense? The requirement for water tank will be a lower bound.
 
 ## Mythbusting time (1)
 
-My weather app shows that outside is $-12\ ^\circ$C and R.H. is 74%, whene the dew point is $-16\ ^\circ$C. What does all that mean?
+My weather app shows that outside is $-12\ ^\circ$C and R.H. is 74%, where the dew point is $-16\ ^\circ$C. What does all that mean?
 
 :::{.callout-tip}
 A useful note is that the **lower** dew point is
@@ -265,7 +265,7 @@ along the adiabatic line (no external heat exchange). For water-air system, the 
 
 ## Deeper look into the cooling process (1)
 
-What does the adiabatic line tells us? It is basically a process that
+What does the adiabatic line tell us? It is basically a process that
 each point has the same humid enthalpy, and no change of heat to external system:
 
 $$
@@ -310,7 +310,6 @@ Next topics we will study:
 - Reading humidity chart for cooling process
 - Wet-bulb temperature and its origin
 - Calculation of humidity values from the chart + equation
-
 
 
 

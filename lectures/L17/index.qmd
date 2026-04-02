@@ -96,7 +96,7 @@ N_{\text{Re}} = \frac{L v \rho}{\mu}
 - $N_{Re}$: laminar flow vs turbulent flow
 - Varies with characteristic length $L_D$ (diameter for a pipe)
 
-![$N_{Re}$ for exhause pipe](./public/exhause-pipe-reynolds.jpeg)
+![$N_{Re}$ for exhaust pipe](./public/exhause-pipe-reynolds.jpeg)
 
 
 

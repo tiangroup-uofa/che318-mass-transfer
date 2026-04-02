@@ -98,7 +98,7 @@ _Adapted from Geankoplis Ex 6.2-4_
 
 A sphere of naphthalene having a radius of 2.0 mm is suspended in a large volume of still air at 318 K and
 $1.01325 \times{}10^5$ Pa (1 atm). The surface temperature of the naphthalene can be assumed to be at 318 K and
-its vapor pressure at 318 K is 0.555 mm Hg. The $D_AB$ of naphthalene in air at 318 K is $6.92\times{}10^{−6}\ \text{m}^2/\text{s}$.
+its vapor pressure at 318 K is 0.555 mm Hg. The $D_{AB}$ of naphthalene in air at 318 K is $6.92\times{}10^{−6}\ \text{m}^2/\text{s}$.
 
 1. Calculate the rate of evaporation of naphthalene from the surface.
 2. Write the expression for the time $t_F$ to evaporate a sphere from radius $r_0$ to $r_F$. The solid density for naphthalene is $\rho$ and molecular weight is $M_A$.
@@ -390,6 +390,5 @@ method!
 ## Summary
 - Pseudo-steady state solutions to diffusion-evaporation problems
 - We will discuss about unsteady state mass transfer next lecture!
-
 
 

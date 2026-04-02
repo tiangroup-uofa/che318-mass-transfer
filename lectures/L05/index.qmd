@@ -25,7 +25,7 @@ format:
 
 - Theories for predicting gas diffusivity $D_{AB}$:
   - Kinetic theory (inaccurate)
-  - Chapman-Enkog theory (high accuracy, hard to use)
+  - Chapman-Enskog theory (high accuracy, hard to use)
   - Fuller method (trade off)
 
 - Estimating $\sum \nu_i$ using Fuller method table

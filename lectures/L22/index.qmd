@@ -42,7 +42,7 @@ The most complex case is probably a packed-bed column.
 - What we may miss?
 
   - Real-world applications are mass transfer between 2 phases
-  - Mass transfer may occur accross 2 phase interfaces
+  - Mass transfer may occur across 2 phase interfaces
   - Equilibrium concentration at interfaces are usually not fixed
 
 ## Examples of 2-phase mass transfer (1)
@@ -60,9 +60,9 @@ The most complex case is probably a packed-bed column.
 
 **Extraction apparatus** (liquid-gas)
 
-- Volatile chemical compounds originally mixted with water is extracted to vapour phase
+- Volatile chemical compounds originally mixed with water are extracted to vapour phase
 - Examples:
-  - Essense oil extraction
+  - Essence oil extraction
 
 ![](./public/essense-oil-extraction.png)
 
@@ -287,5 +287,4 @@ plt.show()
 - Real industrial applications involve mass transfer between 2 phases
 - Equilibrium plots are extremely useful for elucidating the interfacial balance
 - Describe driving force and interfacial concentrations from the equilibrium plot
-
 

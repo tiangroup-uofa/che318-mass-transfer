@@ -100,7 +100,7 @@ The big difference between $T_d$ and $T_w$ must indicate a low relative humidity
 
 ## Deeper look into the cooling process (1)
 
-What does the adiabatic line tells us? It is basically a process that
+What does the adiabatic line tell us? It is basically a process that
 each point has the same humid enthalpy, and no change of heat to external system:
 
 $$
@@ -254,7 +254,6 @@ G (H_{y} - H_{y1}) &= L c_L (T_{L} - T_{L1})
 - Psychrometric-chart tools can be used to solve practical humidification calculations.
 - Cooling towers combine evaporative mass transfer with heat transfer from the liquid stream.
 - The cooling-tower framework parallels absorption-tower analysis through equilibrium and operating-line ideas.
-
 
 
 

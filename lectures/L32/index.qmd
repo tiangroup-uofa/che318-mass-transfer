@@ -254,7 +254,7 @@ d T_G &= \frac{c_L L}{G} \frac{T_{Li} - T_G}{H_{yi} - H_{y}} d T_L
 ```
 
 - Again, we cancel out $c_S = \frac{h_G a}{M_B k_G a P}$.  This is an
-- intergratable ODE, given that at any $(T_L, H_y)$, we can calculate $H_{yi}$ without needing $T_G$
+- integrable ODE, given that at any $(T_L, H_y)$, we can calculate $H_{yi}$ without needing $T_G$
 
 ## Integrating $T_G$: graphical explanation
 

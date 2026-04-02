@@ -89,7 +89,7 @@ Packed bed clearly wins!
 In a packed bed design, it is often desired to know the following quantities:
 
 1) The outlet concentration $c_{A2}$
-2) The total flux of mass transfer accross interface
+2) The total flux of mass transfer across interface
 
 - It is still desired to use [In] - [Out] + [Gen] = [Acc]
 - What are each of these quantities?
@@ -130,7 +130,7 @@ a = \frac{6(1 - \epsilon)}{D_p}
 
 ## How to get $\hat{N}_A$?
 
-- $\hat{N}_A$ is the **average** mass transfer flux accross the interface.
+- $\hat{N}_A$ is the **average** mass transfer flux across the interface.
 - To solve it, we still use a control volume from $z$ to $z+ dz$
 - Locally, driving force $c_{Ai} - c_{A}(z)$
 - Local mass transfer flux
@@ -286,7 +286,6 @@ $$
 - Typically, start with a known geometry (pipe? parallel plate? sphere? packed bed?)
 - Find the correlation with dimensionless numbers $N_{Re}$, $N_{Sc}$
 - Calculate the final mass transfer rate
-
 
 
 

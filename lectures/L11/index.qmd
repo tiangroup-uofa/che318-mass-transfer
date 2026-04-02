@@ -280,7 +280,7 @@ The steady state solution can be easily integrated
 
 ## Catalyst in wall: simulation demo
 
-A slighted adapted demo from lecture 3 ($x_A$ profile). 
+A slightly adapted demo from lecture 3 ($x_A$ profile). 
 Can we modify the molar flux by interface reaction stoichiometry?
 
 ```{=html}
@@ -324,7 +324,6 @@ To solve unsteady and steady state problem, use the following steps:
 - Coupling diffusion with reaction changes both the governing equation and the boundary conditions.
 - Simplifying assumptions can turn difficult reaction-diffusion models into solvable forms.
 - Reactive-wall and catalytic examples show how concentration profiles reveal the controlling mechanism.
-
 
 
 

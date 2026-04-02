@@ -119,7 +119,7 @@ Search for any youtube video with *"diffusion experiment dye"*
 
 [Example Video](https://www.youtube.com/embed/STLAJH7_zkY){preview-link="true"}
 
-Can we **verify** whether the scenario seen is Ficknian diffusion?
+Can we **verify** whether the scenario seen is Fickian diffusion?
 
 ---
 

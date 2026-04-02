@@ -543,5 +543,5 @@ calculate()
 - Diffusivity $D_{AB}$ value is the key to solve the transport problem in gases
 - $D_{AB}$ can be measured from experiments, but not exhaustively
 - Several theories predict the value for $D_{AB}$ with certain accuracy
-- Chapman-Enkog theory and Fuller method both have $D_{AB}\propto T^n/P$ form
-- Fuller method more often used as it can approximate $D_{AB}$ solely by taking values from table
+- Chapman-Enskog theory and Fuller method both have $D_{AB}\propto T^n/P$ form
+- Fuller method is more often used as it can approximate $D_{AB}$ solely by taking values from tables

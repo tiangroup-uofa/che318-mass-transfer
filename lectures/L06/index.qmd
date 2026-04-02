@@ -30,7 +30,7 @@ format:
 
 - Solving $N_A$ in liquid
   - EMCD: rare case
-  - Stgnant B: approximating $x_{Bm}$
+  - Stagnant B: approximating $x_{Bm}$
   - Calculating $c_{av}$ concentration
 
 - Solving $N_A$ in solid (thin membrane permeability)
@@ -92,7 +92,7 @@ CO2 through the plug to the outside in kg mol CO2/s at steady
 state. Assume that the partial pressure of CO2 outside is zero. From
 Barrer (B5) the solubility of the CO2 gas is 0.90 $m^3$ gas (at STP of
 0°C and 1 atm) per m3 rubber per atm pressure of CO2. The diffusivity
-is $0.11\times{}10^{−9}$ m$^22$/s.
+is $0.11\times{}10^{−9}$ m$^2$/s.
 
 ## Example 2: solution
 
@@ -115,7 +115,7 @@ is diffusing through a sheet of vulcanized rubber 20 mm thick at
 25 °C. The partial pressure of H2 is 1.5 atm inside and 0 outside.
 Using the data from Table 6.5-1 (see below), calculate the following:
 
-a. The diffusivity $D_AB$ from the permeability $P_M$ and solubility $S$ ,
+a. The diffusivity $D_{AB}$ from the permeability $P_M$ and solubility $S$,
 and compare with the value in the table.
 b. The flux $N_A$ of H2 at steady state.
 
@@ -419,6 +419,5 @@ This framework can be used to solve diffusion through:
 
 - Solving various examples in liquid and gas diffusion systems
 - Use of weight %, log-mean molar ratio, solubility and permeability
-
 
 

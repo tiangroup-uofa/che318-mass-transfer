@@ -61,7 +61,7 @@ winter, you decide to buy a humidifier. Your knowledge from the CHE
 
 - Definition: kg of water vapor per kg dry air at certain temperature
 
-- For water-air systems where mole weights are $M_A$ and $M_B$, respectively, also link to partial pressure $p_A$
+- For water-air systems where molecular weights are $M_A$ and $M_B$, respectively, this also links to partial pressure $p_A$
 
 $$
 H = \frac{M_A p_A}{M_B(p_T-p_A)}
@@ -232,8 +232,8 @@ Find where $H$, $H_p$, dew point $T_{\text{dew}}$ are?
 ## Example 2: humidifier design
 
 A living room of 60 m$^2$ at 22 $^\circ$C has a relative humidity of
-20% due to continuous heating. Your and your roomate wish to purchase
-a humidifer that can humidify the living room up to 45% relative
+20% due to continuous heating. You and your roommate wish to purchase
+a humidifier that can humidify the living room up to 45% relative
 humidity. Assume the floor-ceiling distance is 3 m, calculate the
 weight of water needed to humidify the whole room. Can you use the
 humidity chart to estimate?
@@ -244,7 +244,7 @@ humidity chart to estimate?
 
 ```{=tex}
 \begin{align}
-H_s &= 0.622 \frac{p_{\text{vap}}}(p_T - p_{\text{vap}}) = 0.017 \\
+H_s &= 0.622 \frac{p_{\text{vap}}}{p_T - p_{\text{vap}}} = 0.017 \\
 p_{\text{vap}} &= 2.69\ \text{kPa}
 \end{align}
 ```
@@ -265,7 +265,7 @@ Does it make sense? The requirement for water tank will be a lower bound.
 
 ## Mythbusting time (1)
 
-My weather app shows that outside is $-12\ ^\circ$C and R.H. is 74%, whene the dew point is $-16\ ^\circ$C. What does all that mean?
+My weather app shows that outside is $-12\ ^\circ$C and R.H. is 74%, where the dew point is $-16\ ^\circ$C. What does all that mean?
 
 :::{.callout-tip}
 A useful note is that the **lower** dew point is
@@ -309,11 +309,10 @@ the concept of enthalpy in next lecture.👉
 
 ## Summary
 
-- Demistifying the humidifaction process: it's just mass transfer + heat transfer
+- Demystifying the humidification process: it's just mass transfer + heat transfer
 - General concepts in humidification
 - Different forms of humidity
 - Humidity-dependent enthalpy and use of humidity chart
-
 
 
 

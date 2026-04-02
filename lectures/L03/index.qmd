@@ -439,7 +439,7 @@ After the substitution, rearrangement and integration we get:
 \end{align*}
 ```
 
-We can extract $D_{AB}$ usingt the slope of the plot!
+We can extract $D_{AB}$ using the slope of the plot!
 
 ---
 
