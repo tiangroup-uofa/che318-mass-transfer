@@ -1,0 +1,38 @@
+---
+title: "CHE 318 Lecture 33"
+subtitle: "Final Exam Review Lecture (I)"
+author: "Dr. Tian Tian"
+date: "2026-03-30"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+  pdf:
+    output-file: L33.pdf
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L33.pdf)
+:::
+
+:::
+
+
+## Learning outcome {.center}
+
+This is a review lecture for preparing for the final exam, focusing on
+the concept sheets from pre-midterm.
+
+## Cheatsheet for pre-midterm mass transfer
+
+![Charts distributed in class. [PDF Version](./public/cheatsheet-premidterm.pdf)](./public/cheatsheet-premidterm.svg)
+
+## Cheatsheet for convective mass transfer & coefficients
+
+![Charts distributed in class. [PDF Version](./public/cheatsheet-coeff.svg)](./public/cheatsheet-coeff.svg)
+
+
+ 

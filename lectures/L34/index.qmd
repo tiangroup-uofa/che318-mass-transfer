@@ -1,0 +1,47 @@
+---
+title: "CHE 318 Lecture 34"
+subtitle: "Final Exam Review Lecture (II)"
+author: "Dr. Tian Tian"
+date: "2026-04-01"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+  pdf:
+    output-file: L34.pdf
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L34.pdf)
+:::
+
+:::
+
+
+## Learning outcome {.center}
+
+This is a review lecture for preparing for the final exam, focusing on
+the concept sheets from pre-midterm.
+
+## Cheatsheet for dimensionless number & scalings
+
+![Charts distributed in class. [PDF Version](../L19/public/cheatsheet.pdf)](../L19/public/cheatsheet.svg)
+
+## Cheatsheet for 2-phase mass transfer & adsorption tower
+
+![Charts distributed in class. [PDF Version](../L25/public/cheatsheet-2phase.pdf)](../L25/public/cheatsheet-2phase.svg)
+
+## Cheatsheet for humidification process
+
+![Charts distributed in class. [PDF Version](../L28/public/humidification.pdf)](../L28/public/humidification.svg)
+
+## Cheatsheet for cooling tower
+
+![Charts distributed in class. [PDF Version](../L30/public/cheatsheet-cooling-tower.pdf)](../L30/public/cheatsheet-cooling-tower.svg)
+
+
+
+
