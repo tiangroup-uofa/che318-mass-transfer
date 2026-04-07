@@ -67,6 +67,8 @@ website:
           - lectures/L30/index.qmd
           - lectures/L31/index.qmd
           - lectures/L32/index.qmd
+          - lectures/L33/index.qmd
+          - lectures/L34/index.qmd
       - section: "Interactive Demos"
         contents:
           - scripts.qmd
