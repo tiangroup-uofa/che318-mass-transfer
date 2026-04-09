@@ -38,7 +38,7 @@ binary gas mixture consisting of species $A$ and $B$ between two
 parallel planes, labeled (1) and (2). The total pressure of the system
 is $p_T = 700\ \text{kPa}$ and the temperature is maintained at $T =
 100 ^\circ\text{C}$. The gas-phase mass transfer coefficient from molar fraction is 
-$k_y’ = 1.5 \times 10^{-4}\ \text{kg mol}\cdot \text{m}^{-2} \cdot \text{s}^{-1}$. Flow in pipe 1 contains 65 mol% A, while flow in pipe 2 contains 45 mol% B.
+$k_y’ = 1.5 \times 10^{-4}\ \text{kg mol}\cdot \text{m}^{-2} \cdot \text{s}^{-1}$. Flow in pipe 1 contains 65 mol% A, while flow in pipe 2 contains 55 mol% B.
 
 1. Find the values for fluxes $N_A$ and $N_B$
 2. Find the values (and units) for other coefficients $k_G'$ and $k_c'$

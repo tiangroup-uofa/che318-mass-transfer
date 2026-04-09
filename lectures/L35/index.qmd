@@ -1,0 +1,55 @@
+---
+title: "CHE 318 Lecture 35 & 36"
+subtitle: "Final Exam Q&A"
+author: "Dr. Tian Tian"
+date: "2026-04-08"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+  pdf:
+    output-file: L35.pdf
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L35.pdf)
+:::
+
+:::
+
+
+## Collections of questions during the live Q&A session
+
+1. How do I prepare for lectures 22 - 24 (two-phase mass transfer)?
+
+Potential steps:
+
+- Please use the [concept sheet](../L25/public/cheatsheet-2phase.pdf) as a reference
+- How did we construct the equilibrium diagram?
+- What is the governing equation for the operating line?
+- Why do operating line have a minimal flow rate requirement?
+- Given the shape of the equilibrium chart, how can I understand the transport resistance in each phase?
+
+2. [Example 1 Lecture 15](../L15/#example-1-convective-flux-through-a-tube) may have a typo in the solution.
+
+Yes indeed. To reuse the hand-written notes solution, "flow in pipe 2 contains 45 mol% B." has been corrected to " while flow in pipe 2 contains **55 mol% B.**", as $x_B = 1 - x_A$.
+
+3. Are the concept sheets provided during the exam? What should I write on the extra hand-written formula sheet?
+
+- Yes all past concept sheets will be provided during the exam.
+- Physical constants, atomic mass, etc will be provided in the questions, if necessary. (Only exception maybe trivial ones like gas constant $R$)
+- During the preparation for final exam, you can use the extra hand-written formula sheet as a notes for concepts you find harder to remember. Examples may include:
+  - Definition of different flow rates
+  - Conversion between $x_A$, $w_A$ and $p_A$
+
+4. Do we expect derivation questions?
+
+- Yes there may be derivation questions. Most likely you will be asked to arrive at a given form of expression.
+- Try your best to think "how can I get to this formula" from a known equation
+
+
+
+
