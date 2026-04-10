@@ -45,11 +45,19 @@ Yes indeed. To reuse the hand-written notes solution, "flow in pipe 2 contains 4
   - Definition of different flow rates
   - Conversion between $x_A$, $w_A$ and $p_A$
 
-4. Do we expect derivation questions?
+4. Will you provide sample formula sheets in Canvas?
 
-- Yes there may be derivation questions. Most likely you will be asked to arrive at a given form of expression.
-- Try your best to think "how can I get to this formula" from a known equation
+- Yes we uploaded one sample formula sheet from previous instructor as a reference on Canvas. Also see the answers to question 3.
 
+5.  Do we expect derivation questions?
 
+- Yes, derivation questions may appear. More likely, you will be asked to start from a known equation and arrive at a given expression.
+- Train yourself to ask: “How do I get to this form?” rather than trying to memorize derivations line by line.
+
+6.  Can I find a list of recommended problems from the textbook?
+
+- Some selected numerical problems from past instructors have been uploaded to Canvas.
+- Skim them first and focus on the ones that expose gaps in your understanding, not on trying to finish everything.
+- If you are unsure about the solution procedure, use the provided Gemini Helper with some judgment.
 
 
