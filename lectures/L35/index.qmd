@@ -61,3 +61,12 @@ Yes indeed. To reuse the hand-written notes solution, "flow in pipe 2 contains 4
 - If you are unsure about the solution procedure, use the provided Gemini Helper with some judgment.
 
 
+7. From the final formula sheet from previous instructor, there are some formulae I have not seen in the lecture notes.
+
+- Yes, there are some concepts we didn't cover in this semester (like the Eddy diffusivity)
+- If you want to write down different re-arrangements of the equations in your sheet, feel free to do so.
+
+8. For derivation problems, where should I start?
+
+- As mentioned in Q5, for any equations you encounter during the preparation but unsure "where do they come from?", this is the case where you can trace back to the concept sheets / lecture notes
+- We do have a search bar in course website that you can search for equations, so use it wisely
