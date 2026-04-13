@@ -173,7 +173,7 @@ $$
 - Liquid-side profile
 
 $$
-Z = \int_{x_2}^{x_1} \frac{L dy}{\frac{k'_x a S}{(1 - x)_{im}} (1 - x)(x_i - x)}
+Z = \int_{x_2}^{x_1} \frac{L dx}{\frac{k'_x a S}{(1 - x)_{im}} (1 - x)(x_i - x)}
 $$
 
 :::{.callout-warning}
