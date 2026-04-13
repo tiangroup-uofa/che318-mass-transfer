@@ -32,7 +32,7 @@ the concept sheets from pre-midterm.
 
 ## Cheatsheet for convective mass transfer & coefficients
 
-![Charts distributed in class. [PDF Version](./public/cheatsheet-coeff.svg)](./public/cheatsheet-coeff.svg)
+![Charts distributed in class. [PDF Version](./public/cheatsheet-coeff.pdf)](./public/cheatsheet-coeff.svg)
 
 
  
