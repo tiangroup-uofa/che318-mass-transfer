@@ -9,7 +9,7 @@ toc: false
 - **Course Number**: CHE 318
 - **Instructor**: Dr. Tian Tian
 - **Semester**: Winter 2026
-- **Office**: DICE 12-245
+- **Office**: **DICE 12-245**
 - **Office Hour**: Wednesday 11:15 - 12: 15
 
 ## Course Description
