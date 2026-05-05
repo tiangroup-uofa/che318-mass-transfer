@@ -1,12 +1,13 @@
 import marimo
 
-__generated_with = "0.19.0"
+__generated_with = "0.20.4"
 app = marimo.App(width="full")
 
 
 @app.cell
 def _():
     import marimo as mo
+
     return (mo,)
 
 
@@ -14,6 +15,7 @@ def _():
 def _():
     import matplotlib.pyplot as plt
     import numpy as np
+
     return np, plt
 
 
@@ -104,7 +106,6 @@ def _(
             ),
         ],
         justify="start",
-        wrap=True
     )
     return
 
