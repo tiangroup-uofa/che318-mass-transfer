@@ -5,6 +5,7 @@ format:
   html
 resources:
   - "scrennshot/*.png"
+  - "scripts/*.py"
 listing:
   contents:
     - scripts-gallery.yml

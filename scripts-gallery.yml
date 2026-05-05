@@ -1,84 +1,90 @@
 - title: "**Diffusion / Convection Length Scales**"
-  description: "**Lecture 02**: comparing diffusion and convection length scales. *Is dye-experiment really diffusion?*"
+  description: |
+    **Lecture 02**: comparing diffusion and convection length scales. [source code](scripts/L02_diffusion_length.py)
   image: "screenshots/l02-lengthscale.png"
   path: "scripts/L02_diffusion_length.html"
   categories: [lecture]
 
 - title: "**Diffusivity vs. Temperature**"
-  description: "**Lecture 02**: comparing diffusivities in gas, liquid, solid vs temperature."
+  description: |
+    **Lecture 02**: comparing diffusivities in gas, liquid, solid vs temperature. [source code](scripts/L02_diffusivity_demo.py)
   image: "screenshots/l02-diffusivity.png"
   path: "scripts/L02_diffusivity_demo.html"
   categories: [lecture]
 
 - title: "**Steady-State Composition Profile**"
-  description: "**Lecture 03**: general solution for composition profile in 1D steady-state problem with different $N_A/N_B$ ratios."
+  description: |
+    **Lecture 03**: general solution for composition profile in 1D steady-state problem with different $N_A/N_B$ ratios. [source code](scripts/L03_xa_profile.py)
   image: "screenshots/l03-xa-profile.png"
   path: "scripts/L03_xa_profile.html"
   categories: [lecture]
 
 - title: "**Unsteady-State Composition Profile**"
-  description: "**Lecture 10**: time-dependent solutions for composition & fluxed in a water evaporation problem."
+  description: |
+    **Lecture 10**: time-dependent solutions for composition & fluxed in a water evaporation problem. [source code](scripts/L10_uss_profile.py)
   image: "screenshots/l10-uss-profile.png"
   path: "scripts/L10_uss_profile.html"
   categories: [lecture]
 
 - title: "**Composition Profile with Various Reaction Stoichiometry**"
-  description: "**Lecture 11**: solution to steady-state composition
-  profile with various reaction stoichiometry $m \text{D} \rightarrow
-  n \text{E}$. (Adapted from L04 example)."
+  description: |
+    **Lecture 11**: solution to steady-state composition profile with various reaction stoichiometry. (Adapted from L04 example). [source code](scripts/L11_stoichiometry.py)
   image: "screenshots/l11-stoichiometry.png"
   path: "scripts/L11_stoichiometry.html"
   categories: [lecture]
 
 - title: "**2-Phase Interfacial Composition**"
-  description: "**Lecture 14**: solution to composition profiles accross the phase boundary."
+  description: |
+    **Lecture 14**: solution to composition profiles accross the phase boundary. [source code](scripts/L14_boundary.py)
   image: "screenshots/l14-interfacial.png"
   path: "scripts/L14_boundary.html"
   categories: [lecture]
 
 - title: "**Interactive Psychrometric Chart**"
-  description: "**Lecture 29** & **Assignment 7**: psychrometric (humidity) chart with solutions."
+  description: |
+    **Lecture 29** & **Assignment 7**: psychrometric (humidity) chart with solutions. [source code](scripts/L29_psychrometric.py)
   image: "screenshots/l29-psychrometric.png"
   path: "scripts/L29_psychrometric.html"
   categories: [lecture, exercise]
 
 - title: "**Cooling Tower Design**"
-  description: "**Lecture 31** & **Assignment 8**: enthalpy chart and integration scheme for solving cooling tower design."
+  description: |
+    **Lecture 31** & **Assignment 8**: enthalpy chart and integration scheme for solving cooling tower design. [source code](scripts/L31_enthalpy_chart.py)
   image: "screenshots/l31-enthalpy-chart.png"
   path: "scripts/L31_enthalpy_chart.html"
   categories: [lecture, exercise]
 
 - title: "**Cooling Tower Full Demo**"
-  description: "**Lecture 32**: full demonstration of cooling tower and temperature profiles"
+  description: |
+    **Lecture 32**: full demonstration of cooling tower and temperature profiles. [source code](scripts/L31_enthalpy_chart_full.py)
   image: "screenshots/l31-cooling-full.png"
   path: "scripts/L31_enthalpy_chart_full.html"
   categories: [lecture, exercise]
 
 - title: "**Diffusivity Estimation**"
-  description: "**Assignment 2** Q3. Compare fluxes calculated by various diffusivity estimation methods."
+  description: |
+    **Assignment 2** Q3. Compare fluxes calculated by various diffusivity estimation methods. [source code](scripts/EX02_codes.py)
   image: "screenshots/ex02-demo.png"
   path: "scripts/EX02_codes.html"
   categories: [exercise]
 
 - title: "**Absorption Tower Minimal Flowrate**"
-  description: "**Assignment 6** Q2. Demonstration of minimal flow rate in absorption tower."
+  description: |
+    **Assignment 6** Q2. Demonstration of minimal flow rate in absorption tower. [source code](scripts/EX06_codes.py)
   image: "screenshots/ex06-demo.png"
   path: "scripts/EX06_codes.html"
   categories: [exercise]
 
 - title: "**Finding the Interfacial Composition**"
-  description: "**Assignment 7** Q1: compare ways of calculating the interfacial composition in absorption tower."
+  description: |
+    **Assignment 7** Q1: compare ways of calculating the interfacial composition in absorption tower. [source code](scripts/EX07_slope.py)
   image: "screenshots/ex07-q1-demo.png"
   path: "scripts/EX07_slope.html"
   categories: [exercise]
 
 - title: "**Packed Bed Integration**"
-  description: "**Assignment 7** Q2: performing integration for packed beds."
+  description: |
+    **Assignment 7** Q2: performing integration for packed beds. [source code](scripts/EX07_packed.py)
   image: "screenshots/ex07-q2-demo.png"
   path: "scripts/EX07_packed.html"
   categories: [exercise]
-
-
-
-
-
